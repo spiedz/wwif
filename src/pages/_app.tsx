@@ -5,6 +5,7 @@ import { getOrganizationSchema } from '../utils/schema';
 import Layout from '../components/Layout';
 import React from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 // Function to initialize comments system only on server
 let initializeCommentsSystem: (() => void) | undefined;
@@ -48,6 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
       <SpeedInsights />
+      <Analytics />
     </>
   );
 }
