@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "message": "I visited Chicago and saw the Trump Tower that was used in the film. It was amazing to see it in person!",
+    "createdAt": "2023-05-15T14:32:00Z",
+    "pageSlug": "where-was-dark-knight-filmed",
+    "pageType": "film",
+    "isApproved": true
+  },
+  {
+    "id": "2",
+    "name": "Jane Smith",
+    "message": "I didn't realize so many of the Gotham scenes were actually filmed in Chicago. This was really informative!",
+    "createdAt": "2023-05-16T09:45:00Z",
+    "pageSlug": "where-was-dark-knight-filmed",
+    "pageType": "film",
+    "isApproved": true
+  },
+  {
+    "id": "3",
+    "name": "Mike Johnson",
+    "message": "The Hong Kong scenes were some of my favorites. I've added it to my travel bucket list!",
+    "createdAt": "2023-05-17T18:22:00Z",
+    "pageSlug": "where-was-dark-knight-filmed",
+    "pageType": "film",
+    "isApproved": true
+  }
+] 

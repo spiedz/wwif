@@ -1,0 +1,179 @@
+# Product Requirements Document (PRD)
+
+## Project Name
+Where Was It Filmed (WWIF)
+
+## Overview
+WWIF is a content-driven, SEO-optimized website that allows users to explore the real-world filming locations of popular movies and TV shows. The site supports Markdown-based content input and features a Google Maps integration for visualizing each location. It also allows users to leave comments under each film or blog page — without needing to create an account.
+
+## Goals
+- Display accurate and engaging content for film and TV filming locations.
+- Support easy content management by adding Markdown files.
+- Rank highly on search engines with proper metadata and structure.
+- Encourage engagement through simple, profile-free commenting.
+- Maintain a clean, mobile-responsive UI using Tailwind CSS.
+- Host with minimal setup using Vercel for auto-deploy and scaling.
+
+## Tech Stack
+- **Framework**: Next.js (React, TypeScript)
+- **Styling**: Tailwind CSS (red / white / gray theme)
+- **Maps**: Google Maps API
+- **Content Format**: Markdown with frontmatter (stored in `/content/films/` and `/content/blog/`)
+- **Comments**: Name + comment only (stored via Supabase, Firebase, or flat file)
+- **Hosting**: Vercel
+
+## Features
+
+### 1. Content Structure
+- Markdown files are added to `/content/films/` or `/content/blog/`.
+- Each Markdown file includes:
+  - `title`
+  - `description`
+  - `slug`
+  - `year`
+  - `genre`
+  - `director`
+  - `categories`
+  - `coordinates` (for map)
+- Files are auto-routed to `/films/[slug]` and `/blog/[slug]`.
+
+### 2. Pages and Layouts
+- `FilmPage.tsx`: Displays film intro, map, locations, trivia, travel tips, and comments.
+- `BlogPost.tsx`: Displays blog article content and user comments.
+- `Map.tsx`: Google Map with multiple markers from coordinates.
+- `LocationCard.tsx`: Displays each filming location.
+- `AffiliateLink.tsx`: Optional call-to-action (e.g. Amazon or streaming).
+- `CommentSection.tsx`: Displays name + comment form and existing thread.
+
+### 3. Comments
+- Visitors can leave comments using just their name and message.
+- Comments are displayed on the page with no login or profile system.
+- Stored in a lightweight backend (Firebase, Supabase, or JSON flat files).
+
+### 4. SEO & Metadata
+- Dynamic meta tags pulled from frontmatter:
+  - `<title>`, `<meta description>`
+  - Open Graph & Twitter Card
+  - JSON-LD schema (`Movie`, `Place`, `Article`)
+- Sitemap and robots.txt for indexing.
+
+### 5. Mobile & UX
+- Fully responsive using Tailwind's utility-first classes.
+- Red for primary CTAs and highlights.
+- Clean layouts with white backgrounds and gray for secondary UI.
+- Mobile-friendly layout for all pages, including map and comments.
+
+## Hosting & Deployment
+- **Platform**: Vercel
+- Push to GitHub triggers automatic deployment.
+- Supports environment variables (e.g., `GOOGLE_MAPS_API_KEY`).
+- Supports dynamic routes and static generation for fast performance.
+
+## Color Palette
+- **Primary Red**: #D32F2F
+- **White**: #FFFFFF
+- **Light Gray**: #F5F5F5
+- **Dark Gray**: #424242
+
+# Blog Post Enhancement PRD for Where Was It Filmed
+
+## Project Overview
+The Where Was It Filmed (WWIF) website showcases filming locations for movies and TV shows. The blog section currently has a basic layout that needs enhancement to make it more engaging, similar to the film pages.
+
+## Current State
+The blog posts currently have a simple format with:
+- Featured image and title at the top
+- Author and date metadata
+- Simple content area with limited styling
+- Basic sharing options
+- Placeholder for related posts section
+
+## Enhancement Goals
+We need to update the blog format to make it more engaging by:
+1. Improving the visual layout and typography
+2. Adding a table of contents for longer posts
+3. Creating better styling for quotes, lists, and code blocks
+4. Supporting image galleries within blog posts
+5. Adding support for embedded maps showing filming locations
+6. Including author information with photo and bio
+7. Implementing a proper related posts section
+
+## Technical Requirements
+
+### Core Visual Layout
+- Create a more visually appealing header section with gradient overlays
+- Implement better typography for headings and body text
+- Add custom styling for lists, blockquotes, and other content elements
+- Support theme-consistent formatting for all blog elements
+
+### Content Organization
+- Add a table of contents component for longer posts
+- Implement better section headings with anchor links
+- Create styled information boxes for tips, warnings, and notes
+- Add support for image galleries with captions
+- Include map embedding capabilities to show filming locations
+
+### Related Content
+- Create an actual related posts component based on categories
+- Add a proper author section with photo and bio
+- Implement better sharing options with social media preview
+
+### Performance Considerations
+- Ensure lazy loading for images
+- Optimize typography for readability and performance
+- Maintain accessibility standards
+
+## Success Criteria
+- Blog posts should have a professional, modern appearance
+- Content should be easier to navigate, especially for longer posts
+- Visual elements should enhance the content without being distracting
+- The enhanced blog format should drive higher engagement and time on page 
+
+# Where Was It Filmed - About Page Feature
+
+## Overview
+Create an engaging and informative About page for the Where Was It Filmed (WWIF) website. This page will explain the purpose of the site, showcase the team behind it, and highlight the site's mission and vision.
+
+## Requirements
+
+### Core Features
+1. Accessible at `/about` URL path
+2. Responsive design matching the site's existing aesthetic
+3. SEO-optimized with appropriate metadata
+4. Clear explanation of the site's purpose and mission
+5. Team member section with photos and bios
+6. Contact information and social media links
+7. History of the site's development
+8. Information about how the site collects and verifies film location data
+
+### Page Sections
+1. **Hero Section**: Engaging header with title and brief introduction
+2. **Mission Statement**: Core purpose of WWIF with compelling visuals
+3. **Team Section**: Photos and bios of key team members
+4. **History Timeline**: How the project evolved
+5. **Methodology**: How locations are researched and verified
+6. **Contact Information**: Ways to reach out, including a simple contact form
+7. **Social Media Links**: Connect with WWIF on various platforms
+8. **FAQ Section**: Common questions about the site
+
+### Design Requirements
+- Follow existing site color scheme (primary: red #D32F2F, background: white, accent: light/dark gray)
+- Include relevant images and icons
+- Maintain the same header and footer as other pages
+- Use animations and transitions consistent with the site's style
+- Ensure full mobile responsiveness
+
+### Technical Requirements
+- Implement using Next.js and React components
+- Style with Tailwind CSS
+- Include proper SEO metadata and JSON-LD
+- Add the About link to the site navigation
+- Ensure accessibility compliance (WCAG standards)
+- Optimize all images for web
+
+## Success Criteria
+- Page loads within 2 seconds
+- Passes Google Lighthouse audit with score >90
+- All content is readable on devices from mobile to desktop
+- Navigation between About and other pages is seamless
+- Site purpose is immediately clear to first-time visitors 
