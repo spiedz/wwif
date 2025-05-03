@@ -4,6 +4,7 @@ import SEO from '../components/SEO';
 import { getWebPageSchema } from '../utils/schema';
 import { useRouter } from 'next/router';
 import PopularCategoriesContainer from '../components/PopularCategoriesContainer';
+import Image from 'next/image';
 
 export default function Home() {
   const router = useRouter();
@@ -59,12 +60,27 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 md:pl-10">
-              <div className="relative h-60 sm:h-72 md:h-80 w-full rounded-lg overflow-hidden shadow-2xl">
-                {/* Placeholder for a map or film location image */}
-                <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-                  <span className="text-white text-lg">Featured Film Location Map</span>
+              <Link href="/films/where-was-harry-potter-filmed" className="block">
+                <div className="relative h-60 sm:h-72 md:h-80 w-full rounded-lg overflow-hidden shadow-2xl group">
+                  {/* Harry Potter Map Image */}
+                  <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+                    <div className="relative w-full h-full">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
+                      <Image 
+                        src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" 
+                        alt="Harry Potter Filming Locations Map" 
+                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        width={800}
+                        height={400}
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+                        <p className="text-white text-lg font-bold">Harry Potter Filming Locations</p>
+                        <p className="text-white/80 text-sm">Explore the magical world across the UK</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
