@@ -52,3 +52,10 @@ dev-debug.log
 tasks.json
 tasks/ 
 .vercel
+
+# Added by Claude Task Master
+# Dependency directories
+node_modules/
+# Environment variables
+.env
+# OS specific

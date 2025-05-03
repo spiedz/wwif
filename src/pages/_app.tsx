@@ -40,6 +40,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         
         <meta name="google-site-verification" content="your-verification-code" />
         
+        {/* Google AdSense script */}
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1419518181504900"
+          crossOrigin="anonymous"
+        />
+        
         {/* Global JSON-LD schema for the organization */}
         <script
           type="application/ld+json"

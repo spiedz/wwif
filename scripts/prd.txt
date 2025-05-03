@@ -177,3 +177,68 @@ Create an engaging and informative About page for the Where Was It Filmed (WWIF)
 - All content is readable on devices from mobile to desktop
 - Navigation between About and other pages is seamless
 - Site purpose is immediately clear to first-time visitors 
+
+# Google AdSense Integration for Where Was It Filmed Website
+
+## Overview
+The Where Was It Filmed (WWIF) website needs to implement Google AdSense to monetize the site through targeted advertisements. This PRD outlines the requirements for integrating Google AdSense with the existing Next.js website while maintaining a good user experience, optimizing ad placement, and ensuring compliance with Google's policies.
+
+## Requirements
+
+### Technical Implementation
+1. Integrate the Google AdSense script in the website's head section
+2. Create reusable ad components for different ad formats (horizontal, vertical, responsive)
+3. Implement ad placement strategies for different pages (homepage, film pages, blog posts)
+4. Handle ad loading performance to minimize impact on Core Web Vitals
+5. Implement ad-blockers detection and graceful fallback
+
+### Ad Placement Strategy
+1. Top banner ads on main sections (home, films, blog)
+2. Sidebar/rail ads on content pages
+3. In-content ads on long-form content (blog posts, film details)
+4. Footer ads across all pages
+5. Implement responsive design for ads on mobile devices
+
+### Compliance & Policy
+1. Implement cookie consent for GDPR compliance related to personalized ads
+2. Add privacy policy disclosures about ads and tracking
+3. Ensure compliance with Google AdSense program policies
+4. Implement proper ad labeling where required
+
+### Testing & Optimization
+1. Implement analytics to track ad performance
+2. A/B testing different ad placements
+3. Monitor and optimize page load performance with ads
+4. Test ads on all target devices and browsers
+
+### Future Considerations
+1. Auto-ads implementation evaluation
+2. Ad refresh strategies for longer user sessions
+3. Advanced targeting options based on film categories
+
+## Technical Specifications
+
+### AdSense Script Implementation
+The base AdSense script must be added to the Next.js app in a way that ensures it loads on all pages without duplicating:
+
+```html
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1419518181504900" crossorigin="anonymous"></script>
+```
+
+### Ad Component Architecture
+- Create a flexible `AdUnit` component that can be reused across the site
+- Component should handle different sizes, formats, and responsive behavior
+- Implement lazy loading for ads below the fold
+
+## Success Criteria
+1. All ads render correctly on all pages and device sizes
+2. Website performance metrics remain within acceptable range
+3. Ad consent mechanism works properly for all visitors
+4. Google AdSense account shows active ads being served
+5. No policy violations in Google AdSense dashboard
+
+## Timeline
+1. Initial implementation of AdSense script and basic ad units: 1 week
+2. Placement optimization and performance testing: 1 week
+3. Compliance and policy implementation: 3 days
+4. Testing and refinement: 4 days 
