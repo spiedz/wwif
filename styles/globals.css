@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-dark-gray;
+}
+
+/* Premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+ 
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/40 rounded-full;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/60;
+}
+
+/* Enhanced page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* FilmLocationsGuide enhanced styling */
+.film-locations-guide {
+  @apply max-w-full overflow-hidden;
+}
+
+.film-locations-guide .region-section {
+  @apply mb-16 overflow-hidden;
+}
+
+.film-locations-guide .region-header {
+  @apply transition-all duration-500;
+}
+
+.film-locations-guide .region-header:hover h3 {
+  @apply transform scale-105 transition-transform duration-500;
+}
+
+/* Enhanced card styling */
+.film-locations-guide .region-section img {
+  @apply object-cover;
+}
+
+/* Map container styling */
+.film-locations-guide .leaflet-container {
+  @apply z-10;
+}
+
+/* Enhanced button styling */
+.btn-primary {
+  @apply bg-gradient-to-r from-primary to-primary-dark text-white px-5 py-3 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.btn-secondary {
+  @apply bg-white text-primary border border-primary/30 px-5 py-3 rounded-xl font-medium shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1;
+}
+
+/* Enhanced typography for film pages */
+.film-page h1 {
+  @apply text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight;
+}
+
+.film-page h2 {
+  @apply text-2xl sm:text-3xl font-bold text-gray-800 mb-4;
+}
+
+.film-page h3 {
+  @apply text-xl font-bold text-gray-800 mb-3;
+}
+
+.film-page p {
+  @apply text-gray-700 leading-relaxed;
+}
+
+/* Card hover effects */
+.premium-card {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-500;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.5s ease;
+}
+
+.premium-card:hover {
+  @apply shadow-xl;
+  transform: translateY(-8px);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply font-bold;
+  background: linear-gradient(to right, theme('colors.primary'), theme('colors.primary-dark'));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Image hover effects */
+.zoom-image {
+  @apply overflow-hidden;
+}
+
+.zoom-image img {
+  @apply transition-transform duration-700 ease-out;
+  transform: scale(1);
+}
+
+.zoom-image:hover img {
+  transform: scale(1.05);
+} 

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Robert Chen",
+    "message": "Great article! I live in Chicago and have seen many of these filming locations. The Board of Trade building is especially impressive.",
+    "createdAt": "2023-06-10T10:15:00Z",
+    "pageSlug": "best-filming-locations-in-chicago",
+    "pageType": "blog",
+    "isApproved": true
+  },
+  {
+    "id": "2",
+    "name": "Sarah Wilson",
+    "message": "I'm planning a trip to Chicago next month. This guide will be super helpful for my film location tour!",
+    "createdAt": "2023-06-11T16:30:00Z",
+    "pageSlug": "best-filming-locations-in-chicago",
+    "pageType": "blog",
+    "isApproved": true
+  },
+  {
+    "id": "3",
+    "name": "David Thompson",
+    "message": "You missed the location where they filmed scenes from The Fugitive! The old Cook County Hospital (now called Stroger) is iconic.",
+    "createdAt": "2023-06-12T14:05:00Z",
+    "pageSlug": "best-filming-locations-in-chicago",
+    "pageType": "blog",
+    "isApproved": true
+  }
+] 
