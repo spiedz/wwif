@@ -1,4 +1,4 @@
-```yaml
+
 ---
 title: "Where Was The Joker Filmed?"
 description: "Explore the gritty and atmospheric filming locations of 'The Joker,' showcasing the bustling streets of Gotham City and beyond."
