@@ -5,6 +5,8 @@ import { getWebPageSchema } from '../utils/schema';
 import { useRouter } from 'next/router';
 import PopularCategoriesContainer from '../components/PopularCategoriesContainer';
 import Image from 'next/image';
+import BannerAd from '../components/ads/BannerAd';
+import { AD_SLOTS } from '../utils/adManager';
 
 export default function Home() {
   const router = useRouter();
@@ -109,6 +111,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        {/* Ad Banner */}
+        <BannerAd slot={AD_SLOTS.HOME_TOP_BANNER} className="mb-16" />
         
         {/* Popular Categories - Dynamic Component */}
         <PopularCategoriesContainer 

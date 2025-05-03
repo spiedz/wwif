@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2001
 director: "Chris Columbus, Alfonso Cuarón, Mike Newell, David Yates"
 genre: ["Fantasy", "Adventure", "Family"]
-posterImage: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630"
+posterImage: "https://www.universalorlando.com/webdata/k2/en/us/files/Images/gds/uor-wwohp-logo-3-kids-clouds-key-art-hero-b.jpg"
 coordinates: [
   { 
     "lat": 51.7520, 

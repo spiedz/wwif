@@ -7,6 +7,8 @@ import { getAllFilms } from '../../utils/markdown';
 import { Content, FilmMeta } from '../../types/content';
 import categoryAnalyticsService from '../../utils/categoryAnalytics';
 import PopularCategoriesContainer from '../../components/PopularCategoriesContainer';
+import BannerAd from '../../components/ads/BannerAd';
+import { AD_SLOTS } from '../../utils/adManager';
 
 interface FilmsPageProps {
   allFilms: Content<FilmMeta>[];
