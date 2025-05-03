@@ -95,6 +95,7 @@ const Map: React.FC<MapProps> = ({
     markersRef.current = [];
 
     const bounds = new google.maps.LatLngBounds();
+    const map = googleMapRef.current; // Create a local variable for TypeScript
 
     markers.forEach((markerData) => {
       const position = new google.maps.LatLng(markerData.lat, markerData.lng);
@@ -102,13 +103,13 @@ const Map: React.FC<MapProps> = ({
 
       const marker = new google.maps.Marker({
         position,
-        map: googleMapRef.current,
+        map, // Use the local variable instead of googleMapRef.current
         title: markerData.title,
         animation: google.maps.Animation.DROP,
       });
 
       marker.addListener('click', () => {
-        if (infoWindowRef.current) {
+        if (infoWindowRef.current && map) {
           infoWindowRef.current.close();
           
           // Create content for info window
@@ -121,7 +122,7 @@ const Map: React.FC<MapProps> = ({
           `;
           
           infoWindowRef.current.setContent(content);
-          infoWindowRef.current.open(googleMapRef.current, marker);
+          infoWindowRef.current.open(map, marker);
         }
       });
 
@@ -129,8 +130,8 @@ const Map: React.FC<MapProps> = ({
     });
 
     // Fit map to bounds if there are multiple markers
-    if (markers.length > 1 && googleMapRef.current) {
-      googleMapRef.current.fitBounds(bounds);
+    if (markers.length > 1 && map) {
+      map.fitBounds(bounds);
     }
 
     return () => {
