@@ -47,6 +47,14 @@ const SEO: React.FC<SEOProps> = ({
       ? JSON.stringify(jsonLd) 
       : '';
 
+  // Process film genre to ensure it's an array
+  const getGenreArray = (genre: string | string[]): string[] => {
+    if (Array.isArray(genre)) {
+      return genre;
+    }
+    return [genre];
+  };
+
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -83,7 +91,7 @@ const SEO: React.FC<SEOProps> = ({
         <>
           <meta property="og:movie:director" content={(meta as FilmMeta).director} />
           <meta property="og:movie:release_date" content={String((meta as FilmMeta).year)} />
-          {(meta as FilmMeta).genre.map((genre, index) => (
+          {getGenreArray((meta as FilmMeta).genre).map((genre, index) => (
             <meta key={index} property="og:movie:tag" content={genre} />
           ))}
         </>
