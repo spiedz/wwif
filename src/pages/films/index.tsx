@@ -147,11 +147,23 @@ export default function FilmsPage({ allFilms }: FilmsPageProps) {
             {films.map((film) => (
               <Link href={`/films/${film.meta.slug}`} key={film.meta.slug} className="block group">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <div className="bg-light-gray h-48 flex items-center justify-center">
-                    {/* Placeholder for film images */}
-                    <div className="text-4xl font-bold text-dark-gray opacity-30">
-                      {film.meta.year}
-                    </div>
+                  <div className="bg-light-gray h-48 relative">
+                    {film.meta.posterImage ? (
+                      <div className="w-full h-full relative">
+                        <img 
+                          src={film.meta.posterImage}
+                          alt={`${film.meta.title} poster`}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    ) : (
+                      <div className="h-full flex items-center justify-center">
+                        <div className="text-4xl font-bold text-dark-gray opacity-30">
+                          {film.meta.year}
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="p-4">
                     <h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{film.meta.title}</h2>
