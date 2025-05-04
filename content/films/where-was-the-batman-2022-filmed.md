@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2022
 director: "Matt Reeves"
 genre: ["Action", "Crime", "Drama"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BOTY2M2Y4MTAtYzgzOC00MjA3LTg0ZTctOTI4MzRjNDc3NGY2XkEyXkFqcGdeQXVyNTI4NjIwMjU@._V1_FMjpg_UX1000_.jpg"
+posterImage: "https://static.posters.cz/image/1300/122127.jpg"
 coordinates: [
   {
     "lat": 47.6062,
