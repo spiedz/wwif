@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2018
 director: "Anthony Russo, Joe Russo"
 genre: ["Action", "Adventure", "Sci-Fi"]
-posterImage: "https://upload.wikimedia.org/wikipedia/en/0/0e/Avengers_Infinity_War_poster.jpg"
+posterImage: "https://cdn.marvel.com/content/1x/avengersinfinitywar_lob_mas_hlf_01_2.jpg"
 coordinates: [
   { 
     "lat": 40.7306, 
