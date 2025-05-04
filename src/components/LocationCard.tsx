@@ -77,7 +77,7 @@ const LocationCard: React.FC<LocationCardProps> = ({ location, index }) => {
         {/* Location actions */}
         <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
           <div className="text-xs text-gray-500 font-mono bg-gray-50 px-3 py-2 rounded-lg shadow-sm">
-            <span className="text-primary font-semibold">LAT</span> {location.lat.toFixed(5)}, <span className="text-primary font-semibold">LNG</span> {location.lng.toFixed(5)}
+            <span className="text-primary font-semibold">LAT</span> {location.lat ? location.lat.toFixed(5) : 'N/A'}, <span className="text-primary font-semibold">LNG</span> {location.lng ? location.lng.toFixed(5) : 'N/A'}
           </div>
           
           <a 

@@ -36,9 +36,9 @@ const FilmLocationsGuide: React.FC<FilmLocationsGuideProps> = ({ film }) => {
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed">
           <span className="float-left text-6xl font-serif text-primary mr-4 mt-1 leading-none">
-            {film.description.charAt(0)}
+            {film.description && film.description.charAt(0)}
           </span>
-          {film.description.substring(1)}
+          {film.description && film.description.substring(1)}
         </p>
         <div className="w-32 h-1 bg-gradient-to-r from-primary/20 to-primary/60 rounded-full my-8"></div>
       </div>
@@ -53,7 +53,7 @@ const FilmLocationsGuide: React.FC<FilmLocationsGuideProps> = ({ film }) => {
         </h2>
         <div className={`${useRegionLayout ? 'rounded-xl overflow-hidden shadow-xl mb-6 border border-gray-200' : 'rounded-lg overflow-hidden shadow-md mb-4'}`}>
           <Map 
-            markers={film.coordinates.map(coord => ({
+            markers={(film.coordinates || []).map(coord => ({
               lat: coord.lat,
               lng: coord.lng,
               title: coord.name || '',
@@ -67,7 +67,7 @@ const FilmLocationsGuide: React.FC<FilmLocationsGuideProps> = ({ film }) => {
           <svg className="w-5 h-5 inline-block mr-2 text-primary/70" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
           </svg>
-          Explore all {film.coordinates.length} filming locations on the interactive map above. Click on markers for details about each filming location.
+          Explore all {film.coordinates ? film.coordinates.length : 0} filming locations on the interactive map above. Click on markers for details about each filming location.
         </p>
       </div>
 
@@ -224,10 +224,10 @@ const LocationCard: React.FC<{ location: FilmLocation, useEnhancedStyle?: boolea
         {location.coordinates && (
           <div className={`mt-5 flex justify-between items-center pt-4 border-t border-gray-100`}>
             <div className={`${useEnhancedStyle ? 'text-sm font-mono' : 'text-xs'} text-gray-500 bg-gray-50 px-3 py-2 rounded-lg shadow-sm`}>
-              <span className="text-primary-dark font-semibold">LAT</span> {location.coordinates.lat.toFixed(5)}, <span className="text-primary-dark font-semibold">LNG</span> {location.coordinates.lng.toFixed(5)}
+              <span className="text-primary-dark font-semibold">LAT</span> {location.coordinates && location.coordinates.lat ? location.coordinates.lat.toFixed(5) : 'N/A'}, <span className="text-primary-dark font-semibold">LNG</span> {location.coordinates && location.coordinates.lng ? location.coordinates.lng.toFixed(5) : 'N/A'}
             </div>
             <a 
-              href={`https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`}
+              href={location.coordinates && location.coordinates.lat && location.coordinates.lng ? `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}` : "#"}
               target="_blank"
               rel="noopener noreferrer"
               className={`${useEnhancedStyle 
@@ -254,5 +254,3 @@ const LocationCard: React.FC<{ location: FilmLocation, useEnhancedStyle?: boolea
     </div>
   );
 };
-
-export default FilmLocationsGuide; 
