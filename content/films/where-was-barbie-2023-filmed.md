@@ -6,7 +6,7 @@ date: "2023-07-21"
 year: 2023
 director: "Greta Gerwig"
 genre: ["Fantasy", "Adventure", "Comedy"]
-posterImage: "https://www.example.com/barbie-poster.jpg"
+posterImage: "https://m.media-amazon.com/images/I/71hsNVUr02L.jpg"
 coordinates: [
   { 
     "lat": 34.0202, 
