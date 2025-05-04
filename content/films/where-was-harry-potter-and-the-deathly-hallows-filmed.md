@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2010
 director: "David Yates"
 genre: ["Fantasy", "Adventure", "Family"]
-posterImage: "https://www.themoviedb.org/t/p/original/x8R8uKJbCr9vgz8HlwM0LOc0n0R.jpg"
+posterImage: "https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_.jpg"
 coordinates:
   - lat: 51.9604
     lng: -2.1043
