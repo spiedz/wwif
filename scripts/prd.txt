@@ -311,3 +311,54 @@ Implement a comprehensive search feature for the "Where Was It Filmed" website t
 - Voice search capabilities
 - Search analytics to track popular queries
 - Personalized search based on user history 
+
+# Where Was It Filmed (WWIF) Bug Fixing PRD
+
+## Project Overview
+Fix critical bugs in the "Where Was It Filmed" website to ensure proper functionality of search features, film page display, and deployment.
+
+## Problem Statement
+The website is experiencing several critical issues:
+1. YAML parsing errors in film markdown files, particularly in "where-was-the-lord-of-the-rings-filmed.md"
+2. Build failures during deployment
+3. Null coordinate handling issues in location displays
+4. Other potential issues with film content
+
+## Goals
+- Fix YAML syntax in all film markdown files
+- Address null handling in location coordinates
+- Ensure all film pages load properly
+- Fix build process for successful deployment
+
+## Project Requirements
+
+### Bug Fixes
+1. **YAML Parsing Errors**
+   - Identify and fix YAML formatting issues in film markdown files
+   - Ensure all frontmatter is properly structured
+   - Pay special attention to the Lord of the Rings film file which has known issues
+
+2. **Null Coordinate Handling**
+   - Add proper null checks before accessing properties like lat/lng in LocationCard and FilmLocationsGuide
+   - Fix any instances of toFixed() on potentially null values
+   - Ensure map links work correctly with coordinates
+
+3. **Image Configuration**
+   - Fix image loading by ensuring all required domains are added to next.config.js
+   - Update configuration to use recommended remotePatterns instead of domains
+
+4. **Search Functionality**
+   - Test and fix any issues with the search feature
+   - Ensure proper display of film titles in search results
+
+### Deployment Requirements
+- All pages must build successfully without errors
+- Static generation should work for all routes
+- No console errors should appear during build
+
+## Success Criteria
+- Vercel deployment completes successfully
+- All film pages load correctly
+- Search functionality works properly
+- No YAML parsing errors in the logs
+- Map and coordinate displays handle null values gracefully 
