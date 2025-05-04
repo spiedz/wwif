@@ -1,4 +1,4 @@
-```
+
 ---
 title: "Where Was Catching Fire Filmed?"
 description: "Explore the stunning filming locations of 'Catching Fire,' showcasing a blend of breathtaking landscapes and intricate sets that brought the Hunger Games to life."
