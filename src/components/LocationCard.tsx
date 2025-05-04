@@ -13,7 +13,7 @@ const LocationCard: React.FC<LocationCardProps> = ({ location, index }) => {
   const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=14&size=600x400&scale=2&markers=color:red|${location.lat},${location.lng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`;
   
   // Directions link
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`;
+  const directionsUrl = location.lat && location.lng ? `https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}` : "#";
 
   return (
     <div 
