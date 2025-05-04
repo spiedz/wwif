@@ -254,3 +254,5 @@ const LocationCard: React.FC<{ location: FilmLocation, useEnhancedStyle?: boolea
     </div>
   );
 };
+
+export default FilmLocationsGuide;
