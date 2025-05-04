@@ -52,7 +52,6 @@ coordinates: [
     "description": "One of the filming locations for Hogwarts, featuring in several key scenes throughout the series."
   }
 ]
-streamingServices: [
   {
     "name": "HBO Max",
     "url": "https://www.hbomax.com/harry-potter-deathly-hallows"
@@ -66,7 +65,7 @@ streamingServices: [
     "url": "https://www.netflix.com/search?q=Harry%20Potter%20Deathly%20Hallows"
   }
 ]
-bookingOptions: [
+streamingServices: [
   {
     "name": "Warner Bros. Studio Tour",
     "url": "https://www.wbstudiotour.co.uk/",
@@ -89,7 +88,7 @@ bookingOptions: [
     "price": "£89/night"
   }
 ]
-behindTheScenes: {
+bookingOptions: [
   "intro": "The filming of 'Harry Potter and the Deathly Hallows' required extensive location shooting throughout the UK, showcasing the rugged beauty of the Scottish Highlands and the quaint charm of English villages.",
   "facts": [
     "The Deathly Hallows was split into two films, allowing for a more in-depth exploration of the plot and character arcs.",
@@ -99,6 +98,7 @@ behindTheScenes: {
     "The iconic chase sequences through the city involved careful planning to capture the sophistication of London while incorporating magical elements."
   ]
 }
+behindTheScenes: {
 ---
 
 <HarryPotterDeathlyHallowsGuide />

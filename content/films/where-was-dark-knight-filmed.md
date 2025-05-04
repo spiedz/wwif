@@ -39,17 +39,17 @@ coordinates:
     name: "London - Battersea Power Station"
     description: "After the destruction of Wayne Manor in 'Batman Begins,' the temporary Batcave scenes were filmed in London studios near this iconic location."
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Battersea_Power_Station_from_the_river.jpg/800px-Battersea_Power_Station_from_the_river.jpg"
-travelTips:
   - text: "Chicago's Lower Wacker Drive can be confusing to navigate, but guided tours are available that highlight Dark Knight filming locations."
   - text: "The Hong Kong skyline looks best at night when the buildings are illuminated, just like in the film's extraction scene."
   - text: "Several Chicago tour companies offer specific 'Batman tours' that visit all the major filming locations in a single day."
   - text: "Visit the Chicago Board of Trade during business hours to see the interior architecture that inspired parts of Gotham City."
-trivia:
+travelTips: 
   - text: "The IMAX camera used during the Hong Kong scenes was the first time such technology was used for a major feature film in these types of action sequences."
   - text: "The truck flip scene on Lower Wacker Drive was done with a real truck, not CGI, using a specially designed hydraulic launcher."
   - text: "The hospital explosion scene was filmed in a real building that was scheduled for demolition, with Heath Ledger improvising the moment when the detonator initially malfunctions."
   - text: "Many Chicago residents were hired as extras for the funeral procession scene."
   - text: "Director Christopher Nolan opted to film as much as possible with practical effects rather than CGI, including real stunt driving on Lower Wacker Drive."
+trivia: 
 ---
 
 # The Dark Knight Filming Locations

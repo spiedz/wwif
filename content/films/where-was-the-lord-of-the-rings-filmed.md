@@ -120,8 +120,7 @@ behindTheScenes: {
 }
 ---
 
-
-  <TheLordOfTheRingsGuide />
+<TheLordOfTheRingsGuide />
 The Lord of the Rings trilogy, directed by Peter Jackson, is renowned not only for its epic storytelling but also for its stunning visuals, brought to life through the diverse landscapes of New Zealand. From the serene pastures of the Shire to the fiery chasms of Mount Doom, the films' locations have become iconic, drawing fans from around the world to experience Middle-earth firsthand.
 
 The journey begins in Matamata, where the lush, rolling hills were transformed into Hobbiton, the tranquil home of the Hobbits. Visitors can explore the meticulously preserved set, complete with hobbit holes and the Green Dragon Inn. Moving south, the volcanic terrain of Mount Ngauruhoe in Tongariro National Park served as the menacing Mount Doom, the ultimate destination of Frodo's perilous quest.
@@ -130,4 +129,4 @@ In the Canterbury region, Mount Sunday provided the backdrop for Edoras, the cap
 
 These locations, among many others, were carefully selected to embody the rich tapestry of Tolkien's world. The production's commitment to authenticity and detail not only elevated the films' storytelling but also showcased New Zealand's natural beauty, cementing its status as the real-world Middle-earth.
 
-Whether you're a die-hard fan or a curious traveler, exploring these filming sites offers an immersive journey through the landscapes that defined a cinematic masterpiece.
+Whether you're a die-hard fan or a curious traveler, exploring these filming sites offers an immersive journey through the landscapes that defined a cinematic masterpiece. 

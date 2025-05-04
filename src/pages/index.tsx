@@ -7,6 +7,7 @@ import PopularCategoriesContainer from '../components/PopularCategoriesContainer
 import Image from 'next/image';
 import BannerAd from '../components/ads/BannerAd';
 import { AD_SLOTS } from '../utils/adManager';
+import SearchBar from '../components/search/SearchBar';
 
 export default function Home() {
   const router = useRouter();
@@ -27,6 +28,13 @@ export default function Home() {
     currentUrl
   );
 
+  // Handle search submission
+  const handleSearch = (query: string) => {
+    if (query.trim()) {
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+    }
+  };
+
   return (
     <>
       <SEO 
@@ -46,6 +54,17 @@ export default function Home() {
                 Explore real-world locations where iconic movie and TV scenes were filmed. 
                 Plan your visit and experience the magic yourself.
               </p>
+              
+              {/* Hero Search Box */}
+              <div className="mb-8">
+                <SearchBar 
+                  onSearch={handleSearch} 
+                  autoFocus={false}
+                  showSuggestions={true}
+                  className="bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"
+                />
+              </div>
+              
               <div className="flex flex-wrap gap-4">
                 <Link 
                   href="/films" 

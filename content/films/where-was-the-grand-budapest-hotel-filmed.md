@@ -8,7 +8,7 @@ genre: ["Comedy", "Drama", "Adventure"]
 posterImage: "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Grand_Budapest_Hotel_Poster.jpg"
 useRegionLayout: true
 date: "2023-05-15"
-coordinates:
+coordinates: 
   - lat: 51.1561
     lng: 14.9860
     name: "Germany - Görlitz Department Store"
@@ -29,16 +29,16 @@ coordinates:
     name: "Germany - Görlitz Streets"
     description: "Many exterior shots, such as the Mendl's bakery scenes and military checkpoints, were filmed on the colorful streets of Görlitz."
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Goerlitz_Hallstrasse_08_ies.jpg/800px-Goerlitz_Hallstrasse_08_ies.jpg"
-travelTips:
   - text: "The Görlitz department store is occasionally open for public events or guided tours."
   - text: "Visit during winter for a similar snowy landscape seen in the film's mountain scenes."
   - text: "Combine your trip with nearby Dresden, a cultural hub just 1.5 hours from Görlitz."
   - text: "The city of Görlitz is walkable and full of preserved architecture, perfect for film buffs."
-trivia:
+travelTips: 
   - text: "The fictional country of Zubrowka is a blend of several Central European influences."
   - text: "The filmmakers avoided CGI by building elaborate physical models, including the hotel's exterior."
   - text: "The interior hotel scenes were shot entirely inside a real department store that had been closed for years."
   - text: "Director Wes Anderson wrote the screenplay specifically for Görlitz after scouting Eastern Europe."
+trivia: 
 ---
 
 ## The Grand Budapest Hotel: A Fairytale of Central Europe
