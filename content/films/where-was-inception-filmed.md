@@ -7,7 +7,7 @@ director: "Christopher Nolan"
 genre: ["Sci-Fi", "Action", "Thriller"]
 posterImage: "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg"
 useRegionLayout: true
-coordinates:
+coordinates: 
   - lat: 48.8582
     lng: 2.2945
     name: "Paris - Pont de Bir-Hakeim"
@@ -42,17 +42,17 @@ coordinates:
     name: "Los Angeles - Richard J. Neutra VDL Research House"
     description: "The Modernist architecture of this landmark was used for the Saito's Japanese castle interior scenes."
     image: "https://images.unsplash.com/photo-1447958272669-9c551967f8c2?auto=format&fit=crop&w=800&q=80"
-travelTips:
   - text: "The Pont de Bir-Hakeim bridge in Paris is easily accessible via metro and offers great photo opportunities of the Eiffel Tower."
   - text: "When visiting the filming locations in Tangier, consider hiring a local guide who can show you exactly where scenes were shot."
   - text: "University College London allows visitors to explore parts of the campus where filming took place."
   - text: "The best time to visit Fortress Mountain in Alberta is during winter months when the snow creates a landscape similar to the movie."
-trivia:
+travelTips: 
   - text: "The famous Paris folding scene combined practical effects with CGI - real buildings were not actually folded!"
   - text: "The zero-gravity hotel corridor fight scene took three weeks to film and used a massive rotating set rather than digital effects."
   - text: "Christopher Nolan built a full-scale Japanese castle interior inside a warehouse for the scenes in Saito's dream."
   - text: "The snow fortress scenes were filmed in the mountains of Alberta, Canada, not in the Alps as many viewers assume."
   - text: "The iconic 'kick' music (known as 'Time' by Hans Zimmer) was actually slowed-down French singer Édith Piaf's 'Non, je ne regrette rien'."
+trivia: 
 ---
 
 ## Inception: The World Inside Dreams

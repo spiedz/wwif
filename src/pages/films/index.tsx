@@ -9,6 +9,7 @@ import categoryAnalyticsService from '../../utils/categoryAnalytics';
 import PopularCategoriesContainer from '../../components/PopularCategoriesContainer';
 import BannerAd from '../../components/ads/BannerAd';
 import { AD_SLOTS } from '../../utils/adManager';
+import SearchBar from '../../components/search/SearchBar';
 
 interface FilmsPageProps {
   allFilms: Content<FilmMeta>[];
@@ -83,6 +84,13 @@ export default function FilmsPage({ allFilms }: FilmsPageProps) {
     return `Explore the real filming locations of ${filterValue} movies and TV shows`;
   };
 
+  // Handle search
+  const handleSearch = (query: string) => {
+    if (query.trim()) {
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -91,16 +99,26 @@ export default function FilmsPage({ allFilms }: FilmsPageProps) {
       </Head>
 
       <main className="container mx-auto px-4 py-8">
-        {/* Header with optional filter indicator */}
+        {/* Header with search */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-primary mb-2">
-            {activeFilter 
-              ? `${activeFilter.value.charAt(0).toUpperCase() + activeFilter.value.slice(1)} Films` 
-              : 'All Films'}
-          </h1>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+            <h1 className="text-4xl font-bold text-primary">
+              {activeFilter 
+                ? `${activeFilter.value.charAt(0).toUpperCase() + activeFilter.value.slice(1)} Films` 
+                : 'All Films'}
+            </h1>
+            
+            <div className="max-w-md w-full">
+              <SearchBar
+                onSearch={handleSearch}
+                placeholder="Search for films, locations, directors..."
+                showSuggestions={true}
+              />
+            </div>
+          </div>
           
           {activeFilter && (
-            <div className="flex items-center">
+            <div className="flex items-center mb-4">
               <span className="text-gray-600 mr-2">Filtering by {activeFilter.type}:</span>
               <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
                 {activeFilter.value}
@@ -117,6 +135,9 @@ export default function FilmsPage({ allFilms }: FilmsPageProps) {
             </div>
           )}
         </div>
+        
+        {/* Ad Banner */}
+        <BannerAd slot={AD_SLOTS.FILM_PAGE_BANNER} className="mb-8" />
         
         {/* Show Popular Categories when not filtered */}
         {!activeFilter && (
@@ -206,6 +227,9 @@ export default function FilmsPage({ allFilms }: FilmsPageProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const allFilms = await getAllFilms();
+  
+  // Sort by title alphabetically
+  allFilms.sort((a, b) => a.meta.title.localeCompare(b.meta.title));
   
   return {
     props: {

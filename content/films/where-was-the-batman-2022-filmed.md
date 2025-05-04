@@ -8,92 +8,65 @@ director: "Matt Reeves"
 genre: ["Action", "Crime", "Drama"]
 posterImage: "https://m.media-amazon.com/images/M/MV5BOTY2M2Y4MTAtYzgzOC00MjA3LTg0ZTctOTI4MzRjNDc3NGY2XkEyXkFqcGdeQXVyNTI4NjIwMjU@._V1_FMjpg_UX1000_.jpg"
 coordinates: [
-  { 
-    "lat": 47.6062, 
-    "lng": -122.3321, 
-    "name": "Seattle, Washington", 
+  {
+    "lat": 47.6062,
+    "lng": -122.3321,
+    "name": "Seattle, Washington",
     "description": "Many exterior shots of Gotham City were filmed in Seattle, known for its iconic skyline and moody atmosphere."
   },
-  { 
-    "lat": 34.0522, 
-    "lng": -118.2437, 
-    "name": "Los Angeles, California", 
+  {
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "name": "Los Angeles, California",
     "description": "Some interior scenes were shot in various studios around Los Angeles, utilizing soundstages and backlots."
   },
-  { 
-    "lat": 47.6553, 
-    "lng": -122.3037, 
-    "name": "University of Washington, Seattle", 
-    "description": "The university's stunning architecture served as a backdrop for several pivotal scenes."
+  {
+    "lat": 47.6553,
+    "lng": -122.3037,
+    "name": "University of Washington, Gotham Square",
+    "description": "The distinctive architecture of the University of Washington served as Gotham Square in several key scenes."
   },
-  { 
-    "lat": 34.0219, 
-    "lng": -118.4814, 
-    "name": "Santa Monica Pier, California", 
-    "description": "Featured prominently in a thrilling chase sequence, adding a unique seaside twist to Batman's urban escapades."
+  {
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "name": "London, England",
+    "description": "Parts of the film, particularly Wayne Tower exteriors, were shot in various locations around London."
   },
-  { 
-    "lat": 45.5200, 
-    "lng": -122.6819, 
-    "name": "Portland, Oregon", 
-    "description": "The city's gloomy streets and vintage architecture represented Gotham's darker corners effectively."
+  {
+    "lat": 51.4546,
+    "lng": -0.9690,
+    "name": "Wollaton Hall, Wayne Manor",
+    "description": "This Elizabethan country house in Nottinghamshire provided the exterior shots for Wayne Manor."
+  },
+  {
+    "lat": 51.4982,
+    "lng": -0.1066,
+    "name": "St. George's Hall, Liverpool",
+    "description": "This neoclassical building was transformed into Gotham City Hall for several pivotal scenes in the film."
   }
 ]
 streamingServices: [
   {
     "name": "HBO Max",
-    "url": "https://www.hbomax.com/the-batman-2022"
+    "url": "https://www.hbomax.com/feature/urn:hbo:feature:GYiDbSAmHpr7DwgEAAAAI"
   },
   {
-    "name": "Amazon Prime",
-    "url": "https://www.amazon.com/gp/video/search?phrase=The%20Batman"
+    "name": "Amazon Prime Video",
+    "url": "https://www.amazon.com/Batman-Robert-Pattinson/dp/B09TPKPGVM"
   },
   {
-    "name": "Disney+ (select regions)",
-    "url": "https://www.disneyplus.com/search?q=The%20Batman"
+    "name": "Apple TV",
+    "url": "https://tv.apple.com/us/movie/the-batman/umc.cmc.2rz10mgipk1wzcv8p75vhtmv2"
   }
 ]
-bookingOptions: [
-  {
-    "name": "Seattle Movie Tour",
-    "url": "https://www.seattlemovietour.com/",
-    "type": "tour",
-    "price": "$45",
-    "isPartner": true
-  },
-  {
-    "name": "Hollywood Sign Hike",
-    "url": "https://www.viator.com/tours/Los-Angeles/Hiking-to-the-Hollywood-Sign/d642-192346P1",
-    "type": "tour",
-    "price": "$39.99",
-    "discount": "$29.99",
-    "isPartner": true
-  },
-  {
-    "name": "Booking.com - Portland",
-    "url": "https://www.booking.com/searchresults.html?ss=Portland",
-    "type": "booking",
-    "price": "$79/night"
-  }
-]
-behindTheScenes: {
-  "intro": "The Batman (2022) brought a new darkness to the superhero genre, with director Matt Reeves crafting a gritty, detective noir film that redefined the iconic character. Filming took place mainly in the Pacific Northwest, utilizing the unique architecture and atmosphere of cities like Seattle and Portland.",
-  "facts": [
-    "The production team built detailed sets in soundstages, allowing for controlled lighting to create Gotham's ominous ambiance.",
-    "The film was shot primarily under strict COVID-19 protocols, with many scenes filmed during night shoots to maintain the film's moody aesthetic.",
-    "Robert Pattinson underwent extensive training to prepare for the physical demands of the role, including stunt work and fight choreography.",
-    "The score by Michael Giacchino incorporated dark, somber tones that complemented the film's gritty visual style.",
-    "Several locations in Seattle not only served as Gotham City but also highlighted the city's rich history and architectural beauty."
-  ]
-}
 ---
 
-<TheBatmanGuide />
+## The Batman (2022): A Dark Journey Through Gotham's Underbelly
 
-The Batman (2022) takes viewers on a thrilling and dark journey through Gotham City, beautifully portrayed through meticulously selected filming locations that enhance the film’s intense atmosphere. Director Matt Reeves successfully blended real-world locations with a cinematic vision, crafting a city that feels both familiar and haunting.
+Matt Reeves' "The Batman" (2022) brought a fresh, noir-inspired take on Gotham City, utilizing a variety of locations to create a brooding, atmospheric urban landscape. Unlike previous Batman films that often relied on Chicago or New York as their primary backdrop, "The Batman" crafted its distinct vision of Gotham through a combination of locations spanning from Seattle to Liverpool, creating one of the most visually striking iterations of Batman's home city.
 
-Though much of the film was shot in Washington and Oregon, it draws on the raw aesthetics of various urban landscapes to create a gripping portrayal of Gotham’s underbelly. Seattle's iconic skyline and rainy streets provided a perfect backdrop for the film’s ongoing themes of crime and justice, while the sprawling scenes in Portland added to the city’s gritty character.
+Seattle's rain-soaked streets and modernist architecture provided the perfect canvas for many of Gotham's exterior scenes. The film's production design team transformed areas of the city to enhance its gothic elements, adding gargoyles, art deco flourishes, and neon signage to existing buildings. The University of Washington's distinctive architecture became Gotham Square, where several pivotal scenes, including the funeral sequence, were filmed.
 
-From the dark alleyways of Seattle to the haunting architecture of the University of Washington, each filming location was chosen to reflect the story's somber tone, immersing audiences into the psyche of the characters. The movie captures the essence of Gotham while allowing viewers to visit these real-life locations and envision the unfolding suspense.
+Across the Atlantic, Liverpool played a crucial role in creating Gotham's old-world charm. St. George's Hall, with its neoclassical design, became Gotham City Hall, while the city's waterfront doubled for various Gotham districts. London locations provided additional urban settings, particularly for scenes involving Wayne Tower. Meanwhile, studio work in Los Angeles allowed for controlled environments for intricate action sequences and interior shots.
 
-Film enthusiasts and Batman fans alike can explore these filming sites, creating a unique experience that invites them to walk in the footsteps of the Dark Knight himself. Whether you’re in Seattle, Portland, or Los Angeles, you can discover where the cinematic magic happened and understand how these locations contributed to the film's immersive storytelling.
+The film's commitment to practical locations over CGI environments contributed significantly to its gritty realism. By blending these diverse locations, "The Batman" created a Gotham City that feels simultaneously familiar and otherworldly - a perfect setting for the Dark Knight's detective journey through the shadows of corruption.

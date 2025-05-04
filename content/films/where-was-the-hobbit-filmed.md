@@ -6,114 +6,105 @@ date: "2023-06-15"
 year: 2012
 director: "Peter Jackson"
 genre: ["Fantasy", "Adventure"]
-posterImage: "https://www.hobbit.com/wp-content/uploads/2020/09/hobbit-desolation-2-1.jpg"
+posterImage: "https://www.hobbitontours.com/media/1299/hobbiton-movie-set-bag-end-view.jpg"
 coordinates: [
-  { 
-    "lat": -41.2888, 
-    "lng": 173.9663, 
-    "name": "Hobbiton, Matamata", 
+  {
+    "lat": -38.2419,
+    "lng": 175.7851,
+    "name": "Hobbiton, Matamata",
     "description": "The iconic movie set showcasing the charming hobbit holes and the Green Dragon Inn, where fans can enjoy a drink."
   },
-  { 
-    "lat": -38.2419, 
-    "lng": 175.7851, 
-    "name": "Mount Doom (Ngauruhoe), Tongariro National Park", 
-    "description": "The fearsome volcano that served as the backdrop for the treacherous journey to destroy the One Ring."
+  {
+    "lat": -38.2419,
+    "lng": 175.7851,
+    "name": "Mount Doom (Ngauruhoe), Tongariro National Park",
+    "description": "This active stratovolcano in Tongariro National Park served as the dramatic backdrop for Mount Doom scenes."
   },
-  { 
-    "lat": -39.7647, 
-    "lng": 175.1557, 
-    "name": "Rivendell, Kaitoke Regional Park", 
-    "description": "The picturesque filming location that brought the Elven realm of Rivendell to life, complete with stunning waterfalls."
+  {
+    "lat": -44.1678,
+    "lng": 170.0939,
+    "name": "Lake Pukaki, Aoraki/Mount Cook",
+    "description": "The stunning turquoise waters of Lake Pukaki were used to depict Lake-town and the surrounding landscapes of Middle-earth."
   },
-  { 
-    "lat": -44.3480, 
-    "lng": 168.1646, 
-    "name": "Fiordland National Park", 
-    "description": "The dramatic landscapes that provided breathtaking backdrops for various journey scenes, including the Misty Mountains."
+  {
+    "lat": -45.0272,
+    "lng": 168.7348,
+    "name": "The Remarkables, Queenstown",
+    "description": "This mountain range provided the breathtaking backdrop for the Misty Mountains in the films."
   },
-  { 
-    "lat": -42.2000, 
-    "lng": 171.5857, 
-    "name": "Lake Tweed, Canterbury", 
-    "description": "Showcased beautiful landscapes for the scenes featuring the journey through the wilds of Middle-earth."
+  {
+    "lat": -41.1291,
+    "lng": 173.3090,
+    "name": "Pelorus River, Marlborough",
+    "description": "The stunning river where the famous barrel escape scene was filmed, with its crystal-clear waters and lush surroundings."
   },
-  { 
-    "lat": -41.4001, 
-    "lng": 174.7471, 
-    "name": "Wellington, Miramar", 
-    "description": "The home of Weta Workshop where much of the film's intricate visual effects and props were created."
+  {
+    "lat": -44.6694,
+    "lng": 169.1399,
+    "name": "Earnslaw Burn, Glenorchy",
+    "description": "This breathtaking location with its hanging glacier and cascading waterfalls was used for scenes where the dwarves journey through Middle-earth."
   },
-  { 
-    "lat": -44.3971, 
-    "lng": 168.1544, 
-    "name": "Queenstown", 
-    "description": "The stunning landscapes around Queenstown served as vital locations for the thrilling adventure sequences."
-  },
-  { 
-    "lat": -43.1456, 
-    "lng": 171.2245, 
-    "name": "The Southern Alps", 
-    "description": "These towering peaks delivered the sweeping vistas associated with Middle-earth’s grandeur."
+  {
+    "lat": -44.2414,
+    "lng": 170.0965,
+    "name": "Rock and Pillar Range, Otago",
+    "description": "These distinctive rock formations were transformed into the desolate landscapes where Azog pursues Thorin and company."
   }
 ]
 streamingServices: [
   {
-    "name": "Amazon Prime Video",
-    "url": "https://www.amazon.com/Hobbit-Trilogy/dp/B00I1Z7R3G"
+    "name": "HBO Max",
+    "url": "https://www.hbomax.com/feature/urn:hbo:feature:GXkRjxg7z3sLCwwEAAAP4"
   },
   {
-    "name": "HBO Max",
-    "url": "https://www.hbomax.com/hobbit"
+    "name": "Amazon Prime Video",
+    "url": "https://www.amazon.com/Hobbit-Unexpected-Journey-Ian-McKellen/dp/B00BEZTMJ8"
   },
   {
     "name": "Apple TV",
-    "url": "https://tv.apple.com/movies/the-hobbit"
+    "url": "https://tv.apple.com/us/movie/the-hobbit-an-unexpected-journey/umc.cmc.4ven3aa6a7aq8xl5pc8honpbb"
   }
 ]
 bookingOptions: [
   {
-    "name": "Hobbiton Movie Set Tour",
+    "name": "Hobbiton Movie Set Tours",
     "url": "https://www.hobbitontours.com/",
     "type": "tour",
-    "price": "$89 NZD",
+    "price": "NZD ",
     "isPartner": true
   },
   {
-    "name": "Tongariro Alpine Crossing Guided Tour",
-    "url": "https://www.tongariroalpinecrossing.com/",
+    "name": "Tongariro Crossing Guided Walk",
+    "url": "https://www.tongarirocrossing.org.nz/",
     "type": "tour",
-    "price": "$199 NZD",
-    "discount": "$179 NZD",
+    "price": "NZD ",
     "isPartner": true
   },
   {
-    "name": "Booking.com - New Zealand Accommodation",
-    "url": "https://www.booking.com/",
-    "type": "booking",
-    "price": "$120 NZD/night"
+    "name": "Air New Zealand",
+    "url": "https://www.airnewzealand.co.nz/",
+    "type": "flight",
+    "price": "Varies"
   }
 ]
 behindTheScenes: {
-  "intro": "The Hobbit trilogy, based on J.R.R. Tolkien's beloved work, was brought to life through an incredible blend of stunning New Zealand landscapes, groundbreaking technology, and dedicated craftsmanship.",
+  "intro": "The Hobbit trilogy, directed by Peter Jackson, was filmed entirely in New Zealand, showcasing the country's diverse and breathtaking landscapes. The production was a massive undertaking, employing thousands of local crew members and utilizing cutting-edge technology.",
   "facts": [
-    "The Hobbiton set was built in 1999 for the filming of 'The Lord of the Rings' and was revitalized for 'The Hobbit', featuring 44 unique hobbit holes.",
-    "Over 2,000 sheep were used as extras during the production, enhancing the authenticity of the New Zealand countryside.",
-    "The visual effects in 'The Hobbit' employed the latest technology, including high frame rate shooting at 48 frames per second.",
-    "Peter Jackson made cameo appearances in all three films, serving as a nod to his enduring connection to Middle-earth.",
-    "The original Hobbiton set was dismantled after filming of 'The Lord of the Rings', but was painstakingly rebuilt to last for future tourists."
+    "The Hobbiton movie set in Matamata was rebuilt with permanent materials, making it a lasting tourist attraction.",
+    "The three films were shot simultaneously over a period of 266 days.",
+    "The production team created over 5,000 costumes and used hundreds of prosthetics for the various races of Middle-earth.",
+    "Weta Workshop and Weta Digital created thousands of props and visual effects for the trilogy.",
+    "Peter Jackson used revolutionary 48 frames-per-second technology and 3D cameras to capture the films."
   ]
 }
 ---
 
-<HobbitGuide />
+## The Hobbit Trilogy: New Zealand's Middle-earth Adventure
 
-The Hobbit trilogy, directed by Peter Jackson, immerses audiences in the rich world of Middle-earth, beautifully brought to life through some of the most stunning locations across New Zealand. With its majestic mountains, lush green valleys, and dramatic coastlines, New Zealand serves not only as a backdrop but as a character itself in the saga of Bilbo Baggins and his quest.
+The Hobbit trilogy, directed by Peter Jackson, transformed New Zealand once again into the magical realm of Middle-earth, building upon the foundation established by The Lord of the Rings films. With its diverse landscapes ranging from rolling green hills to rugged mountains and crystal-clear rivers, New Zealand provided the perfect backdrop for Bilbo Baggins' unexpected journey.
 
-From the enchanting Hobbiton in Matamata, where fans can stroll through the iconic hobbit holes and sip a drink at the Green Dragon Inn, to the surreal landscapes of Tongariro National Park, which doubled for the perilous journeys through Mordor, every location was thoughtfully selected to represent Tolkien's legendary world.
+At the heart of The Hobbit's filming locations is the Hobbiton Movie Set in Matamata, which was reconstructed with permanent materials for the trilogy. Unlike its temporary construction for The Lord of the Rings, this version was built to last, allowing visitors to step directly into the charming Shire that Bilbo calls home. The attention to detail is extraordinary, with 44 hobbit holes, the Green Dragon Inn, and the Party Tree all meticulously crafted to bring Tolkien's vision to life.
 
-The trilogy not only featured spectacular vistas but also showcased the advanced filmmaking techniques and craftsmanship involved in creating a visually stunning experience. The use of practical effects combined with cutting-edge visual effects drew viewers deeper into the narrative, making each scene feel alive and immersive.
+Beyond Hobbiton, the production ventured to numerous locations across both the North and South Islands. The magnificent Tongariro National Park, with its volcanic landscapes, provided the desolate terrain of Mordor, while the turquoise waters of Lake Pukaki became the setting for Lake-town. The Remarkables mountain range near Queenstown formed the breathtaking backdrop for the Misty Mountains, and the Pelorus River hosted the exciting barrel escape sequence, showcasing the dwarves' ingenuity.
 
-Visitors to New Zealand can explore these remarkable filming locations through various guided tours that offer insight into the filmmaking process. Whether you're hiking the trails of the Tongariro Alpine Crossing or enjoying a laid-back tour of Hobbiton, you can relive Bilbo's adventures in the breathtaking landscapes of Middle-earth.
-
-As you plan your journey through New Zealand, these iconic filming locations will leave you with unforgettable memories, as you step into the shoes of hobbits, elves, and dwarves, and discover the magic of 'The Hobbit' in real life.
+What makes The Hobbit's filming locations so special is the way they blend seamlessly with the story's fantasy elements. Jackson's team selected sites that required minimal digital enhancement, allowing New Zealand's natural beauty to shine through while still creating a world that feels magical and otherworldly. Today, these locations attract thousands of tourists annually, all eager to experience their own adventure in Middle-earth while appreciating the stunning landscapes that New Zealand has to offer.

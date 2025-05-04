@@ -42,14 +42,9 @@ export interface BehindTheScenes {
 
 export interface ContentMeta {
   title: string;
-  description: string;
+  description?: string;
   slug: string;
   date?: string;
-  categories?: string[];
-  components?: string[];
-  featuredImage?: string;
-  gallery?: string[];
-  content?: string;
 }
 
 export interface StreamingService {
@@ -68,29 +63,32 @@ export interface BookingOption {
   logo?: string;
 }
 
+export interface Coordinate {
+  lat: number;
+  lng: number;
+  name: string;
+  description?: string;
+  image?: string;
+}
+
 export interface FilmMeta extends ContentMeta {
-  year: number | string;
-  genre: string[] | string;
+  year: number;
   director: string;
-  coordinates: Coordinates[];
-  regions?: FilmRegion[];
-  travelTips?: TravelTip[];
-  trivia?: FilmTrivia[];
-  useRegionLayout?: boolean;
-  behindTheScenes?: string | BehindTheScenes;
-  streamingServices?: StreamingService[];
-  bookingOptions?: BookingOption[];
+  genre: string | string[];
   posterImage?: string;
-  location?: string;
+  coordinates?: Coordinate[];
 }
 
 export interface BlogMeta extends ContentMeta {
-  author?: string;
+  author: string;
   featuredImage?: string;
-  estimatedReadingTime?: number;
-  gallery?: string[];
-  relatedPosts?: string[];
-  location?: string;
+  tags?: string[];
+}
+
+export interface SearchResult {
+  meta: FilmMeta;
+  content?: string;
+  html?: string;
 }
 
 export interface Content<T extends ContentMeta> {

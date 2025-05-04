@@ -242,3 +242,72 @@ The base AdSense script must be added to the Next.js app in a way that ensures i
 2. Placement optimization and performance testing: 1 week
 3. Compliance and policy implementation: 3 days
 4. Testing and refinement: 4 days 
+
+# Film Search Feature PRD
+
+## Overview
+Implement a comprehensive search feature for the "Where Was It Filmed" website that allows users to search for films by title, location, and other relevant metadata. The search should be intuitive, fast, and enhance the overall user experience.
+
+## Requirements
+
+### Core Search Functionality
+- Create a responsive search UI with an input field and search button
+- Implement real-time search suggestions as users type
+- Search should query across multiple film attributes:
+  - Film titles
+  - Filming locations (cities, landmarks, countries)
+  - Year of release
+  - Director
+  - Genre
+
+### Search Results Page
+- Design and implement a dedicated search results page
+- Display search results with film thumbnails and basic information
+- Include pagination or infinite scroll for handling large result sets
+- Allow filtering of search results by categories (year, genre, location)
+- Show "No results found" with suggestions when appropriate
+
+### Search Implementation
+- Build a client-side search index for fast results
+- Ensure search is case-insensitive and handles partial matches
+- Implement fuzzy search to account for typos and misspellings
+- Add highlighting of matched terms in the search results
+- Store recent search history in local storage
+
+### UI/UX Requirements
+- The search bar should be accessible from every page
+- Mobile-friendly design with appropriate touch targets
+- Implement loading states to indicate search is in progress
+- Use animation for a polished experience
+- Maintain the site's existing design language and color scheme
+
+### Performance Requirements
+- Search results should appear within 300ms
+- Lazy load images in search results
+- Implement debounce for search input to avoid excessive re-rendering
+- Optimize bundle size for any new dependencies
+
+## Technical Constraints
+- Build using the existing Next.js framework
+- Search should work client-side without requiring a dedicated backend
+- Use TypeScript for all new components
+- Follow existing component structure and naming conventions
+- Implement appropriate unit tests for search functionality
+
+## Success Metrics
+- Search feature correctly returns all relevant films
+- Users can find films by partial name or location matches
+- UI remains responsive during search operations
+- Search index updates when new films are added to the site
+
+## Timeline
+- Design: 1-2 days
+- Implementation: 3-5 days
+- Testing: 1-2 days
+- Refinement: 1 day
+
+## Future Enhancements (Not in initial scope)
+- Advanced filtering options
+- Voice search capabilities
+- Search analytics to track popular queries
+- Personalized search based on user history 

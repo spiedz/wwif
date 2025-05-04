@@ -49,19 +49,19 @@ coordinates:
     name: "Atlanta, Georgia - Hawkins Quarry"
     description: "The quarry where the kids go swimming and where Will's 'body' is found is actually located in the Bellwood Quarry in Atlanta."
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bellwood_Quarry.jpg/800px-Bellwood_Quarry.jpg"
-travelTips:
   - text: "Jackson, Georgia offers guided tours of the Stranger Things filming locations in the downtown area, which is a must for fans."
   - text: "Many of the locations are private property or have been altered since filming, so always be respectful and observe from public areas only."
   - text: "The best time to visit is during the spring or fall when Georgia weather is most pleasant for walking tours."
   - text: "Unfortunately, Starcourt Mall was a temporary set inside an actual dying mall and is no longer accessible, so don't plan your trip around it."
   - text: "Bring your camera to Jackson square where you can recreate several iconic scenes from the show."
-trivia:
+travelTips: 
   - text: "The original pilot was actually shot in Georgia despite being set in Indiana because of tax incentives for film production."
   - text: "The Duffer Brothers extensively researched small-town Indiana to create a convincing setting despite filming in Georgia."
   - text: "Many buildings used in the show are dressed differently between seasons to reflect the time period changes (early to mid-1980s)."
   - text: "The iconic Stranger Things title sequence was inspired by the work of designer Richard Greenberg, who created several iconic 1980s movie titles."
   - text: "The Hawkins Laboratory building (Emory University's Briarcliff Campus) was previously a real psychiatric hospital, adding to its eerie atmosphere."
   - text: "The set designers created over 20 unique period-appropriate storefronts for Starcourt Mall."
+trivia: 
 ---
 
 # Stranger Things Filming Locations
