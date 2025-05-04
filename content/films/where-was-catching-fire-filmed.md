@@ -9,7 +9,7 @@ genre:
   - "Action"
   - "Adventure"
   - "Sci-Fi"
-posterImage: "N/A"
+posterImage: "https://i.ebayimg.com/images/g/DmQAAOSworxepPyR/s-l1200.jpg"
 coordinates:
   - lat: 1.2921
     lng: 36.8219
