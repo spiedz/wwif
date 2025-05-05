@@ -7,8 +7,8 @@ releaseYearStart: 2002
 releaseYearEnd: null
 creator: "Danny Boyle"
 genres: ["Horror", "Drama", "Thriller"]
-posterImage: "https://upload.wikimedia.org/wikipedia/en/0/07/28_days_later_poster.jpg"
-bannerImage: "https://example.com/banner-28-days-later.jpg"
+posterImage: "https://upload.wikimedia.org/wikipedia/en/e/e4/28_days_later.jpg"
+bannerImage: "https://www.filmcomment.com/wp-content/uploads/sites/2/2014/05/28days_01-feature-1600x900-c-default.jpg"
 coordinates:
   - lat: 51.5007
     lng: -0.1246
