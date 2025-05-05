@@ -362,3 +362,79 @@ The website is experiencing several critical issues:
 - Search functionality works properly
 - No YAML parsing errors in the logs
 - Map and coordinate displays handle null values gracefully 
+
+# Where Was It Filmed - TV Series Feature
+
+## Overview
+Add TV series support to the "Where Was It Filmed" website, which previously only supported movies. This will include creating data models, APIs, and UI components specifically for TV series content.
+
+## Requirements
+
+### Data Model
+- Create a TV Series data model with fields for title, description, seasons, episodes, filming locations, etc.
+- Support for ongoing series with open-ended release dates
+- Store series metadata like creator, genres, release years
+- Support multiple filming locations per series
+
+### API Implementation
+- Create API endpoints for retrieving TV series data
+- Update search functionality to include series
+- Support filtering search results by content type (film or series)
+
+### UI Components
+- Series listing page showing all available TV series
+- Series detail page showing filming locations
+- Series Card component for displaying series in lists
+- Update navigation to include TV series section
+
+### Search Integration
+- Add TV series to global search results
+- Support filtering search by content type
+- Add appropriate metadata for TV series search results
+
+## Existing Implementation
+Several components have already been implemented:
+- Data models in src/types/series.ts
+- Updated markdown.ts to handle TV series content
+- Example content files for series like "Stranger Things" and "Game of Thrones"
+- UI components like SeriesLocationsGuide.tsx
+- Added pages for series listings and individual series
+- Updated navigation to include TV series
+
+## Current Bugs
+- JSON serialization issue with releaseYearEnd property
+- Next.js Link component issues with nested <a> tags
+- TypeScript errors in various files
+
+## Success Criteria
+- Users can browse TV series filming locations
+- Search functionality properly includes TV series results
+- No TypeScript errors or console warnings
+- All pages render correctly without errors 
+
+# TV Series Feature Bug Fix
+
+## Project Overview
+Where Was It Filmed (WWIF) is a website showcasing real filming locations of popular movies and TV shows. The website currently has a bug in the TV Series feature that needs to be fixed.
+
+## Current Issues
+1. The main series listing page at `/series` has an error in the SEO component where the SEO component fails with "Cannot use 'in' operator to search for 'genre' in undefined".
+2. The individual series page `/series/[slug]` needs to be updated to match the same SEO component pattern used in other pages.
+3. A standardized template for adding new TV series is missing from the content templates collection.
+
+## Requirements
+1. Fix the SEO component usage in `/series/index.tsx` to properly provide all required meta fields.
+2. Update the SEO component usage in `/series/[slug].tsx` to match the same pattern.
+3. Create a series template file in the content/templates directory to make it easier to add new series in the future.
+4. Test the fixes by running the app and navigating to the series pages.
+
+## Technical Specifications
+- The SEO component requires a properly structured meta object with at least title, description, and slug fields.
+- The series pages need to match the existing patterns used in film and blog pages.
+- The template should follow the same structure as the existing TV series files.
+
+## Success Criteria
+1. Navigating to `/series` loads without errors.
+2. Navigating to individual series pages like `/series/where-was-stranger-things-filmed` works correctly.
+3. The template makes it easy to add new TV series content.
+4. All SEO features function correctly on series pages. 

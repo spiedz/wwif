@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2016
 director: "Anthony and Joe Russo"
 genre: ["Action", "Adventure", "Sci-Fi"]
-posterImage: "https://upload.wikimedia.org/wikipedia/en/0/0c/Captain_America_Civil_War_poster.jpg"
+posterImage: "https://static1.srcdn.com/wordpress/wp-content/uploads/2019/11/Captain-America-Civil-War.jpg"
 coordinates: [
   { 
     "lat": 38.6270, 

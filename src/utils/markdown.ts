@@ -7,9 +7,11 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypePrettyCode from 'rehype-pretty-code';
 import { BlogMeta, Content, FilmMeta } from '../types/content';
+import { TVSeries, SeriesMeta } from '../types/series';
 
 const filmsDirectory = path.join(process.cwd(), 'content/films');
 const blogDirectory = path.join(process.cwd(), 'content/blog');
+const seriesDirectory = path.join(process.cwd(), 'content/series');
 
 /**
  * Default rehype-pretty-code configuration options
@@ -45,6 +47,21 @@ export function getBlogSlugs() {
       .map((fileName) => fileName.replace(/\.md$/, ''));
   } catch (error) {
     console.error('Error reading blog slugs:', error);
+    return [];
+  }
+}
+
+/**
+ * Gets all TV series slugs from the series directory
+ */
+export function getSeriesSlugs() {
+  try {
+    const fileNames = fs.readdirSync(seriesDirectory);
+    return fileNames
+      .filter((fileName) => fileName.endsWith('.md'))
+      .map((fileName) => fileName.replace(/\.md$/, ''));
+  } catch (error) {
+    console.error('Error reading series slugs:', error);
     return [];
   }
 }
@@ -238,4 +255,80 @@ export async function getRelatedBlogPosts(currentSlug: string, limit = 3): Promi
   }
   
   return relatedPosts;
+}
+
+/**
+ * Gets a TV series by its slug
+ */
+export async function getSeriesBySlug(slug: string): Promise<TVSeries | null> {
+  try {
+    const fullPath = path.join(seriesDirectory, `${slug}.md`);
+    if (!fs.existsSync(fullPath)) {
+      return null;
+    }
+
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data, content } = matter(fileContents);
+
+    // Process content with remark
+    const processedContent = await remark()
+      .use(remarkRehype)
+      .use(rehypePrettyCode, prettycodeOptions)
+      .use(rehypeStringify)
+      .process(content);
+
+    const htmlContent = processedContent.toString();
+
+    return {
+      meta: {
+        slug,
+        title: data.title || '',
+        description: data.description || '',
+        overview: data.overview || '',
+        releaseYearStart: data.releaseYearStart || null,
+        releaseYearEnd: data.releaseYearEnd === undefined ? null : data.releaseYearEnd,
+        genres: data.genres || [],
+        creator: data.creator || '',
+        posterImage: data.posterImage || '',
+        bannerImage: data.bannerImage || '',
+        coordinates: data.coordinates || [],
+        streamingServices: data.streamingServices || [],
+        bookingOptions: data.bookingOptions || [],
+        behindTheScenes: data.behindTheScenes || null,
+        seasons: data.seasons || [],
+        episodes: data.episodes || [],
+        locations: data.locations || [],
+      },
+      content,
+      html: htmlContent,
+    };
+  } catch (error) {
+    console.error(`Error getting series by slug (${slug}):`, error);
+    return null;
+  }
+}
+
+/**
+ * Gets all TV series
+ */
+export async function getAllSeries(): Promise<TVSeries[]> {
+  const slugs = getSeriesSlugs();
+  const seriesPromises = slugs.map((slug) => getSeriesBySlug(slug));
+  const allSeries = await Promise.all(seriesPromises);
+  
+  // Ensure all series have releaseYearEnd as null when undefined
+  return allSeries
+    .filter(Boolean)
+    .map(series => {
+      if (series) {
+        return {
+          ...series,
+          meta: {
+            ...series.meta,
+            releaseYearEnd: series.meta.releaseYearEnd === undefined ? null : series.meta.releaseYearEnd
+          }
+        };
+      }
+      return series;
+    }) as TVSeries[];
 } 

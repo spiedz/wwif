@@ -174,15 +174,24 @@ const SearchPage: NextPage = () => {
     return paginationItems;
   };
 
-  // Extract film data from search result item
-  const getFilmData = (result: any) => {
+  // Extract content data from search result item
+  const getContentData = (result: any) => {
     // Handle different result formats
     if (result.item && result.item.meta) {
-      return result.item.meta;
+      return {
+        meta: result.item.meta,
+        type: result.item.type || 'film' // Default to film if type is not specified
+      };
     } else if (result.meta) {
-      return result.meta;
+      return {
+        meta: result.meta,
+        type: result.type || 'film'
+      };
     } else {
-      return result;
+      return {
+        meta: result,
+        type: 'film'
+      };
     }
   };
 
@@ -196,13 +205,13 @@ const SearchPage: NextPage = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold mb-4">Search Films</h1>
+            <h1 className="text-3xl font-bold mb-4">Search Content</h1>
             
             <SearchBar 
               initialValue={query}
               onSearch={handleSearch}
               autoFocus={true}
-              placeholder="Search for films, locations, directors..."
+              placeholder="Search for films, TV series, locations..."
               className="mb-4"
             />
             
@@ -234,27 +243,30 @@ const SearchPage: NextPage = () => {
                   {totalResults > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                       {results.map((result, index) => {
-                        // Get film data with fallback for different structures
-                        const film = getFilmData(result);
+                        // Get content data with fallback for different structures
+                        const { meta: content, type } = getContentData(result);
                         
-                        // Ensure film data is valid
-                        if (!film) return null;
+                        // Ensure content data is valid
+                        if (!content) return null;
 
                         // Create a safe slug for the link
-                        const filmSlug = film.slug || `unknown-${index}`;
+                        const contentSlug = content.slug || `unknown-${index}`;
+                        
+                        // Determine the correct URL based on content type
+                        const contentUrl = type === 'series' ? `/series/${contentSlug}` : `/films/${contentSlug}`;
                         
                         return (
                           <Link 
-                            href={`/films/${filmSlug}`} 
-                            key={`film-${index}`}
+                            href={contentUrl} 
+                            key={`content-${index}`}
                             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
                           >
                             <div className="aspect-video relative bg-gray-200">
-                              {film.posterImage ? (
+                              {content.posterImage ? (
                                 <div className="relative w-full h-40">
                                   <Image 
-                                    src={film.posterImage} 
-                                    alt={film.title || 'Film poster'}
+                                    src={content.posterImage} 
+                                    alt={content.title || 'Content poster'}
                                     fill
                                     className="object-cover" 
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -268,21 +280,37 @@ const SearchPage: NextPage = () => {
                             </div>
                             <div className="p-4">
                               <h3 className="font-bold text-lg mb-1 line-clamp-2">
-                                {film.title || 'Untitled Film'}
+                                {content.title || 'Untitled'}
                               </h3>
                               
-                              {film.year && (
-                                <p className="text-gray-600 mb-1">{film.year}</p>
+                              {/* Display badge for content type */}
+                              <div className="mb-2">
+                                <span className={`text-xs font-medium px-2 py-1 rounded ${type === 'series' ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'}`}>
+                                  {type === 'series' ? 'TV Series' : 'Film'}
+                                </span>
+                              </div>
+                              
+                              {/* Year display - handle different properties for films vs series */}
+                              {(content.year || content.releaseYearStart) && (
+                                <p className="text-gray-600 mb-1">
+                                  {content.year || content.releaseYearStart}
+                                  {content.releaseYearEnd && content.releaseYearEnd !== content.releaseYearStart && 
+                                    ` - ${content.releaseYearEnd === null ? 'Present' : content.releaseYearEnd}`}
+                                </p>
                               )}
                               
-                              {film.director && (
-                                <p className="text-sm text-gray-600 mb-2">Director: {film.director}</p>
+                              {/* Creator/Director display */}
+                              {(content.director || content.creator) && (
+                                <p className="text-sm text-gray-600 mb-2">
+                                  {content.director ? `Director: ${content.director}` : `Creator: ${content.creator}`}
+                                </p>
                               )}
                               
-                              {film.genre && (
+                              {/* Genre display - handle different properties for films vs series */}
+                              {(content.genre || content.genres) && (
                                 <div className="flex flex-wrap gap-1 mt-1 mb-3">
-                                  {Array.isArray(film.genre) 
-                                    ? film.genre.filter(Boolean).map((genre: string, idx: number) => (
+                                  {Array.isArray(content.genre) 
+                                    ? content.genre.filter(Boolean).map((genre: string, idx: number) => (
                                         <span 
                                           key={`genre-${idx}`} 
                                           className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded"
@@ -290,18 +318,27 @@ const SearchPage: NextPage = () => {
                                           {genre}
                                         </span>
                                       ))
-                                    : typeof film.genre === 'string' ? (
+                                    : Array.isArray(content.genres)
+                                    ? content.genres.filter(Boolean).map((genre: string, idx: number) => (
+                                        <span 
+                                          key={`genre-${idx}`} 
+                                          className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded"
+                                        >
+                                          {genre}
+                                        </span>
+                                      ))
+                                    : typeof content.genre === 'string' ? (
                                         <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                          {film.genre}
+                                          {content.genre}
                                         </span>
                                       ) : null
                                   }
                                 </div>
                               )}
                               
-                              {film.description && (
+                              {content.description && (
                                 <p className="text-gray-700 text-sm line-clamp-2">
-                                  {film.description}
+                                  {content.description}
                                 </p>
                               )}
                             </div>

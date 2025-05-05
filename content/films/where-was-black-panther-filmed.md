@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2018
 director: "Ryan Coogler"
 genre: ["Action", "Adventure", "Sci-Fi"]
-posterImage: "https://upload.wikimedia.org/wikipedia/en/2/24/Black_Panther_film_poster.jpg"
+posterImage: "https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg?region=0,0,540,810"
 coordinates: [
   { 
     "lat": -26.2041, 
