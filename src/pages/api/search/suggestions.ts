@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getAllFilms } from '../../../utils/markdown';
-import searchService from '../../../utils/searchService';
+import { getAllFilms, getAllSeries } from '../../../utils/markdown';
+import searchService, { ContentType } from '../../../utils/searchService';
 
 export default async function handler(
   req: NextApiRequest,
@@ -13,7 +13,7 @@ export default async function handler(
     }
 
     // Get query params
-    const { q, limit = '5' } = req.query;
+    const { q, limit = '5', contentType } = req.query;
     
     // Query must be provided
     if (!q || typeof q !== 'string' || !q.trim()) {
@@ -27,17 +27,27 @@ export default async function handler(
     const parsedLimit = parseInt(limit as string, 10);
     const maxSuggestions = !isNaN(parsedLimit) ? Math.min(parsedLimit, 10) : 5;
     
+    // Get content type if specified
+    let selectedContentType: ContentType | undefined;
+    if (contentType === 'films') {
+      selectedContentType = ContentType.FILM;
+    } else if (contentType === 'series') {
+      selectedContentType = ContentType.SERIES;
+    }
+    
     // Initialize search service if needed
     if (!searchService.isInitialized()) {
       const films = await getAllFilms();
-      searchService.initialize(films);
+      const series = await getAllSeries();
+      searchService.initialize(films, series);
     }
     
     // Get suggestions
-    const suggestions = searchService.getSuggestions(q, maxSuggestions);
+    const suggestions = searchService.getSuggestions(q, selectedContentType, maxSuggestions);
     
     return res.status(200).json({
       query: q,
+      contentType: contentType || 'all',
       count: suggestions.length,
       suggestions
     });

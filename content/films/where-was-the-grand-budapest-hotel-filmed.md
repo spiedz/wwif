@@ -5,7 +5,7 @@ description: "Explore the real-world locations behind The Grand Budapest Hotel, 
 year: 2014
 director: "Wes Anderson"
 genre: ["Comedy", "Drama", "Adventure"]
-posterImage: "https://upload.wikimedia.org/wikipedia/en/a/a6/The_Grand_Budapest_Hotel_Poster.jpg"
+posterImage: "https://i.etsystatic.com/5148979/r/il/1ca5be/628601329/il_570xN.628601329_2m9u.jpg"
 useRegionLayout: true
 date: "2023-05-15"
 coordinates: 

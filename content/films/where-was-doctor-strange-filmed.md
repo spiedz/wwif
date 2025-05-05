@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2016
 director: "Scott Derrickson"
 genre: ["Action", "Adventure", "Fantasy"]
-posterImage: "https://upload.wikimedia.org/wikipedia/en/c/c7/Doctor_Strange_poster.jpg"
+posterImage: "https://www.robertmitchellevans.com/wp-content/uploads/2016/11/1-doctor_strange_2016-HD.jpg"
 coordinates: [
   { 
     "lat": 40.7587, 

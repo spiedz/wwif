@@ -6,7 +6,7 @@ date: "2023-10-10"
 year: 2021
 director: "Denis Villeneuve"
 genre: ["Sci-Fi", "Adventure", "Drama"]
-posterImage: "N/A"
+posterImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmLuu4NxQvuGQQBciWcTNJrBGch9e_I6CtA&s"
 coordinates: [
   { 
     "lat": 26.3206, 

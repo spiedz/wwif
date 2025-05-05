@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2012
 director: "Peter Jackson"
 genre: ["Fantasy", "Adventure"]
-posterImage: "https://www.hobbitontours.com/media/1299/hobbiton-movie-set-bag-end-view.jpg"
+posterImage: "https://m.media-amazon.com/images/I/81FUvFZBVyL.jpg"
 coordinates: [
   {
     "lat": -38.2419,

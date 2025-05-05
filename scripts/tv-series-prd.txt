@@ -1,0 +1,70 @@
+# Product Requirements Document: TV Series Feature for "Where Was It Filmed"
+
+## Background
+"Where Was It Filmed" is a successful website showcasing filming locations for movies. Users can discover, explore, and learn about real-world locations where their favorite films were shot. We want to expand this concept to include TV series, as many popular shows have iconic filming locations that fans would love to visit.
+
+## Feature Overview
+Add TV series support to the website, allowing users to explore filming locations for popular TV shows just like they can for movies. The feature should maintain consistency with the existing film experience while accounting for TV series-specific attributes (seasons, episodes, etc.).
+
+## Requirements
+
+### Core Functionality
+1. Create a data model for TV series that includes:
+   - Series title
+   - Series poster/image
+   - Overview/description
+   - Release years (start-end)
+   - Genres
+   - Seasons information
+   - Filming locations with coordinates, descriptions, and episode references
+
+2. Extend existing search to include TV series results alongside films
+
+3. Add a dedicated TV Series discovery page at /series similar to the existing /films page
+
+4. Create individual TV series pages with:
+   - Overview information
+   - Interactive map of filming locations
+   - Location cards with images and details
+   - Season-specific location filtering (if applicable)
+
+### User Experience
+1. Update navigation to include TV Series as a main category
+
+2. Ensure the homepage features both films and TV series
+
+3. Maintain consistent UI patterns between film and TV series pages
+
+4. Allow users to filter search results by content type (films, TV series, or both)
+
+### Technical Requirements
+1. Reuse existing components where possible (MapView, LocationCard, etc.)
+
+2. Create TV series-specific components as needed
+
+3. Follow the same content structure for TV series as films (Markdown files, images, etc.)
+
+4. Include SEO optimization for TV series pages
+
+5. Ensure responsive design works correctly with new TV series components
+
+### Content
+1. Add at least 5 initial TV series with complete location data for launch
+
+2. Include high-quality images for each location
+
+3. Write detailed descriptions for each filming location
+
+## Non-functional Requirements
+1. Maintain page load performance with the addition of TV series data
+
+2. Ensure compatibility with existing analytics tracking
+
+3. Update site architecture to accommodate the new content type
+
+4. Include proper Open Graph tags for TV series pages for social sharing
+
+## Project Scope
+- Primary focus is adding the TV series content type and discovery
+- Existing film functionality should remain unchanged
+- User accounts and authentication are out of scope for this feature 

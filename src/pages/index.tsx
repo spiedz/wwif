@@ -73,6 +73,12 @@ export default function Home() {
                   Browse Films
                 </Link>
                 <Link 
+                  href="/series" 
+                  className="inline-block bg-white text-primary font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-colors"
+                >
+                  Browse Series
+                </Link>
+                <Link 
                   href="/blog" 
                   className="inline-block border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors"
                 >
@@ -140,6 +146,72 @@ export default function Home() {
           showViewAll={true}
           maxCategories={6}
         />
+        
+        {/* TV Series Section */}
+        <section className="mb-16">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-800">Popular TV Series</h2>
+            <Link 
+              href="/series" 
+              className="text-primary hover:text-red-700 font-medium flex items-center"
+            >
+              View All Series
+              <svg className="w-5 h-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Where Was Stranger Things Filmed?",
+                description: "Explore the real-world locations behind the supernatural hit series.",
+                image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+                slug: "where-was-stranger-things-filmed"
+              },
+              {
+                title: "Where Was Game of Thrones Filmed?",
+                description: "Discover the stunning locations that brought Westeros to life.",
+                image: "https://images.unsplash.com/photo-1576549116895-29f97be12d6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+                slug: "where-was-game-of-thrones-filmed"
+              },
+              {
+                title: "Where Was Breaking Bad Filmed?",
+                description: "Visit the real Albuquerque locations from the iconic crime drama.",
+                image: "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+                slug: "where-was-breaking-bad-filmed"
+              }
+            ].map((series, index) => (
+              <Link key={index} href={`/series/${series.slug}`} className="block group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100">
+                  <div className="h-48 overflow-hidden relative">
+                    <img 
+                      src={series.image} 
+                      alt={series.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300";
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2 group-hover:text-primary transition-colors">{series.title}</h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">{series.description}</p>
+                    <div className="flex justify-end">
+                      <span className="text-primary group-hover:text-red-700 font-medium text-sm flex items-center transition-colors">
+                        Explore Locations
+                        <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
         
         {/* Featured Locations */}
         <section className="mb-16">

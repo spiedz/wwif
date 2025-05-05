@@ -6,7 +6,7 @@ date: "2023-06-15"
 year: 2008
 director: "Jon Favreau"
 genre: ["Action", "Adventure", "Sci-Fi"]
-posterImage: "https://m.media-amazon.com/images/I/71vnRYY6y6L._AC_SY679_.jpg"
+posterImage: "https://en-academic.com/pictures/enwiki/73/Ironmanposter.JPG"
 coordinates: [
   { 
     "lat": 34.0522, 
