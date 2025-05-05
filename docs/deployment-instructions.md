@@ -14,7 +14,7 @@ Before deploying, you need to set up the following environment variables in Verc
 
 | Variable | Description | Example |
 | -------- | ----------- | ------- |
-| `NEXT_PUBLIC_BASE_URL` | The base URL of your website | `https://wherewasitfilmed.com` |
+| `NEXT_PUBLIC_BASE_URL` | The base URL of your website | `https://wherewasitfilmed.co` |
 | `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Your Google Maps API key | `AIza...` |
 
 ## Deployment Steps

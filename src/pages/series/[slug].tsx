@@ -71,17 +71,17 @@ export default function SeriesPage({ series }: SeriesPageProps) {
             'name': 'Where Was It Filmed',
             'logo': {
               '@type': 'ImageObject',
-              'url': 'https://wherewasitfilmed.com/logo.png'
+              'url': 'https://wherewasitfilmed.co/logo.png'
             }
           },
-          'url': `https://wherewasitfilmed.com/series/${meta.slug}`,
+          'url': `https://wherewasitfilmed.co/series/${meta.slug}`,
           'datePublished': new Date().toISOString(),
           'dateCreated': new Date().toISOString(),
           'dateModified': new Date().toISOString(),
           'description': meta.description,
           'mainEntityOfPage': {
             '@type': 'WebPage',
-            '@id': `https://wherewasitfilmed.com/series/${meta.slug}`,
+            '@id': `https://wherewasitfilmed.co/series/${meta.slug}`,
           }
         }}
       />

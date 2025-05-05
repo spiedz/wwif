@@ -11,7 +11,7 @@ import SearchBar from '../components/search/SearchBar';
 
 export default function Home() {
   const router = useRouter();
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com';
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
   const currentUrl = `${BASE_URL}${router.asPath}`;
   
   // Create page metadata

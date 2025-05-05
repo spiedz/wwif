@@ -1,7 +1,7 @@
 import { FilmMeta, BlogMeta, Coordinates } from '../types/content';
 
 // Base URL for the website
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
 
 // Helper to generate organization schema
 export const getOrganizationSchema = () => {

@@ -27,7 +27,7 @@ jobs:
       - name: Generate sitemap
         run: npm run generate-sitemap
         env:
-          NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com' }}
+          NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co' }}
       
       - uses: amondnet/vercel-action@v25
         if: github.event_name == 'push'

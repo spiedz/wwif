@@ -3,7 +3,7 @@ import { getFilmSlugs, getBlogSlugs, getSeriesSlugs } from '../utils/markdown';
 import fs from 'fs';
 import path from 'path';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
 
 // Get the last modified date of a file
 function getFileLastModified(filepath: string): string {

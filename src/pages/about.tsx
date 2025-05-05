@@ -35,7 +35,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
 export default function AboutPage() {
   const router = useRouter();
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com';
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
   const currentUrl = `${BASE_URL}${router.asPath}`;
   
   // Create page metadata
@@ -721,8 +721,8 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <h4 className="text-xl font-medium text-gray-800 mb-1">Email</h4>
-                        <p className="text-gray-600">info@wherewasitfilmed.com</p>
-                        <p className="text-gray-600">support@wherewasitfilmed.com</p>
+                        <p className="text-gray-600">info@wherewasitfilmed.co</p>
+                        <p className="text-gray-600">support@wherewasitfilmed.co</p>
                       </div>
                     </div>
                     

@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
 
 function generateRobotsTxt() {
   return `# *
