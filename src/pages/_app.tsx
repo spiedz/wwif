@@ -40,6 +40,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         
         <meta name="google-site-verification" content="your-verification-code" />
         
+        {/* Google AdSense account */}
+        <meta name="google-adsense-account" content="ca-pub-1419518181504900" />
+        
         {/* Google AdSense script */}
         <script 
           async 
