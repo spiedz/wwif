@@ -43,7 +43,7 @@ export default function FilmPage({ film }: FilmPageProps) {
 
   const currentUrl = process.env.NEXT_PUBLIC_BASE_URL ? 
     `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}` : 
-    `https://wherewasitfilmed.com${router.asPath}`;
+    `https://wherewasitfilmed.co${router.asPath}`;
     
   // Generate JSON-LD schema for this film page
   const filmSchema = getFilmSchema(film.meta, currentUrl);
@@ -51,8 +51,8 @@ export default function FilmPage({ film }: FilmPageProps) {
   
   // Generate breadcrumb schema
   const breadcrumbItems = [
-    { name: 'Home', url: 'https://wherewasitfilmed.com/' },
-    { name: 'Films', url: 'https://wherewasitfilmed.com/films/' },
+    { name: 'Home', url: 'https://wherewasitfilmed.co/' },
+    { name: 'Films', url: 'https://wherewasitfilmed.co/films/' },
     { name: film.meta.title, url: currentUrl }
   ];
   const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);

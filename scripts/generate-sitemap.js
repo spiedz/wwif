@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const prettier = require('prettier');
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
 
 // Get all film slugs
 function getFilmSlugs() {

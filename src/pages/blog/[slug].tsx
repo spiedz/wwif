@@ -47,15 +47,15 @@ const BlogPostPage = ({ post, relatedPosts }: BlogPostPageProps) => {
   
   const currentUrl = process.env.NEXT_PUBLIC_BASE_URL ? 
     `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}` : 
-    `https://wherewasitfilmed.com${router.asPath}`;
+    `https://wherewasitfilmed.co${router.asPath}`;
     
   // Generate JSON-LD schema for this blog post
   const blogSchema = getBlogSchema(post.meta, currentUrl);
   
   // Generate breadcrumb schema
   const breadcrumbItems = [
-    { name: 'Home', url: 'https://wherewasitfilmed.com/' },
-    { name: 'Blog', url: 'https://wherewasitfilmed.com/blog/' },
+    { name: 'Home', url: 'https://wherewasitfilmed.co/' },
+    { name: 'Blog', url: 'https://wherewasitfilmed.co/blog/' },
     { name: post.meta.title, url: currentUrl }
   ];
   const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
@@ -71,7 +71,7 @@ const BlogPostPage = ({ post, relatedPosts }: BlogPostPageProps) => {
     socialLinks: [
       { platform: 'twitter', url: 'https://twitter.com/filmlocations' },
       { platform: 'instagram', url: 'https://instagram.com/filmlocations' },
-      { platform: 'website', url: 'https://wherewasitfilmed.com' }
+      { platform: 'website', url: 'https://wherewasitfilmed.co' }
     ]
   };
 

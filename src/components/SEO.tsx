@@ -12,7 +12,7 @@ interface SEOProps {
   jsonLd?: Record<string, unknown> | string;
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
 
 const SEO: React.FC<SEOProps> = ({
   meta,
