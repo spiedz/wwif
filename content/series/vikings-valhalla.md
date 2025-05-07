@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Vikings: Valhalla Filmed?"
 description: "Explore the real-world filming locations of Vikings: Valhalla, from the Viking epic to the stunning landscapes of Ireland."
@@ -167,4 +166,3 @@ Some of the most iconic filming locations include:
 ## Behind the Scenes
 
 The production of Vikings: Valhalla involved meticulous planning and skilled artisans to recreate a historically rich narrative. The show not only builds on the legacy of the original Vikings series but introduces new characters and deeper emotional landscapes, bringing the Viking saga alive for a new generation.
-```

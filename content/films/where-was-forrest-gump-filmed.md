@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Forrest Gump Filmed?"
 description: "Discover the iconic filming locations of Forrest Gump, where the unforgettable journey of a simple man intersects with pivotal moments in American history."
@@ -119,4 +118,3 @@ Forrest Gump is more than a film; it’s a heartfelt journey filled with humor, 
 From the streets of Mobile, Alabama, to the historic settings of Washington D.C., each filming site enriches the narrative with its unique charm and character. Savannah, Georgia, not only served as a backdrop for key moments, like the bench where Forrest recalls his life, but has also blossomed into a vibrant hub for film enthusiasts and tourists alike.
 
 With a variety of tours and experiences available, visitors can walk in the footsteps of Forrest himself. Whether you’re savoring a Southern meal in the charming streets of Savannah or discovering the nuances behind the filmmaking process, every location tells a story that complements the heartwarming tale of Forrest Gump, reminding us that life is like a box of chocolates—you never know what you’re gonna get.
-```

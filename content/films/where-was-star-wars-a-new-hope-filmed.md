@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Star Wars: A New Hope Filmed?"
 description: "Discover the iconic filming locations of Star Wars: A New Hope, where the galaxy far, far away came to life against some of the most stunning and memorable landscapes."
@@ -119,4 +118,3 @@ Star Wars: A New Hope set the foundation for an expansive universe that has capt
 Each filming site acts as a time capsule, transporting fans back to the moment they first experienced the thrill of the Force. Whether you're looking to explore the iconic desert landscapes or the studios behind the magic, these locations have become pilgrimage sites for Star Wars enthusiasts eager to immerse themselves in the lore of this epic saga.
 
 With an array of tours available, including trips through Death Valley National Park and Elstree Studios, fans have the chance to step into the very worlds that inspired the film. Visiting these unforgettable places not only enhances appreciation for the film but also creates lasting memories for those who wish to walk in the footsteps of their favorite characters from a galaxy far, far away.
-```

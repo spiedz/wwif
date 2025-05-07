@@ -32,6 +32,7 @@ const nextConfig = {
         hostname: 'upload.wikimedia.org',
       },
     ],
+    domains: ['upload.wikimedia.org', 'm.media-amazon.com', 'images.unsplash.com', 'via.placeholder.com'],
   },
   eslint: {
     // Disable ESLint during production builds
@@ -40,6 +41,38 @@ const nextConfig = {
   typescript: {
     // Disable TypeScript checking during production builds
     ignoreBuildErrors: true,
+  },
+  async redirects() {
+    return [
+      // Format: /what-was-filmed-in-[location] -> /locations/[location]
+      {
+        source: '/what-was-filmed-in-:location',
+        destination: '/locations/:location',
+        permanent: true,
+      },
+      // Format: /locations/what-was-filmed-in-[location] -> /locations/[location]
+      {
+        source: '/locations/what-was-filmed-in-:location',
+        destination: '/locations/:location',
+        permanent: true,
+      }
+    ]
+  },
+  // Indicate that fs should only be available on the server side
+  experimental: {
+    serverComponentsExternalPackages: ['fs', 'path'],
+  },
+  // Add a webpack configuration to provide empty modules for fs on the client
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Client-side fallbacks for Node.js modules
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+      };
+    }
+    return config;
   },
 };
 

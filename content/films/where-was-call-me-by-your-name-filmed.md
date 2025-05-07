@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Call Me by Your Name Filmed?"
 description: "Discover the breathtaking filming locations of Call Me by Your Name, where romance blossoms in the sun-drenched landscapes of Italy."
@@ -101,4 +100,3 @@ Call Me by Your Name is not just a film; it's a visual love letter to the Italia
 From the narrow streets of Crema to the elegant Villa Albergoni, each location in Call Me by Your Name holds its own charm and importance, reflecting the beauty and melancholy of adolescent desire. The film takes advantage of the stunning natural landscapes, from tranquil rivers to lush orchards, painting a vivid tapestry that heightens the emotional depth of the story.
 
 Fans of the film can follow in the footsteps of Elio and Oliver, touring the enchanting locations that brought their romance to life. Whether you're savoring gelato at a local café or strolling through historic villas, each moment allows you to feel the lingering magic of summer love captured on film. Discover the charm of Italy while celebrating one of the most heartfelt cinematic experiences that Call Me by Your Name has to offer.
-```

@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Aviator Filmed?"
 description: "Discover the stunning filming locations of The Aviator, diving into the life of Howard Hughes amidst breathtaking backdrops that bring the story to life."
@@ -113,4 +112,3 @@ The Aviator is not merely a film; it is a visual journey through the lavish and 
 From the bustling streets of L.A. to the historic sites that hosted critical moments in Hughes' life, the film's backdrop enhances its emotional depth. The iconic Santa Monica Pier and the regal surroundings of the Hughes Aircraft Company seamlessly blend fiction with reality, allowing viewers to experience the glitz and struggles of this extraordinary man.
 
 As you explore these filming locations, you’ll gain a deeper understanding of Hughes' legacy and the golden age of aviation and filmmaking. Whether you’re planning a trip to Los Angeles or simply looking to relive the magic of The Aviator, these sites offer an insightful glimpse into the life of a Hollywood legend.
-```

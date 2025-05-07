@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Barfi! Filmed?"
 description: "Discover the enchanting locations of Barfi!, a heartwarming tale set against the stunning backdrop of picturesque India."
@@ -90,4 +89,3 @@ The charismatic city of Kolkata, with its rich heritage, serves as a significant
 For film enthusiasts and travelers alike, Barfi!'s filming locations offer a unique opportunity to experience the magic of this cinematic journey firsthand. Whether you choose to stroll through the bustling lanes of Kolkata or breathe in the crisp mountain air of Mussoorie, these sites become a living part of the story.
 
 Join in the exploration of this beloved film and discover why it continues to capture hearts, one mesmerizing frame at a time.
-```

@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Alien: Covenant Filmed?"
 description: "Uncover the breathtaking filming locations of Alien: Covenant, where the thrilling sci-fi saga unfolds against stunning backdrops."
@@ -102,4 +101,3 @@ Alien: Covenant isn’t merely a horror film—it’s a thought-provoking explor
 From the rugged terrain of the Flinders Ranges to the hauntingly beautiful Torrens Island, each filming location has been meticulously selected to reflect the film's themes of isolation and discovery. The diverse array of landscapes enhances the sense of dread and adventure that permeates the story, while also offering a glimpse into the creative process behind the visuals we see on screen.
 
 For fans yearning to immerse themselves in the world of Alien: Covenant, these filming sites also present exciting opportunities for exploration. Whether you're embarking on a guided tour of the cinematic settings or marveling at the stunning natural beauty of Adelaide, stepping into these locations allows a deepening appreciation for the artistry of Ridley Scott’s vision. Don't miss your chance to experience the thrilling landscapes that shaped this iconic sci-fi saga!
-```

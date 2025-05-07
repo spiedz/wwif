@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Rockstar Filmed?"
 description: "Discover the captivating filming locations of Rockstar, the musical drama that explores the journey of a rock star and the quest for identity."
@@ -101,4 +100,3 @@ Rockstar is not just a film; it's an emotive journey through the soul of music a
 Filming in iconic locales like Agra and Chandigarh, the movie beautifully contrasts urban chaos with the tranquility of nature, symbolizing the protagonist's internal struggle. These scenic spots add depth to the narrative and become integral parts of the rock star's journey, captivating viewers with their stunning visuals and cultural significance.
 
 For fans of the film, each of these locations offers a chance to walk in the footsteps of the characters, experiencing the vibrant sights and sounds that shaped the story. Whether it's a heritage tour in Delhi or a picturesque escapade to the Taj Mahal, exploring these filming locations enhances the appreciation of Rockstar as a remarkable musical odyssey.
-```

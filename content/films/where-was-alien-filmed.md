@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Alien Filmed?"
 description: "Discover the captivating filming locations of the sci-fi horror classic, Alien, and explore the eerie atmospheres that brought this iconic film to life."
@@ -95,4 +94,3 @@ Alien remains one of the most revered films in the sci-fi horror genre, masterfu
 The meticulous attention to detail in the filmmaking process is evident in locations like Farnham and Exmouth, where serene landscapes lent themselves to the unsettling narrative, juxtaposing the haunting plot with beautiful surroundings. The combination of these distinct settings creates a tapestry that enhances the film's story, making the viewer feel every moment of the characters’ terrifying journey.
 
 As fans of the classic film venture into the historic filming locations, they discover a new dimension to their appreciation of Alien. From behind-the-scenes tours at Shepperton Studios to London location tours, the opportunities to connect with the film’s legacy abound. Whether you're a die-hard fan or simply intrigued by cinematic history, exploring these sites will leave you with chilling memories and a deeper understanding of the artistry behind Alien.
-```

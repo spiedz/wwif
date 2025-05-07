@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Moonlight Filmed?"
 description: "Uncover the breathtaking filming locations of Moonlight, a powerful coming-of-age story that beautifully captures the essence of Miami."
@@ -95,4 +94,3 @@ Moonlight isn't just a film; it's a visual poem that explores identity, family, 
 As you wander through the same streets where Chiron's story unfolds, you'll find that these places resonate with the themes of exploration and self-discovery that the film so beautifully encapsulates. Miami's lively culture and landscape serve not just as backdrops, but as integral components of the narrative, making the viewing experience all the more immersive.
 
 For fans of Moonlight, visiting these iconic locations can be a deeply moving experience. Guided tours provide an opportunity to immerse yourself in the film’s world, allowing you to connect with its poignant themes on a personal level. Whether you're capturing photos on the scenic beaches or walking through Liberty City, each stop brings you closer to understanding the profound storytelling that earned Moonlight its place in cinematic history.
-```

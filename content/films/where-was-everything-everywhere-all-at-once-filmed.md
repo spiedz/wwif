@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Everything Everywhere All at Once Filmed?"
 description: "Discover the fascinating filming locations of Everything Everywhere All at Once, a mind-bending journey through various stunning visuals and real-world settings."
@@ -102,4 +101,3 @@ Everything Everywhere All at Once is a cinematic experience unlike any other, we
 From the sunny streets of Santa Monica to the serene surroundings of Pasadena, these diverse settings complement the film’s whimsical yet profound exploration of life's myriad possibilities. The use of local landmarks not only adds authenticity but also resonates with the audience, making these locations foundational to the story's emotional impact.
 
 Fans can visit these mesmerizing sets, participating in tours that delve deeper into the journey of the film's characters and creators. By exploring the very spaces that shaped this unique narrative, viewers gain a fresh perspective on the film's intricate tapestry of experiences, reminding us that the extraordinary can be found in the most unexpected of places.
-```

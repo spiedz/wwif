@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Titanic Filmed?"
 description: "Uncover the breathtaking filming locations of Titanic, the epic love story that gripped audiences and became a cinematic phenomenon."
@@ -107,4 +106,3 @@ Titanic transcends the boundaries of mere filmmaking, enchanting audiences with 
 From the lush landscapes of Victoria, British Columbia, to the exceptional studio work in Los Angeles, every filming site comes alive with rich history and emotional resonance, drawing fans and tourists alike. The Butchart Gardens capture the film’s romantic essence, while the extensive sets mimic the ornate details of the real ship, providing a striking backdrop for key scenes.
 
 For those eager to explore the legacy of Titanic, various tours and experiences are available, allowing fans to connect with the film on a deeper level. Whether visiting the replica museums or traveling to the filming locations, each step provides a unique opportunity to relive the nearly mythic narrative and the enduring love story of Jack and Rose.
-```

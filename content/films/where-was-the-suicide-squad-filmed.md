@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was The Suicide Squad Filmed?"
 description: "Dive into the colorful filming locations of The Suicide Squad, where chaotic missions unfold across vibrant settings that bring the DC universe to life."

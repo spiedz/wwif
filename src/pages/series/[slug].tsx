@@ -8,16 +8,19 @@ import { getSeriesBySlug, getSeriesSlugs } from '../../utils/markdown';
 import { TVSeries } from '../../types/series';
 import SEO from '../../components/SEO';
 import CommentSection from '../../components/CommentSection';
+import { addLocationBacklinks } from '../../utils/locationUtils';
+import Link from 'next/link';
 
 interface SeriesPageProps {
   series: TVSeries;
+  locationBacklinks: string[];
 }
 
 interface Params extends ParsedUrlQuery {
   slug: string;
 }
 
-export default function SeriesPage({ series }: SeriesPageProps) {
+export default function SeriesPage({ series, locationBacklinks }: SeriesPageProps) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -381,6 +384,39 @@ export default function SeriesPage({ series }: SeriesPageProps) {
             </div>
           </div>
         </div>
+
+        {/* Location Backlinks Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
+          <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+            <svg className="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Explore Filming Locations
+          </h2>
+          <div className="w-32 h-1 bg-primary/30 rounded mb-8"></div>
+          
+          {locationBacklinks.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {locationBacklinks.map((link, index) => (
+                <div key={index} className="p-4 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors" dangerouslySetInnerHTML={{ __html: link }} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-gray-600">
+              No specific location pages available for this series yet. Check back later!
+            </p>
+          )}
+          
+          <div className="mt-6">
+            <Link href="/locations" className="text-primary font-medium hover:underline flex items-center">
+              Browse all filming locations
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -399,23 +435,29 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<SeriesPageProps, Params> = async ({ params }) => {
-  if (!params?.slug) {
+  const slug = params?.slug;
+  
+  if (typeof slug !== 'string') {
     return {
       notFound: true,
     };
   }
-
-  const series = await getSeriesBySlug(params.slug);
-
+  
+  const series = await getSeriesBySlug(slug);
+  
   if (!series) {
     return {
       notFound: true,
     };
   }
-
+  
+  // Generate location backlinks for SEO
+  const locationBacklinks = await addLocationBacklinks(series);
+  
   return {
     props: {
       series,
+      locationBacklinks,
     },
     revalidate: 3600, // revalidate every hour
   };

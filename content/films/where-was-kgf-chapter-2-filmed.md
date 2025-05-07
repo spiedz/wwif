@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was KGF: Chapter 2 Filmed?"
 description: "Discover the breathtaking filming locations of KGF: Chapter 2, where riveting storytelling meets stunning landscapes in this blockbuster hit."
@@ -115,4 +114,3 @@ From the bustling streets of Bengaluru to the rugged terrains of the actual KGF,
 Fans of KGF: Chapter 2 can find themselves longing to explore these iconic sites firsthand, where the cinematic world bleeds into reality. Tours and experiences dedicated to the film allow true enthusiasts to walk in the footsteps of their favorite characters, enriching their appreciation of the film.
 
 With diverse experiences awaiting those who seek to delve into the KGF universe, whether through guided tours or unforgettable scenic explorations, each visit to these filming locations becomes not just a journey into a film's world but a captivating adventure in its own right.
-```

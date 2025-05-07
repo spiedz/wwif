@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Jackie Filmed?"
 description: "Dive into the captivating filming locations of Jackie, a poignant biopic that chronicles the life of Jackie Kennedy in the aftermath of her husband's assassination."
@@ -95,4 +94,3 @@ From the quaint streets of Dumont, New Jersey, to the powerful political landsca
 With the film relying heavily on historical accuracy, the production recreated pivotal settings that defined Jackie’s legacy, from her iconic fashion to her poignant moments of grief. Fans of the film can explore many of these locations through guided tours, offering an intimate glimpse into the life and times of one of America's most enduring First Ladies.
 
 If you’re captivated by the story of Jackie Kennedy, visiting these sites provides a tangible connection to her journey, allowing you to walk in her footsteps and experience firsthand the history that inspired this remarkable film.
-```

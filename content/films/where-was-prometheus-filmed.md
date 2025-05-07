@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Prometheus Filmed?"
 description: "Discover the mesmerizing filming locations of Prometheus, where science fiction meets stunning landscapes, bringing the universe to life on screen."
@@ -103,4 +102,3 @@ Iceland's dramatic settings are undoubtedly breathtaking, making it the perfect 
 These locations have transformed into pilgrimage sites for fans and filmmakers alike, eager to witness the landscapes that helped create the visual narrative of Prometheus. With guided tours available, you can explore the natural wonders that served as the backdrop for this epic journey into the unknown.
 
 Whether you're a fan of sci-fi or a traveler seeking breathtaking scenery, experiencing these locations will deepen your appreciation of Prometheus and its exploration of humanity's deepest questions. Step into the shoes of filmmakers and discover the cinematic magic that lies within these iconic landscapes.
-```

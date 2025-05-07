@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Dark Filmed?"
 description: "Explore the real-world filming locations of Dark, from Winden to the picturesque landscapes of Germany."
@@ -168,4 +167,3 @@ Some of the most iconic filming locations include:
 ## Behind the Scenes
 
 As captivating as the storyline is, the production of Dark also remains shrouded in its own mysteries. From filming in abandoned spaces to using historical references, every aspect was handled with care to evoke the series' eerie, suspenseful tone. The series has left a lifelong impression on its viewers, offering thrilling storytelling and stunning cinematography that reflect the darkest corners of the human experience.
-```

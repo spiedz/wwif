@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Squid Game Filmed?"
 description: "Explore the real-world filming locations of Squid Game, from the dystopian playground to iconic Seoul venues."
@@ -146,4 +145,3 @@ Some of the most iconic filming locations include:
 ## Behind the Scenes
 
 Gain a deeper understanding of the creative process behind Squid Game, from unique challenges faced during filming to the artistic inspirations that guided wardrobe and set design.
-```

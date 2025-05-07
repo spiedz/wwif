@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was The Shawshank Redemption Filmed?"
 description: "Discover the iconic filming locations of The Shawshank Redemption, a masterpiece that continues to inspire with its compelling story of hope and friendship."
@@ -103,4 +102,3 @@ From the ivy-covered walls of the prison to the picturesque landscapes of Ohiopy
 The Mansfield Reformatory remains a popular destination for fans, showcasing not only the film’s history but also the formidable architecture of the reformatory itself. Whether you’re walking through the same halls as Andy and Red or taking in the serene beauty of Dunsborough Falls, these locations invite you to immerse yourself in a journey of transformation and resilience.
 
 As you explore these iconic filming sites, you’ll discover a greater appreciation for the story that transcends its setting—a narrative of hope that encourages us all to persist, no matter the odds.
-```

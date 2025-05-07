@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Saving Private Ryan Filmed?"
 description: "Discover the stunning and historically significant filming locations of Saving Private Ryan, a cinematic masterpiece directed by Steven Spielberg."
@@ -116,4 +115,3 @@ From the infamous Omaha Beach to the peaceful surroundings of the American Cemet
 Visiting these locations today allows fans and history buffs to walk in the footsteps of the brave soldiers who fought for freedom. Tourism related to the film has blossomed, with opportunities to explore the beaches, battlefields, and memorials that tell the tales of heroism and sacrifice.
 
 Whether you are planning a trip to Normandy or simply want to dive deeper into the historical significance of the film, understanding where Saving Private Ryan was filmed adds layers of appreciation to this cinematic masterpiece that resonates with audiences around the world.
-```

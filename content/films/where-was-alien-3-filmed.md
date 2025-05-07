@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Alien 3 Filmed?"
 description: "Discover the haunting and atmospheric filming locations of Alien 3, where sci-fi horror was brought to life in some of the most eerie settings."
@@ -96,4 +95,3 @@ Alien 3 is not just another chapter in the iconic Alien saga; it's a dark explor
 The film utilized the atmospheric Old Mersey Docks as the eerie penal colony of Fiorina 161, a decision that enhances the film's oppressive mood. This unique blend of established studio work and stark outdoor settings allows audiences to grasp the extreme isolation characters endure, making their battles against the iconic xenomorph even more gripping.
 
 For fans eager to delve deeper into the haunting world of Alien 3, the locations have become significant sites for exploration. Tours are available that showcase the various filming spots, offering a unique glimpse into the making of this cult classic. Visiting these notable locations not only uncovers cinematic history but also deepens your appreciation for the artistry that brings the terrifying story to life.
-```

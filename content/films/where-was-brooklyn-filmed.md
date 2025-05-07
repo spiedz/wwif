@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Brooklyn Filmed?"
 description: "Discover the enchanting filming locations of Brooklyn, a film that beautifully captures the essence of love, identity, and the immigrant experience in 1950s America."
@@ -115,4 +114,3 @@ From the bustling neighborhoods of Brooklyn itself to the iconic Ellis Island, w
 Every filming site serves as a reminder of the resilience and hope that define the immigrant experience. As you explore these locations, you'll find pieces of Eilis’s world, including the charming subway stations and the culturally significant churches that anchor her community.
 
 For fans eager to delve deeper, guided tours and accommodations in Brooklyn offer immersive experiences. Whether you’re wandering through historic streets or cruising along the Brooklyn Bridge, embracing the spirit of **Brooklyn** allows you to connect with the story on a more personal level. 
-```

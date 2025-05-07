@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Oldboy Filmed?"
 description: "Discover the captivating filming locations of Oldboy, a cinematic masterpiece known for its gripping narrative and unforgettable atmosphere."
@@ -91,4 +90,3 @@ Oldboy is not just a film; it’s an experience that leaves viewers reeling long
 Set against the striking backdrop of Seoul, the film creatively employs both the bustling streets and hidden corners of the metropolis. Each location is meticulously chosen to reflect the emotional stakes and surreal nature of the narrative, making Seoul a character in its own right. From the tension-filled alleys of Gangseo-gu to the serene vistas of Yangjaecheon Stream, Oldboy’s settings enhance its labyrinthine story.
 
 Fans of this cinematic gem can delve deeper into the world of Oldboy through dedicated tours that highlight these iconic filming spots. Whether you're an ardent cinephile seeking to unravel the cinematic choices or simply looking to explore Seoul’s charming landscapes, Oldboy’s filming locations offer a fascinating glimpse into the artistry behind this unforgettable film.
-```

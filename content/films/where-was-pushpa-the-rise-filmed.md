@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Pushpa: The Rise Filmed?"
 description: "Uncover the breathtaking locations that brought Pushpa: The Rise to life, from lush forests to vibrant towns that set the stage for this gripping tale."
@@ -114,4 +113,3 @@ Pushpa: The Rise doesn’t just tell a story; it invites viewers on a cinematic 
 From the breathtaking Seshachalam Hills, where the conflict unfolds amidst towering trees, to the charming town of Rayachoti that brings emotional depth, each site is carefully chosen to enhance the storytelling. The natural beauty of Karnataka's forests contrasts perfectly with the high-stakes drama at play, drawing viewers into an engaging visual feast.
 
 As fans of this hit film venture into the regions featured on screen, they have the opportunity to connect with the heart of "Pushpa." Guided tours of these locations offer a chance to experience the landscapes up close, allowing fans to immerse themselves in the world of Pushpa while exploring the culture and beauty of India’s southern landscapes. Don’t miss your chance to step into the shoes of the film’s protagonists and witness the breathtaking sites that contributed to its gripping narrative.
-```

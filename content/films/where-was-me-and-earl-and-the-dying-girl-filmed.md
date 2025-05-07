@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Me and Earl and the Dying Girl Filmed?"
 description: "Discover the heartfelt filming locations of 'Me and Earl and the Dying Girl,' a poignant coming-of-age film that captures the essence of friendship and creativity against the backdrop of a beautiful suburb."
@@ -103,4 +102,3 @@ From the bustling halls of Mt. Lebanon High School to the serene landscapes of S
 Fans of the film can immerse themselves in the life of its characters by visiting the real places where key moments unfolded. With exciting tours available that highlight the film's top locations, getting a glimpse of these backdrops adds an extra layer of connection to the story.
 
 Whether you're revisiting the film or experiencing it for the first time, exploring the filming locations of 'Me and Earl and the Dying Girl' provides a unique opportunity to appreciate the film's heartfelt message while enjoying the charm of Pittsburgh.
-```

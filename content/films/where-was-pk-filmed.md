@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was PK Filmed?"
 description: "Dive into the vibrant filming locations of PK, where the unique journey of an alien in human form unfolds against the backdrop of scenic India."
@@ -108,4 +107,3 @@ PK captures the heart and essence of India while delivering a powerful message a
 The film takes viewers on a captivating journey, showcasing the marvelous diversity of Indian culture and landscapes. Iconic settings, like the beautiful forts of Jaipur and the soulful streets of Kolkata, not only provide stunning visuals but also play a vital role in deepening the story's impact.
 
 As a fan of PK, you can now explore these locations and immerse yourself in the sights that made the film iconic. Each city offers unique experiences and tours, making your visit a thrilling adventure into the world of PK. Discover how this cinematic gem showcased India while making audiences rethink societal norms and beliefs in an engaging, entertaining way.
-```

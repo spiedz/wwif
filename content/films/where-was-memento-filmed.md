@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Memento Filmed?"
 description: "Dive into the intriguing filming locations of Memento, where the boundaries of memory and reality blur in a gripping narrative."
@@ -110,4 +109,3 @@ From the sprawling urban streets to the serene beach vistas of Venice, each film
 As the story unfolds through Leonard's fractured memories, the locations serve as crucial elements that shape the storytelling, delivering a visual punch alongside a powerful narrative. Fans can recreate this unforgettable experience by embarking on tours of these iconic sites, offering a glimpse into the real-world landscapes that brought Memento to life.
 
 Explore this labyrinth of memories and locations, as the journey through Memento not only captivates the mind but also invites you to delve deeper into the essence of storytelling in cinema.
-```

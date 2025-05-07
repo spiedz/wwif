@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Spencer Filmed?"
 description: "Discover the enchanting filming locations of Spencer, where the life of Princess Diana unfolds against breathtaking backdrops."
@@ -90,4 +89,3 @@ Spencer magnificently intertwines history and personal turmoil, presenting a bea
 From the resplendent halls of Hatfield House to the tranquil beauty of Kew Gardens, each filming location plays an essential role in bringing Princess Diana's personal story to life. London’s iconic streets represent both the lavish public life and internal conflicts, making it a character in its own right.
 
 For fans of cinema and history alike, visiting these filming locations provides a unique opportunity to connect with Diana's legacy. Whether you're strolling through the grand interiors of Wilton House or exploring the lush expanses of the English landscape, experiencing the sites of Spencer adds an extra layer of appreciation for this poignant portrayal of a beloved figure.
-```

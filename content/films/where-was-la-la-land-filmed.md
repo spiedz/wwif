@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was La La Land Filmed?"
 description: "Discover the enchanting filming locations of La La Land, where the magic of Los Angeles and the dream of Hollywood come to life."
@@ -120,4 +119,3 @@ La La Land is more than just a film; it’s a love letter to Los Angeles, captur
 From the stunning Griffith Observatory to the magical streets of downtown LA, the filming locations not only serve as a backdrop but also enhance the emotional resonance of the story. Each site reflects the diverse culture and vivid energy of the city, making them essential to the experience of La La Land.
 
 Fans of the film can embark on their own cinematic journey by visiting these iconic sites, from enjoying live jazz at The Lighthouse Café to experiencing the charm of Seb's Jazz Club. With organized tours available, movie lovers can immerse themselves in the world of La La Land and appreciate the artistry that transformed it into an unforgettable cinematic experience.
-```

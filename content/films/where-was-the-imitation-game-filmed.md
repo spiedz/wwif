@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Imitation Game Filmed?"
 description: "Discover the stunning filming locations of The Imitation Game, where the life of Alan Turing comes to life against historical backdrops."
@@ -121,4 +120,3 @@ From the iconic Bletchley Park, where Turing and his team cracked the infamous E
 Fans of The Imitation Game can visit these historically rich sites, where they can walk the very paths that shaped modern computing and cryptography. Tours at Bletchley Park and Cambridge University allow enthusiasts to delve deeper into Turing's legacy while experiencing the environments that fostered his brilliance.
 
 Embark on an unforgettable journey through history by exploring the filming locations of The Imitation Game. Each site offers a glimpse into the life of a man whose work changed the world, turning cinematic moments into tangible experiences that resonate with viewers today.
-```

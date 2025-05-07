@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was The Martian Filmed?"
 description: "Dive into the breathtaking filming locations of The Martian, showcasing the stunning landscapes of Mars brought to life on Earth."
@@ -96,4 +95,3 @@ As you explore these diverse filming sitesâ€”each a character in its own rightâ€
 For fans eager to connect with this cinematic masterpiece, a variety of tours and experiences are available. Whether you're wandering through the deserts of Utah or taking in the breathtaking views of Death Valley, these locations offer a unique opportunity to step into the shoes of an interplanetary botanist.
 
 Embark on your own adventure and discover how The Martian transformed stunning earthly landscapes into the vibrant, harsh reality of Mars.
-```

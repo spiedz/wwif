@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Shazam! Filmed?"
 description: "Discover the vibrant filming locations of Shazam!, where the beloved hero took his first steps into the world of family-friendly superhero adventures."
@@ -94,4 +93,3 @@ Shazam! is the perfect blend of humor and superhero action, ushering in a refres
 From the historic Liberty Bell to the picturesque Love Park, each location in Philadelphia helps to paint a vibrant picture of Shazam!'s world. The production cleverly utilized the charming streets and lively atmosphere of the city, making it an essential character in the story itself.
 
 As fans of this beloved superhero, you might feel compelled to explore these unique locations firsthand. Whether you’re wandering through the bustling streets of Philadelphia or checking out sites portrayed in the film, experiencing Shazam!'s backdrop will enhance your appreciation for this delightful adventure. With guided tours and exciting experiences available, you can step into the shoes of Billy Batson and embrace the fun of being a superhero for a day!
-```

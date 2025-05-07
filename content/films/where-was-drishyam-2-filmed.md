@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Drishyam 2 Filmed?"
 description: "Unearth the stunning filming locations of Drishyam 2, a gripping sequel that transcends boundaries and showcases India's cinematic beauty."
@@ -96,4 +95,3 @@ Drishyam 2 is more than just a continuation of the acclaimed storyline; it's a c
 From the vibrant streets of Kolkata to the serene backwaters of Kerala, each location plays a significant role in shaping the story, creating an immersive experience for viewers. The use of real settings not only enhances the authenticity but also draws audiences closer to the narrative's emotional gravity.
 
 As these filming sites attract fans and tourists alike, they transform into gateways for visitors seeking to connect with the layers of storytelling in Drishyam 2. With guided tours available, exploring these stunning locations offers a thrilling way to dive deeper into the world of cinema, making your experience unforgettable.
-```

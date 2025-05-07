@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Avatar: The Way of Water Filmed?"
 description: "Dive into the breathtaking filming locations of Avatar: The Way of Water, showcasing stunning natural landscapes that brought Pandora to life."
@@ -103,4 +102,3 @@ Filmed predominantly in Queensland, Australia, the film captures the essence of 
 These evocative filming sites not only serve as magnificent backdrops but have also become sought-after destinations for fans eager to explore the world that James Cameron has so beautifully brought to life. Whether you're trekking through the steamy rainforests or gazing at the marvels of the Gold Coast, experiencing these locations firsthand adds an unforgettable dimension to your love for the film.
 
 With tailored tours and exciting excursions available, fans can step into the breathtaking world of Avatar. Whether you plan to visit the stunning Whitsunday Islands or dive deep into the adventures of Queensland, exploring these filming locations will undoubtedly deepen your appreciation for the spellbinding saga of Avatar: The Way of Water.
-```

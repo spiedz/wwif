@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was The Florida Project Filmed?"
 description: "Dive into the vibrant and heartwarming world of The Florida Project and explore the unique filming locations that brought the story to life."
@@ -94,4 +93,3 @@ The Florida Project isn't just a film; it's a heartfelt journey into the lives o
 The iconic Magic Castle Inn & Suites serves as more than just a filming location; it is a symbol of the transient lifestyle led by the characters. The striking visuals resonate with the vibrancy of the area, as scenes flicker between the joys of childhood and the harsh realities of life outside Orlando’s famous attractions.
 
 Traveling to Kissimmee allows fans of The Florida Project to not just witness the filming locations, but to immerse themselves in a world exploring community, resilience, and the dream that so many chase. From guided tours that delve into the film's impact to opportunities to explore the real-life settings, every visit becomes a unique journey into the heart of Florida's complex tapestry—one that's beautifully captured on screen.
-```

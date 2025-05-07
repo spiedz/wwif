@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was What If...? Filmed?"
 description: "Explore the real-world filming locations of What If...?, from alternate realities to actual filming locations."
@@ -112,4 +111,3 @@ Some of the most iconic filming locations include:
 ## Behind the Scenes
 
 What If...? showcases a creativity-driven production approach. The development of the show involved collaboration with notable Marvel creators, ensuring a fusion of authentic storytelling with innovative animation techniques. Whether you’re a comics enthusiast or an animation lover, there’s something for everyone in this fascinating exploration of alternate timelines.
-```

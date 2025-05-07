@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was If Beale Street Could Talk Filmed?"
 description: "Discover the beautiful filming locations of If Beale Street Could Talk, a poignant story brought to life in the vibrant streets and neighborhoods of New York City."
@@ -95,4 +94,3 @@ If Beale Street Could Talk is not just a film; it's a heartfelt journey through 
 From the bustling streets of Lower Manhattan to the historic neighborhoods of Harlem, the filming locations invite viewers to immerse themselves in the rich narrative that unfolds. The iconic Washington Square Park becomes a sanctuary, while the vibrant East Village reflects the rawness of urban life, each setting meticulously chosen to enrich the story.
 
 These locations have now transformed into points of interest for fans and film enthusiasts alike, offering tours that allow visitors to walk in the footsteps of the characters. Whether you’re exploring the heart of Harlem or taking a reflective stroll in a city park, experiencing these locales firsthand will deepen your appreciation for this poignant tale of love and social justice in If Beale Street Could Talk.
-```

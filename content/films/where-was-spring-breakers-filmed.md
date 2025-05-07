@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Spring Breakers Filmed?"
 description: "Dive into the vibrant and eclectic filming locations of Spring Breakers, where a sun-soaked adventure meets gritty reality in the heart of Florida."
@@ -99,4 +98,3 @@ Spring Breakers isn’t just a film; it’s an experience that immerses viewers 
 Fans of the film can now explore these iconic settings and imagine the characters' escapades in real life. The contrasting serene landscapes of Fort De Soto Park and the party-heavy atmosphere at Clearwater Beach draw visitors from around the world, eager to witness the charm and grit of these locations.
 
 Whether you’re attending organized tours or simply visiting the beaches that hosted the characters' wild adventures, experiencing these places firsthand offers a deeper understanding of the film's message. So grab your sunglasses and beach towel; a journey to the world of Spring Breakers awaits!
-```

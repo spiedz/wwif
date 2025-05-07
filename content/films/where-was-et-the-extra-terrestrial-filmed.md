@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was E.T. the Extra-Terrestrial Filmed?"
 description: "Discover the enchanting filming locations of E.T. the Extra-Terrestrial, where Spielberg brought to life a heartwarming tale of friendship and adventure."
@@ -116,4 +115,3 @@ The film utilized iconic spots like California State University, where the magic
 These filming locations have evolved into significant pilgrimage sites for fans, enticing travelers to walk in the footsteps of Elliott and his extraterrestrial companion. Exploring these spots is more than just a trip down memory lane; it’s about reliving one of cinema's most treasured tales and appreciating the physical places that helped shape an unforgettable narrative.
 
 If you’re longing to reconnect with the magic of E.T., consider embarking on tours around Universal Studios and the stunning sites across Los Angeles. Each visit to these cherished locations deepens the experience and offers a unique lens into the heartwarming world of E.T. the Extra-Terrestrial.
-```

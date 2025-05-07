@@ -1,17 +1,29 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+/**
+ * CLIENT-SAFE MARKDOWN UTILITIES
+ * 
+ * This file contains utilities for working with markdown content that are safe to use
+ * in client components. All file system operations have been moved to serverMarkdown.ts.
+ * 
+ * Use these utilities for client-side operations on pre-fetched content that has been
+ * passed from server components via props.
+ */
+
 import { remark } from 'remark';
-import html from 'remark-html';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypePrettyCode from 'rehype-pretty-code';
-import { BlogMeta, Content, FilmMeta } from '../types/content';
-import { TVSeries, SeriesMeta } from '../types/series';
+import { BlogMeta, Content, ContentMeta, FilmMeta } from '../types/content';
+import { TVSeries, SeriesMeta, Season, SeriesLocation } from '../types/series';
 
-const filmsDirectory = path.join(process.cwd(), 'content/films');
-const blogDirectory = path.join(process.cwd(), 'content/blog');
-const seriesDirectory = path.join(process.cwd(), 'content/series');
+// Define custom types that extend the base types to include all possible properties
+interface ExtendedBlogMeta extends BlogMeta {
+  categories?: string[];
+}
+
+// Extend ContentMeta to ensure type constraint is satisfied
+interface ExtendedContent<T extends ContentMeta> extends Content<T> {
+  meta: T;
+}
 
 /**
  * Default rehype-pretty-code configuration options
@@ -22,195 +34,22 @@ const prettycodeOptions = {
 };
 
 /**
- * Gets all film slugs from the films directory
+ * Processes markdown content to HTML with syntax highlighting
  */
-export function getFilmSlugs() {
-  try {
-    const fileNames = fs.readdirSync(filmsDirectory);
-    return fileNames
-      .filter((fileName) => fileName.endsWith('.md'))
-      .map((fileName) => fileName.replace(/\.md$/, ''));
-  } catch (error) {
-    console.error('Error reading film slugs:', error);
-    return [];
-  }
-}
+export async function processMarkdown(content: string): Promise<string> {
+  const processedContent = await remark()
+    .use(remarkRehype)
+    .use(rehypePrettyCode, prettycodeOptions)
+    .use(rehypeStringify)
+    .process(content);
 
-/**
- * Gets all blog slugs from the blog directory
- */
-export function getBlogSlugs() {
-  try {
-    const fileNames = fs.readdirSync(blogDirectory);
-    return fileNames
-      .filter((fileName) => fileName.endsWith('.md') && fileName !== 'template.md')
-      .map((fileName) => fileName.replace(/\.md$/, ''));
-  } catch (error) {
-    console.error('Error reading blog slugs:', error);
-    return [];
-  }
-}
-
-/**
- * Gets all TV series slugs from the series directory
- */
-export function getSeriesSlugs() {
-  try {
-    const fileNames = fs.readdirSync(seriesDirectory);
-    return fileNames
-      .filter((fileName) => fileName.endsWith('.md'))
-      .map((fileName) => fileName.replace(/\.md$/, ''));
-  } catch (error) {
-    console.error('Error reading series slugs:', error);
-    return [];
-  }
-}
-
-/**
- * Gets a film by its slug
- */
-export async function getFilmBySlug(slug: string): Promise<Content<FilmMeta> | null> {
-  try {
-    const fullPath = path.join(filmsDirectory, `${slug}.md`);
-    if (!fs.existsSync(fullPath)) {
-      return null;
-    }
-
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    // Process content with remark
-    const processedContent = await remark()
-      .use(remarkRehype)
-      .use(rehypePrettyCode, prettycodeOptions)
-      .use(rehypeStringify)
-      .process(content);
-
-    const htmlContent = processedContent.toString();
-
-    return {
-      meta: {
-        slug,
-        title: data.title || '',
-        description: data.description || '',
-        coordinates: data.coordinates || [],
-        location: data.location || '',
-        year: data.year || '',
-        director: data.director || '',
-        genre: data.genre || '',
-        featuredImage: data.featuredImage || '',
-        gallery: data.gallery || [],
-        posterImage: data.posterImage || '',
-        regions: data.regions || [],
-        travelTips: data.travelTips || [],
-        trivia: data.trivia || [],
-        useRegionLayout: data.useRegionLayout || false,
-        behindTheScenes: data.behindTheScenes || '',
-        streamingServices: data.streamingServices || [],
-        bookingOptions: data.bookingOptions || [],
-      },
-      content,
-      html: htmlContent,
-    };
-  } catch (error) {
-    console.error(`Error getting film by slug (${slug}):`, error);
-    return null;
-  }
-}
-
-/**
- * Gets all films
- */
-export async function getAllFilms(): Promise<Content<FilmMeta>[]> {
-  const slugs = getFilmSlugs();
-  const filmsPromises = slugs.map((slug) => getFilmBySlug(slug));
-  const films = await Promise.all(filmsPromises);
-  return films.filter(Boolean) as Content<FilmMeta>[];
-}
-
-/**
- * Gets a blog post by its slug with enhanced formatting
- */
-export async function getBlogBySlug(slug: string): Promise<Content<BlogMeta> | null> {
-  try {
-    const fullPath = path.join(blogDirectory, `${slug}.md`);
-    if (!fs.existsSync(fullPath)) {
-      return null;
-    }
-
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    // Clean and format the content before processing
-    let formattedContent = content
-      // Ensure proper line breaks around headers
-      .replace(/\n(#{1,3}[^#\n]+)/g, '\n\n$1')
-      // Format lists properly
-      .replace(/\n(\s*[-*+])/g, '\n\n$1')
-      .replace(/\n(\s*\d+\.)/g, '\n\n$1')
-      // Format location sections
-      .replace(/\n([0-9]+\.\s+[^\n]+)\n/g, '\n\n## $1\n\n')
-      .replace(/\n(The Location:)/g, '\n\n### The Location\n\n')
-      .replace(/\n(Where to Visit:)/g, '\n\n### Where to Visit\n\n')
-      .replace(/\n(Visitor Experience:)/g, '\n\n### Visitor Experience\n\n')
-      // Format callouts
-      .replace(/\n(Tip:)/g, '\n\n**Tip:**')
-      .replace(/\n(Note:)/g, '\n\n**Note:**')
-      .replace(/\n(Warning:)/g, '\n\n**Warning:**')
-      // Clean up extra line breaks
-      .replace(/\n{3,}/g, '\n\n');
-
-    // Process content with remark
-    const processedContent = await remark()
-      .use(remarkRehype)
-      .use(rehypePrettyCode, prettycodeOptions)
-      .use(rehypeStringify)
-      .process(formattedContent);
-
-    const htmlContent = processedContent.toString();
-
-    return {
-      meta: {
-        slug,
-        title: data.title || '',
-        description: data.description || '',
-        date: data.date || '',
-        author: data.author || '',
-        categories: data.categories || [],
-        featuredImage: data.featuredImage || '',
-        estimatedReadingTime: calculateReadingTime(content),
-      },
-      content: formattedContent,
-      html: htmlContent,
-    };
-  } catch (error) {
-    console.error(`Error getting blog by slug (${slug}):`, error);
-    return null;
-  }
-}
-
-/**
- * Gets all blog posts
- */
-export async function getAllBlogPosts(): Promise<Content<BlogMeta>[]> {
-  const slugs = getBlogSlugs();
-  const postsPromises = slugs.map((slug) => getBlogBySlug(slug));
-  const posts = await Promise.all(postsPromises);
-  
-  // Filter out null values and sort by date (newest first)
-  return posts
-    .filter((post): post is Content<BlogMeta> => post !== null)
-    .sort((a: Content<BlogMeta>, b: Content<BlogMeta>) => {
-      if (!a.meta.date) return 1;
-      if (!b.meta.date) return -1;
-      return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
-    });
+  return processedContent.toString();
 }
 
 /**
  * Calculate estimated reading time in minutes
  */
-function calculateReadingTime(content: string): number {
+export function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200;
   const wordCount = content.split(/\s+/).length;
   const readingTime = Math.ceil(wordCount / wordsPerMinute);
@@ -218,10 +57,13 @@ function calculateReadingTime(content: string): number {
 }
 
 /**
- * Gets related blog posts
+ * Gets related blog posts from a pre-fetched array
  */
-export async function getRelatedBlogPosts(currentSlug: string, limit = 3): Promise<Content<BlogMeta>[]> {
-  const allPosts = await getAllBlogPosts();
+export function getRelatedBlogPosts(
+  allPosts: ExtendedContent<ExtendedBlogMeta>[], 
+  currentSlug: string, 
+  limit = 3
+): ExtendedContent<ExtendedBlogMeta>[] {
   const currentPost = allPosts.find(post => post.meta.slug === currentSlug);
   
   if (!currentPost) return [];
@@ -231,9 +73,14 @@ export async function getRelatedBlogPosts(currentSlug: string, limit = 3): Promi
     .filter(post => {
       if (post.meta.slug === currentSlug) return false;
       
-      // Check for category overlap
-      if (currentPost.meta.categories && post.meta.categories) {
-        return currentPost.meta.categories.some(cat => 
+      // Check for category overlap if categories exist
+      if (
+        currentPost.meta.categories && 
+        Array.isArray(currentPost.meta.categories) && 
+        post.meta.categories && 
+        Array.isArray(post.meta.categories)
+      ) {
+        return currentPost.meta.categories.some((cat: string) => 
           post.meta.categories?.includes(cat)
         );
       }
@@ -250,85 +97,82 @@ export async function getRelatedBlogPosts(currentSlug: string, limit = 3): Promi
         !relatedPosts.some(rp => rp.meta.slug === post.meta.slug)
       )
       .slice(0, limit - relatedPosts.length);
-    
+
     return [...relatedPosts, ...recentPosts];
   }
-  
+
   return relatedPosts;
 }
 
 /**
- * Gets a TV series by its slug
+ * Format a film from raw data (for use with pre-fetched content)
  */
-export async function getSeriesBySlug(slug: string): Promise<TVSeries | null> {
-  try {
-    const fullPath = path.join(seriesDirectory, `${slug}.md`);
-    if (!fs.existsSync(fullPath)) {
-      return null;
-    }
-
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    // Process content with remark
-    const processedContent = await remark()
-      .use(remarkRehype)
-      .use(rehypePrettyCode, prettycodeOptions)
-      .use(rehypeStringify)
-      .process(content);
-
-    const htmlContent = processedContent.toString();
-
-    return {
-      meta: {
-        slug,
-        title: data.title || '',
-        description: data.description || '',
-        overview: data.overview || '',
-        releaseYearStart: data.releaseYearStart || null,
-        releaseYearEnd: data.releaseYearEnd === undefined ? null : data.releaseYearEnd,
-        genres: data.genres || [],
-        creator: data.creator || '',
-        posterImage: data.posterImage || '',
-        bannerImage: data.bannerImage || '',
-        coordinates: data.coordinates || [],
-        streamingServices: data.streamingServices || [],
-        bookingOptions: data.bookingOptions || [],
-        behindTheScenes: data.behindTheScenes || null,
-        seasons: data.seasons || [],
-        episodes: data.episodes || [],
-        locations: data.locations || [],
-      },
-      content,
-      html: htmlContent,
-    };
-  } catch (error) {
-    console.error(`Error getting series by slug (${slug}):`, error);
-    return null;
-  }
+export function formatFilm(filmData: any): Content<FilmMeta> | null {
+  if (!filmData || !filmData.meta) return null;
+  
+  return {
+    meta: {
+      ...filmData.meta,
+      coordinates: filmData.meta.coordinates || [],
+      posterImage: filmData.meta.posterImage || '',
+      regions: filmData.meta.regions || [],
+      travelTips: filmData.meta.travelTips || [],
+      trivia: filmData.meta.trivia || [],
+      useRegionLayout: filmData.meta.useRegionLayout || false,
+      streamingServices: filmData.meta.streamingServices || [],
+      bookingOptions: filmData.meta.bookingOptions || [],
+    },
+    content: filmData.content || '',
+    html: filmData.html || ''
+  };
 }
 
 /**
- * Gets all TV series
+ * Format a TV series from raw data (for use with pre-fetched content)
  */
-export async function getAllSeries(): Promise<TVSeries[]> {
-  const slugs = getSeriesSlugs();
-  const seriesPromises = slugs.map((slug) => getSeriesBySlug(slug));
-  const allSeries = await Promise.all(seriesPromises);
+export function formatTVSeries(seriesData: any): TVSeries | null {
+  if (!seriesData || !seriesData.meta) return null;
   
-  // Ensure all series have releaseYearEnd as null when undefined
-  return allSeries
-    .filter(Boolean)
-    .map(series => {
-      if (series) {
-        return {
-          ...series,
-          meta: {
-            ...series.meta,
-            releaseYearEnd: series.meta.releaseYearEnd === undefined ? null : series.meta.releaseYearEnd
-          }
-        };
-      }
-      return series;
-    }) as TVSeries[];
+  // Create the SeriesMeta object first
+  const seriesMeta: SeriesMeta = {
+    slug: seriesData.meta.slug || '',
+    title: seriesData.meta.title || '',
+    description: seriesData.meta.description || '',
+    overview: seriesData.meta.overview || '',
+    releaseYearStart: seriesData.meta.releaseYearStart || 0,
+    releaseYearEnd: seriesData.meta.releaseYearEnd || null,
+    genres: seriesData.meta.genres || [],
+    creator: seriesData.meta.creator || '',
+    posterImage: seriesData.meta.posterImage || '',
+    bannerImage: seriesData.meta.bannerImage || '',
+    coordinates: seriesData.meta.coordinates || [],
+    streamingServices: seriesData.meta.streamingServices || [],
+    bookingOptions: seriesData.meta.bookingOptions || [],
+    behindTheScenes: seriesData.meta.behindTheScenes || null,
+  };
+
+  // Then construct the full TVSeries object
+  return {
+    meta: seriesMeta,
+    content: seriesData.content || '',
+    html: seriesData.html || '',
+    seasons: seriesData.seasons || [],
+    locations: seriesData.locations || [],
+  };
+}
+
+/**
+ * Format an array of films from raw data
+ */
+export function formatFilms(filmsData: any[]): Content<FilmMeta>[] {
+  if (!Array.isArray(filmsData)) return [];
+  return filmsData.map(formatFilm).filter(Boolean) as Content<FilmMeta>[];
+}
+
+/**
+ * Format an array of TV series from raw data
+ */
+export function formatTVSeriesArray(seriesData: any[]): TVSeries[] {
+  if (!Array.isArray(seriesData)) return [];
+  return seriesData.map(formatTVSeries).filter(Boolean) as TVSeries[];
 } 

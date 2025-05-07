@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Bohemian Rhapsody Filmed?"
 description: "Discover the iconic locations featured in Bohemian Rhapsody, the cinematic celebration of Queen and Freddie Mercury, and get a glimpse into the journey of one of rock music's most legendary bands."
@@ -121,4 +120,3 @@ London serves as the heartbeat of the film, with pivotal scenes set in various l
 Fans of Queen will find themselves captivated by the effortlessly recreated environments. Whether it’s a visit to iconic recording studios or walking the streets of Notting Hill, the film’s locations bring you closer to the essence of the band’s musical journey.
 
 For avid fans and those seeking to know more about the making of this cinematic masterpiece, tours celebrating Queen's legacy are readily available, offering a firsthand experience that deepens your connection to the music and the remarkable story behind Bohemian Rhapsody. Prepare for an unforgettable exploration into the life of one of rock history's most influential figures.
-```

@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Zodiac Filmed?"
 description: "Dive deep into the captivating filming locations of Zodiac, where the gripping storyline of crime and investigation unfolds across iconic sites in California."
@@ -116,4 +115,3 @@ From the haunting shores of Lake Berryessa to the vibrant streets of San Francis
 As a testament to its enduring legacy, many of these filming locations have become essential stops for fans and true crime enthusiasts. Engaging tours offer opportunities to walk in the footsteps of the film's characters, inviting you to explore the very streets and landmarks that were pivotal to the investigation.
 
 Whether you're a lover of true crime, a fan of David Fincher’s work, or just someone intrigued by fascinating stories, visiting these locations allows for a deeper understanding of the mythology surrounding the Zodiac killer. Embrace the experience and uncover the real-life mysteries that inspired this iconic film.
-```

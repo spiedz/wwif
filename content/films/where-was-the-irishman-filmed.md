@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Irishman Filmed?"
 description: "Discover the rich and diverse filming locations of The Irishman, a cinematic masterpiece that brings to life the gritty underbelly of organized crime in America."
@@ -81,4 +80,3 @@ The Irishman invites viewers into a world of intrigue, betrayal, and loyalty wit
 New York City stands as a central character, with its iconic skyline providing the backdrop for key moments. Chicago exemplifies the mid-century ambiance that was essential to depict the rise and fall of mob power. Weehawken, New Jersey, offers stunning visuals that amplify the film's emotional depth, creating a cinematic landscape that truly feels alive.
 
 For fans and cinephiles alike, exploring these filming locations provides an opportunity to dive deeper into the world of The Irishman. Whether joining an immersive film tour in the heart of New York or discovering ends of historic Chicago, the richness of the filming sites adds another layer of appreciation to this cinematic gem, allowing audiences to walk in the footsteps of legendary figures depicted on-screen.
-```
