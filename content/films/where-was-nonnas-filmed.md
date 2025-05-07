@@ -1,4 +1,4 @@
-"
+
 ---
 title: "Where Was Nonna's Filmed? A Taste of New Jersey's Charm"
 description: "Get ready to crave some pasta! We're diving into the charming and authentic filming locations of 'Nonna's,' the heartwarming comedy that serves up family, food, and a heartfelt quest across New Jersey."
@@ -105,4 +105,3 @@ Key filming took place across several New Jersey towns, including **Carlstadt**,
 While many exterior shots and community scenes were filmed on location, showcasing the real streets and businesses of New Jersey, the intricate interiors of the family restaurant and intimate home scenes were likely brought to life on **soundstages in Bergen County**. This allowed the filmmakers to meticulously craft the perfect atmosphere for Joe's culinary and personal journey.
 
 These New Jersey locales aren't just dots on a map; they are vibrant communities steeped in culture and history. By choosing these authentic spots, "Nonna's" offers viewers more than just a story; it provides a genuine slice of life. Fans of the film looking to connect with its world can explore these Garden State towns, sample the local Italian cuisine, and perhaps even feel a bit of the movie's magic. Who knows, you might just find your new favorite cannoli spot or the perfect plate of pasta that tastes like it was made by a nonna!
-"
