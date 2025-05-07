@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlogMeta } from '../types/content';
@@ -59,6 +59,9 @@ export interface BlogPostProps {
  * This component provides a more engaging and visually appealing blog post layout
  */
 const BlogPost: React.FC<BlogPostProps> = ({ meta, content, html }): React.ReactElement => {
+  const [imageError, setImageError] = useState(false);
+  const fallbackImage = "https://images.unsplash.com/photo-1616530940355-351fabd9524b?auto=format&fit=crop&w=800&q=80";
+  
   // Function to enhance HTML content with section dividers and special formatting
   const enhancedHtml = useMemo(() => {
     if (!html) return '';
@@ -192,7 +195,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ meta, content, html }): React.React
     <article className="max-w-5xl mx-auto">
       {/* Header with featured image */}
       <header className="relative mb-12">
-        {meta.featuredImage && (
+        {meta.featuredImage && !imageError ? (
           <div className="relative h-[60vh] min-h-[400px] rounded-xl overflow-hidden shadow-xl">
             <Image
               src={meta.featuredImage}
@@ -201,6 +204,10 @@ const BlogPost: React.FC<BlogPostProps> = ({ meta, content, html }): React.React
               className="object-cover"
               priority
               sizes="(max-width: 1024px) 100vw, 1024px"
+              onError={(e) => {
+                console.error(`Failed to load featured image: ${meta.featuredImage}`);
+                setImageError(true);
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
             
@@ -211,9 +218,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ meta, content, html }): React.React
               )}
               
               <div className="flex flex-wrap items-center mt-6 text-sm text-white/70">
-                <time dateTime={meta.date}>{formatDate(meta.date)}</time>
+                <time dateTime={meta.date || ''}>{meta.date ? formatDate(meta.date) : 'No date'}</time>
                 <span className="mx-2">•</span>
-                <span>{meta.content?.length ? Math.ceil(meta.content.split(/\s+/).length / 200) + ' min read' : '5 min read'}</span>
+                <span>{content ? Math.ceil(content.split(/\s+/).length / 200) + ' min read' : '5 min read'}</span>
                 {meta.author && (
                   <>
                     <span className="mx-2">•</span>
@@ -224,14 +231,14 @@ const BlogPost: React.FC<BlogPostProps> = ({ meta, content, html }): React.React
               
               {/* Tags */}
               {meta.categories && meta.categories.length > 0 && (
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h3 className="text-lg font-medium text-gray-900 mb-3">Topics</h3>
+                <div className="mt-8 pt-6 border-t border-white/30">
+                  <h3 className="text-lg font-medium text-white mb-3">Topics</h3>
                   <div className="flex flex-wrap gap-2">
-                    {meta.categories.map((category, index) => (
+                    {meta.categories.map((category, i) => (
                       <Link 
-                        key={index} 
+                        key={i} 
                         href={`/blog/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full px-3 py-1 text-sm transition-colors"
+                        className="bg-white/20 hover:bg-white/30 text-white rounded-full px-3 py-1 text-sm transition-colors"
                       >
                         {category}
                       </Link>
@@ -239,6 +246,41 @@ const BlogPost: React.FC<BlogPostProps> = ({ meta, content, html }): React.React
                   </div>
                 </div>
               )}
+            </div>
+          </div>
+        ) : (
+          // Fallback header without image or with fallback image
+          <div className="relative rounded-xl overflow-hidden shadow-xl bg-gradient-to-r from-primary to-primary-dark">
+            <div className="relative h-[40vh] min-h-[300px]">
+              {imageError && (
+                <Image
+                  src={fallbackImage}
+                  alt={meta.title}
+                  fill
+                  className="object-cover opacity-30"
+                  priority
+                />
+              )}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="p-6 md:p-12 text-white text-center max-w-3xl">
+                  <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">{meta.title}</h1>
+                  {meta.description && (
+                    <p className="mt-4 text-lg md:text-xl text-white/80">{meta.description}</p>
+                  )}
+                  
+                  <div className="flex flex-wrap items-center justify-center mt-6 text-sm text-white/70">
+                    <time dateTime={meta.date || ''}>{meta.date ? formatDate(meta.date) : 'No date'}</time>
+                    <span className="mx-2">•</span>
+                    <span>{content ? Math.ceil(content.split(/\s+/).length / 200) + ' min read' : '5 min read'}</span>
+                    {meta.author && (
+                      <>
+                        <span className="mx-2">•</span>
+                        <span>By {meta.author}</span>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
