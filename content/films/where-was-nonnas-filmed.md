@@ -1,4 +1,3 @@
-
 ---
 title: "Where Was Nonna's Filmed? A Taste of New Jersey's Charm"
 description: "Get ready to crave some pasta! We're diving into the charming and authentic filming locations of 'Nonna's,' the heartwarming comedy that serves up family, food, and a heartfelt quest across New Jersey."
