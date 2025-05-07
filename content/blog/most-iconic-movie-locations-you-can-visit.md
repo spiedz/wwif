@@ -5,7 +5,7 @@ slug: "most-iconic-movie-locations-you-can-visit"
 date: "2025-06-02"
 categories: ["Film Tourism", "Travel Guides", "Movie Locations"]
 author: "Film Location Explorer"
-featuredImage: "https://images.unsplash.com/photo-1626806787461-102c1a7d1513?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
+featuredImage: "https://media.timeout.com/images/106191999/750/562/image.jpg"
 ---
 
 # 25 Most Iconic Movie Locations You Can Actually Visit
