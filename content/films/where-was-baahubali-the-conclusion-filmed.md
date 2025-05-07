@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Baahubali: The Conclusion Filmed?"
 description: "Dive into the mesmerizing locations of Baahubali: The Conclusion, where breathtaking landscapes and historical sites brought the epic saga to life."
@@ -119,4 +118,3 @@ Baahubali: The Conclusion is not just a film; it's an epic saga that enchants au
 From the architectural marvels of Mysore Palace to the natural beauty of Hampi, each location offers a glimpse into the grandeur and depth of the narrative. The sprawling sets at Ramoji Film City provided the perfect backdrop for monumental scenes, while historic forts like Kondapalli added authenticity to the film's period setting.
 
 Whether you are an avid fan or a curious traveler, exploring the real-life locations where Baahubali: The Conclusion was filmed adds a unique dimension to your appreciation of this cinematic wonder. With guided tours and immersive experiences available, you can walk in the footsteps of your favorite characters and witness the breathtaking beauty that brought this epic to life.
-```

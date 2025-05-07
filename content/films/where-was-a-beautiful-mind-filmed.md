@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was A Beautiful Mind Filmed?"
 description: "Discover the captivating filming locations of A Beautiful Mind, a film that beautifully portrays the life of genius mathematician John Nash against stunning backdrops."
@@ -93,4 +92,3 @@ Filmed prominently in New York City, the film captures both the chaos and beauty
 These locations have transformed into sacred pilgrimage sites for fans wishing to step into Nash's world, offering guided tours that provide deeper insight into the man behind the myth. Whether you find yourself wandering the ivy-clad paths of Princeton or strolling through the iconic streets of NYC, experiencing these settings in person adds an unforgettable dimension to the film’s narrative.
 
 The filming locations encapsulate not just the essence of a great mind but also the emotions that intertwined within them, making A Beautiful Mind a timeless classic that resonates long after the credits roll.
-```

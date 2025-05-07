@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Munich Filmed?"
 description: "Discover the captivating filming locations of Munich, where gripping historical drama meets stunning backdrops across Europe."
@@ -96,4 +95,3 @@ behindTheScenes: {
 From the vibrant streets of Munich to the intricately designed Bavarian Film Studios, each filming location adds weight and authenticity to the narrative. The contrast of bustling urban settings and solemn historical sites create a backdrop that echoes the themes of the struggle and resilience that are central to the film.
 
 Fans of the film can walk the very streets that witnessed the events depicted and visit the studios that brought the history to life. Whether you're traversing the picturesque avenues of Munich or immersing yourself in a storytelling tour, experiencing these locales offers a tangible connection to the cinematic legacy of "Munich." Plan your adventure today and step into the scenes that compellingly depict a dark chapter in history.
-```

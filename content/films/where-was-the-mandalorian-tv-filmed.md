@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was The Mandalorian (TV) Filmed?"
 description: "Discover the stunning filming locations of The Mandalorian, where the riveting adventures of this iconic series unfold across breathtaking landscapes."
@@ -104,4 +103,3 @@ From the iconic landscapes of the Mojave Desert to the breathtaking vistas of Yo
 For fans yearning to explore these majestic settings, numerous tours and experiences are available. Whether you venture to the sun-soaked deserts or the scenic hills of California, walking in the footsteps of the Mandalorian allows for a unique connection to your favorite characters and stories.
 
 Step into the galaxy far, far away and experience the filming locations that brought The Mandalorian to life, making each episode a remarkable blend of artistry and adventure.
-```

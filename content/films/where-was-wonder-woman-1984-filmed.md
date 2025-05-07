@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Wonder Woman 1984 Filmed?"
 description: "Uncover the stunning filming locations of Wonder Woman 1984, where the enchanting world of the Amazons meets the vibrant sights of 1980s America."
@@ -91,9 +90,8 @@ behindTheScenes: {
 
 <WonderWoman1984Guide />
 
-Wonder Woman 1984 is more than just a sequel; it’s a vibrant celebration of heroism, nostalgia, and the fight for justice. Shot across breathtaking locations, from the historic heart of Washington D.C. to the scenic vistas of San Antonio, each filming spot plays an essential role in enhancing the movie's exhilarating narrative.
+Wonder Woman 1984 is more than just a sequel; it's a vibrant celebration of heroism, nostalgia, and the fight for justice. Shot across breathtaking locations, from the historic heart of Washington D.C. to the scenic vistas of San Antonio, each filming spot plays an essential role in enhancing the movie's exhilarating narrative.
 
 Visiting these iconic places allows fans to immerse themselves in the world of the Amazonian princess. Whether it's the buzz of Salt Lake City or the glamourous streets of Los Angeles, these locations are now more than mere backdrops; they are landmarks of adventure waiting to be explored.
 
 With various tours and experiences available, you can walk in the footsteps of Wonder Woman. From Hollywood's iconic streets to San Antonio's rich history, connecting with these filming locations brings the magic of the movie into the real world. Don't miss the opportunity to experience the breathtaking scenes that made Wonder Woman 1984 a visual masterpiece.
-```

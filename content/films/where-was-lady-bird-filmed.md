@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Lady Bird Filmed?"
 description: "Dive into the charming filming locations of Lady Bird, where the unique essence of Sacramento comes alive in this coming-of-age story."
@@ -105,4 +104,3 @@ Lady Bird is not just a film; it’s an exploration of identity, family, and the
 From the hallowed halls of C.K. McClatchy High School to the inviting ambiance of Café Matisse, each filming location adds a rich layer to the story. Lady Bird’s dream of leaving her hometown resonates deeply, and locations like the Sacramento International Airport become symbols of aspiration and desire.
 
 As fans of the film embark on their own adventures, visiting these sites offers a chance to connect with the heartfelt journey of Lady Bird. Whether exploring the streets of Sacramento or cozying up in familiar cafés, immersing oneself in these locations can create a deeper appreciation for the film's artistry and storytelling. So grab your map and get ready to experience the magic of Lady Bird in its hometown!
-```

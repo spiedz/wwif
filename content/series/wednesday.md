@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Wednesday Filmed?"
 description: "Explore the real-world filming locations of Wednesday, from Nevermore Academy to its actual filming spots."
@@ -145,4 +144,3 @@ Some of the most iconic filming locations include:
 ## Behind the Scenes
 
 The production of Wednesday was a labor of love, infused with Tim Burton's distinctive flair. From casting choices to location selection, each aspect was captured with care and creativity, ensuring that the series would be a haunting yet heartfelt experience for audiences of all ages.
-```

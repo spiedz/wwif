@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Terminal Filmed?"
 description: "Uncover the enchanting filming locations of 'The Terminal', showcasing the real-life backdrop for this heartwarming film starring Tom Hanks."
@@ -121,4 +120,3 @@ The primary setting is the iconic John F. Kennedy International Airport, where t
 For fans of the film, these locales have transformed into must-see destinations, offering a glimpse into the world that brought Viktor's story to life. A visit to the actual settings adds a rich layer of understanding and connection to the themes of hope, resilience, and the human spirit that are so delicately woven throughout 'The Terminal'.
 
 Embark on a tour of New York City and explore the filming locations that provide a tangible connection to Viktor's enchanting story, making your experience truly unforgettable.
-```

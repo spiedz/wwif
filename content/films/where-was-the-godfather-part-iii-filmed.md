@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was The Godfather Part III Filmed?"
 description: "Dive into the captivating filming locations of The Godfather Part III, where the iconic saga continues against stunning backdrops in Italy and America."
@@ -109,4 +108,3 @@ Rome, with its rich history and breathtaking architecture, serves as more than j
 Fans of the franchise can immerse themselves in the world of The Godfather Part III through various tours that explore these stunning sites. From guided walks through Rome to special excursions in Sicily, experiencing these locations firsthand adds a profound layer to understanding this cinematic masterpiece.
 
 Whether a lifelong fan or a newcomer to the saga, visiting the filming spots of The Godfather Part III invites you to delve deeper into the intertwined narratives of power, family, and legacy that have captivated viewers for decades.
-```

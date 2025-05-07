@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Sicario: Day of the Soldado Filmed?"
 description: "Uncover the thrilling filming locations of Sicario: Day of the Soldado, where intense action unfolds against the stark backdrop of the U.S.-Mexico border."
@@ -98,4 +97,3 @@ From the bustling streets of El Paso to the harrowing landscapes of Ciudad Juár
 For fans eager to explore these locations and delve deeper into the film's world, there are numerous guided tours available. Whether you venture into El Paso or Juárez, experiencing these sites in person will bring a new understanding of the film's dramatic narrative and the true stories behind it.
 
 Embark on a journey through these impactful locations as you uncover the cinematic landscape that defines Sicario: Day of the Soldado, and witness how film and reality converge in one of the most intense depictions of the modern drug trade.
-```

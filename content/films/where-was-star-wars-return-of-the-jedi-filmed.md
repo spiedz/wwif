@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Star Wars: Return of the Jedi Filmed?"
 description: "Dive into the captivating filming locations of Star Wars: Return of the Jedi, where iconic scenes were shot across stunning landscapes that brought the galaxy to life."
@@ -101,4 +100,3 @@ Star Wars: Return of the Jedi is more than just a film; it's an epic adventure t
 From the majestic Redwood National and State Parks, capturing the enchanting forests of Endor, to the stunning vistas of the California desert depicted as Tatooine, every location played a significant role in elevating the visual narrative. These enchanting backdrops not only added to the film's authenticity but also transformed into pilgrimage sites for ardent fans eager to walk in the footsteps of their favorite characters.
 
 Returning to these iconic locations offers a unique experience, allowing fans to deeply connect with the film’s legacy. Whether you're exploring the towering redwoods or venturing into the stark beauty of Joshua Tree National Park, each step you take echoes the adventures of Luke, Leia, and Han. As you retrace the journey of the Rebellion, you'll gain a newfound appreciation for the artistry and dedication that went into making Star Wars: Return of the Jedi a timeless classic.
-```

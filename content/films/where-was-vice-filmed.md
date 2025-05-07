@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Vice Filmed?"
 description: "Dive into the intriguing filming locations of Vice, the biographical film that unveils the complex life of Dick Cheney, showcasing extraordinary sites across America."
@@ -102,4 +101,3 @@ Vice isn't just a biographical narrative; it's a riveting ride through the moder
 Los Angeles provided the backdrop for many scenes, where the film's intricate portrayal of political conflict unfolded, while distances were bridged through the representation of iconic Washington D.C. locations. From San Francisco’s vibrant culture to the political pulse of Texas, each filming site adds depth and authenticity to Cheney’s complex narrative.
 
 Film enthusiasts and political aficionados alike can embark on a journey similar to Cheney's by exploring these filming locations, gaining insight into the intertwining of political power and personal stories. Designated tours allow fans to step into the world of Vice, enrichening their understanding of the film and the real-life events it depicts. Whether you're recounting history in Washington D.C. or immersing yourself in the bustling energy of Los Angeles, visiting these sites amplifies the cinematic experience that is Vice.
-```

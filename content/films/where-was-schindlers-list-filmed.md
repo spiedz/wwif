@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Schindler’s List Filmed?"
 description: "Dive into the poignant filming locations of Schindler’s List, exploring the historic backdrops that brought this powerful narrative to life."
@@ -97,4 +96,3 @@ Kraków, Poland, stands out as the heart of the movie, providing not only stunni
 The impact of Oskar Schindler’s factory and the remnants of the Plaszów concentration camp remind us of the harsh realities faced during that time, adding an intensified poignancy to the viewing experience. Each location, steeped in history, contributes to the film’s powerful message about humanity, morality, and courage.
 
 For those eager to immerse themselves in this noteworthy history, Kraków offers a wealth of tours and experiences that bring you closer to the film’s legacy. Whether you’re wandering through the Jewish District or visiting the museum at Schindler’s factory, these sites provide a profound connection to the story behind the film and its lasting impact on society.
-```

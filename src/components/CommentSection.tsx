@@ -3,7 +3,7 @@ import { Comment, CommentFormData } from '../types/comment';
 
 interface CommentSectionProps {
   pageSlug: string;
-  pageType: 'film' | 'blog';
+  pageType: 'film' | 'blog' | 'series' | 'location';
 }
 
 const CommentSection: React.FC<CommentSectionProps> = ({ pageSlug, pageType }) => {

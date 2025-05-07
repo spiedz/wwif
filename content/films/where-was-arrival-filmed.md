@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Arrival Filmed?"
 description: "Delve into the captivating filming locations of Arrival, where the blend of stunning landscapes and thought-provoking narrative come alive."
@@ -90,4 +89,3 @@ The beautiful city of Victoria, British Columbia, stands out as a key filming lo
 These scenic locales have captivated fans and newcomers alike, inviting them to explore the landscapes that played a role in shaping this unforgettable journey. For travelers and cinephiles, each location brings newfound meaning and connection to the film’s mesmerizing narrative.
 
 Whether you're planning a visit to the picturesque sites of Arrival or embarking on a cinematic adventure, experiencing these locations firsthand invites you into the world that expertly intertwines the extraordinary with the everyday.
-```

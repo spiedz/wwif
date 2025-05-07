@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Yellowjackets Filmed?"
 description: "Explore the real-world filming locations of Yellowjackets, from a remote wilderness to stunning landscapes across the Pacific Northwest."

@@ -6,7 +6,7 @@ import { Coordinates, FilmLocation, FilmRegion, FilmMeta, TravelTip, FilmTrivia 
  */
 export const groupLocationsByRegion = (film: FilmMeta): FilmRegion[] => {
   // If film already has regions defined, use those
-  if (film.regions && film.regions.length > 0) {
+  if (film.regions && Array.isArray(film.regions) && film.regions.length > 0) {
     return film.regions;
   }
 
@@ -63,6 +63,14 @@ export const groupLocationsByRegion = (film: FilmMeta): FilmRegion[] => {
  * Creates a single default region from coordinates
  */
 export const createDefaultRegion = (film: FilmMeta): FilmRegion => {
+  if (!film.coordinates || film.coordinates.length === 0) {
+    return {
+      name: 'Featured Locations',
+      description: `Explore the filming locations of ${film.title}`,
+      locations: []
+    };
+  }
+  
   const locations = film.coordinates.map(coord => ({
     name: coord.name || 'Unnamed Location',
     description: coord.description || '',
@@ -82,7 +90,7 @@ export const createDefaultRegion = (film: FilmMeta): FilmRegion => {
  */
 export const extractTravelTips = (film: FilmMeta): TravelTip[] => {
   // If film already has travel tips defined, use those
-  if (film.travelTips && film.travelTips.length > 0) {
+  if (film.travelTips && Array.isArray(film.travelTips) && film.travelTips.length > 0) {
     return film.travelTips;
   }
   
@@ -114,42 +122,16 @@ export const extractTravelTips = (film: FilmMeta): TravelTip[] => {
 };
 
 /**
- * Extracts trivia from film metadata or creates default ones
+ * Extracts trivia facts from film metadata or returns empty array
  */
 export const extractTrivia = (film: FilmMeta): FilmTrivia[] => {
   // If film already has trivia defined, use those
-  if (film.trivia && film.trivia.length > 0) {
+  if (film.trivia && Array.isArray(film.trivia) && film.trivia.length > 0) {
     return film.trivia;
   }
   
-  // Check if there's behind the scenes content that could be used for trivia
-  const defaultTrivia: FilmTrivia[] = [];
-  
-  if (film.behindTheScenes) {
-    if (typeof film.behindTheScenes === 'string') {
-      defaultTrivia.push({
-        text: film.behindTheScenes
-      });
-    } else if (film.behindTheScenes.facts && film.behindTheScenes.facts.length > 0) {
-      film.behindTheScenes.facts.forEach(fact => {
-        defaultTrivia.push({
-          text: fact
-        });
-      });
-    }
-  }
-  
-  // Add generic trivia if we don't have enough
-  if (defaultTrivia.length === 0) {
-    defaultTrivia.push({
-      text: `${film.title} was directed by ${film.director} and released in ${film.year}.`
-    });
-    defaultTrivia.push({
-      text: `The film was shot in multiple locations, including ${film.coordinates.slice(0, 3).map(c => c.name).join(', ')}.`
-    });
-  }
-  
-  return defaultTrivia;
+  // Otherwise return empty array
+  return [];
 };
 
 /**

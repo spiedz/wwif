@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Black Adam Filmed?"
 description: "Discover the breathtaking locations where Black Adam was filmed, taking you from the vibrant landscapes to ancient ruins that brought the story to life."
@@ -98,4 +97,3 @@ From the ancient ruins of Hawkman Palace in Egypt to the modern elegance of Abu 
 Tourists and fans alike can now explore these iconic filming sites, each serving as a portal into the cinematic world of Black Adam. Whether you’re traversing the magnificent landscapes of the Middle East or wandering the vibrant streets of Atlanta, each step allows you to connect with the characters in a way that elevates your viewing experience.
 
 With numerous tours and accommodations available, there's never been a better time to immerse yourself in the world of Black Adam. Prepare to embark on an adventure that extends beyond the screen and into the heart of your next travel destination.
-```

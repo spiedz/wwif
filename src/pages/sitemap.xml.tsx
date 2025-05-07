@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { getFilmSlugs, getBlogSlugs, getSeriesSlugs } from '../utils/markdown';
+import { getAllLocationSlugs } from '../utils/locationUtils';
 import fs from 'fs';
 import path from 'path';
 
@@ -20,6 +21,7 @@ function generateSiteMap(
   filmSlugs: string[], 
   blogSlugs: string[], 
   seriesSlugs: string[],
+  locationSlugs: string[],
   lastModDates: {
     films: Record<string, string>,
     blogs: Record<string, string>,
@@ -48,6 +50,12 @@ function generateSiteMap(
      </url>
      <url>
        <loc>${BASE_URL}/series</loc>
+       <lastmod>${new Date().toISOString()}</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8</priority>
+     </url>
+     <url>
+       <loc>${BASE_URL}/locations</loc>
        <lastmod>${new Date().toISOString()}</lastmod>
        <changefreq>weekly</changefreq>
        <priority>0.8</priority>
@@ -88,6 +96,18 @@ function generateSiteMap(
      `;
        })
        .join('')}
+     ${locationSlugs
+       .map(slug => {
+         return `
+       <url>
+           <loc>${BASE_URL}/locations/${slug}</loc>
+           <lastmod>${new Date().toISOString()}</lastmod>
+           <changefreq>monthly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `;
+       })
+       .join('')}
    </urlset>
  `;
 }
@@ -101,6 +121,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const filmSlugs = getFilmSlugs();
   const blogSlugs = getBlogSlugs();
   const seriesSlugs = getSeriesSlugs();
+  
+  // Get location slugs (these are async)
+  const locationSlugsPromise = getAllLocationSlugs();
   
   // Get last modified dates for all content files
   const filmsDir = path.join(process.cwd(), 'content/films');
@@ -131,8 +154,11 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     lastModDates.series[slug] = getFileLastModified(filePath);
   });
 
-  // Generate the XML sitemap with the film, blog, and series data
-  const sitemap = generateSiteMap(filmSlugs, blogSlugs, seriesSlugs, lastModDates);
+  // Resolve the async location slugs
+  const locationSlugs = await locationSlugsPromise;
+
+  // Generate the XML sitemap with the film, blog, series, and location data
+  const sitemap = generateSiteMap(filmSlugs, blogSlugs, seriesSlugs, locationSlugs, lastModDates);
 
   res.setHeader('Content-Type', 'text/xml');
   // Add Cache-Control header to help with CDN caching

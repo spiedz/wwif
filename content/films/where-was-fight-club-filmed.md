@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Fight Club Filmed?"
 description: "Dive deep into the gritty and captivating filming locations of Fight Club, where the complex narrative and iconic visuals were brought to life."
@@ -102,4 +101,3 @@ Fight Club is more than just a film; it’s a cultural phenomenon that resonates
 From the historical Bradbury Building, providing a striking contrast to the anarchic spirit of the characters, to the bustling streets of downtown Los Angeles echoing the film’s critique of consumerism, each location adds depth and dimension to this groundbreaking story. The selection of locations was deliberate, emphasizing the film’s themes of identity and societal breakdown.
 
 For fans and film enthusiasts alike, exploring these iconic spots offers a unique opportunity to walk in the footsteps of The Narrator and Tyler Durden, diving deeper into the world that sparked conversations around masculinity, existentialism, and rebellion. Whether you’re participating in the Fight Club Experience Tour or simply wandering the streets of L.A., each location tells a story that continues to captivate and provoke thought long after the credits roll.
-```

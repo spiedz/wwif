@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Snowpiercer Filmed?"
 description: "Discover the breathtaking filming locations of 'Snowpiercer,' the thrilling sci-fi film set in a frozen world of survival and rebellion."
@@ -88,4 +87,3 @@ behindTheScenes: {
 From the bustling city streets of Vancouver to the striking architecture of the Vancouver Public Library, every site adds a layer of authenticity to the story. The carefully chosen locations not only capture the essence of a dystopian future but also reflect the human experiences of the characters onboard the Snowpiercer.
 
 With tours and accommodation options available, fans have the opportunity to delve deeper into the world of 'Snowpiercer.' Exploring these captivating sites allows viewers to connect with the film on a more personal level, enriching their appreciation of this cinematic masterpiece and the compelling themes it explores.
-```

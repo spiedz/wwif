@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was 1917 Filmed?"
 description: "Discover the breathtaking locations that brought the intense World War I epic, 1917, to life. Explore how these sites enhance the film's gripping storytelling."
@@ -96,4 +95,3 @@ behindTheScenes: {
 From the expansive backdrop of Frensham Ponds to the historic charm of Shepperton Studios, each filming location plays a crucial role in immersing viewers in the perilous atmosphere of World War I. The seamless transitions between these sites evoke a sense of urgency, drawing audiences deeper into the plight of the film's protagonist.
 
 For fans and history buffs alike, visiting these filming locations offers a unique opportunity to step into the world of 1917. Tours and experiences provide insights into the film's creative process and an understanding of how these landscapes were transformed into the poignant narrative we see on screen. Whether it's wandering through the scenic routes of Surrey or discovering the intricacies of film production at Shepperton, each adventure serves to deepen the appreciation of this extraordinary cinematic work.
-```

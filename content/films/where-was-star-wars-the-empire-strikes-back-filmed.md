@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Star Wars: The Empire Strikes Back Filmed?"
 description: "Discover the breathtaking locations where the iconic Star Wars: The Empire Strikes Back was filmed, revealing the magic behind each scene."
@@ -98,4 +97,3 @@ The film takes us from the chilling environments of Norway’s fjords—where th
 Each filming location serves not only as a striking backdrop but has become a pilgrimage for fans eager to connect with the universe George Lucas created. Whether you’re hiking through icy landscapes in Norway or exploring the volcanic vistas of Tenerife, you can celebrate the legacy of a film that redefined the sci-fi genre.
 
 With exciting tours available and opportunities to explore distinct filming spots, fans can immerse themselves in the magic of The Empire Strikes Back. These experiences enhance the appreciation of this timeless classic, offering a chance to walk in the footsteps of legendary characters while basking in the awe-inspiring locales that made Star Wars an indelible part of cinematic history.
-```

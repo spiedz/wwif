@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Inglourious Basterds Filmed?"
 description: "Discover the captivating filming locations of Inglourious Basterds, where Quentin Tarantino crafted his unique take on World War II through stunning visuals."
@@ -98,4 +97,3 @@ From the glamorous streets of Paris, which provided a stunning backdrop for crit
 These filming locations have become pilgrimage sites for fans of the film, eager to walk where their favorite characters tread. Whether it’s a charming café in Zurich or the vibrant streets of Paris, experiencing these sites enriches the appreciation of Inglourious Basterds and its unique blend of history and fiction.
 
 With a variety of local tours available, fans can delve deeper into the making of this cinematic gem. So if you’re planning a trip to these iconic locations, prepare for an adventure that combines sightseeing with the thrill of cinema.
-```

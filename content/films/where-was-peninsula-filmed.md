@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Peninsula Filmed?"
 description: "Delve into the captivating filming locations of Peninsula, the thrilling sequel to the acclaimed Train to Busan, and discover the diverse landscapes that amplify its intense narrative."
@@ -95,4 +94,3 @@ Peninsula offers a thrilling continuation of the story first told in Train to Bu
 Each site not only enhances the film's atmosphere but also invites viewers to experience the stunningly beautiful yet haunting landscapes of South Korea. The production capitalized on the country’s varied environments, showcasing vast urban vistas and desolate countryside that amplify the stakes of survival.
 
 For fans of Peninsula, visiting these actual filming locations provides a unique opportunity to walk in the footsteps of the characters and witness firsthand the dramatic settings that shaped their harrowing journey. Whether you’re exploring the active streets of Seoul or the historic charm of Gyeongju, these sites are sure to leave an indelible mark on your appreciation of this cinematic experience.
-```

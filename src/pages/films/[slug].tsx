@@ -14,15 +14,44 @@ import SEO from '../../components/SEO';
 import { getFilmSchema, getFilmingLocationSchema, getBreadcrumbSchema } from '../../utils/schema';
 import FilmLocationsGuide from '../../components/FilmLocationsGuide';
 import { extractTravelTips, extractTrivia } from '../../utils/locationFormatters';
+import { addLocationBacklinks } from '../../utils/locationUtils';
 
 interface FilmPageProps {
   film: Content<FilmMeta>;
 }
 
-export default function FilmPage({ film }: FilmPageProps) {
+export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { locationBacklinks: string[] }) {
   const router = useRouter();
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState<'locations' | 'overview' | 'related'>('overview');
+  
+  /**
+   * Checks if the film has valid coordinates data
+   * Used to conditionally render map and location-based UI elements
+   * @returns {boolean} True if coordinates exist and array is not empty
+   */
+  const hasCoordinates = !!film.meta.coordinates && film.meta.coordinates.length > 0;
+  
+  /**
+   * Safely checks if the film includes a specific component
+   * Handles undefined components array and performs type checking
+   * @param {string} componentName - Name of the component to check for
+   * @returns {boolean} True if the component is included in the film's components
+   */
+  const hasComponent = (componentName: string): boolean => {
+    return !!film.meta.components && Array.isArray(film.meta.components) && 
+      film.meta.components.includes(componentName);
+  };
+  
+  /**
+   * Determines if the region-based layout should be used for this film
+   * Uses region layout if explicitly set in metadata or if film has special components
+   * @returns {boolean} True if region layout should be used
+   */
+  const shouldUseRegionLayout = (): boolean => {
+    // Use region layout if explicitly set to true or if it has the HarryPotterGuide component
+    return film.meta.useRegionLayout === true || hasComponent('HarryPotterGuide');
+  };
   
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -37,9 +66,11 @@ export default function FilmPage({ film }: FilmPageProps) {
   
   // Get random images from coordinates to show in the overview gallery
   const locationImages = film.meta.coordinates
-    .filter(coord => coord.image)
-    .map(coord => ({ url: coord.image as string, name: coord.name || 'Film location' }))
-    .slice(0, 6);
+    ? film.meta.coordinates
+        .filter(coord => coord.image)
+        .map(coord => ({ url: coord.image as string, name: coord.name || 'Film location' }))
+        .slice(0, 6)
+    : [];
 
   const currentUrl = process.env.NEXT_PUBLIC_BASE_URL ? 
     `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}` : 
@@ -47,7 +78,7 @@ export default function FilmPage({ film }: FilmPageProps) {
     
   // Generate JSON-LD schema for this film page
   const filmSchema = getFilmSchema(film.meta, currentUrl);
-  const locationsSchema = getFilmingLocationSchema(film.meta.title, film.meta.coordinates);
+  const locationsSchema = hasCoordinates ? getFilmingLocationSchema(film.meta.title, film.meta.coordinates || []) : null;
   
   // Generate breadcrumb schema
   const breadcrumbItems = [
@@ -64,14 +95,14 @@ export default function FilmPage({ film }: FilmPageProps) {
   const bookingOptions: BookingOption[] = film.meta.bookingOptions || [
     {
       name: 'Booking.com',
-      url: `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(film.meta.coordinates[0]?.name || film.meta.title)}&aid=1234567`,
+      url: `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(film.meta.coordinates?.[0]?.name || film.meta.title)}&aid=1234567`,
       type: 'booking',
       price: '$120/night',
       isPartner: true
     },
     {
       name: 'Expedia',
-      url: `https://www.expedia.com/Hotel-Search?destination=${encodeURIComponent(film.meta.coordinates[0]?.name || film.meta.title)}`,
+      url: `https://www.expedia.com/Hotel-Search?destination=${encodeURIComponent(film.meta.coordinates?.[0]?.name || film.meta.title)}`,
       type: 'booking',
       price: '$110/night'
     },
@@ -102,9 +133,9 @@ export default function FilmPage({ film }: FilmPageProps) {
   ];
 
   // Check if content includes custom components
-  const hasHarryPotterGuide = film.meta.components?.includes('HarryPotterGuide');
-  // Check if we should use the new region-based layout - ensure it's a boolean
-  const useRegionLayout = film.meta.useRegionLayout === true || hasHarryPotterGuide;
+  const hasHarryPotterGuide = hasComponent('HarryPotterGuide');
+  // Check if we should use the new region-based layout
+  const useRegionLayout = shouldUseRegionLayout();
 
   if (!film) {
     return <div>Film not found</div>;
@@ -230,18 +261,20 @@ export default function FilmPage({ film }: FilmPageProps) {
                         <p className="text-gray-600">{film.meta.director}</p>
                       </div>
                       
-                      <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <svg className="w-10 h-10 text-primary mb-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-1">Filming Locations</h3>
-                        <p className="text-gray-600">{film.meta.coordinates.length} location{film.meta.coordinates.length !== 1 ? 's' : ''}</p>
-                      </div>
+                      {hasCoordinates && (
+                        <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                          <svg className="w-10 h-10 text-primary mb-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                          </svg>
+                          <h3 className="text-lg font-semibold text-gray-800 mb-1">Filming Locations</h3>
+                          <p className="text-gray-600">{film.meta.coordinates?.length || 0} location{(film.meta.coordinates?.length || 0) !== 1 ? 's' : ''}</p>
+                        </div>
+                      )}
                     </div>
                   )}
                   
                   {/* Behind the Scenes section - only show if not using region layout */}
-                  {film.meta.behindTheScenes && !hasHarryPotterGuide && !useRegionLayout ? (
+                  {!useRegionLayout && film.meta.behindTheScenes && (
                     <section className="mt-12 mb-4 transform transition-all duration-500 hover:translate-y-[-5px]">
                       <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
                         <svg className="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,7 +287,7 @@ export default function FilmPage({ film }: FilmPageProps) {
                         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                         {typeof film.meta.behindTheScenes === 'string' ? (
                           <p className="italic text-gray-700 leading-relaxed text-lg relative z-10">{film.meta.behindTheScenes}</p>
-                        ) : film.meta.behindTheScenes.intro ? (
+                        ) : film.meta.behindTheScenes && typeof film.meta.behindTheScenes === 'object' && film.meta.behindTheScenes.intro ? (
                           <>
                             <p className="italic text-gray-700 leading-relaxed mb-6 text-lg relative z-10">{film.meta.behindTheScenes.intro}</p>
                             {film.meta.behindTheScenes.facts && film.meta.behindTheScenes.facts.length > 0 && (
@@ -273,7 +306,7 @@ export default function FilmPage({ film }: FilmPageProps) {
                         ) : null}
                       </div>
                     </section>
-                  ) : null}
+                  )}
                   
                   {/* Location Image Gallery */}
                   {locationImages.length > 0 && (
@@ -356,21 +389,23 @@ export default function FilmPage({ film }: FilmPageProps) {
                   )}
                   
                   {/* Call to action for locations exploration */}
-                  <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between border border-primary/10 shadow-sm transform transition-all duration-500 hover:shadow-md hover:translate-y-[-5px]">
-                    <div className="mb-4 md:mb-0 md:mr-6">
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Explore Filming Locations</h3>
-                      <p className="text-gray-600">Discover all {film.meta.coordinates.length} locations where {film.meta.title} was filmed</p>
+                  {hasCoordinates && (
+                    <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between border border-primary/10 shadow-sm transform transition-all duration-500 hover:shadow-md hover:translate-y-[-5px]">
+                      <div className="mb-4 md:mb-0 md:mr-6">
+                        <h3 className="text-xl font-bold text-gray-800 mb-2">Explore Filming Locations</h3>
+                        <p className="text-gray-600">Discover all {film.meta.coordinates?.length || 0} locations where {film.meta.title} was filmed</p>
+                      </div>
+                      <button 
+                        onClick={() => setActiveTab('locations')}
+                        className="px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-primary-dark transition-colors flex items-center"
+                      >
+                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                        </svg>
+                        View on Map
+                      </button>
                     </div>
-                    <button 
-                      onClick={() => setActiveTab('locations')}
-                      className="px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-primary-dark transition-colors flex items-center"
-                    >
-                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                      </svg>
-                      View on Map
-                    </button>
-                  </div>
+                  )}
                 </div>
               </div>
               
@@ -380,43 +415,47 @@ export default function FilmPage({ film }: FilmPageProps) {
                 style={{ position: activeTab === 'locations' ? 'relative' : 'absolute' }}
               >
                 {/* Interactive Map */}
-                <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
-                  <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
-                    <svg className="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                    </svg>
-                    Interactive Location Map
-                  </h2>
-                  <div className="w-32 h-1 bg-primary/30 rounded mb-8"></div>
-                  <div className="rounded-xl overflow-hidden border border-gray-200 mb-4 shadow-lg">
-                    <Map markers={film.meta.coordinates.map(coord => ({
-                      lat: coord.lat,
-                      lng: coord.lng,
-                      title: coord.name || '',
-                      description: coord.description || ''
-                    }))} height="500px" />
+                {hasCoordinates && (
+                  <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
+                    <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                      <svg className="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                      </svg>
+                      Interactive Location Map
+                    </h2>
+                    <div className="w-32 h-1 bg-primary/30 rounded mb-8"></div>
+                    <div className="rounded-xl overflow-hidden border border-gray-200 mb-4 shadow-lg">
+                      <Map markers={film.meta.coordinates?.map(coord => ({
+                        lat: coord.lat,
+                        lng: coord.lng,
+                        title: coord.name || '',
+                        description: coord.description || ''
+                      })) || []} height="500px" />
+                    </div>
+                    <p className="text-gray-600 text-sm italic mt-4 bg-gray-50 p-4 rounded-lg border-l-4 border-primary/30">
+                      Explore all {film.meta.coordinates?.length || 0} filming locations on the interactive map above. Click on markers for details.
+                    </p>
                   </div>
-                  <p className="text-gray-600 text-sm italic mt-4 bg-gray-50 p-4 rounded-lg border-l-4 border-primary/30">
-                    Explore all {film.meta.coordinates.length} filming locations on the interactive map above. Click on markers for details.
-                  </p>
-                </div>
+                )}
                 
                 {/* Filming Locations */}
-                <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
-                  <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
-                    <svg className="w-6 h-6 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                    Filming Locations
-                  </h2>
-                  <div className="w-32 h-1 bg-primary/30 rounded mb-8"></div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                    {film.meta.coordinates.map((coord: Coordinates, index: number) => (
-                      <LocationCard key={index} location={coord} index={index} />
-                    ))}
+                {hasCoordinates && (
+                  <div>
+                    <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                      <svg className="w-6 h-6 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                      Filming Locations
+                    </h2>
+                    <div className="w-32 h-1 bg-primary/30 rounded mb-8"></div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                      {film.meta.coordinates?.map((coord: Coordinates, index: number) => (
+                        <LocationCard key={index} location={coord} index={index} />
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
               
               {/* Related Tab Content */}
@@ -456,7 +495,7 @@ export default function FilmPage({ film }: FilmPageProps) {
                       </Link>
                     ))}
                     
-                    {film.meta.coordinates && film.meta.coordinates.slice(0, 2).map((coord, index) => (
+                    {hasCoordinates && film.meta.coordinates?.slice(0, 2).map((coord, index) => (
                       <Link 
                         key={`location-${index}`}
                         href={`/locations?name=${encodeURIComponent(coord.name || '')}`}
@@ -473,6 +512,39 @@ export default function FilmPage({ film }: FilmPageProps) {
                         </div>
                       </Link>
                     ))}
+                  </div>
+                </div>
+                
+                {/* Filming Locations Links */}
+                <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
+                  <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                    <svg className="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Explore Filming Locations
+                  </h2>
+                  <div className="w-32 h-1 bg-primary/30 rounded mb-8"></div>
+                  
+                  {locationBacklinks.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {locationBacklinks.map((link, index) => (
+                        <div key={index} className="p-4 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors" dangerouslySetInnerHTML={{ __html: link }} />
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-gray-600">
+                      No specific location pages available for this film yet. Check back later!
+                    </p>
+                  )}
+                  
+                  <div className="mt-6">
+                    <Link href="/locations" className="text-primary font-medium hover:underline flex items-center">
+                      Browse all filming locations
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -623,9 +695,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
   
+  // Generate location backlinks for SEO
+  const locationBacklinks = await addLocationBacklinks(film);
+  
   return {
     props: {
       film,
+      locationBacklinks,
     },
   };
 }; 

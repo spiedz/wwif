@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Enemy Filmed?"
 description: "Discover the intriguing filming locations of the psychological thriller Enemy, where the duality of identity intertwines with the visually stunning landscapes."
@@ -103,4 +102,3 @@ From the urban vibrancy of downtown Toronto to the peaceful escapism of the Toro
 Fans of the film can embark on guided tours that highlight these cinematic landmarks, gaining firsthand insight into how Toronto's unique charm shaped the narrative. Whether walking through the atmospheric Distillery District or exploring the lively streets of Kensington Market, viewers can deepen their connection to the haunting story of Enemy.
 
 As you immerse yourself in the striking landscapes that contributed to this cinematic masterpiece, you'll appreciate the film's exploration of duality on a whole new level.
-```

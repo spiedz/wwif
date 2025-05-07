@@ -1,7 +1,36 @@
 import { FilmMeta, BlogMeta, Coordinates } from '../types/content';
+import { LocationInfo, MediaItem } from './locationUtils';
 
 // Base URL for the website
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
+
+// Schema interfaces
+interface PlaceSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  description: string;
+  url: string;
+  geo: {
+    '@type': string;
+    latitude: number;
+    longitude: number;
+  };
+  image?: string;
+}
+
+interface MediaItemSchema {
+  '@type': string;
+  name: string;
+  url: string;
+  image?: string;
+}
+
+interface ListItemSchema {
+  '@type': string;
+  position: number;
+  item: MediaItemSchema;
+}
 
 // Helper to generate organization schema
 export const getOrganizationSchema = () => {
@@ -113,4 +142,52 @@ export const getWebPageSchema = (title: string, description: string, url: string
     description: description,
     url: url
   };
+};
+
+// Generate Schema for location pages
+export const getLocationPageSchema = (location: LocationInfo, url: string) => {
+  // Create the place schema
+  const placeSchema: PlaceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: location.name,
+    description: location.description || `Films and TV series filmed in ${location.name}`,
+    url: url,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: location.lat,
+      longitude: location.lng
+    }
+  };
+
+  // Add image only if it exists
+  if (location.image) {
+    placeSchema.image = location.image;
+  }
+
+  // Create itemList schema for the media items
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: location.mediaItems.map((item, index) => {
+      const listItem: ListItemSchema = {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': item.type === 'film' ? 'Movie' : 'TVSeries',
+          name: item.title,
+          url: `${BASE_URL}/${item.type === 'film' ? 'films' : 'series'}/${item.slug}`
+        }
+      };
+      
+      // Add image only if it exists
+      if (item.posterImage) {
+        listItem.item.image = item.posterImage;
+      }
+      
+      return listItem;
+    })
+  };
+
+  return [placeSchema, itemListSchema];
 }; 

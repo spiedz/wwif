@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Room Filmed?"
 description: "Dive into the captivating filming locations of Room, where the powerful story of resilience and love unfolds in stunning settings."
@@ -97,4 +96,3 @@ The film’s primary setting, a meticulously designed room, provides a stark con
 For fans and film enthusiasts alike, these locations have become gateways to experiencing the story firsthand. From exploring the streets of Queen Street West to visiting the tranquil gardens that played a role in outdoor scenes, every site resonates with the film’s themes of liberation and the transformative power of love.
 
 Whether you're planning a trip to Toronto or simply want to dive deeper into the world of Room, visiting these iconic locations offers a profound way to connect with the film's heart-wrenching yet uplifting narrative.
-```

@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was The Last Kingdom Filmed?"
 description: "Explore the real-world filming locations of The Last Kingdom, from the Dark Ages to historic England."
@@ -173,4 +172,3 @@ The making of The Last Kingdom was a monumental task, taking film crews to vario
 - Blenheim Palace was transformed into multiple regal settings over several seasons.
 - The creators emphasized historical accuracy in the set designs and costumes.
 - The show became a critical success, appealing to both history buffs and action-adventure fans.
-```

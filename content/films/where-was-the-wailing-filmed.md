@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Wailing Filmed?"
 description: "Dive into the haunting filming locations of The Wailing, where eerie landscapes and traditional villages set the stage for this chilling South Korean masterpiece."
@@ -98,4 +97,3 @@ From the haunting hills of Gokseong County to the traditional villages that brim
 As it explores themes of fear and the unknown, The Wailing's filming locations are a testament to this chilling tale. For fans and thrill-seekers alike, visiting these sites can provide a deeper appreciation for the narrative's complexity and the cultural richness embedded within the story.
 
 With guided tours available, horror enthusiasts and cinema lovers can immerse themselves in the cultural aspects and landscapes that shaped this critically acclaimed film. Whether it's walking through the same streets as the characters or exploring the haunting terrain, the experience brings The Wailing to life in a profound and unforgettable way.
-```

@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was War Horse Filmed?"
 description: "Discover the breathtaking filming locations of War Horse, a visually stunning epic that beautifully captures the essence of World War I."
@@ -95,4 +94,3 @@ War Horse is more than just a film; it’s a heartfelt exploration of loyalty, b
 From the rolling hills of Devon to the dramatic vistas of Dartmoor National Park, each location adds a layer of depth and authenticity to the story. The impressive sets at Pinewood Studios allowed filmmakers to recreate the devastating impacts of war while ensuring the horses were safe and well-handled during production.
 
 As fans of the film seek to experience these magnificent landscapes for themselves, dedicated tours in Dartmoor and Bath allow them to walk in the footsteps of the beloved characters. With each destination, viewers can gain a greater appreciation for the film’s artistry and the profound storytelling that War Horse offers, making it a must-watch for cinephiles and history enthusiasts alike.
-```

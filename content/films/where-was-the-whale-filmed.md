@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Whale Filmed?"
 description: "Dive into the filming locations of The Whale, an emotionally powerful film that captivates viewers with its poignant story and stunning settings."
@@ -95,4 +94,3 @@ Delving into the heart of urban life, the film captures moments of solitude amid
 These filming locations have not only become part of the film's identity but have transformed into pilgrimage sites for fans eager to engage with the places that brought this powerful story to life. Whether visiting the bustling neighborhoods or finding solace in serene parks, experiencing these locations firsthand adds an enriching layer to the narrative of The Whale.
 
 With guided tours and local insights available, film enthusiasts and travelers alike can explore the city through the lens of this cinematic masterpiece, ensuring that the experience is as profound as the film itself.
-```

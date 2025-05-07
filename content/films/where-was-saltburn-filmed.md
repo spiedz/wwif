@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Saltburn Filmed?"
 description: "Discover the captivating filming locations of Saltburn, a film that captures the essence of British elegance and intrigue against a stunning backdrop."
@@ -83,4 +82,3 @@ Saltburn captures the imagination with its stunning visuals and complex storytel
 The locations selected for filming are not just mere backdrops; they serve to enhance the narrative, allowing viewers to immerse themselves in a world filled with intrigue and elegance. The town's Victorian architecture and the resplendent coastal views set the perfect scene for the film's exploration of themes like obsession and class.
 
 For fans eager to explore these iconic sites, tailored tours are available, providing an opportunity to step into the film's world. Whether strolling along Saltburn's sandy beaches or exploring the majestic interiors of Dartington Hall, visiting these locations adds a delightful layer of authenticity to your cinematic experience of Saltburn.
-```

@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Elvis Filmed?"
 description: "Dive into the captivating filming locations of Elvis, where the life and legacy of the King of Rock 'n' Roll come to life across stunning landscapes and historic sites."
@@ -113,4 +112,3 @@ The film Elvis is a striking homage to one of music’s most influential figures
 Each location used in the film tells a unique story, enhancing the narrative and providing visual depth to the stunning portrayal of Elvis's life. Whether exploring the cultural landscape of New Orleans or standing in the very spaces where the King performed, audiences are given a glimpse into the thrilling world Elvis inhabited.
 
 For those wanting to embark on a journey through Elvis's life, there are exciting tours and experiences that allow fans to walk in his footsteps. Discover the charm of Memphis or the quiet beauty of Little Rock, and immerse yourself in the music history that shaped a generation. Experiencing these filming locations offers a deeper appreciation of the complexities and brilliance of Elvis, making the film not just a watch, but a remarkable exploration into the life of a legend.
-```

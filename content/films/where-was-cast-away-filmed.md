@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Cast Away Filmed?"
 description: "Discover the breathtaking filming locations of Cast Away, where Tom Hanks transformed on a deserted island in a gripping tale of survival and isolation."
@@ -86,4 +85,3 @@ From the pristine beaches to the rugged terrain, Monuriki Island's landscapes ar
 For fans eager to walk in the footsteps of Chuck Noland, tours in Fiji offer an opportunity to explore the locations that brought this gripping story to life. The Cast Away Film Location Tour provides insights into the production, while Fiji’s breathtaking scenery invites travelers to appreciate the beauty of their surroundings, just like Chuck did.
 
 Whether you’re a cinephile looking to trace the film's path or a traveler seeking adventure in paradise, Cast Away’s filming locations promise an enriching experience, making you feel a profound connection with the narrative and its stars.
-```

@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Aftersun Filmed?"
 description: "Discover the breathtaking locations where Aftersun was filmed, capturing the essence of nostalgia and the beautiful connection between a father and daughter."
@@ -81,4 +80,3 @@ Aftersun is a touching exploration of familial love, encapsulated within the ser
 The picturesque landscapes serve as a perfect canvas for the nuanced performances, where every frame tells a story of growing up and the bittersweet nature of memories. Each location is carefully chosen, enhancing the emotional depth and bringing viewers closer to the heartfelt connection between the father and daughter.
 
 For those who wish to explore the enchanting sites featured in Aftersun, there are a variety of tours and experiences available. Whether basking in the sun of Costa del Sol or enjoying the vibrant culture of Bristol, visiting these filming locations provides a tangible connection to this beautiful cinematic journey. Dive into the world of Aftersun and experience these captivating locations for yourself; it’s more than just watching a film — it’s about reliving those cherished moments.
-```

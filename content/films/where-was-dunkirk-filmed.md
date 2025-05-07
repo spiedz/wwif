@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Dunkirk Filmed?"
 description: "Discover the breathtaking filming locations of Dunkirk, where Christopher Nolan brought the extraordinary story of evacuation during World War II to life against stunning backdrops."
@@ -102,4 +101,3 @@ Dunkirk is more than just a film; it’s a visceral journey through a critical w
 From the serene yet haunting beaches of Dunkirk to the bustling streets of London, every location was chosen for its historical significance and visual impact. The choice to shoot on location rather than in studios enhances the film’s authenticity, creating an emotional connection for viewers.
 
 As you experience these filming sites, you’ll be walking in the footsteps of history, and the tours offered allow fans to delve deeper into the surroundings that inspired such a powerful narrative. Whether you’re visiting the shores of Dunkirk or exploring nearby towns like Ostend, these locations provide an enriching experience for anyone captivated by the story of resilience and survival that Dunkirk tells.
-```

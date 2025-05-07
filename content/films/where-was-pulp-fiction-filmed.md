@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Pulp Fiction Filmed?"
 description: "Dive into the iconic filming locations of Pulp Fiction, exploring the unforgettable settings that brought Quentin Tarantino's masterpiece to life."
@@ -102,4 +101,3 @@ The filming locations play a pivotal role in shaping the storytelling of Pulp Fi
 Exploring these iconic sites allows fans to immerse themselves in the quirky and darkly humorous world crafted by Tarantino. Whether you’re enjoying a meal at a diner where some of the film’s most famous scenes were shot or touring the streets where the action unfolds, visiting these locations adds depth to the appreciation of this cinematic classic.
 
 For those eager to step into the world of Pulp Fiction, dedicated tours and experiences await, offering a unique chance to explore the film’s influence on pop culture and cinema. Whether you're a lifelong fan or a newcomer, the locations of Pulp Fiction promise an unforgettable exploration of film history.
-```

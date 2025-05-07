@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was The Northman Filmed?"
 description: "Discover the breathtaking filming locations of The Northman, a visually stunning film that transports viewers to the Viking Age."
@@ -98,4 +97,3 @@ From the mesmerizing vistas of Thingvellir National Park to the captivating coas
 For fans and adventurers alike, these filming sites now offer unique opportunities to connect with the cinematic world of The Northman. Guided tours and experiences allow you to walk the same paths as the film’s characters and immerse yourself in the breathtaking landscapes that so vividly echo their stories.
 
 Whether you’re planning a trip to Iceland or indulging in a streaming session at home, exploring the locations where The Northman was filmed adds a thrilling new dimension to your viewing experience. Grab your gear, pack your bags, and prepare to discover the Viking world that awaits!
-```

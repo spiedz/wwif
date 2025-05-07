@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Prisoners Filmed?"
 description: "Dive into the haunting and intricate filming locations of the thriller 'Prisoners,' where tension builds in the atmospheric landscapes and gritty urban settings."
@@ -98,4 +97,3 @@ From the quiet suburban streets of Burlington, which stand in as the uncertain w
 Fans of Prisoners will find that these locations have become special pilgrimage sites, offering tours that dive deeper into the film’s filming process and narrative inspirations. Discovering these places allows audiences to connect with the film on a personal level, understanding the moods and challenges faced by the characters.
 
 Whether you're contemplating a journey to the atmospheric streets of Burlington or the majestic views of Niagara Falls, these real-world locations promise to enrich your appreciation of the hauntingly powerful film that is Prisoners.
-```

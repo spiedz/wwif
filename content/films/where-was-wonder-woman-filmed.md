@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Wonder Woman Filmed?"
 description: "Discover the breathtaking filming locations of Wonder Woman, where the story of a warrior princess unfolds against stunning backdrops."
@@ -97,4 +96,3 @@ The stunning landscapes of Italy and the vibrant charm of Faro, Portugal, transp
 As fans of the film, the allure of these filming locations beckons adventurers and enthusiasts alike. With dedicated tours available, you have the opportunity to walk the paths where Wonder Woman herself roamed, absorbing the atmosphere that influenced this iconic tale.
 
 Embark on a journey of your own as you discover the stunning locations of Wonder Woman, and let the film's message of strength and bravery inspire your travels across these cinematic landscapes.
-```

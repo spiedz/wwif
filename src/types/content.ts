@@ -71,12 +71,38 @@ export interface Coordinate {
   image?: string;
 }
 
+/**
+ * Film metadata information.
+ * Contains essential fields for displaying film details and optional properties
+ * that may not be available for all films.
+ */
 export interface FilmMeta extends ContentMeta {
+  /** Release year of the film */
   year: number;
+  /** Film director name */
   director: string;
+  /** Film genre(s) - can be a single string or array of genres */
   genre: string | string[];
+  /** URL to the film's poster image */
   posterImage?: string;
+  /** Array of filming locations with coordinates - if undefined, no map will be shown */
   coordinates?: Coordinate[];
+  /** Available streaming services for the film - if undefined, default services will be shown */
+  streamingServices?: StreamingService[];
+  /** Booking options related to film locations - if undefined, default options will be shown */
+  bookingOptions?: BookingOption[];
+  /** Special components to include in the film page rendering */
+  components?: string[];
+  /** Whether to use the region-based layout - defaults to false if undefined */
+  useRegionLayout?: boolean;
+  /** Behind-the-scenes information about the film - if undefined, this section won't be shown */
+  behindTheScenes?: string | BehindTheScenes;
+  /** Predefined regions for grouping locations - if undefined, regions will be auto-generated */
+  regions?: FilmRegion[];
+  /** Travel tips related to the film locations - if undefined, generic tips will be generated */
+  travelTips?: TravelTip[];
+  /** Trivia facts about the film - if undefined, this section won't be shown */
+  trivia?: FilmTrivia[];
 }
 
 export interface BlogMeta extends ContentMeta {

@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was The White Lotus Filmed?"
 description: "Explore the real-world filming locations of The White Lotus, from the luxurious Hawaiian resort to breathtaking landscapes across the islands."
@@ -144,4 +143,3 @@ Some of the most iconic filming locations include:
 ## Behind the Scenes
 
 The White Lotus was more than just a show; it was a transformative experience for its cast and crew, who navigated production hurdles during unprecedented times. Each stunning location was chosen to reflect the show's themes of privilege and perception, sprinkled with authentic Hawaiian beauty.
-```

@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Solo: A Star Wars Story Filmed?"
 description: "Dive into the enchanting filming locations of Solo: A Star Wars Story, where a galaxy far, far away meets stunning real-world landscapes."
@@ -109,4 +108,3 @@ Exploring the various terrains—from the breathtaking Sierra de Guadarrama in S
 These filming sites have evolved into pilgrimage spots for dedicated fans, eager to step into the world once dominated by the Empire and now shaped by the Rebellion. Whether you’re planning a tour of Bavaria Filmstadt or looking for scenic spots across California, visiting these locations elevates your connection to the Star Wars universe.
 
 Join us as we recount the cinematic journey of Solo: A Star Wars Story and discover how its stunning locations not only create an unforgettable viewing experience but also invite viewers to explore the awe of the galaxy together.
-```

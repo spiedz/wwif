@@ -76,4 +76,3 @@ From urban settings that reflect the stark contrasts in society to natural vista
 The locations featured in the film bring to life the juxtaposition of wealth and poverty, showcasing the stark realities of each district. Whether it's the bustling streets of Los Angeles representing the Capitol's grandeur or the serene yet wild landscapes of Yosemite, these locations add depth and authenticity to the cinematic experience.
 
 If you're a fan of the series, you can explore these incredible locations and even sign up for specialized tours that take you through the world of the Hunger Games. The stunning backdrops not only serve as the settings for Katniss's journey but also invite fans to reflect on the beauty and challenges of the world she's fighting to change.
-```

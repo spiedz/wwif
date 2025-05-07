@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Se7en Filmed?"
 description: "Explore the haunting and gritty filming locations of Se7en, where the dark and twisted storyline unfolds against the backdrop of a rain-soaked city."
@@ -107,4 +106,3 @@ Se7en is not just a film; it's an experience that immerses viewers in a world fi
 From the rain-soaked streets to iconic landmarks like the Reading Terminal Market and the Philadelphia Museum of Art, every location enhances the film's oppressive atmosphere. Fans of the movie can walk in the footsteps of detectives Mills and Somerset, tracing their path through the very streets where the haunting story unfolds.
 
 With specialized tours dedicated to exploring the filming locations of Se7en, fans can delve deeper into the film's narrative and visual style. Whether you're visiting Philadelphia for the first time or are a long-time fan of this classic thriller, experiencing the locations firsthand adds an unforgettable layer to your understanding and appreciation of David Fincher's chilling masterpiece.
-```

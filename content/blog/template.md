@@ -69,7 +69,6 @@ If you're writing a technical post, you can include code examples using triple b
 function helloWorld() {
   console.log("Hello from Where Was It Filmed!");
 }
-```
 
 ## Conclusion
 

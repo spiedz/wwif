@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Dangal Filmed?"
 description: "Discover the breathtaking filming locations of Dangal, the inspiring sports drama that showcases the journey of two young wrestlers against the backdrop of rural India."
@@ -98,4 +97,3 @@ From the lively streets of Ludhiana to the tranquil fields of Gurdaspur, every l
 As a viewer, immersing yourself in the locations where Dangal was filmed offers a unique perspective on the film. Fans can explore the vibrant cities and serene villages that served as the backdrop for this inspiring tale.
 
 With a variety of tours and experiences available, travelers can walk through the footsteps of Mahavir Singh Phogat and experience the spirited atmosphere of Punjab. Whether you are in search of heritage sites or interested in the rich cultural tapestry that the film portrays, Dangal's filming locations provide an unforgettable adventure.
-```

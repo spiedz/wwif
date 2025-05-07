@@ -1,4 +1,3 @@
-```   
 ---
 title: "Where Was Star Wars: Revenge of the Sith Filmed?"
 description: "Delve into the iconic filming locations of Star Wars: Revenge of the Sith, where the epic tale of the Galactic Civil War unfolds across mesmerizing landscapes and historical sites."
@@ -108,4 +107,3 @@ Star Wars: Revenge of the Sith draws viewers into a heart-wrenching saga filled 
 From Fox Studios in Sydney, where masterful sets were built, to the lush landscapes of California’s Redwood Parks serving as Endor, these locales enhance the film’s mythology. The blend of urban landscapes in cities such as Madrid and Hong Kong creates a rich tapestry that reflects the high-tech world of the Galactic Empire.
 
 Fans eager to experience the world of Star Wars can embark on tours of these filming sites, reliving the thrill of their favorite scenes. Whether traversing the studios in Sydney or exploring the dense forests that transported audiences to a galaxy far, far away, visiting these locations deepens your connection to the legendary narrative that is Revenge of the Sith.
-```

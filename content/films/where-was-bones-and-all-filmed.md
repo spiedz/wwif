@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Bones and All Filmed?"
 description: "Discover the hauntingly beautiful filming locations of 'Bones and All', a film that intertwines themes of love and identity in captivating settings."
@@ -102,4 +101,3 @@ In the hauntingly captivating 'Bones and All', the film’s locations are not me
 From the lively streets of Louisville to the intimate settings in Cincinnati, each location enriches the narrative, embodying the characters' struggles and triumphs. This diverse array of filming locations not only grounds the story in reality but also invites viewers into the heart of America, revealing both its beauty and its complexities.
 
 Travel enthusiasts and film buffs alike have the opportunity to explore these iconic sites, where cinematic history meets real-world charm. Whether taking tours or simply enjoying the landscapes, a trip to these locations offers a deeper connection to the rich fabric of 'Bones and All', allowing fans to step into the story in meaningful ways. As you follow the characters’ hauntingly beautiful narrative, you’ll find that these places hold stories of their own, waiting to be discovered.
-```

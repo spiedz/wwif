@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Justice League Filmed?"
 description: "Dive into the stunning filming locations of Justice League, where iconic superheroes united across breathtaking backdrops in this epic adventure."
@@ -93,4 +92,3 @@ Justice League isn't just a film; it’s a visual spectacle that transports view
 The film's clever use of various filming sites provides fans a chance to explore these remarkable places in person. Iconic locales, such as the majestic architecture of Amsterdam and the bustling streets of London, have transformed into pilgrimage points for die-hard fans eager to walk where their favorite heroes once stood.
 
 With numerous tours available, fans can dive deep into the world crafted by Zack Snyder, experiencing the thrill of standing in the same spots that showcased legendary standoffs and heartfelt moments. Whether you're planning a trip to the vibrant streets of D.C. or the iconic landmarks of London, each visit immerses you deeper into the narrative of Justice League, allowing you to feel the energy of the adventure like never before.
-```

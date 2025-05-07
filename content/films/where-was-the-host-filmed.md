@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Host Filmed?"
 description: "Discover the breathtaking filming locations of 'The Host,' a gripping tale of survival and resilience set against stunning backdrops."
@@ -108,4 +107,3 @@ behindTheScenes: {
 From the dramatic shores of the Han River to the bustling districts of Seoul that serve as a backdrop for panic and survival, each site contributes significantly to the film's atmosphere. The juxtaposition of serene landscapes with chaotic city life draws viewers into a world brimming with tension and emotion.
 
 For fans of film and travel alike, visiting these filming locations offers a unique chance to connect with the story and experience the cultural heart of South Korea. Whether you embark on guided tours exploring Seoul's historical landmarks or immerse yourself in the vibrant life of Busan, reliving the journey of the characters adds a special layer to your appreciation of this modern classic. So pack your bags and prepare to step into the world of "The Host!"
-```

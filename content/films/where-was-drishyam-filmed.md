@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was Drishyam Filmed?"
 description: "Dive into the captivating filming locations of Drishyam, exploring the beautiful landscapes and unique settings that brought this gripping tale to life."
@@ -103,4 +102,3 @@ From the mesmerizing beaches of Goa to quaint villages and historic sites, each 
 These filming sites have attracted fans and tourists, all eager to immerse themselves in the world of Drishyam. Whether you're exploring the vibrant streets of Panjim or enjoying the serenity of Chorao Island, the locations breathe life into the film's narrative, forging a connection between the viewer and the story.
 
 With the availability of dedicated tours that take you through these iconic filming spots, fans can step directly into the heart of Drishyam's story, enriching their understanding and appreciation of this cinematic masterpiece.
-```

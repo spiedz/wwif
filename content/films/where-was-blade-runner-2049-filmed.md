@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Blade Runner 2049 Filmed?"
 description: "Dive into the mesmerizing filming locations of Blade Runner 2049, a sci-fi masterpiece that shaped the dystopian landscape of the future."
@@ -104,4 +103,3 @@ The urban settings of Vancouver served as the backdrop for this sci-fi epic, int
 These locations are more than cinematic scenery; they're an invitation for fans to explore the universe of Blade Runner 2049. Whether traversing the neon-lit streets of Los Angeles or standing in the stark silence of the desert, experiencing these sites provides a tangible connection to the movie's profound themes of humanity and identity.
 
 With tailored tours available and a variety of accommodations nearby, enthusiasts can dive deep into the Blade Runner landscape. Whether you're a die-hard fan or a newcomer to the genre, visiting these filming locations offers a unique way to appreciate the artistry behind this cinematic landmark.
-```

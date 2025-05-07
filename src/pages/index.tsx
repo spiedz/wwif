@@ -79,6 +79,12 @@ export default function Home() {
                   Browse Series
                 </Link>
                 <Link 
+                  href="/locations" 
+                  className="inline-block bg-white text-primary font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-colors"
+                >
+                  Explore Locations
+                </Link>
+                <Link 
                   href="/blog" 
                   className="inline-block border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors"
                 >
@@ -215,41 +221,66 @@ export default function Home() {
         
         {/* Featured Locations */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">Featured Locations</h2>
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-800">Featured Locations</h2>
+            <Link 
+              href="/locations" 
+              className="text-primary hover:text-red-700 font-medium flex items-center"
+            >
+              View All Locations
+              <svg className="w-5 h-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </Link>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: 'New York City, USA',
                 description: 'Home to countless iconic movie scenes, from superhero battles to romantic comedies.',
+                slug: 'what-was-filmed-in-new-york-city',
+                image: 'https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300'
               },
               {
                 title: 'Dubrovnik, Croatia',
                 description: 'The real-world setting for King\'s Landing in Game of Thrones.',
+                slug: 'what-was-filmed-in-dubrovnik',
+                image: 'https://images.unsplash.com/photo-1555990538-17bae0b94f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300'
               },
               {
                 title: 'Matamata, New Zealand',
                 description: 'Visit the Hobbiton set from The Lord of the Rings and The Hobbit.',
+                slug: 'what-was-filmed-in-matamata',
+                image: 'https://images.unsplash.com/photo-1473186505569-9c61870c11f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300'
               }
             ].map((location, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform">
-                <div className="h-48 bg-gray-300 relative">
-                  {/* Placeholder for location image */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <Link key={index} href={`/locations/${location.slug}`} className="block group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100">
+                  <div className="h-48 overflow-hidden relative">
+                    <img 
+                      src={location.image} 
+                      alt={location.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1568707043650-eb03f2536825?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300";
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2 group-hover:text-primary transition-colors">{location.title}</h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">{location.description}</p>
+                    <div className="flex justify-end">
+                      <span className="text-primary group-hover:text-red-700 font-medium text-sm flex items-center transition-colors">
+                        See films & series
+                        <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-lg mb-2">{location.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{location.description}</p>
-                  <Link 
-                    href={`/blog/${location.title.toLowerCase().replace(/,?\s+/g, '-')}`}
-                    className="text-primary hover:text-red-700 font-medium text-sm flex items-center"
-                  >
-                    Explore Location
-                    <svg className="w-4 h-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

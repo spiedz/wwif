@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was The Dark Knight Rises Filmed?"
 description: "Discover the stunning locations of The Dark Knight Rises, where Gotham City comes to life in an array of breathtaking landscapes and iconic sites."
@@ -115,4 +114,3 @@ From the bustling Wall Street District, reflecting the chaos unleashed by Bane, 
 These breathtaking filming sites have now become pilgrimage destinations for Batman enthusiasts. Whether traversing through streets that once echoed with Bane's villainous laughter or visiting the iconic studio tours, experiencing these locations firsthand adds depth to your appreciation of this cinematic treasure.
 
 With guided tours and immersive experiences, fans can step into the shoes of their favorite characters and feel the thrill of the Dark Knight saga. Embark on your tour of Gotham today and uncover the secrets behind The Dark Knight Rises!
-```

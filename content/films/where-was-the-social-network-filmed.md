@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was The Social Network Filmed?"
 description: "Dive into the intriguing filming locations of The Social Network, where the story of Facebook's creation unfolds against the backdrop of vibrant college campuses and bustling cityscapes."
@@ -102,4 +101,3 @@ The Social Network is not just a cinematic experience; it's a historical signatu
 Through the historic halls of Harvard University to the tech-savvy surroundings of the Bay Area, each filming location plays a crucial role in crafting the narrative. These sites have transformed into must-visit spots for film aficionados and those curious about the origins of the social media giant.
 
 Fans and curious travelers can embark on dedicated tours of Harvard's campus or explore the iconic settings depicted in the film. Whether you're wandering the historic campuses or the urban streets, experiencing these locations firsthand offers a profound connection to the story that forever changed how we interact. Immerse yourself in the world of The Social Network, and uncover the real-life inspirations behind this compelling tale.
-```

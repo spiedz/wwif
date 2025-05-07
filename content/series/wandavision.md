@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was WandaVision Filmed?"
 description: "Explore the real-world filming locations of WandaVision, from Westview to various Los Angeles locations."
@@ -149,4 +148,3 @@ WandaVision was a groundbreaking series that cleverly blended classic sitcom aes
 - It features an original score with vintage sounds inspired by sitcoms of the past.
 - Most of the visual effects were created in post-production, allowing for creative freedom during filming.
 - The series creatively used practical effects to enhance the nostalgic feel.
-```

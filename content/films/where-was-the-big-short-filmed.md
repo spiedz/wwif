@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was The Big Short Filmed?"
 description: "Discover the real-life locations that brought the gripping financial drama 'The Big Short' to life, showcasing the places that witnessed the 2007-2008 mortgage crisis."
@@ -93,4 +92,3 @@ Los Angeles served as a backdrop for the film's exterior shots, maintaining the 
 These filming locations have become points of interest for fans and aspiring film enthusiasts alike, offering opportunities to retrace the steps of the characters portrayed on screen. Whether you're wandering through Hollywood or exploring the Financial District in New York, these sites enhance the viewing experience by connecting audiences to the reality that inspired the film.
 
 With guided tours and accommodations readily available, fans can dive into the world that The Big Short so artfully depicts. Step into the shoes of the characters, gain insight into their motivations, and appreciate the cinematic brilliance behind this unforgettable adaptation of financial turmoil.
-```

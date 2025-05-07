@@ -38,19 +38,19 @@ const SeriesLocationsGuide: React.FC<SeriesLocationsGuideProps> = ({ series, hid
     <div className="series-locations-guide">
       {/* Series introduction with animated entrance - conditionally render based on hideTitle prop */}
       {!hideTitle && (
-        <div className={`mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6 flex items-center">
-            <span className="gradient-text">{series.meta.title}</span>
-            <span className="ml-2 text-gray-700"> Filming Locations</span>
-          </h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            <span className="float-left text-6xl font-serif text-primary mr-4 mt-1 leading-none">
-              {series.meta.description && series.meta.description.charAt(0)}
-            </span>
-            {series.meta.description && series.meta.description.substring(1)}
-          </p>
-          <div className="w-32 h-1 bg-gradient-to-r from-primary/20 to-primary/60 rounded-full my-8"></div>
-        </div>
+      <div className={`mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6 flex items-center">
+          <span className="gradient-text">{series.meta.title}</span>
+          <span className="ml-2 text-gray-700"> Filming Locations</span>
+        </h2>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          <span className="float-left text-6xl font-serif text-primary mr-4 mt-1 leading-none">
+            {series.meta.description && series.meta.description.charAt(0)}
+          </span>
+          {series.meta.description && series.meta.description.substring(1)}
+        </p>
+        <div className="w-32 h-1 bg-gradient-to-r from-primary/20 to-primary/60 rounded-full my-8"></div>
+      </div>
       )}
 
       {/* Season filter with improved visual styling */}
@@ -90,12 +90,12 @@ const SeriesLocationsGuide: React.FC<SeriesLocationsGuideProps> = ({ series, hid
       <div className={`mb-16 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg border border-gray-100 transform transition-all duration-1000 hover:shadow-xl ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
         <div className="p-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-            <svg className="w-7 h-7 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-            </svg>
-            Interactive Location Map
-            {selectedSeason && <span className="ml-2 text-primary-dark">Season {selectedSeason}</span>}
-          </h2>
+          <svg className="w-7 h-7 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          Interactive Location Map
+          {selectedSeason && <span className="ml-2 text-primary-dark">Season {selectedSeason}</span>}
+        </h2>
         </div>
         
         <div className="rounded-xl overflow-hidden shadow-xl mb-6 border border-gray-200">
@@ -114,11 +114,11 @@ const SeriesLocationsGuide: React.FC<SeriesLocationsGuideProps> = ({ series, hid
         <div className="px-6 pb-6">
           <div className="text-gray-600 text-sm italic bg-gray-50 rounded-lg border-l-4 border-primary/30 p-4 flex items-start">
             <svg className="w-5 h-5 text-primary/70 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-            </svg>
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+          </svg>
             <span>
-              Explore {filteredLocations?.length || 0} filming location{(filteredLocations?.length !== 1) ? 's' : ''} 
-              {selectedSeason ? ` from Season ${selectedSeason}` : ' across all seasons'}.
+          Explore {filteredLocations?.length || 0} filming location{(filteredLocations?.length !== 1) ? 's' : ''} 
+          {selectedSeason ? ` from Season ${selectedSeason}` : ' across all seasons'}.
               Click on markers for details about each filming location or browse the locations below.
             </span>
           </div>
@@ -135,17 +135,17 @@ const SeriesLocationsGuide: React.FC<SeriesLocationsGuideProps> = ({ series, hid
           Filming Locations {selectedSeason ? `- Season ${selectedSeason}` : ''}
         </h2>
         
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '300ms' }}>
-          {filteredLocations?.map((location, idx) => (
-            <SeriesLocationCard 
+      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '300ms' }}>
+        {filteredLocations?.map((location, idx) => (
+          <SeriesLocationCard 
               key={location.id || `location-${idx}`} 
-              location={location} 
-              index={idx}
-              selectedSeason={selectedSeason}
+            location={location} 
+            index={idx}
+            selectedSeason={selectedSeason}
               isActive={activeLocation === (location.id || `location-${idx}`)}
               onCardClick={() => setActiveLocation(location.id || `location-${idx}`)}
-            />
-          ))}
+          />
+        ))}
         </div>
         
         {filteredLocations?.length === 0 && (

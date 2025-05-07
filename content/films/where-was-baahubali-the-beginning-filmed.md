@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Baahubali: The Beginning Filmed?"
 description: "Discover the breathtaking filming locations of Baahubali: The Beginning, where epic battles and stunning landscapes come to life."
@@ -113,4 +112,3 @@ Baahubali: The Beginning is not just a film; it's an immersive experience that t
 From the sprawling Ramoji Film City where majestic sets were meticulously crafted, to the historical Kurnool Fort that served as a majestic backdrop for intense battle sequences, every filming location tells a story of its own. The stunning landscapes of Goa and the iconic Mysore Palace enhanced the film's visual splendor, inviting viewers into a world filled with breathtaking beauty and fierce drama.
 
 These captivating filming sites have turned into pilgrimages for fans and travelers eager to explore the world of Baahubali. Whether it's the royal Ramoji Film City tour or a serene beach resort in Goa, each journey brings you closer to the cinematic magic that is Baahubali: The Beginning. Discover these locations firsthand and immerse yourself in the epic tale that has captured the hearts of millions.
-```

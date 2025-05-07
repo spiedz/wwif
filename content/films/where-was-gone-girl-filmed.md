@@ -1,4 +1,3 @@
-```yaml
 ---
 title: "Where Was Gone Girl Filmed?"
 description: "Discover the captivating filming locations of Gone Girl, where the psychological thriller unfolds amidst the serene and unsettling backdrop of Missouri."
@@ -97,4 +96,3 @@ From the bustling urban backdrop of St. Louis, where pivotal storylines converge
 For fans and film enthusiasts, these locations have become more than mere settings; they're a pilgrimage to the heart of a modern classic. Whether navigating the streets of Cape Girardeau or exploring the atmospheric locations in Kansas City, embarking on a journey through these filming sites provides a unique perspective on the haunting world of Gone Girl.
 
 Whether you're planning a dedicated film tour or simply looking to witness the locales of this gripping tale, experiencing these sites firsthand offers an unforgettable connection with the story and its characters.
-```

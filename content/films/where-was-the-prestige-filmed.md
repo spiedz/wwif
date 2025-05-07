@@ -1,4 +1,3 @@
-```
 ---
 title: "Where Was The Prestige Filmed?"
 description: "Unravel the mystery behind the filming locations of The Prestige, a film filled with magic, rivalry, and cinematic brilliance."
@@ -116,4 +115,3 @@ From the opulent streets of London to the picturesque views of the Lake District
 For fans and aspiring magicians alike, visiting these locations offers a spellbinding experience, allowing them to walk in the footsteps of the characters that have captivated audiences for years. Whether you're drawn to the vibrant heart of London or the serene landscapes of the countryside, each location has a tale to tell.
 
 With various tours and booking options available, eager fans can fully immerse themselves in the magic of The Prestige and discover the secrets behind its captivating narrative.
-```

@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Where Was Aliens Filmed?"
 description: "Discover the iconic filming locations of Aliens and explore the breathtaking backdrops that brought this sci-fi masterpiece to life."
@@ -98,4 +97,3 @@ From the iconic Pinewood Studios in England, where most of the interior sets wer
 These locations aren’t just backdrops; they pulse with the rich legacy of cinematic history, and many have become pilgrimage sites for devoted fans. Whether you're exploring the time-honored streets of Greenwich or standing in the shadow of Pinewood Studios, each visit deepens your connection to Aliens.
 
 Enhanced by engaging tours and unique experiences, fans of this sci-fi classic can traverse the very paths tread by Ripley and her team. Dare to adventure through these iconic locations, and you’ll find that every corner is steeped in the suspenseful lore of Aliens—a journey worth embarking on for cinephiles and thrill-seekers alike.
-```
