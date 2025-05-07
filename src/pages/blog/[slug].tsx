@@ -13,7 +13,6 @@ import AuthorInfo from '../../components/AuthorInfo';
 import RelatedPosts from '../../components/RelatedPosts';
 import { ParsedUrlQuery } from 'querystring';
 import Head from 'next/head';
-import Layout from '../../components/Layout';
 import { RelatedPost } from '../../types/blog-interfaces';
 
 interface BlogPostPageProps {
@@ -82,7 +81,7 @@ const BlogPostPage = ({ post, relatedPosts }: BlogPostPageProps) => {
   const { meta, content, html } = post;
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>{meta.title} | WWIF - Where Was It Filmed</title>
         <meta name="description" content={meta.description} />
@@ -193,7 +192,7 @@ const BlogPostPage = ({ post, relatedPosts }: BlogPostPageProps) => {
           <CommentSection pageSlug={meta.slug} pageType="blog" />
         </section>
       </main>
-    </Layout>
+    </>
   );
 };
 
