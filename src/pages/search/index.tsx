@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { NextPage } from 'next';
-import Layout from '../../components/Layout';
 import SearchBar from '../../components/search/SearchBar';
 import RecentSearches from '../../components/search/RecentSearches';
 import Image from 'next/image';
@@ -196,7 +195,7 @@ const SearchPage: NextPage = () => {
   };
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
@@ -410,7 +409,7 @@ const SearchPage: NextPage = () => {
           )}
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

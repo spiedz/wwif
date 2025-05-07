@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { getWebPageSchema, getOrganizationSchema } from '../utils/schema';
 import { useRouter } from 'next/router';
@@ -58,7 +57,7 @@ export default function AboutPage() {
   const jsonLdData = JSON.stringify([webpageSchema, organizationSchema]);
 
   return (
-    <Layout>
+    <>
       <SEO 
         meta={pageMeta} 
         jsonLd={jsonLdData}
@@ -906,6 +905,6 @@ export default function AboutPage() {
           </section>
         </div>
       </div>
-    </Layout>
+    </>
   );
 } 

@@ -53,7 +53,7 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
   const { meta } = series;
   
   return (
-    <>
+      <>
       <SEO 
         meta={{
           title: `${meta.title} - Filming Locations`,
@@ -418,7 +418,7 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
           </div>
         </div>
       </div>
-    </>
+      </>
   );
 }
 

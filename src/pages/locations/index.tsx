@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import { LocationInfo, getAllLocations } from '../../utils/locationUtils';
 import { getWebPageSchema } from '../../utils/schema';
@@ -68,7 +67,7 @@ export default function LocationsPage({ locations }: LocationsPageProps) {
   );
 
   return (
-    <Layout>
+    <>
       <SEO 
         meta={pageMeta}
         jsonLd={JSON.stringify(schema)}
@@ -229,7 +228,7 @@ export default function LocationsPage({ locations }: LocationsPageProps) {
           </section>
         </div>
       </main>
-    </Layout>
+    </>
   );
 }
 

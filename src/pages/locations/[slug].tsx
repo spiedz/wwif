@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import Layout from '../../components/Layout';
 import MediaGrid from '../../components/MediaGrid';
 import Map from '../../components/Map';
 import { LocationInfo, MediaItem, getLocationBySlug, getPopularLocations } from '../../utils/locationUtils';
@@ -32,7 +31,7 @@ export default function LocationPage({ location }: LocationPageProps) {
   
   if (router.isFallback) {
     return (
-      <Layout>
+      <>
         <div className="container mx-auto px-4 py-12">
           <div className="text-center">
             <div className="animate-pulse mb-4">
@@ -46,7 +45,7 @@ export default function LocationPage({ location }: LocationPageProps) {
             </div>
           </div>
         </div>
-      </Layout>
+      </>
     );
   }
   
@@ -63,7 +62,7 @@ export default function LocationPage({ location }: LocationPageProps) {
   const series = location.mediaItems.filter((item: MediaItem) => item.type === 'series');
   
   return (
-    <Layout>
+    <>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={`Discover all films and TV series filmed at ${location.name}. Explore film locations, get travel tips, and plan your visit.`} />
@@ -250,7 +249,7 @@ export default function LocationPage({ location }: LocationPageProps) {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
 
