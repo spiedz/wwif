@@ -4,7 +4,7 @@
  */
 
 import path from 'path';
-import { getFilmBySlug, getBlogBySlug, getAllFilms, getAllBlogPosts } from '../utils/markdown';
+import { getFilmBySlug, getBlogBySlug, getAllFilms, getAllBlogPosts } from '../lib/server/serverMarkdown';
 
 // Log directories for debugging
 console.log('Current working directory:', process.cwd());

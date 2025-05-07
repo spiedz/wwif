@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getAllSeries } from '../../../utils/markdown';
+import { getAllSeries } from '../../../lib/server/serverMarkdown';
 
 export default async function handler(
   req: NextApiRequest,

@@ -132,4 +132,46 @@ export async function getLocationBacklinks(locationName: string): Promise<string
   return matchingLocation.mediaItems.map((item: MediaItem) => 
     `/${item.type}s/${item.slug}`
   );
+}
+
+/**
+ * Add location backlinks to the content object (films or series)
+ * Used for navigation between related content
+ */
+export async function addLocationBacklinks(content: any): Promise<any> {
+  // If this is content without coordinates, return it unchanged
+  if (!content || !content.meta || !content.meta.coordinates) {
+    return content;
+  }
+
+  // Process each location mentioned in the content
+  for (const coord of content.meta.coordinates) {
+    if (coord.name) {
+      // Get backlinks for this location (other films/series filmed there)
+      const backlinks = await getLocationBacklinks(coord.name);
+      // Add the backlinks to the location data
+      coord.backlinks = backlinks.filter(link => 
+        // Remove the current content from backlinks to avoid self-referencing
+        !link.endsWith(`/${content.meta.slug}`)
+      );
+    }
+  }
+
+  return content;
+}
+
+/**
+ * Get all location slugs for sitemap generation
+ */
+export async function getAllLocationSlugs(): Promise<string[]> {
+  const locations = await getAllLocationsData();
+  
+  return locations.map(location => {
+    // Create both normal and SEO-friendly versions of the slugs
+    const normalSlug = location.slug;
+    const seoSlug = generateLocationSlug(location.name);
+    
+    // Return both formats for the sitemap
+    return [normalSlug, seoSlug];
+  }).flat();
 } 

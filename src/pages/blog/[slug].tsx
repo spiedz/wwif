@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Link from 'next/link';
-import { getBlogBySlug, getBlogSlugs, getAllBlogPosts, getRelatedBlogPosts } from '../../utils/markdown';
+import { getBlogBySlug, getBlogSlugs, getAllBlogPosts, getRelatedBlogPosts } from '../../lib/server/serverMarkdown';
 import { Content, BlogMeta } from '../../types/content';
 import SEO from '../../components/SEO';
 import { getBlogSchema, getBreadcrumbSchema } from '../../utils/schema';

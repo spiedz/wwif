@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getAllFilms, getAllSeries } from '../../../utils/markdown';
+import { getAllFilms, getAllSeries } from '../../../lib/server/serverMarkdown';
 import searchService, { ContentType, SearchItem } from '../../../utils/searchService';
 import { FilmMeta } from '../../../types/content';
 import { SeriesMeta } from '../../../types/series';

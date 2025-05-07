@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import SEO from '../../components/SEO';
-import { getAllSeries } from '../../utils/markdown';
+import { getAllSeries } from '../../lib/server/serverMarkdown';
 import { TVSeries } from '../../types/series';
 
 interface SeriesIndexPageProps {

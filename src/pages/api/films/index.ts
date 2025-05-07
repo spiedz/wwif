@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getAllFilms } from '../../../utils/markdown';
+import { getAllFilms } from '../../../lib/server/serverMarkdown';
 
 export default async function handler(
   req: NextApiRequest,
