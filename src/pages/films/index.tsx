@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { getAllFilms } from '../../utils/markdown';
+import { getAllFilms } from '../../lib/server/serverMarkdown';
 import { Content, FilmMeta } from '../../types/content';
 import categoryAnalyticsService from '../../utils/categoryAnalytics';
 import PopularCategoriesContainer from '../../components/PopularCategoriesContainer';

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { getFilmBySlug, getFilmSlugs } from '../../utils/markdown';
+import { getFilmBySlug, getFilmSlugs } from '../../lib/server/serverMarkdown';
 import { Content, FilmMeta, Coordinates, StreamingService, BookingOption, TravelTip, FilmTrivia } from '../../types/content';
 import Map from '../../components/Map';
 import FilmHero from '../../components/FilmHero';

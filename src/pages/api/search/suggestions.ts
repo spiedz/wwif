@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getAllFilms, getAllSeries } from '../../../utils/markdown';
+import { getAllFilms, getAllSeries } from '../../../lib/server/serverMarkdown';
 import searchService, { ContentType } from '../../../utils/searchService';
 
 export default async function handler(

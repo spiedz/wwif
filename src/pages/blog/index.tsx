@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { getAllBlogPosts } from '../../utils/markdown';
+import { getAllBlogPosts } from '../../lib/server/serverMarkdown';
 import { Content, BlogMeta } from '../../types/content';
 
 interface BlogPageProps {

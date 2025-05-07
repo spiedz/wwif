@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { getFilmSlugs, getBlogSlugs, getSeriesSlugs } from '../utils/markdown';
+import { getFilmSlugs, getBlogSlugs, getSeriesSlugs } from '../lib/server/serverMarkdown';
 import { getAllLocationSlugs } from '../utils/locationUtils';
 import fs from 'fs';
 import path from 'path';

@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { ParsedUrlQuery } from 'querystring';
 import SeriesLocationsGuide from '../../components/SeriesLocationsGuide';
 import SeriesEpisodesDisplay from '../../components/SeriesEpisodesDisplay';
-import { getSeriesBySlug, getSeriesSlugs } from '../../utils/markdown';
+import { getSeriesBySlug, getSeriesSlugs } from '../../lib/server/serverMarkdown';
 import { TVSeries } from '../../types/series';
 import SEO from '../../components/SEO';
 import CommentSection from '../../components/CommentSection';
