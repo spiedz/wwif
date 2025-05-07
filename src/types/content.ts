@@ -77,38 +77,33 @@ export interface Coordinate {
  * that may not be available for all films.
  */
 export interface FilmMeta extends ContentMeta {
-  /** Release year of the film */
-  year: number;
-  /** Film director name */
-  director: string;
-  /** Film genre(s) - can be a single string or array of genres */
-  genre: string | string[];
-  /** URL to the film's poster image */
+  title: string;
+  description: string;
+  director?: string;
+  year?: string;
+  genre?: string;
+  coordinates?: [number, number][];
+  location?: string | string[];
   posterImage?: string;
-  /** Array of filming locations with coordinates - if undefined, no map will be shown */
-  coordinates?: Coordinate[];
-  /** Available streaming services for the film - if undefined, default services will be shown */
-  streamingServices?: StreamingService[];
-  /** Booking options related to film locations - if undefined, default options will be shown */
-  bookingOptions?: BookingOption[];
-  /** Special components to include in the film page rendering */
-  components?: string[];
-  /** Whether to use the region-based layout - defaults to false if undefined */
-  useRegionLayout?: boolean;
-  /** Behind-the-scenes information about the film - if undefined, this section won't be shown */
-  behindTheScenes?: string | BehindTheScenes;
-  /** Predefined regions for grouping locations - if undefined, regions will be auto-generated */
+  featuredImage?: string;
+  gallery?: string[];
   regions?: FilmRegion[];
-  /** Travel tips related to the film locations - if undefined, generic tips will be generated */
   travelTips?: TravelTip[];
-  /** Trivia facts about the film - if undefined, this section won't be shown */
   trivia?: FilmTrivia[];
+  useRegionLayout?: boolean;
+  behindTheScenes?: string;
+  streamingServices?: string[];
+  bookingOptions?: string[];
 }
 
 export interface BlogMeta extends ContentMeta {
   author: string;
   featuredImage?: string;
   tags?: string[];
+  categories?: string[];
+  content?: string;
+  date?: string;
+  estimatedReadingTime?: number;
 }
 
 export interface SearchResult {
@@ -121,4 +116,51 @@ export interface Content<T extends ContentMeta> {
   meta: T;
   content: string;
   html: string;
+}
+
+// Define SeriesFilmingLocation interface
+export interface SeriesFilmingLocation {
+  name: string;
+  description?: string;
+  coordinates?: [number, number];
+  address?: string;
+  image?: string;
+  realLocation?: string;
+  travelTips?: string[];
+  episodeNumbers?: number[];
+  seasonNumbers?: number[];
+}
+
+// Update SeriesMeta to include seasons property
+export interface SeriesMeta extends ContentMeta {
+  title: string;
+  description: string;
+  network?: string;
+  creator?: string;
+  startYear?: string;
+  endYear?: string;
+  genre?: string[];
+  featuredImage?: string;
+  posterImage?: string;
+  mainLocation?: string;
+  filmingLocations?: SeriesFilmingLocation[];
+  seasons?: number | SeriesSeason[];
+  behindTheScenes?: string;
+  streamingServices?: string[];
+}
+
+// Define SeriesSeason interface if it doesn't exist
+export interface SeriesSeason {
+  number: number;
+  episodes: SeriesEpisode[];
+  year?: string;
+  title?: string;
+}
+
+// Define SeriesEpisode interface if it doesn't exist
+export interface SeriesEpisode {
+  number: number;
+  title: string;
+  description?: string;
+  locations?: SeriesFilmingLocation[];
 } 

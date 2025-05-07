@@ -97,6 +97,13 @@ export async function getFilmBySlug(slug: string): Promise<Content<FilmMeta> | n
 
     const htmlContent = processedContent.toString();
 
+    // Add helper functions for type-safe conversions
+    function ensureStringArray(value: unknown): string[] {
+      if (!value) return [];
+      if (Array.isArray(value)) return value.map(String);
+      return [String(value)];
+    }
+
     return {
       meta: {
         slug,
@@ -108,15 +115,15 @@ export async function getFilmBySlug(slug: string): Promise<Content<FilmMeta> | n
         director: data.director || '',
         genre: data.genre || '',
         featuredImage: data.featuredImage || '',
-        gallery: data.gallery || [],
+        gallery: ensureStringArray(data.gallery),
         posterImage: data.posterImage || '',
         regions: data.regions || [],
         travelTips: data.travelTips || [],
         trivia: data.trivia || [],
-        useRegionLayout: data.useRegionLayout || false,
+        useRegionLayout: Boolean(data.useRegionLayout),
         behindTheScenes: data.behindTheScenes || '',
-        streamingServices: data.streamingServices || [],
-        bookingOptions: data.bookingOptions || [],
+        streamingServices: ensureStringArray(data.streamingServices),
+        bookingOptions: ensureStringArray(data.bookingOptions),
       },
       content,
       html: htmlContent,
@@ -178,6 +185,15 @@ export async function getBlogBySlug(slug: string): Promise<Content<BlogMeta> | n
 
     const htmlContent = processedContent.toString();
 
+    // Handle featuredImage path - if it's relative, convert to absolute URL
+    let featuredImage = data.featuredImage || '';
+    if (featuredImage && !featuredImage.startsWith('http')) {
+      // If it's a relative path, convert to absolute URL
+      // For production, you might want to use a proper URL with your domain
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+      featuredImage = `${baseUrl}${featuredImage.startsWith('/') ? '' : '/'}${featuredImage}`;
+    }
+
     return {
       meta: {
         slug,
@@ -186,7 +202,7 @@ export async function getBlogBySlug(slug: string): Promise<Content<BlogMeta> | n
         date: data.date || '',
         author: data.author || '',
         categories: data.categories || [],
-        featuredImage: data.featuredImage || '',
+        featuredImage,
         estimatedReadingTime: calculateReadingTime(content),
       },
       content: formattedContent,
