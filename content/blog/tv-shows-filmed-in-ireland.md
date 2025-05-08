@@ -7,7 +7,7 @@ slug: "tv-shows-filmed-in-ireland"
 date: "2025-05-08"
 categories: ["TV Locations", "Ireland", "Travel Guides"]
 author: "Film Location Explorer"
-featuredImage: "https://drive.google.com/file/d/10zq5J8UtCvLVJDEWtYur4oWUxLeBw24f/view?usp=drivesdk"
+featuredImage: "https://drive.google.com/file/d/10zq5J8UtCvLVJDEWtYur4oWUxLeBw24f/view?usp=drivesdk](https://i.ibb.co/DPdbWX1Z/e2b5fa700092.png"
 ---
 
 # TV Shows Filmed in Ireland: The Emerald Screen
