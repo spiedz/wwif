@@ -164,14 +164,39 @@ export async function addLocationBacklinks(content: any): Promise<any> {
  * Get all location slugs for sitemap generation
  */
 export async function getAllLocationSlugs(): Promise<string[]> {
-  const locations = await getAllLocationsData();
-  
-  return locations.map(location => {
-    // Create both normal and SEO-friendly versions of the slugs
-    const normalSlug = location.slug;
-    const seoSlug = generateLocationSlug(location.name);
+  try {
+    const locations = await getAllLocationsData();
     
-    // Return both formats for the sitemap
-    return [normalSlug, seoSlug];
-  }).flat();
+    // Helper function to validate slugs
+    const isValidSlug = (slug: string): boolean => {
+      return Boolean(slug) && 
+             /^[a-z0-9-]+$/.test(slug) &&  // Only allow alphanumeric chars and hyphens
+             slug.length > 0 && 
+             slug.length < 200; // Reasonable max length for a URL segment
+    };
+    
+    const slugs = locations.map(location => {
+      try {
+        // Create both normal and SEO-friendly versions of the slugs
+        const normalSlug = location.slug;
+        const seoSlug = generateLocationSlug(location.name);
+        
+        // Validate slugs before returning
+        const validSlugs: string[] = [];
+        if (isValidSlug(normalSlug)) validSlugs.push(normalSlug);
+        if (isValidSlug(seoSlug)) validSlugs.push(seoSlug);
+        
+        return validSlugs;
+      } catch (error) {
+        console.error(`Error processing location slug for ${location.name}:`, error);
+        return [];
+      }
+    }).flat();
+    
+    // Remove duplicates (in case some slugs end up being the same after sanitizing)
+    return [...new Set(slugs)];
+  } catch (error) {
+    console.error('Error getting all location slugs:', error);
+    return [];
+  }
 } 
