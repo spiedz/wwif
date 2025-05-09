@@ -6,7 +6,8 @@ date: "2024-03-10"
 year: 2023
 director: "Luca Lucini"
 genre: ["Comedy", "Drama", "Coming-of-Age"]
-posterImage: "https://www.hollywoodreporter.com/wp-content/uploads/2025/05/N_00448rv3-1.jpg?w=1296&h=730&crop=1"
+posterImage: >-
+  https://www.hollywoodreporter.com/wp-content/uploads/2025/05/N_00448rv3-1.jpg?w=1296&h=730&crop=1
 coordinates: [
   { 
     "lat": 45.6662, 
