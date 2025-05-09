@@ -1,11 +1,17 @@
 ---
-title: "Hollywood's Favorite National Parks: Iconic Film Locations in Nature"
-description: "Discover 20+ breathtaking national parks featured in movies and TV, with travel tips, scene details, and insider advice for film fans and adventurers."
-slug: "hollywoods-favorite-national-parks-film-locations"
-date: "2025-06-01"
-categories: ["Film Locations", "Nature", "Movie Tourism", "Travel Tips"]
-author: "Where Was It Filmed Team"
-featuredImage: "https://media.timeout.com/images/106014136/750/562/image.jpg"
+title: 'Hollywood''s Favorite National Parks: Iconic Film Locations in Nature'
+description: >-
+  Discover 20+ breathtaking national parks featured in movies and TV, with
+  travel tips, scene details, and insider advice for film fans and adventurers.
+slug: hollywoods-favorite-national-parks-film-locations
+date: '2025-06-01'
+categories:
+  - Film Locations
+  - Nature
+  - Movie Tourism
+  - Travel Tips
+author: Where Was It Filmed Team
+featuredImage: 'https://media.timeout.com/images/106014136/750/562/image.jpg'
 ---
 
 # Hollywood's Favorite National Parks: Iconic Film Locations in Nature

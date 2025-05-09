@@ -8,46 +8,45 @@ year: 2024
 director: "Emma Roberts" # Assuming a director for the example
 genre: ["Romance", "Sci-Fi", "Drama"] # Assuming genres for the example
 posterImage: "https://image.tmdb.org/t/p/w500/lostinstarlight_poster.jpg" # Replace with actual poster URL
-coordinates:
-  -
-    "lat": 45.5017
-    "lng": -73.5673
-    "name": "Montreal, Quebec, Canada"
-    "description": "Used for futuristic urban landscapes and key interior scenes."
-  -
-    "lat": 46.8139
-    "lng": -71.2080
-    "name": "Quebec City, Quebec, Canada"
-    "description": "Provided charming, historic backdrops blended with sci-fi elements."
-  -
-    "lat": 41.9028
-    "lng": 12.4964
-    "name": "Rome, Italy"
-    "description": "Iconic Roman landmarks are featured in pivotal romantic sequences."
-  -
-    "lat": 35.6895
-    "lng": 139.6917
-    "name": "Tokyo, Japan"
-    "description": "Vibrant and futuristic cityscape featured in action-packed scenes."
-  -
-    "lat": -33.8688
-    "lng": 151.2093
-    "name": "Sydney, New South Wales, Australia"
-    "description": "Served as a backdrop for stunning coastal and harbor views."
-  -
-    "lat": 25.2048
-    "lng": 55.2708
-    "name": "Dubai, UAE"
-    "description": "Modern and visually striking architecture used for a significant sequence."
-  -
-    "lat": 52.5200
-    "lng": 13.4050
-    "name": "Berlin, Germany"
-    "description": "Provided a mix of historical and modern locations for diverse scenes."
-  -
-    "lat": 48.8566
-    "lng": 2.3522
-    "name": "Paris, France"
+coordinates: [
+  {     "lat": 45.5017,
+    "lng": -73.5673,
+    "name": "Montreal, Quebec, Canada",
+    "description": "Used for futuristic urban landscapes and key interior scenes."  },
+  { 
+    "lat": 46.8139,
+    "lng": -71.2080,
+    "name": "Quebec City, Quebec, Canada",
+    "description": "Provided charming, historic backdrops blended with sci-fi elements."  },
+  { 
+    "lat": 41.9028,
+    "lng": 12.4964,
+    "name": "Rome, Italy",
+    "description": "Iconic Roman landmarks are featured in pivotal romantic sequences."  },
+  { 
+    "lat": 35.6895,
+    "lng": 139.6917,
+    "name": "Tokyo, Japan",
+    "description": "Vibrant and futuristic cityscape featured in action-packed scenes."  },
+  { 
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "name": "Sydney, New South Wales, Australia",
+    "description": "Served as a backdrop for stunning coastal and harbor views."  },
+  { 
+    "lat": 25.2048,
+    "lng": 55.2708,
+    "name": "Dubai, UAE",
+    "description": "Modern and visually striking architecture used for a significant sequence."  },
+  { 
+    "lat": 52.5200,
+    "lng": 13.4050,
+    "name": "Berlin, Germany",
+    "description": "Provided a mix of historical and modern locations for diverse scenes."  },
+  { 
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "name": "Paris, France",
     "description": "The iconic city of love featured in romantic and reflective moments."
 streamingServices:
   -

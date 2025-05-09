@@ -1,35 +1,62 @@
 ---
-title: "Where Was Marvel's Thunderbolts Filmed?"
-description: "Explore the real-world filming locations of Marvel Studios' Thunderbolts, a gritty new addition to the MCU slated for 2025."
-slug: "where-was-marvel-thunderbolts-filmed"
-date: "2025-05-05"
+title: Where Was Marvel's Thunderbolts Filmed?
+description: >-
+  Explore the real-world filming locations of Marvel Studios' Thunderbolts, a
+  gritty new addition to the MCU slated for 2025.
+slug: where-was-marvel-thunderbolts-filmed
+date: '2025-05-05'
 year: 2025
-director: "Jake Schreier"
-genre: ["Action", "Superhero", "Thriller"]
-posterImage: "https://www.themoviedb.org/t/p/original/sample-thunderbolts-poster.jpg"
+director: Jake Schreier
+genre:
+  - Action
+  - Superhero
+  - Thriller
+posterImage: 'https://www.themoviedb.org/t/p/original/sample-thunderbolts-poster.jpg'
 coordinates:
   - lat: 33.7488
-    lng: -84.3880
-    name: "Atlanta, Georgia"
-    description: "Primary production hub for Thunderbolts, with many scenes filmed in and around Trilith Studios (formerly Pinewood Atlanta)."
+    lng: -84.388
+    name: 'Atlanta, Georgia'
+    description: >-
+      Primary production hub for Thunderbolts, with many scenes filmed in and
+      around Trilith Studios (formerly Pinewood Atlanta).
   - lat: 41.8781
     lng: -87.6298
-    name: "Chicago, Illinois"
-    description: "Urban chase scenes and several street-level action sequences were filmed here, showcasing the gritty underworld setting of the film."
+    name: 'Chicago, Illinois'
+    description: >-
+      Urban chase scenes and several street-level action sequences were filmed
+      here, showcasing the gritty underworld setting of the film.
   - lat: 34.0522
     lng: -118.2437
-    name: "Los Angeles, California"
-    description: "Used for studio interiors and reshoots, especially scenes involving key character interactions and high-tech environments."
+    name: 'Los Angeles, California'
+    description: >-
+      Used for studio interiors and reshoots, especially scenes involving key
+      character interactions and high-tech environments.
 travelTips:
-  - text: "Most MCU films are filmed in Atlanta due to Georgia's generous tax credits. Trilith Studios offers nearby public tours and fan experiences."
-  - text: "Downtown Chicago offers self-guided walking tours of many film locations, including Thunderbolts filming zones."
-  - text: "Watch for local filming notices around Chicago's Lower Wacker Drive area — a favorite for action scenes."
-  - text: "Check Instagram for behind-the-scenes content — fans often share sightings near key filming spots."
+  - text: >-
+      Most MCU films are filmed in Atlanta due to Georgia's generous tax
+      credits. Trilith Studios offers nearby public tours and fan experiences.
+  - text: >-
+      Downtown Chicago offers self-guided walking tours of many film locations,
+      including Thunderbolts filming zones.
+  - text: >-
+      Watch for local filming notices around Chicago's Lower Wacker Drive area —
+      a favorite for action scenes.
+  - text: >-
+      Check Instagram for behind-the-scenes content — fans often share sightings
+      near key filming spots.
 trivia:
-  - text: "Thunderbolts features a darker tone than most MCU films, with a focus on morally complex anti-heroes."
-  - text: "Florence Pugh, Sebastian Stan, and Wyatt Russell reprise their roles as Yelena Belova, Bucky Barnes, and U.S. Agent."
-  - text: "The film draws inspiration from Marvel's Suicide Squad-like team — expect betrayal, espionage, and uneasy alliances."
-  - text: "Production began in early 2024 and involved over 3 months of principal photography in Georgia and Illinois."
+  - text: >-
+      Thunderbolts features a darker tone than most MCU films, with a focus on
+      morally complex anti-heroes.
+  - text: >-
+      Florence Pugh, Sebastian Stan, and Wyatt Russell reprise their roles as
+      Yelena Belova, Bucky Barnes, and U.S. Agent.
+  - text: >-
+      The film draws inspiration from Marvel's Suicide Squad-like team — expect
+      betrayal, espionage, and uneasy alliances.
+  - text: >-
+      Production began in early 2024 and involved over 3 months of principal
+      photography in Georgia and Illinois.
 ---
 
 ## Marvel's Thunderbolts: Filming Locations Revealed

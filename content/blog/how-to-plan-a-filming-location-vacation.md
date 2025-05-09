@@ -1,11 +1,16 @@
 ---
-title: "How to Plan the Perfect Filming Location Vacation"
-description: "Learn how to create an unforgettable trip by visiting the real-world locations of your favorite movies and TV shows with these expert tips."
-slug: "how-to-plan-a-filming-location-vacation"
-date: "2023-08-05"
-categories: ["Travel Guides", "Planning Tips", "Movie Tourism"]
-author: "Film Location Expert"
-featuredImage: "/images/filming-location-vacation.jpg"
+title: How to Plan the Perfect Filming Location Vacation
+description: >-
+  Learn how to create an unforgettable trip by visiting the real-world locations
+  of your favorite movies and TV shows with these expert tips.
+slug: how-to-plan-a-filming-location-vacation
+date: '2023-08-05'
+categories:
+  - Travel Guides
+  - Planning Tips
+  - Movie Tourism
+author: Film Location Expert
+featuredImage: /images/filming-location-vacation.jpg
 ---
 
 # How to Plan the Perfect Filming Location Vacation

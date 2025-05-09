@@ -11,10 +11,12 @@ import AffiliateLink from '../../components/AffiliateLink';
 import HarryPotterGuide from '../../components/HarryPotterGuide';
 import CommentSection from '../../components/CommentSection';
 import SEO from '../../components/SEO';
-import { getFilmSchema, getFilmingLocationSchema, getBreadcrumbSchema } from '../../utils/schema';
+import { getFilmSchema, getFilmingLocationSchema, getBreadcrumbSchema, getVideoObjectSchema, combineSchemas } from '../../utils/schema';
 import FilmLocationsGuide from '../../components/FilmLocationsGuide';
 import { extractTravelTips, extractTrivia } from '../../utils/locationFormatters';
 import { addLocationBacklinks } from '../../utils/locationUtils';
+import VideoTrailer from '../../components/VideoTrailer';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 interface FilmPageProps {
   film: Content<FilmMeta>;
@@ -80,16 +82,34 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
   const filmSchema = getFilmSchema(film.meta, currentUrl);
   const locationsSchema = hasCoordinates ? getFilmingLocationSchema(film.meta.title, film.meta.coordinates || []) : null;
   
-  // Generate breadcrumb schema
-  const breadcrumbItems = [
+  // Generate breadcrumb items for UI
+  const breadcrumbUIItems = [
+    { label: 'Home', url: '/' },
+    { label: 'Films', url: '/films' },
+    { label: film.meta.title }
+  ];
+
+  // Generate breadcrumb schema items
+  const breadcrumbSchemaItems = [
     { name: 'Home', url: 'https://wherewasitfilmed.co/' },
     { name: 'Films', url: 'https://wherewasitfilmed.co/films/' },
     { name: film.meta.title, url: currentUrl }
   ];
-  const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+  const breadcrumbSchema = getBreadcrumbSchema(breadcrumbSchemaItems);
+  
+  // Generate video object schema if trailer exists
+  const videoObjectSchema = film.meta.trailer ? getVideoObjectSchema({
+    name: film.meta.trailer.title || `${film.meta.title} - Official Trailer`,
+    description: film.meta.trailer.description || `Watch the official trailer for ${film.meta.title}`,
+    thumbnailUrl: film.meta.trailer.thumbnailUrl || film.meta.posterImage || `${process.env.NEXT_PUBLIC_BASE_URL}/images/default-trailer-thumbnail.jpg`,
+    uploadDate: film.meta.trailer.uploadDate || new Date().toISOString().split('T')[0],
+    contentUrl: film.meta.trailer.contentUrl,
+    embedUrl: film.meta.trailer.embedUrl,
+    duration: film.meta.trailer.duration
+  }) : null;
   
   // Combine all schemas into a single JSON string
-  const schemaData = JSON.stringify([filmSchema, locationsSchema, breadcrumbSchema].filter(Boolean));
+  const schemaData = JSON.stringify([filmSchema, locationsSchema, breadcrumbSchema, videoObjectSchema].filter(Boolean));
 
   // Default sample booking options if none provided in the film meta
   const bookingOptions: BookingOption[] = film.meta.bookingOptions || [
@@ -168,23 +188,7 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4 py-6 max-w-7xl">
           {/* Breadcrumb navigation */}
-          <nav className={`mb-6 text-sm transform transition-all duration-500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <ol className="flex items-center space-x-2">
-              <li>
-                <Link href="/" className="text-gray-600 hover:text-primary transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li className="text-gray-400">/</li>
-              <li>
-                <Link href="/films" className="text-gray-600 hover:text-primary transition-colors">
-                  Films
-                </Link>
-              </li>
-              <li className="text-gray-400">/</li>
-              <li className="text-primary font-medium truncate max-w-xs">{film.meta.title}</li>
-            </ol>
-          </nav>
+          <Breadcrumbs items={breadcrumbUIItems} />
 
           {/* Hero Section */}
           <FilmHero film={film.meta} posterImage={film.meta.posterImage} />
@@ -228,19 +232,38 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
                   <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
                   
                   {/* Film Introduction or custom component */}
-                  <div className="relative">
-                    <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center group">
-                      <svg className="w-7 h-7 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-                      </svg>
-                      <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">About <span className="text-primary">{film.meta.title}</span></span>
-                    </h2>
-                    <div className="w-32 h-1 bg-gradient-to-r from-primary/20 to-primary/60 rounded-full mb-8"></div>
-                    
-                    <div className="prose prose-lg max-w-none mb-8 prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
-                      {renderContentWithComponents()}
+                  {!useRegionLayout && (
+                    <div className="relative">
+                      <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center group">
+                        <svg className="w-7 h-7 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                        </svg>
+                        <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">About <span className="text-primary">{film.meta.title}</span></span>
+                      </h2>
+                      <div className="w-32 h-1 bg-gradient-to-r from-primary/20 to-primary/60 rounded-full mb-8"></div>
+                      
+                      {/* Show trailer if available */}
+                      {film.meta.trailer && (
+                        <div className="mb-8">
+                          <h3 className="text-xl font-semibold mb-4 flex items-center">
+                            <svg className="w-5 h-5 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                            {film.meta.trailer.title || "Official Trailer"}
+                          </h3>
+                          <VideoTrailer 
+                            video={film.meta.trailer} 
+                            filmTitle={film.meta.title}
+                            showSchemaMarkup={false} // Schema is already added at page level
+                          />
+                        </div>
+                      )}
+                      
+                      <div className="prose prose-lg max-w-none mb-8 prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
+                        {renderContentWithComponents()}
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
                   {/* Quick Film Facts */}
                   {!hasHarryPotterGuide && !useRegionLayout && (

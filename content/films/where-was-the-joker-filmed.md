@@ -1,96 +1,106 @@
 ---
-title: "Where Was Joker Filmed?"
-description: "Discover the gritty filming locations of Todd Phillips' 'Joker' (2019), exploring the real streets and landmarks of New York City that were transformed into the urban decay of Gotham City."
-slug: "where-was-the-joker-filmed"
-date: "2023-07-21"
+title: Where Was Joker Filmed?
+description: >-
+  Discover the gritty filming locations of Todd Phillips' 'Joker' (2019),
+  exploring the real streets and landmarks of New York City that were
+  transformed into the urban decay of Gotham City.
+slug: where-was-the-joker-filmed
+date: '2023-07-21'
 year: 2019
-director: "Todd Phillips"
-genre: ["Crime", "Drama", "Thriller"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
-coordinates: [
-  {
-    "lat": 40.8326,
-    "lng": -73.9252,
-    "name": "Joker Stairs, Bronx",
-    "description": "The iconic staircase at 167th Street in the Bronx where Arthur Fleck dances down after fully embracing his Joker persona."
-  },
-  {
-    "lat": 40.7031,
-    "lng": -74.0102,
-    "name": "Wall Street, Manhattan",
-    "description": "Served as the backdrop for several scenes depicting Gotham City's financial district and wealth disparity."
-  },
-  {
-    "lat": 40.7587,
-    "lng": -73.9787,
-    "name": "Midtown Manhattan",
-    "description": "Various Midtown locations stood in for the urban landscape of Gotham City, featuring its towering skyscrapers."
-  },
-  {
-    "lat": 40.7314,
-    "lng": -73.9847,
-    "name": "East Village, Manhattan",
-    "description": "The gritty streets of the East Village provided the perfect setting for Arthur's apartment building and neighborhood."
-  },
-  {
-    "lat": 40.7411,
-    "lng": -74.0018,
-    "name": "St. Mark's Theatre (Retired)",
-    "description": "This vintage theatre was transformed into the movie house where Arthur watches Charlie Chaplin's 'Modern Times'."
-  },
-  {
-    "lat": 40.7128,
-    "lng": -74.0060,
-    "name": "Brooklyn Army Terminal",
-    "description": "This industrial complex served as Arkham State Hospital where Arthur's mother was institutionalized."
-  },
-  {
-    "lat": 40.6782,
-    "lng": -73.9442,
-    "name": "Brooklyn Subway Stations",
-    "description": "Several Brooklyn subway stations were used for the pivotal scene where Arthur commits his first violent act."
-  }
-]
-streamingServices: [
-  {
-    "name": "HBO Max",
-    "url": "https://www.hbomax.com/feature/urn:hbo:feature:GXkPjQwAYmlFvjSoaQAVQ"
-  },
-  {
-    "name": "Amazon Prime Video",
-    "url": "https://www.amazon.com/Joker-Joaquin-Phoenix/dp/B07YLKPWL5"
-  },
-  {
-    "name": "Apple TV",
-    "url": "https://tv.apple.com/us/movie/joker/umc.cmc.5vlq4kmj5st3jktugsdh6ylly"
-  }
-]
-bookingOptions: [
-  {
-    "name": "Joker Film Locations Tour",
-    "url": "https://www.viator.com/tours/New-York-City/Joker-Filming-Locations-Tour/d687-73883P15",
-    "type": "tour",
-    "price": "",
-    "isPartner": true
-  },
-  {
-    "name": "Bronx Step Street Walking Tour",
-    "url": "https://www.getyourguide.com/new-york-l59/joker-stairs-and-bronx-tour-t373371/",
-    "type": "tour",
-    "price": "",
-    "isPartner": true
-  }
-]
-behindTheScenes: {
-  "intro": "Todd Phillips' 'Joker' transformed New York City into the dark, decaying Gotham City of the early 1980s. The film's production design team meticulously selected locations that would reflect the economic disparity and urban decay central to the film's themes.",
-  "facts": [
-    "The production filmed for 80 days across various New York City boroughs, primarily in the Bronx, Manhattan, and Brooklyn.",
-    "The iconic stairs scene was filmed at a real Bronx staircase connecting Shakespeare and Anderson Avenues, which has since become a tourist attraction.",
-    "Joaquin Phoenix lost 52 pounds for the role and practiced extensively to perfect the Joker's distinctive dance movements.",
-    "Many scenes were shot on location with minimal set dressing to capture the authentic feel of New York City.",
-    "The film's color palette was carefully designed to transition from muted, somber tones at the beginning to more vibrant colors as Arthur transforms into Joker."
-  ]
-}
+director: Todd Phillips
+genre:
+  - Crime
+  - Drama
+  - Thriller
+posterImage: >-
+  https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg
+coordinates:
+  - lat: 40.8326
+    lng: -73.9252
+    name: 'Joker Stairs, Bronx'
+    description: >-
+      The iconic staircase at 167th Street in the Bronx where Arthur Fleck
+      dances down after fully embracing his Joker persona.
+  - lat: 40.7031
+    lng: -74.0102
+    name: 'Wall Street, Manhattan'
+    description: >-
+      Served as the backdrop for several scenes depicting Gotham City's
+      financial district and wealth disparity.
+  - lat: 40.7587
+    lng: -73.9787
+    name: Midtown Manhattan
+    description: >-
+      Various Midtown locations stood in for the urban landscape of Gotham City,
+      featuring its towering skyscrapers.
+  - lat: 40.7314
+    lng: -73.9847
+    name: 'East Village, Manhattan'
+    description: >-
+      The gritty streets of the East Village provided the perfect setting for
+      Arthur's apartment building and neighborhood.
+  - lat: 40.7411
+    lng: -74.0018
+    name: St. Mark's Theatre (Retired)
+    description: >-
+      This vintage theatre was transformed into the movie house where Arthur
+      watches Charlie Chaplin's 'Modern Times'.
+  - lat: 40.7128
+    lng: -74.006
+    name: Brooklyn Army Terminal
+    description: >-
+      This industrial complex served as Arkham State Hospital where Arthur's
+      mother was institutionalized.
+  - lat: 40.6782
+    lng: -73.9442
+    name: Brooklyn Subway Stations
+    description: >-
+      Several Brooklyn subway stations were used for the pivotal scene where
+      Arthur commits his first violent act.
+streamingServices:
+  - name: HBO Max
+    url: 'https://www.hbomax.com/feature/urn:hbo:feature:GXkPjQwAYmlFvjSoaQAVQ'
+  - name: Amazon Prime Video
+    url: 'https://www.amazon.com/Joker-Joaquin-Phoenix/dp/B07YLKPWL5'
+  - name: Apple TV
+    url: 'https://tv.apple.com/us/movie/joker/umc.cmc.5vlq4kmj5st3jktugsdh6ylly'
+bookingOptions:
+  - name: Joker Film Locations Tour
+    url: >-
+      https://www.viator.com/tours/New-York-City/Joker-Filming-Locations-Tour/d687-73883P15
+    type: tour
+    price: ''
+    isPartner: true
+  - name: Bronx Step Street Walking Tour
+    url: >-
+      https://www.getyourguide.com/new-york-l59/joker-stairs-and-bronx-tour-t373371/
+    type: tour
+    price: ''
+    isPartner: true
+behindTheScenes:
+  intro: >-
+    Todd Phillips' 'Joker' transformed New York City into the dark, decaying
+    Gotham City of the early 1980s. The film's production design team
+    meticulously selected locations that would reflect the economic disparity
+    and urban decay central to the film's themes.
+  facts:
+    - >-
+      The production filmed for 80 days across various New York City boroughs,
+      primarily in the Bronx, Manhattan, and Brooklyn.
+    - >-
+      The iconic stairs scene was filmed at a real Bronx staircase connecting
+      Shakespeare and Anderson Avenues, which has since become a tourist
+      attraction.
+    - >-
+      Joaquin Phoenix lost 52 pounds for the role and practiced extensively to
+      perfect the Joker's distinctive dance movements.
+    - >-
+      Many scenes were shot on location with minimal set dressing to capture the
+      authentic feel of New York City.
+    - >-
+      The film's color palette was carefully designed to transition from muted,
+      somber tones at the beginning to more vibrant colors as Arthur transforms
+      into Joker.
 ---
 
 ## Joker: The Real Gotham Behind the Chaos

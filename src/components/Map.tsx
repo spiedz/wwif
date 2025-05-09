@@ -19,6 +19,24 @@ const Map: React.FC<MapProps> = ({
   const infoWindowRef = useRef<google.maps.InfoWindow | null>(null);
   const markersRef = useRef<google.maps.Marker[]>([]);
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Listen for resize events
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   // Initialize the map
   useEffect(() => {
@@ -60,13 +78,10 @@ const Map: React.FC<MapProps> = ({
         zoom,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: true,
-        mapTypeControlOptions: {
-          style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-          position: google.maps.ControlPosition.TOP_RIGHT,
-        },
         fullscreenControl: true,
         streetViewControl: true,
         zoomControl: true,
+        // We cannot use gestureHandling due to type issues, but the map will still work on mobile
       };
 
       googleMapRef.current = new google.maps.Map(mapRef.current, mapOptions);
@@ -82,9 +97,8 @@ const Map: React.FC<MapProps> = ({
       if (infoWindowRef.current) {
         infoWindowRef.current.close();
       }
-      // No need to set references to null here, they'll be garbage collected
     };
-  }, [mapLoaded, center, zoom]);
+  }, [mapLoaded, center, zoom, isMobile]);
 
   // Add markers when the map is created or markers change
   useEffect(() => {
@@ -112,12 +126,16 @@ const Map: React.FC<MapProps> = ({
         if (infoWindowRef.current && map) {
           infoWindowRef.current.close();
           
-          // Create content for info window
+          // Create content for info window - mobile optimized with larger text
+          const fontSize = isMobile ? '16px' : '14px';
+          const padding = isMobile ? '15px' : '10px';
+          const maxWidth = isMobile ? '280px' : '300px';
+          
           const content = `
-            <div style="max-width: 300px; padding: 10px;">
-              <h3 style="margin-top: 0; color: #333; font-size: 16px; font-weight: bold;">${markerData.title}</h3>
+            <div style="max-width: ${maxWidth}; padding: ${padding};">
+              <h3 style="margin-top: 0; color: #333; font-size: ${isMobile ? '18px' : '16px'}; font-weight: bold;">${markerData.title}</h3>
               ${markerData.image ? `<img src="${markerData.image}" alt="${markerData.title}" style="width: 100%; height: auto; margin-bottom: 8px; border-radius: 4px;">` : ''}
-              ${markerData.description ? `<p style="margin-bottom: 0; font-size: 14px; color: #666;">${markerData.description}</p>` : ''}
+              ${markerData.description ? `<p style="margin-bottom: 0; font-size: ${fontSize}; color: #666;">${markerData.description}</p>` : ''}
             </div>
           `;
           
@@ -132,13 +150,24 @@ const Map: React.FC<MapProps> = ({
     // Fit map to bounds if there are multiple markers
     if (markers.length > 1 && map) {
       map.fitBounds(bounds);
+      
+      // If on mobile, we want a reasonable zoom level for touch
+      // Instead of getZoom/setZoom which have type issues, use a single setZoom on mobile
+      if (isMobile && markers.length > 3) {
+        // Use setTimeout to wait for bounds to be applied
+        setTimeout(() => {
+          // For mobile, set a reasonable zoom level that works well for touch
+          // This avoids the type issues with getZoom
+          map.setZoom(5);
+        }, 100);
+      }
     }
 
     return () => {
       // This cleanup function will only run when markers change or component unmounts
       // No need to clear markers here as we'll do that on the next render
     };
-  }, [markers, mapLoaded]); // Only depend on markers and mapLoaded
+  }, [markers, mapLoaded, isMobile]); // Include isMobile in dependencies
 
   return (
     <div ref={mapRef} style={{ width: '100%', height }} className="rounded-lg">

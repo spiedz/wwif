@@ -92,8 +92,22 @@ export interface FilmMeta extends ContentMeta {
   trivia?: FilmTrivia[];
   useRegionLayout?: boolean;
   behindTheScenes?: string;
-  streamingServices?: string[];
-  bookingOptions?: string[];
+  streamingServices?: StreamingService[];
+  bookingOptions?: BookingOption[];
+  trailer?: VideoContent;
+}
+
+/**
+ * Video content metadata for trailers and clips
+ */
+export interface VideoContent {
+  title?: string;
+  description?: string;
+  thumbnailUrl?: string;
+  uploadDate?: string;
+  embedUrl?: string;
+  contentUrl?: string;
+  duration?: string;
 }
 
 export interface BlogMeta extends ContentMeta {
@@ -145,8 +159,12 @@ export interface SeriesMeta extends ContentMeta {
   mainLocation?: string;
   filmingLocations?: SeriesFilmingLocation[];
   seasons?: number | SeriesSeason[];
-  behindTheScenes?: string;
-  streamingServices?: string[];
+  behindTheScenes?: {
+    intro?: string;
+    facts?: string[];
+  };
+  streamingServices?: StreamingService[];
+  trailer?: VideoContent;
 }
 
 // Define SeriesSeason interface if it doesn't exist

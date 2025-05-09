@@ -1,4 +1,4 @@
-```yaml
+
 ---
 title: "Where Was The Quilters Filmed?"
 description: "Discover the authentic Texas filming locations that brought the heartfelt stories of The Quilters to life."

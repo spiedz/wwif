@@ -1,10 +1,15 @@
 ---
-title: "Famous Movie Car Chase Locations You Can Actually Visit"
-description: "Explore iconic film locations where legendary car chases were filmed, from San Francisco's steep hills to the streets of Paris."
-date: "2023-12-10"
-author: "Action Film Expert"
-categories: ["Filming Locations", "Action Movies", "Travel"]
-featuredImage: "/images/blog/car-chase-cover.jpg"
+title: Famous Movie Car Chase Locations You Can Actually Visit
+description: >-
+  Explore iconic film locations where legendary car chases were filmed, from San
+  Francisco's steep hills to the streets of Paris.
+date: '2023-12-10'
+author: Action Film Expert
+categories:
+  - Filming Locations
+  - Action Movies
+  - Travel
+featuredImage: /images/blog/car-chase-cover.jpg
 ---
 
 # Famous Movie Car Chase Locations You Can Actually Visit

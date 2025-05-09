@@ -1,123 +1,111 @@
 ---
-title: "Where Was Severance Filmed?"
-description: "Explore the real-world filming locations of Severance, from the enigmatic Lumon Industries to the actual filming locations."
-slug: "severance"
-overview: "Severance, set in a dystopian world where work-life balance is taken to an extreme, has captivated audiences with its unique storytelling and thought-provoking themes. Despite being set in the fictional Lumon Industries, the series was primarily filmed in various locations in New York City and beyond."
+title: Where Was Severance Filmed?
+description: >-
+  Explore the real-world filming locations of Severance, from the enigmatic
+  Lumon Industries to the actual filming locations.
+slug: severance
+overview: >-
+  Severance, set in a dystopian world where work-life balance is taken to an
+  extreme, has captivated audiences with its unique storytelling and
+  thought-provoking themes. Despite being set in the fictional Lumon Industries,
+  the series was primarily filmed in various locations in New York City and
+  beyond.
 releaseYearStart: 2022
-releaseYearEnd: null
-creator: "Dan Erickson"
-genres: ["Drama", "Thriller", "Sci-Fi"]
-posterImage: "https://example.com/poster.jpg"
-bannerImage: "https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_SX300.jpg"
-coordinates: [
-  { 
-    "lat": 40.7128, 
-    "lng": -74.0060, 
-    "name": "New York City", 
-    "description": "Multiple urban scenes were filmed in this vibrant city." 
-  },
-  { 
-    "lat": 40.7851, 
-    "lng": -73.9683, 
-    "name": "Central Park", 
-    "description": "Some outdoor scenes capture the juxtaposition of nature amidst urban life."
-  }
-]
-seasons: [
-  {
-    "number": 1,
-    "episodeCount": 9,
-    "releaseYear": 2022,
-    "episodes": [
-      {
-        "number": 1,
-        "title": "Goodbye, Lumen",
-        "description": "The start of the chilling journey in Lumon Industries."
-      },
-      {
-        "number": 2,
-        "title": "The Anatomy of a Decision",
-        "description": "Exploring the consequences of choices at work."
-      },
-      {
-        "number": 3,
-        "title": "Inclusion",
-        "description": "The impact of new hires on workplace dynamics."
-      }
-    ]
-  }
-]
-locations: [
-  {
-    "id": "location-1-id",
-    "name": "Lumon Industries",
-    "description": "The enigmatic headquarters where employees undergo 'severance,' a procedure separating their work and personal lives. Filmed at various offices and corporate settings around New York, this location showcases the stark and sterile environment of Lumon.",
-    "coordinates": {
-      "lat": 40.7128,
-      "lng": -74.0060
-    },
-    "image": "https://example.com/lumon.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 1,
-        "sceneDescription": "Introduction to the workplace environment and the severance procedure."
-      },
-      {
-        "season": 1,
-        "episode": 2,
-        "sceneDescription": "Dramatic meetings and personal revelations unfold within the corporate walls."
-      }
-    ]
-  },
-  {
-    "id": "location-2-id",
-    "name": "Central Park",
-    "description": "Known for its natural beauty, Central Park provides a contrasting backdrop to the rigid work life depicted in Severance. Scenes filmed here depict characters reflecting on their lives outside of Lumon, capturing moments of introspection and freedom.",
-    "coordinates": {
-      "lat": 40.7851,
-      "lng": -73.9683
-    },
-    "image": "https://example.com/centralpark.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 3,
-        "sceneDescription": "A pivotal moment of self-discovery occurs amidst the park's serenity."
-      }
-    ]
-  }
-]
-streamingServices: [
-  {
-    "name": "Apple TV+",
-    "url": "https://www.apple.com/apple-tv-plus/series/severance"
-  }
-]
-bookingOptions: [
-  {
-    "name": "Severance Tour NYC",
-    "url": "https://www.severancetours.com",
-    "type": "tour",
-    "price": "$50",
-    "isPartner": true
-  },
-  {
-    "name": "Self-Guided Brooklyn Tour",
-    "url": "https://www.brooklyntour.com/self-guided",
-    "type": "tour",
-    "price": "Free self-guided tour"
-  }
-]
-behindTheScenes: {
-  "intro": "Delve into the fascinating world behind the scenes of Severance, where creativity meets corporate culture.",
-  "facts": [
-    "The concept of severance is inspired by real psychological theories.",
-    "Filming involved extensive use of minimalist design to create an unsettling atmosphere.",
-    "Crews often had to work in unconventional hours to capture specific scenes.",
-    "Dan Erickson's vision for the show includes exploring existential themes through a corporate lens."
-  ]
-}
+creator: Dan Erickson
+genres:
+  - Drama
+  - Thriller
+  - Sci-Fi
+posterImage: 'https://example.com/poster.jpg'
+bannerImage: >-
+  https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_SX300.jpg
+coordinates:
+  - lat: 40.7128
+    lng: -74.006
+    name: New York City
+    description: Multiple urban scenes were filmed in this vibrant city.
+  - lat: 40.7851
+    lng: -73.9683
+    name: Central Park
+    description: Some outdoor scenes capture the juxtaposition of nature amidst urban life.
+seasons:
+  - number: 1
+    episodeCount: 9
+    releaseYear: 2022
+    episodes:
+      - number: 1
+        title: 'Goodbye, Lumen'
+        description: The start of the chilling journey in Lumon Industries.
+      - number: 2
+        title: The Anatomy of a Decision
+        description: Exploring the consequences of choices at work.
+      - number: 3
+        title: Inclusion
+        description: The impact of new hires on workplace dynamics.
+locations:
+  - id: location-1-id
+    name: Lumon Industries
+    description: >-
+      The enigmatic headquarters where employees undergo 'severance,' a
+      procedure separating their work and personal lives. Filmed at various
+      offices and corporate settings around New York, this location showcases
+      the stark and sterile environment of Lumon.
+    coordinates:
+      lat: 40.7128
+      lng: -74.006
+    image: 'https://example.com/lumon.jpg'
+    episodes:
+      - season: 1
+        episode: 1
+        sceneDescription: Introduction to the workplace environment and the severance procedure.
+      - season: 1
+        episode: 2
+        sceneDescription: >-
+          Dramatic meetings and personal revelations unfold within the corporate
+          walls.
+  - id: location-2-id
+    name: Central Park
+    description: >-
+      Known for its natural beauty, Central Park provides a contrasting backdrop
+      to the rigid work life depicted in Severance. Scenes filmed here depict
+      characters reflecting on their lives outside of Lumon, capturing moments
+      of introspection and freedom.
+    coordinates:
+      lat: 40.7851
+      lng: -73.9683
+    image: 'https://example.com/centralpark.jpg'
+    episodes:
+      - season: 1
+        episode: 3
+        sceneDescription: A pivotal moment of self-discovery occurs amidst the park's serenity.
+streamingServices:
+  - name: Apple TV+
+    url: 'https://www.apple.com/apple-tv-plus/series/severance'
+bookingOptions:
+  - name: Severance Tour NYC
+    url: 'https://www.severancetours.com'
+    type: tour
+    price: $50
+    isPartner: true
+  - name: Self-Guided Brooklyn Tour
+    url: 'https://www.brooklyntour.com/self-guided'
+    type: tour
+    price: Free self-guided tour
+behindTheScenes:
+  intro: >-
+    Delve into the fascinating world behind the scenes of Severance, where
+    creativity meets corporate culture.
+  facts:
+    - The concept of severance is inspired by real psychological theories.
+    - >-
+      Filming involved extensive use of minimalist design to create an
+      unsettling atmosphere.
+    - >-
+      Crews often had to work in unconventional hours to capture specific
+      scenes.
+    - >-
+      Dan Erickson's vision for the show includes exploring existential themes
+      through a corporate lens.
 ---
 
 ## About Severance

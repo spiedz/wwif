@@ -1,10 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { FilmMeta, FilmRegion, FilmLocation, TravelTip, FilmTrivia } from '../types/content';
-import { prepareFilmLocationData } from '../utils/locationFormatters';
+import { FilmMeta, FilmLocation } from '../types';
 import Map from './Map';
 
 interface FilmLocationsGuideProps {
   film: FilmMeta;
+}
+
+// Define interfaces for FilmRegion, TravelTip, and FilmTrivia
+interface FilmRegion {
+  name: string;
+  description: string;
+  image?: string;
+  locations: FilmLocation[];
+}
+
+interface TravelTip {
+  text: string;
+}
+
+interface FilmTrivia {
+  text: string;
 }
 
 const FilmLocationsGuide: React.FC<FilmLocationsGuideProps> = ({ film }) => {
@@ -177,6 +192,19 @@ const LocationCard: React.FC<{ location: FilmLocation, useEnhancedStyle?: boolea
   const [isHovered, setIsHovered] = useState(false);
   const defaultImage = '/images/default-location.jpg';
   
+  // Handle image error
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>): void => {
+    e.currentTarget.src = defaultImage;
+  };
+  
+  // Define the location scene type
+  interface LocationWithScene extends FilmLocation {
+    scene?: string;
+  }
+  
+  // Safely cast location to the extended type
+  const locationWithScene = location as LocationWithScene;
+  
   return (
     <div 
       className={`premium-card ${useEnhancedStyle 
@@ -194,9 +222,7 @@ const LocationCard: React.FC<{ location: FilmLocation, useEnhancedStyle?: boolea
           style={{
             transform: isHovered ? 'scale(1.1)' : 'scale(1.01)'
           }}
-          onError={(e) => {
-            e.currentTarget.src = defaultImage;
-          }}
+          onError={handleImageError}
         />
         
         {/* Image overlay gradient */}
@@ -212,9 +238,9 @@ const LocationCard: React.FC<{ location: FilmLocation, useEnhancedStyle?: boolea
       <div className={`${useEnhancedStyle ? 'p-6' : 'p-5'}`}>
         <h4 className={`${useEnhancedStyle ? 'text-2xl' : 'text-xl'} font-bold text-gray-800 mb-3 flex items-center`}>
           {location.name}
-          {(location as any).scene && (
+          {locationWithScene.scene && (
             <span className="ml-2 text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
-              {(location as any).scene}
+              {locationWithScene.scene}
             </span>
           )}
         </h4>

@@ -126,7 +126,7 @@ const AdUnit: React.FC<AdProps> = ({
 // Add the global AdSense type definition for TypeScript
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: Array<Record<string, unknown>>;
   }
 }
 

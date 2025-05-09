@@ -1,123 +1,108 @@
 ---
-title: "Where Was The Defenders Filmed?"
-description: "Explore the real-world filming locations of The Defenders, from New York City to various iconic spots in the city."
-slug: "the-defenders"
-overview: "The Defenders, set in the gritty and vibrant streets of New York City, has captivated audiences with its thrilling tales of superheroes and camaraderie. Despite being set in the bustling urban landscape of New York, the series was primarily filmed in the metropolitan areas that breathe life into the show."
+title: Where Was The Defenders Filmed?
+description: >-
+  Explore the real-world filming locations of The Defenders, from New York City
+  to various iconic spots in the city.
+slug: the-defenders
+overview: >-
+  The Defenders, set in the gritty and vibrant streets of New York City, has
+  captivated audiences with its thrilling tales of superheroes and camaraderie.
+  Despite being set in the bustling urban landscape of New York, the series was
+  primarily filmed in the metropolitan areas that breathe life into the show.
 releaseYearStart: 2017
-releaseYearEnd: null
-creator: "Drew Goddard"
-genres: ["Action", "Adventure", "Superhero"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BMTUwMjA5NTg4MF5BMl5BanBnXkFtZTgwODUyODkwMzI@._V1_SX300.jpg"
-bannerImage: "https://m.media-amazon.com/images/M/MV5BMTUwMjA5NTg4MF5BMl5BanBnXkFtZTgwODUyODkwMzI@._V1_SX300.jpg"
-coordinates: [
-  { 
-    "lat": 40.7128, 
-    "lng": -74.0060, 
-    "name": "New York City", 
-    "description": "The bustling city serves as the main backdrop for all the action."
-  },
-  { 
-    "lat": 40.7580, 
-    "lng": -73.9855, 
-    "name": "Times Square", 
-    "description": "Famous for its vibrant nightlife and iconic lights, featured in several scenes."
-  }
-]
-seasons: [
-  {
-    "number": 1,
-    "episodeCount": 8,
-    "releaseYear": 2017,
-    "episodes": [
-      {
-        "number": 1,
-        "title": "Into the Ring",
-        "description": "Daredevil and Iron Fist team up to face the Hand."
-      },
-      {
-        "number": 2,
-        "title": "Mean Right Hook",
-        "description": "The Defenders attempt to strategize against their common enemy."
-      },
-      {
-        "number": 3,
-        "title": "Worst Behavior",
-        "description": "The group faces their first major challenge together."
-      }
-    ]
-  }
-]
-locations: [
-  {
-    "id": "location-1-id",
-    "name": "The New York Public Library",
-    "description": "This iconic library was used for several key scenes, showcasing its majestic architecture as a backdrop for the Defenders' encounters.",
-    "coordinates": {
-      "lat": 40.7532,
-      "lng": -73.9822
-    },
-    "image": "https://example.com/location1.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 1,
-        "sceneDescription": "The Defenders regroup in the library to discuss their next move."
-      },
-      {
-        "season": 1,
-        "episode": 2,
-        "sceneDescription": "Intense dialogue unfolds amid the library's grand reading rooms."
-      }
-    ]
-  },
-  {
-    "id": "location-2-id",
-    "name": "Rand Enterprises",
-    "description": "The workplace of Danny Rand that serves as a key location, emphasizing the corporate side of the story intertwined with the heroics.",
-    "coordinates": {
-      "lat": 40.7600,
-      "lng": -73.9632
-    },
-    "image": "https://example.com/location2.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 1,
-        "sceneDescription": "Danny Rand confronts his past within the halls of Rand Enterprises."
-      }
-    ]
-  }
-]
-streamingServices: [
-  {
-    "name": "Netflix",
-    "url": "https://www.netflix.com/title/80025655"
-  }
-]
-bookingOptions: [
-  {
-    "name": "NYC Superhero Tour",
-    "url": "https://www.nyc-superhero-tour.com",
-    "type": "tour",
-    "price": "$25",
-    "isPartner": true
-  },
-  {
-    "name": "Self-Guided Tour",
-    "url": "https://www.example.com/self-guided-tour",
-    "type": "tour",
-    "price": "Free self-guided tour"
-  }
-]
-behindTheScenes: {
-  "intro": "The Defenders brought together Marvel's most popular street-level heroes, creating a unique blend of action and storytelling. Behind the scenes, the production was just as thrilling as the episodes.",
-  "facts": [
-    "The Defenders was filmed primarily on location in New York City.",
-    "Each episode featured extensive fight choreography involving all four protagonists.",
-    "The series had a crossover of characters from previous Marvel Netflix shows.",
-    "Filming often took place under a strict time schedule to capture the authentic essence of NYC."
-  ]
-}
+creator: Drew Goddard
+genres:
+  - Action
+  - Adventure
+  - Superhero
+posterImage: >-
+  https://m.media-amazon.com/images/M/MV5BMTUwMjA5NTg4MF5BMl5BanBnXkFtZTgwODUyODkwMzI@._V1_SX300.jpg
+bannerImage: >-
+  https://m.media-amazon.com/images/M/MV5BMTUwMjA5NTg4MF5BMl5BanBnXkFtZTgwODUyODkwMzI@._V1_SX300.jpg
+coordinates:
+  - lat: 40.7128
+    lng: -74.006
+    name: New York City
+    description: The bustling city serves as the main backdrop for all the action.
+  - lat: 40.758
+    lng: -73.9855
+    name: Times Square
+    description: >-
+      Famous for its vibrant nightlife and iconic lights, featured in several
+      scenes.
+seasons:
+  - number: 1
+    episodeCount: 8
+    releaseYear: 2017
+    episodes:
+      - number: 1
+        title: Into the Ring
+        description: Daredevil and Iron Fist team up to face the Hand.
+      - number: 2
+        title: Mean Right Hook
+        description: The Defenders attempt to strategize against their common enemy.
+      - number: 3
+        title: Worst Behavior
+        description: The group faces their first major challenge together.
+locations:
+  - id: location-1-id
+    name: The New York Public Library
+    description: >-
+      This iconic library was used for several key scenes, showcasing its
+      majestic architecture as a backdrop for the Defenders' encounters.
+    coordinates:
+      lat: 40.7532
+      lng: -73.9822
+    image: 'https://example.com/location1.jpg'
+    episodes:
+      - season: 1
+        episode: 1
+        sceneDescription: The Defenders regroup in the library to discuss their next move.
+      - season: 1
+        episode: 2
+        sceneDescription: Intense dialogue unfolds amid the library's grand reading rooms.
+  - id: location-2-id
+    name: Rand Enterprises
+    description: >-
+      The workplace of Danny Rand that serves as a key location, emphasizing the
+      corporate side of the story intertwined with the heroics.
+    coordinates:
+      lat: 40.76
+      lng: -73.9632
+    image: 'https://example.com/location2.jpg'
+    episodes:
+      - season: 1
+        episode: 1
+        sceneDescription: Danny Rand confronts his past within the halls of Rand Enterprises.
+streamingServices:
+  - name: Netflix
+    url: 'https://www.netflix.com/title/80025655'
+bookingOptions:
+  - name: NYC Superhero Tour
+    url: 'https://www.nyc-superhero-tour.com'
+    type: tour
+    price: $25
+    isPartner: true
+  - name: Self-Guided Tour
+    url: 'https://www.example.com/self-guided-tour'
+    type: tour
+    price: Free self-guided tour
+behindTheScenes:
+  intro: >-
+    The Defenders brought together Marvel's most popular street-level heroes,
+    creating a unique blend of action and storytelling. Behind the scenes, the
+    production was just as thrilling as the episodes.
+  facts:
+    - The Defenders was filmed primarily on location in New York City.
+    - >-
+      Each episode featured extensive fight choreography involving all four
+      protagonists.
+    - >-
+      The series had a crossover of characters from previous Marvel Netflix
+      shows.
+    - >-
+      Filming often took place under a strict time schedule to capture the
+      authentic essence of NYC.
 ---
 
 ## About The Defenders

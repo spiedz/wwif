@@ -1,11 +1,17 @@
 ---
-title: "25 Most Iconic Movie Locations You Can Actually Visit"
-description: "Discover the world's most famous film locations that welcome visitors, from New Zealand's Hobbiton to Iceland's otherworldly landscapes featured in Game of Thrones."
-slug: "most-iconic-movie-locations-you-can-visit"
-date: "2025-06-02"
-categories: ["Film Tourism", "Travel Guides", "Movie Locations"]
-author: "Film Location Explorer"
-featuredImage: "https://media.timeout.com/images/106191999/750/562/image.jpg"
+title: 25 Most Iconic Movie Locations You Can Actually Visit
+description: >-
+  Discover the world's most famous film locations that welcome visitors, from
+  New Zealand's Hobbiton to Iceland's otherworldly landscapes featured in Game
+  of Thrones.
+slug: most-iconic-movie-locations-you-can-visit
+date: '2025-06-02'
+categories:
+  - Film Tourism
+  - Travel Guides
+  - Movie Locations
+author: Film Location Explorer
+featuredImage: 'https://media.timeout.com/images/106191999/750/562/image.jpg'
 ---
 
 # 25 Most Iconic Movie Locations You Can Actually Visit

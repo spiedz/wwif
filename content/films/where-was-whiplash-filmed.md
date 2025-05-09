@@ -1,91 +1,90 @@
 ---
-title: "Where Was Whiplash Filmed?"
-description: "Dive into the intense world of Whiplash and explore the remarkable filming locations that brought this gripping story to life, from music conservatories to bustling New York City streets."
-slug: "where-was-whiplash-filmed"
-date: "2023-06-15"
+title: Where Was Whiplash Filmed?
+description: >-
+  Dive into the intense world of Whiplash and explore the remarkable filming
+  locations that brought this gripping story to life, from music conservatories
+  to bustling New York City streets.
+slug: where-was-whiplash-filmed
+date: '2023-06-15'
 year: 2014
-director: "Damien Chazelle"
-genre: ["Drama", "Music"]
-posterImage: "https://image.tmdb.org/t/p/w500/7B57WFKemsJvYwLACZiSZMUZcKM.jpg"
-coordinates: [
-  { 
-    "lat": 34.0583, 
-    "lng": -118.4438, 
-    "name": "Los Angeles, California", 
-    "description": "Key interior scenes were filmed at the renowned Conservatory of Music."
-  },
-  { 
-    "lat": 34.0696, 
-    "lng": -118.4053, 
-    "name": "University of Southern California", 
-    "description": "Filming took place in the university's iconic music department."
-  },
-  { 
-    "lat": 34.0522, 
-    "lng": -118.2437, 
-    "name": "Downtown Los Angeles", 
-    "description": "The vibrant streets and architecture of LA provided a dynamic backdrop for several key scenes."
-  },
-  { 
-    "lat": 34.0953, 
-    "lng": -118.1624, 
-    "name": "Hollyhock House, Los Angeles", 
-    "description": "This historical site was transformed into a visually stunning landscape for pivotal moments."
-  },
-  { 
-    "lat": 40.7128, 
-    "lng": -74.0060, 
-    "name": "New York City, New York", 
-    "description": "Some scenes were shot in NYC, capturing the hustle and ambition synonymous with the city's music scene."
-  }
-]
-streamingServices: [
-  {
-    "name": "Amazon Prime Video",
-    "url": "https://www.amazon.com/Whiplash-Miles-Teller/dp/B00T3U98UC"
-  },
-  {
-    "name": "Apple TV",
-    "url": "https://tv.apple.com/us/movie/whiplash/umc.cmc.5dr802yla9a5zykejn99s5188"
-  },
-  {
-    "name": "Netflix",
-    "url": "https://www.netflix.com/title/80030392"
-  }
-]
-bookingOptions: [
-  {
-    "name": "USC Music Department Tour",
-    "url": "https://music.usc.edu/",
-    "type": "tour",
-    "price": "Free",
-    "isPartner": true
-  },
-  {
-    "name": "Los Angeles City Tour",
-    "url": "https://www.lacitytours.com/",
-    "type": "tour",
-    "price": "$60",
-    "discount": "$50",
-    "isPartner": true
-  },
-  {
-    "name": "Booking.com - Los Angeles Hotels",
-    "url": "https://www.booking.com/searchresults.html?ss=Los+Angeles",
-    "type": "booking",
-    "price": "$150/night"
-  }
-]
-behindTheScenes: {
-  "intro": "Whiplash, a gripping exploration of ambition and the pursuit of greatness, was brought to life through meticulous filming across various locations in Los Angeles and New York City. The film's powerful narrative hinges on the brutal dynamic between a determined student and an unforgiving instructor, all set against the backdrop of prestigious music conservatories.",
-  "facts": [
-    "The film was shot in 19 days, highlighting the intense dedication of the cast and crew.",
-    "Miles Teller, who played the lead role, underwent extensive drumming training to authentically portray Andrew Neiman's character.",
-    "The film's powerful score was created by composer Justin Hurwitz, enhancing the emotional weight of the film's intense moments.",
-    "Director Damien Chazelle used a variety of camera techniques to create a sense of urgency and tension, immersing viewers in the story.",
-    "Whiplash was nominated for five Academy Awards and won three, including Best Supporting Actor for J.K. Simmons."
-  ]
-}
+director: Damien Chazelle
+genre:
+  - Drama
+  - Music
+posterImage: 'https://image.tmdb.org/t/p/w500/7B57WFKemsJvYwLACZiSZMUZcKM.jpg'
+coordinates:
+  - lat: 34.0583
+    lng: -118.4438
+    name: 'Los Angeles, California'
+    description: Key interior scenes were filmed at the renowned Conservatory of Music.
+  - lat: 34.0696
+    lng: -118.4053
+    name: University of Southern California
+    description: Filming took place in the university's iconic music department.
+  - lat: 34.0522
+    lng: -118.2437
+    name: Downtown Los Angeles
+    description: >-
+      The vibrant streets and architecture of LA provided a dynamic backdrop for
+      several key scenes.
+  - lat: 34.0953
+    lng: -118.1624
+    name: 'Hollyhock House, Los Angeles'
+    description: >-
+      This historical site was transformed into a visually stunning landscape
+      for pivotal moments.
+  - lat: 40.7128
+    lng: -74.006
+    name: 'New York City, New York'
+    description: >-
+      Some scenes were shot in NYC, capturing the hustle and ambition synonymous
+      with the city's music scene.
+streamingServices:
+  - name: Amazon Prime Video
+    url: 'https://www.amazon.com/Whiplash-Miles-Teller/dp/B00T3U98UC'
+  - name: Apple TV
+    url: 'https://tv.apple.com/us/movie/whiplash/umc.cmc.5dr802yla9a5zykejn99s5188'
+  - name: Netflix
+    url: 'https://www.netflix.com/title/80030392'
+bookingOptions:
+  - name: USC Music Department Tour
+    url: 'https://music.usc.edu/'
+    type: tour
+    price: Free
+    isPartner: true
+  - name: Los Angeles City Tour
+    url: 'https://www.lacitytours.com/'
+    type: tour
+    price: $60
+    discount: $50
+    isPartner: true
+  - name: Booking.com - Los Angeles Hotels
+    url: 'https://www.booking.com/searchresults.html?ss=Los+Angeles'
+    type: booking
+    price: $150/night
+behindTheScenes:
+  intro: >-
+    Whiplash, a gripping exploration of ambition and the pursuit of greatness,
+    was brought to life through meticulous filming across various locations in
+    Los Angeles and New York City. The film's powerful narrative hinges on the
+    brutal dynamic between a determined student and an unforgiving instructor,
+    all set against the backdrop of prestigious music conservatories.
+  facts:
+    - >-
+      The film was shot in 19 days, highlighting the intense dedication of the
+      cast and crew.
+    - >-
+      Miles Teller, who played the lead role, underwent extensive drumming
+      training to authentically portray Andrew Neiman's character.
+    - >-
+      The film's powerful score was created by composer Justin Hurwitz,
+      enhancing the emotional weight of the film's intense moments.
+    - >-
+      Director Damien Chazelle used a variety of camera techniques to create a
+      sense of urgency and tension, immersing viewers in the story.
+    - >-
+      Whiplash was nominated for five Academy Awards and won three, including
+      Best Supporting Actor for J.K. Simmons.
 ---
 
 <WhiplashFilmGuide />

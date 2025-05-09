@@ -10,6 +10,8 @@ import Map from '../../components/Map';
 import { LocationInfo, MediaItem, getLocationBySlug, getPopularLocations } from '../../utils/locationUtils';
 import { formatPageTitle } from '../../utils/metaUtils';
 import { getAllLocationsData } from '../../lib/server/serverMarkdown';
+import { getLocationPageSchema, getBreadcrumbSchema, combineSchemas } from '../../utils/schema';
+import SEO from '../../components/SEO';
 
 // Default placeholder image for locations
 const DEFAULT_LOCATION_IMAGE = '/images/default-location.jpg';
@@ -50,12 +52,31 @@ export default function LocationPage({ location }: LocationPageProps) {
   }
   
   const pageTitle = formatPageTitle(`Films and TV Series Filmed in ${location.name}`);
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const currentUrl = process.env.NEXT_PUBLIC_BASE_URL ? 
+    `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}` : 
+    `https://wherewasitfilmed.co${router.asPath}`;
+  
   const breadcrumbsItems = [
     { label: 'Home', url: '/' },
     { label: 'Locations', url: '/locations' },
     { label: location.name }
   ];
+  
+  // Generate location schema
+  const locationSchema = getLocationPageSchema(location, currentUrl);
+  
+  // Generate breadcrumb schema
+  const breadcrumbSchema = getBreadcrumbSchema(
+    breadcrumbsItems.map(item => ({
+      name: item.label,
+      url: item.url 
+        ? `${process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co'}${item.url}` 
+        : currentUrl
+    }))
+  );
+  
+  // Combine schemas
+  const schemaData = JSON.stringify(combineSchemas(locationSchema, breadcrumbSchema));
   
   // Group media items by type
   const films = location.mediaItems.filter((item: MediaItem) => item.type === 'film');
@@ -63,47 +84,20 @@ export default function LocationPage({ location }: LocationPageProps) {
   
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={`Discover all films and TV series filmed at ${location.name}. Explore film locations, get travel tips, and plan your visit.`} />
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={`Discover all films and TV series filmed at ${location.name}. Explore film locations, get travel tips, and plan your visit.`} />
-        <meta property="og:image" content={location.image || DEFAULT_LOCATION_IMAGE} />
-        <meta property="og:url" content={currentUrl} />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={`Discover all films and TV series filmed at ${location.name}. Explore film locations, get travel tips, and plan your visit.`} />
-        <meta name="twitter:image" content={location.image || DEFAULT_LOCATION_IMAGE} />
-        
-        {/* Schema.org structured data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Place',
-              name: location.name,
-              description: location.description || `A filming location featured in ${location.mediaItems.length} films and TV series.`,
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: location.lat,
-                longitude: location.lng
-              },
-              url: currentUrl,
-              image: location.image || DEFAULT_LOCATION_IMAGE
-            })
-          }}
-        />
-      </Head>
+      <SEO
+        meta={{
+          title: `${location.name} - Filming Locations`,
+          description: `Discover all films and TV series filmed at ${location.name}. Explore film locations, get travel tips, and plan your visit.`,
+          slug: router.query.slug as string
+        }}
+        imageUrl={location.image || DEFAULT_LOCATION_IMAGE}
+        type="website"
+        jsonLd={schemaData}
+      />
       
       <div className={`fade-in ${isLoaded ? 'visible' : ''}`}>
         <div className="container mx-auto px-4 py-8">
-          <Breadcrumbs items={breadcrumbsItems} />
+          <Breadcrumbs items={breadcrumbsItems} includeSchemaMarkup={false} />
           
           <header className="mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

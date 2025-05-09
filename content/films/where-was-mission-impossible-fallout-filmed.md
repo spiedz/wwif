@@ -1,115 +1,108 @@
 ---
-title: "Where Was Mission: Impossible – Fallout Filmed?"
-description: "Explore the breathtaking filming locations of 'Mission: Impossible – Fallout,' from the streets of Paris to the landscapes of New Zealand."
-slug: "where-was-mission-impossible-fallout-filmed"
-date: "2023-06-15"
+title: 'Where Was Mission: Impossible – Fallout Filmed?'
+description: >-
+  Explore the breathtaking filming locations of 'Mission: Impossible – Fallout,'
+  from the streets of Paris to the landscapes of New Zealand.
+slug: where-was-mission-impossible-fallout-filmed
+date: '2023-06-15'
 year: 2018
-director: "Christopher McQuarrie"
-genre: ["Action", "Adventure", "Thriller"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BMTk3NDY5MTU0NV5BMl5BanBnXkFtZTgwNDI3MDE1NTM@._V1_SX300.jpg"
-coordinates: [
-  { 
-    "lat": 48.8584, 
-    "lng": 2.2945, 
-    "name": "Eiffel Tower, Paris", 
-    "description": "Iconic landmark where some of the film's most thrilling action sequences unfold."
-  },
-  { 
-    "lat": 48.8830, 
-    "lng": 2.3412, 
-    "name": "Palais Garnier, Paris", 
-    "description": "The stunning opera house that featured prominently in the film's plot."
-  },
-  { 
-    "lat": 51.5007, 
-    "lng": -0.1246, 
-    "name": "Whitehall, London", 
-    "description": "One of London's most famous streets, used for key scenes in the film."
-  },
-  { 
-    "lat": 36.9613, 
-    "lng": 174.9333, 
-    "name": "Wellington, New Zealand", 
-    "description": "Stunning aerial views of the Wellington region feature in the movie."
-  },
-  { 
-    "lat": 38.7030, 
-    "lng": -77.0220, 
-    "name": "Langley, Virginia", 
-    "description": "Exterior shots of the CIA Headquarters are captured here."
-  },
-  { 
-    "lat": 48.8004, 
-    "lng": 2.1124, 
-    "name": "Sainte-Chapelle, Paris", 
-    "description": "This stunning Gothic chapel served as a backdrop for some key scenes."
-  },
-  { 
-    "lat": 38.8980, 
-    "lng": -77.0403, 
-    "name": "The Hyatt Regency, Washington D.C.", 
-    "description": "Exterior and interior shots were used during the gripping climax of the film."
-  },
-  { 
-    "lat": 44.5646, 
-    "lng": -123.2620, 
-    "name": "Oregon, USA", 
-    "description": "Scenes from the film benefited from the diverse landscapes of Oregon."
-  },
-  { 
-    "lat": 33.7490, 
-    "lng": -84.3880, 
-    "name": "Atlanta, Georgia", 
-    "description": "Some sequences were also filmed around this vibrant southern city."
-  }
-]
-streamingServices: [
-  {
-    "name": "Paramount+",
-    "url": "https://www.paramountplus.com/movies/mission-impossible-fallout/"
-  },
-  {
-    "name": "Amazon Prime",
-    "url": "https://www.amazon.com/gp/video/search?phrase=Mission%20Impossible%20Fallout"
-  },
-  {
-    "name": "Apple TV",
-    "url": "https://tv.apple.com/us/movie/mission-impossible-fallout/umc.cmc.5tberinog7unk6lg4z1scw6nm"
-  }
-]
-bookingOptions: [
-  {
-    "name": "Paris City Tour",
-    "url": "https://www.pariscitytour.com/",
-    "type": "tour",
-    "price": "€49",
-    "isPartner": true
-  },
-  {
-    "name": "CIA Headquarters Tour",
-    "url": "https://www.cia.gov/business/visit-the-cia",
-    "type": "tour",
-    "price": "Free",
-    "isPartner": false
-  },
-  {
-    "name": "New Zealand Adventure Tours",
-    "url": "https://www.newzealand.com/us/tours/",
-    "type": "tour",
-    "price": "$150",
-    "isPartner": true
-  }
-]
-behindTheScenes: {
-  "intro": "The filming of 'Mission: Impossible – Fallout' was a breathtaking endeavor that spanned several international locations, showcasing incredible stunts and immersive action sequences. The production team faced numerous challenges to ensure that each scene delivered the high-octane thrills audiences expect from the franchise.",
-  "facts": [
-    "Tom Cruise performed many of his own stunts, including a HALO jump from 25,000 feet, marking one of the highest in cinematic history.",
-    "The iconic helicopter chase in the film was shot in the mountains of New Zealand, capturing stunning aerial views.",
-    "In total, the film was shot in six different countries, with significant scenes taking place in Paris, London, and Abu Dhabi.",
-    "The scene on the Eiffel Tower featured a specially designed set that allowed for safe filming so close to the famous landmark.",
-    "The production team invested in advanced technology to deliver the film's groundbreaking action sequences, pushing the boundaries of special effects."
-  ]
-}
+director: Christopher McQuarrie
+genre:
+  - Action
+  - Adventure
+  - Thriller
+posterImage: >-
+  https://m.media-amazon.com/images/M/MV5BMTk3NDY5MTU0NV5BMl5BanBnXkFtZTgwNDI3MDE1NTM@._V1_SX300.jpg
+coordinates:
+  - lat: 48.8584
+    lng: 2.2945
+    name: 'Eiffel Tower, Paris'
+    description: >-
+      Iconic landmark where some of the film's most thrilling action sequences
+      unfold.
+  - lat: 48.883
+    lng: 2.3412
+    name: 'Palais Garnier, Paris'
+    description: The stunning opera house that featured prominently in the film's plot.
+  - lat: 51.5007
+    lng: -0.1246
+    name: 'Whitehall, London'
+    description: 'One of London''s most famous streets, used for key scenes in the film.'
+  - lat: 36.9613
+    lng: 174.9333
+    name: 'Wellington, New Zealand'
+    description: Stunning aerial views of the Wellington region feature in the movie.
+  - lat: 38.703
+    lng: -77.022
+    name: 'Langley, Virginia'
+    description: Exterior shots of the CIA Headquarters are captured here.
+  - lat: 48.8004
+    lng: 2.1124
+    name: 'Sainte-Chapelle, Paris'
+    description: This stunning Gothic chapel served as a backdrop for some key scenes.
+  - lat: 38.898
+    lng: -77.0403
+    name: 'The Hyatt Regency, Washington D.C.'
+    description: >-
+      Exterior and interior shots were used during the gripping climax of the
+      film.
+  - lat: 44.5646
+    lng: -123.262
+    name: 'Oregon, USA'
+    description: Scenes from the film benefited from the diverse landscapes of Oregon.
+  - lat: 33.749
+    lng: -84.388
+    name: 'Atlanta, Georgia'
+    description: Some sequences were also filmed around this vibrant southern city.
+streamingServices:
+  - name: Paramount+
+    url: 'https://www.paramountplus.com/movies/mission-impossible-fallout/'
+  - name: Amazon Prime
+    url: >-
+      https://www.amazon.com/gp/video/search?phrase=Mission%20Impossible%20Fallout
+  - name: Apple TV
+    url: >-
+      https://tv.apple.com/us/movie/mission-impossible-fallout/umc.cmc.5tberinog7unk6lg4z1scw6nm
+bookingOptions:
+  - name: Paris City Tour
+    url: 'https://www.pariscitytour.com/'
+    type: tour
+    price: €49
+    isPartner: true
+  - name: CIA Headquarters Tour
+    url: 'https://www.cia.gov/business/visit-the-cia'
+    type: tour
+    price: Free
+    isPartner: false
+  - name: New Zealand Adventure Tours
+    url: 'https://www.newzealand.com/us/tours/'
+    type: tour
+    price: $150
+    isPartner: true
+behindTheScenes:
+  intro: >-
+    The filming of 'Mission: Impossible – Fallout' was a breathtaking endeavor
+    that spanned several international locations, showcasing incredible stunts
+    and immersive action sequences. The production team faced numerous
+    challenges to ensure that each scene delivered the high-octane thrills
+    audiences expect from the franchise.
+  facts:
+    - >-
+      Tom Cruise performed many of his own stunts, including a HALO jump from
+      25,000 feet, marking one of the highest in cinematic history.
+    - >-
+      The iconic helicopter chase in the film was shot in the mountains of New
+      Zealand, capturing stunning aerial views.
+    - >-
+      In total, the film was shot in six different countries, with significant
+      scenes taking place in Paris, London, and Abu Dhabi.
+    - >-
+      The scene on the Eiffel Tower featured a specially designed set that
+      allowed for safe filming so close to the famous landmark.
+    - >-
+      The production team invested in advanced technology to deliver the film's
+      groundbreaking action sequences, pushing the boundaries of special
+      effects.
 ---
 
 <MissionImpossibleFalloutGuide />

@@ -20,6 +20,8 @@ export interface LocationInfo {
   description?: string;
   image: string | null;
   mediaItems: MediaItem[];
+  city?: string;
+  country?: string;
 }
 
 // Interface for media items (films or TV series) associated with a location
@@ -32,8 +34,85 @@ export interface MediaItem {
   description?: string;
 }
 
+// Interface for a city with locations
+export interface CityInfo {
+  name: string;
+  slug: string; 
+  country: string;
+  description?: string;
+  image?: string | null;
+  locationCount: number;
+  mediaItemCount: number;
+  topLocations: LocationInfo[];
+  locations?: string[];
+}
+
+// Interface for a country with locations
+export interface CountryInfo {
+  name: string;
+  slug: string;
+  description?: string;
+  image?: string | null;
+  locationCount: number;
+  mediaItemCount: number;
+  cities: string[];
+  topLocations: LocationInfo[];
+  locations?: string[];
+}
+
 // Default location image to use when none is provided
 export const DEFAULT_LOCATION_IMAGE = '/images/default-location.jpg';
+
+// City-to-country mapping for normalization
+const cityCountryMapping: Record<string, string> = {
+  'london': 'United Kingdom',
+  'edinburgh': 'United Kingdom',
+  'glasgow': 'United Kingdom',
+  'manchester': 'United Kingdom',
+  'liverpool': 'United Kingdom',
+  'new york': 'United States',
+  'los angeles': 'United States',
+  'chicago': 'United States',
+  'san francisco': 'United States',
+  'miami': 'United States',
+  'las vegas': 'United States',
+  'paris': 'France',
+  'rome': 'Italy',
+  'tokyo': 'Japan',
+  'sydney': 'Australia',
+  'toronto': 'Canada',
+  'vancouver': 'Canada',
+  'berlin': 'Germany',
+  'madrid': 'Spain',
+  'barcelona': 'Spain',
+  'amsterdam': 'Netherlands',
+  'dublin': 'Ireland',
+  'vienna': 'Austria',
+  'wellington': 'New Zealand',
+  'auckland': 'New Zealand',
+  'queenstown': 'New Zealand',
+  'mexico city': 'Mexico',
+  'rio de janeiro': 'Brazil',
+  'cairo': 'Egypt',
+  'prague': 'Czech Republic',
+  'budapest': 'Hungary',
+  'bangkok': 'Thailand',
+  'beijing': 'China',
+  'hong kong': 'China',
+  'seoul': 'South Korea',
+  'moscow': 'Russia',
+  'mumbai': 'India',
+  'dubai': 'United Arab Emirates',
+  'athens': 'Greece',
+  'venice': 'Italy',
+  'florence': 'Italy',
+  'montreal': 'Canada',
+  'copenhagen': 'Denmark',
+  'oslo': 'Norway',
+  'stockholm': 'Sweden',
+  'helsinki': 'Finland',
+  'reykjavik': 'Iceland'
+};
 
 /**
  * Get all unique filming locations from both films and series
@@ -52,6 +131,20 @@ export function generateLocationSlug(locationName: string): string {
   
   // Generate the slug with 'what-was-filmed-in' prefix
   return `what-was-filmed-in-${slugify(cleanName, { lower: true, strict: true })}`;
+}
+
+/**
+ * Generate a SEO-friendly city slug
+ */
+export function generateCitySlug(cityName: string): string {
+  return `movies-filmed-in-${slugify(cityName, { lower: true, strict: true })}`;
+}
+
+/**
+ * Generate a SEO-friendly country slug
+ */
+export function generateCountrySlug(countryName: string): string {
+  return `movies-filmed-in-${slugify(countryName, { lower: true, strict: true })}`;
 }
 
 /**
@@ -95,27 +188,172 @@ export async function getPopularLocations(limit = 6): Promise<LocationInfo[]> {
 export function extractLocationsFromContent(content: Content<FilmMeta> | TVSeries): LocationInfo[] {
   if (!content.meta.coordinates) return [];
 
-  // Filter out undefined names
-  return content.meta.coordinates
-    .filter(coord => coord.name) // Filter out coordinates with undefined names
-    .map((coord: Coordinates) => ({
-      name: coord.name!, // Non-null assertion because we filtered undefined names
-      slug: slugify(coord.name!, { lower: true, strict: true }),
-      formattedSlug: generateLocationSlug(coord.name!),
-      lat: coord.lat,
-      lng: coord.lng,
-      description: coord.description,
-      image: coord.image || DEFAULT_LOCATION_IMAGE,
+  // Handle both coordinate formats
+  const extractedLocations: LocationInfo[] = [];
+  
+  // Process each coordinate
+  for (const coordItem of content.meta.coordinates) {
+    // Skip if no data
+    if (!coordItem) continue;
+    
+    // Format will either be a [lat, lng] tuple or a Coordinate object
+    let name: string | undefined;
+    let lat: number;
+    let lng: number;
+    let description: string | undefined;
+    let image: string | undefined;
+    
+    if (Array.isArray(coordItem)) {
+      // It's a simple [lat, lng] tuple
+      [lat, lng] = coordItem;
+      name = "Unknown Location"; // Default name for simple coordinate
+    } else {
+      // It's a Coordinate object with additional data
+      name = coordItem.name;
+      lat = coordItem.lat;
+      lng = coordItem.lng;
+      description = coordItem.description;
+      image = coordItem.image;
+    }
+    
+    // Skip if no name
+    if (!name) continue;
+    
+    // Create the location object
+    const location: LocationInfo = {
+      name,
+      slug: slugify(name, { lower: true, strict: true }),
+      formattedSlug: generateLocationSlug(name),
+      lat,
+      lng,
+      description,
+      image: image || DEFAULT_LOCATION_IMAGE,
       mediaItems: [{
         title: content.meta.title,
         slug: content.meta.slug,
         type: 'film' in content.meta ? 'film' : 'series',
-        year: 'year' in content.meta ? content.meta.year : 
-             ('releaseYearStart' in content.meta ? content.meta.releaseYearStart : 'Unknown'),
+        year: 'year' in content.meta ? content.meta.year || 'Unknown' : 
+             ('releaseYearStart' in content.meta ? content.meta.releaseYearStart || 'Unknown' : 'Unknown'),
         posterImage: content.meta.posterImage || null,
         description: content.meta.description
-      }]
-    }));
+      }],
+      city: detectCity(name),
+      country: detectCountry(name)
+    };
+    
+    extractedLocations.push(location);
+  }
+  
+  return extractedLocations;
+}
+
+/**
+ * Attempt to detect city from a location name
+ */
+function detectCity(locationName: string): string | undefined {
+  if (!locationName) return undefined;
+  
+  const lowerName = locationName.toLowerCase();
+  
+  // Check if the location name contains a known city
+  for (const city of Object.keys(cityCountryMapping)) {
+    // Check for exact matches or matches with common prefixes/suffixes
+    const cityRegex = new RegExp(`\\b${city}\\b|\\b${city}\\s+(city|area|district|region)\\b`, 'i');
+    if (cityRegex.test(lowerName)) {
+      return capitalizeWords(city);
+    }
+  }
+  
+  // Handle common city formats like "Location, City"
+  const commaParts = locationName.split(',');
+  if (commaParts.length > 1) {
+    const potentialCity = commaParts[1].trim().toLowerCase();
+    // Check if it's a known city
+    for (const city of Object.keys(cityCountryMapping)) {
+      if (potentialCity.includes(city)) {
+        return capitalizeWords(city);
+      }
+    }
+    
+    // If the second part is short (likely a city abbreviation or name), use it
+    if (potentialCity.length > 0 && potentialCity.length < 20 && !potentialCity.includes("state") && !potentialCity.includes("province")) {
+      return capitalizeWords(potentialCity);
+    }
+  }
+  
+  // Check for "City of X" format
+  const cityOfMatch = lowerName.match(/city of ([a-z\s]+)(\W|$)/i);
+  if (cityOfMatch && cityOfMatch[1]) {
+    return capitalizeWords(cityOfMatch[1].trim());
+  }
+  
+  return undefined;
+}
+
+/**
+ * Attempt to detect country from a location name
+ */
+function detectCountry(locationName: string): string | undefined {
+  if (!locationName) return undefined;
+  
+  const lowerName = locationName.toLowerCase();
+  
+  // Check if a name contains a known country directly
+  const countries = [...new Set(Object.values(cityCountryMapping))];
+  for (const country of countries) {
+    // Check for exact matches or matches with common prefixes/suffixes
+    const countryRegex = new RegExp(`\\b${country.toLowerCase()}\\b|\\b${country.toLowerCase()}\\s+(country|nation|kingdom|republic|state)\\b`, 'i');
+    if (countryRegex.test(lowerName)) {
+      return country;
+    }
+  }
+  
+  // Check if we can find a city and map it to a country
+  const city = detectCity(locationName);
+  if (city) {
+    const country = cityCountryMapping[city.toLowerCase()];
+    if (country) return country;
+  }
+  
+  // Check common format "Location, City, Country"
+  const commaParts = locationName.split(',');
+  if (commaParts.length > 2) {
+    const potentialCountry = commaParts[2].trim();
+    // Check if it's a known country
+    for (const country of countries) {
+      if (potentialCountry.toLowerCase().includes(country.toLowerCase())) {
+        return country;
+      }
+    }
+    // If the third part is not too long, assume it's a country
+    if (potentialCountry.length > 0 && potentialCountry.length < 30) {
+      return capitalizeWords(potentialCountry);
+    }
+  }
+  
+  // Check for "X, Y" format where Y could be a country
+  if (commaParts.length === 2) {
+    const secondPart = commaParts[1].trim();
+    // Common countries that might appear as second part
+    const commonCountries = ["USA", "UK", "United States", "United Kingdom", "Canada", "Australia", "France", "Germany", "Italy", "Spain", "Japan"];
+    
+    for (const country of commonCountries) {
+      if (secondPart.toLowerCase() === country.toLowerCase()) {
+        return country === "USA" ? "United States" : (country === "UK" ? "United Kingdom" : country);
+      }
+    }
+  }
+  
+  return undefined;
+}
+
+/**
+ * Capitalize words in a string
+ */
+function capitalizeWords(str: string): string {
+  return str.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
 }
 
 /**
@@ -199,4 +437,156 @@ export async function getAllLocationSlugs(): Promise<string[]> {
     console.error('Error getting all location slugs:', error);
     return [];
   }
+}
+
+/**
+ * Get all locations grouped by city
+ */
+export async function getLocationsByCity(): Promise<CityInfo[]> {
+  const allLocations = await getAllLocationsData();
+  
+  // Group locations by city
+  const cityGroups: Record<string, LocationInfo[]> = {};
+  
+  allLocations.forEach(location => {
+    if (location.city) {
+      if (!cityGroups[location.city]) {
+        cityGroups[location.city] = [];
+      }
+      cityGroups[location.city].push(location);
+    }
+  });
+  
+  // Create city info objects
+  const cityInfos: CityInfo[] = Object.entries(cityGroups).map(([cityName, locations]) => {
+    // Get country from first location with city
+    const country = locations[0]?.country || 'Unknown';
+    
+    // Get set of unique media items
+    const uniqueMediaItems = new Set();
+    locations.forEach(location => {
+      location.mediaItems.forEach(item => {
+        uniqueMediaItems.add(`${item.type}-${item.slug}`); // Create unique identifier since MediaItem doesn't have id
+      });
+    });
+    
+    // Use first location image as city image
+    const cityImage = locations.find(loc => loc.image)?.image || null;
+    
+    // Get top locations (most popular by media item count)
+    const topLocations = [...locations]
+      .sort((a, b) => b.mediaItems.length - a.mediaItems.length)
+      .slice(0, 5);
+    
+    return {
+      name: cityName,
+      slug: slugify(cityName, { lower: true }),
+      country,
+      locationCount: locations.length,
+      mediaItemCount: uniqueMediaItems.size,
+      image: cityImage,
+      topLocations,
+      locations: locations.map(loc => loc.slug),
+      description: locations[0]?.description || undefined
+    };
+  });
+  
+  // Sort cities by location count
+  return cityInfos.sort((a, b) => b.locationCount - a.locationCount);
+}
+
+/**
+ * Get city info by slug
+ */
+export async function getCityBySlug(slug: string): Promise<CityInfo | null> {
+  const cities = await getLocationsByCity();
+  return cities.find(city => city.slug === slug) || null;
+}
+
+/**
+ * Get locations for a specific city
+ */
+export async function getLocationsForCity(cityName: string): Promise<LocationInfo[]> {
+  const allLocations = await getAllLocationsData();
+  
+  // Filter locations by city
+  return allLocations.filter(location => 
+    location.city && location.city.toLowerCase() === cityName.toLowerCase()
+  );
+}
+
+/**
+ * Get all locations grouped by country
+ */
+export async function getLocationsByCountry(): Promise<CountryInfo[]> {
+  const allLocations = await getAllLocationsData();
+  
+  // Group locations by country
+  const countryGroups: Record<string, LocationInfo[]> = {};
+  
+  allLocations.forEach(location => {
+    if (location.country) {
+      if (!countryGroups[location.country]) {
+        countryGroups[location.country] = [];
+      }
+      countryGroups[location.country].push(location);
+    }
+  });
+  
+  // Create country info objects
+  const countryInfos: CountryInfo[] = Object.entries(countryGroups).map(([countryName, locations]) => {
+    // Get unique cities in this country - filter out undefined values
+    const uniqueCities = [...new Set(locations.map(loc => loc.city).filter(Boolean))] as string[];
+    
+    // Get set of unique media items
+    const uniqueMediaItems = new Set();
+    locations.forEach(location => {
+      location.mediaItems.forEach(item => {
+        uniqueMediaItems.add(`${item.type}-${item.slug}`); // Create unique identifier since MediaItem doesn't have id
+      });
+    });
+    
+    // Use first location image as country image
+    const countryImage = locations.find(loc => loc.image)?.image || null;
+    
+    // Get top locations (most popular by media item count)
+    const topLocations = [...locations]
+      .sort((a, b) => b.mediaItems.length - a.mediaItems.length)
+      .slice(0, 5);
+    
+    return {
+      name: countryName,
+      slug: slugify(countryName, { lower: true }),
+      cities: uniqueCities,
+      locationCount: locations.length,
+      mediaItemCount: uniqueMediaItems.size,
+      image: countryImage,
+      topLocations,
+      locations: locations.map(loc => loc.slug),
+      description: locations[0]?.description || undefined
+    };
+  });
+  
+  // Sort countries by location count
+  return countryInfos.sort((a, b) => b.locationCount - a.locationCount);
+}
+
+/**
+ * Get country info by slug
+ */
+export async function getCountryBySlug(slug: string): Promise<CountryInfo | null> {
+  const countries = await getLocationsByCountry();
+  return countries.find(country => country.slug === slug) || null;
+}
+
+/**
+ * Get locations for a specific country
+ */
+export async function getLocationsForCountry(countryName: string): Promise<LocationInfo[]> {
+  const allLocations = await getAllLocationsData();
+  
+  // Filter locations by country
+  return allLocations.filter(location => 
+    location.country && location.country.toLowerCase() === countryName.toLowerCase()
+  );
 } 

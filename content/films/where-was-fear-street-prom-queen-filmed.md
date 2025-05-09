@@ -1,4 +1,4 @@
-```yaml
+
 ---
 title: "Where Was Fear Street: Prom Queen Filmed?"
 description: "Uncover the filming locations where the terror unfolds in Fear Street: Prom Queen, the latest bone-chilling installment in the popular horror franchise."
@@ -8,26 +8,25 @@ year: 2024
 director: "Chloe Okuno"
 genre: ["Horror", "Mystery", "Thriller"]
 posterImage: "https://image.tmdb.org/t/p/w500/wRpiV6aK0TqU1X31aJt3m1oQv2S.jpg"
-coordinates:
-  -
-    "lat": 40.4130
-    "lng": -79.9148
-    "name": "Allegheny County, Pennsylvania"
-    "description": "The primary filming location for the movie, setting the eerie small-town backdrop."
-  -
-    "lat": 40.3477
-    "lng": -79.9772
-    "name": "Pittsburgh, Pennsylvania"
-    "description": "Contributing to the overall atmosphere with various city and suburban environments."
-  -
-    "lat": 40.4396
-    "lng": -79.9767
-    "name": "Schenley Park, Pittsburgh"
-    "description": "Possible exterior shots leveraging the park's varied landscapes."
-  -
-    "lat": 40.4775
-    "lng": -80.0225
-    "name": "North Hills, Pittsburgh"
+coordinates: [
+  {     "lat": 40.4130,
+    "lng": -79.9148,
+    "name": "Allegheny County, Pennsylvania",
+    "description": "The primary filming location for the movie, setting the eerie small-town backdrop."  },
+  { 
+    "lat": 40.3477,
+    "lng": -79.9772,
+    "name": "Pittsburgh, Pennsylvania",
+    "description": "Contributing to the overall atmosphere with various city and suburban environments."  },
+  { 
+    "lat": 40.4396,
+    "lng": -79.9767,
+    "name": "Schenley Park, Pittsburgh",
+    "description": "Possible exterior shots leveraging the park's varied landscapes."  },
+  { 
+    "lat": 40.4775,
+    "lng": -80.0225,
+    "name": "North Hills, Pittsburgh",
     "description": "Likely locations for suburban street scenes and character homes."
 streamingServices: [] # Information not yet widely available
 bookingOptions: [] # Information not yet widely available
