@@ -1,5 +1,3 @@
-# 10 TV Shows You Didn't Know Were Filmed in Canada
-
 ---
 title: "10 TV Shows You Didn't Know Were Filmed in Canada"
 description: "Discover popular TV shows filmed in Canada where Vancouver, Toronto, and Montreal stand in for American cities like New York, Seattle, and Chicago."
