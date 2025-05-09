@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: "10 Famous Restaurants From Movies You Can Dine At"
 description: "Experience the magic of cinema through your taste buds at these iconic movie restaurants. From Katz's Deli to the Bubba Gump Shrimp Co, dine where your favorite movie scenes were filmed."
