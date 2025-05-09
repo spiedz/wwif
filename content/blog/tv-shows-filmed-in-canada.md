@@ -12,7 +12,7 @@ When you're watching your favorite TV show set in New York, Chicago, or Seattle,
 
 In this guide, we'll unveil 10 popular TV shows filmed in Canada that you probably thought were shot in the United States. From supernatural dramas to crime procedurals, these productions have made Canadian cities their home while convincingly portraying American locations.
 
-<img src="/images/tv-shows-filmed-in-canada-vancouver.jpg" alt="Vancouver skyline doubling as Seattle in many TV productions">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP7BBnG38eBgVjVVY6knLtjTHkjrgY3bkl-w&s" alt="Vancouver skyline doubling as Seattle in many TV productions">
 
 ## 1. The X-Files (1993-2002, 2016-2018)
 
