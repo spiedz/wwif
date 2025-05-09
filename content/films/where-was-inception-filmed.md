@@ -1,58 +1,101 @@
 ---
-title: "Where Was Inception Filmed?"
-slug: "where-was-inception-filmed"
-description: "Explore the real-world locations behind Christopher Nolan's mind-bending sci-fi thriller Inception, from Paris to Tangier and beyond."
+title: Where Was Inception Filmed?
+slug: where-was-inception-filmed
+description: >-
+  Explore the real-world locations behind Christopher Nolan's mind-bending
+  sci-fi thriller Inception, from Paris to Tangier and beyond.
 year: 2010
-director: "Christopher Nolan"
-genre: ["Sci-Fi", "Action", "Thriller"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg"
+director: Christopher Nolan
+genre:
+  - Sci-Fi
+  - Action
+  - Thriller
+posterImage: >-
+  https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg
 useRegionLayout: true
-coordinates: 
+coordinates:
   - lat: 48.8582
     lng: 2.2945
-    name: "Paris - Pont de Bir-Hakeim"
-    description: "This iconic Parisian bridge featured in the famous folding city scene where Ariadne learns about dream architecture."
-    image: "https://images.unsplash.com/photo-1584266337361-b5351a0dbf00?auto=format&fit=crop&w=800&q=80"
-  - lat: 48.8450
+    name: Paris - Pont de Bir-Hakeim
+    description: >-
+      This iconic Parisian bridge featured in the famous folding city scene
+      where Ariadne learns about dream architecture.
+    image: >-
+      https://images.unsplash.com/photo-1584266337361-b5351a0dbf00?auto=format&fit=crop&w=800&q=80
+  - lat: 48.845
     lng: 2.3428
-    name: "Paris - Café Debussy"
-    description: "The Parisian café where Cobb explains dream sharing to Ariadne. In reality, this was filmed at a location in the 5th arrondissement."
-    image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80"
+    name: Paris - Café Debussy
+    description: >-
+      The Parisian café where Cobb explains dream sharing to Ariadne. In
+      reality, this was filmed at a location in the 5th arrondissement.
+    image: >-
+      https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80
   - lat: 35.7595
-    lng: -5.8340
-    name: "Tangier, Morocco - Grand Socco"
-    description: "The bustling market square in Tangier that was transformed into Mombasa for the chase scene where Cobb is pursued by Cobol Engineering agents."
-    image: "https://images.unsplash.com/photo-1530717449302-271006cdc1bf?auto=format&fit=crop&w=800&q=80"
+    lng: -5.834
+    name: 'Tangier, Morocco - Grand Socco'
+    description: >-
+      The bustling market square in Tangier that was transformed into Mombasa
+      for the chase scene where Cobb is pursued by Cobol Engineering agents.
+    image: >-
+      https://images.unsplash.com/photo-1530717449302-271006cdc1bf?auto=format&fit=crop&w=800&q=80
   - lat: 51.5074
     lng: -0.1278
-    name: "London - University College London"
-    description: "The exterior of UCL's Flaxman Gallery was used as the university where Cobb recruits Ariadne."
-    image: "https://images.unsplash.com/photo-1513373319109-eb154073eb0b?auto=format&fit=crop&w=800&q=80"
+    name: London - University College London
+    description: >-
+      The exterior of UCL's Flaxman Gallery was used as the university where
+      Cobb recruits Ariadne.
+    image: >-
+      https://images.unsplash.com/photo-1513373319109-eb154073eb0b?auto=format&fit=crop&w=800&q=80
   - lat: 43.1505
-    lng: 5.2060
-    name: "Marseille, France - La Vieille Charité"
-    description: "This historic building in Marseille served as the hospital where Mal committed herself in the film."
+    lng: 5.206
+    name: 'Marseille, France - La Vieille Charité'
+    description: >-
+      This historic building in Marseille served as the hospital where Mal
+      committed herself in the film.
   - lat: 45.4064
     lng: 122.6664
-    name: "Alberta, Canada - Fortress Mountain"
-    description: "The snow fortress in the third level of the dream was filmed at this ski resort in the Canadian Rockies."
-    image: "https://images.unsplash.com/photo-1486341581035-103adc27dca2?auto=format&fit=crop&w=800&q=80"
+    name: 'Alberta, Canada - Fortress Mountain'
+    description: >-
+      The snow fortress in the third level of the dream was filmed at this ski
+      resort in the Canadian Rockies.
+    image: >-
+      https://images.unsplash.com/photo-1486341581035-103adc27dca2?auto=format&fit=crop&w=800&q=80
   - lat: 34.0522
     lng: -118.2437
-    name: "Los Angeles - Richard J. Neutra VDL Research House"
-    description: "The Modernist architecture of this landmark was used for the Saito's Japanese castle interior scenes."
-    image: "https://images.unsplash.com/photo-1447958272669-9c551967f8c2?auto=format&fit=crop&w=800&q=80"
-  - text: "The Pont de Bir-Hakeim bridge in Paris is easily accessible via metro and offers great photo opportunities of the Eiffel Tower."
-  - text: "When visiting the filming locations in Tangier, consider hiring a local guide who can show you exactly where scenes were shot."
-  - text: "University College London allows visitors to explore parts of the campus where filming took place."
-  - text: "The best time to visit Fortress Mountain in Alberta is during winter months when the snow creates a landscape similar to the movie."
-travelTips: 
-  - text: "The famous Paris folding scene combined practical effects with CGI - real buildings were not actually folded!"
-  - text: "The zero-gravity hotel corridor fight scene took three weeks to film and used a massive rotating set rather than digital effects."
-  - text: "Christopher Nolan built a full-scale Japanese castle interior inside a warehouse for the scenes in Saito's dream."
-  - text: "The snow fortress scenes were filmed in the mountains of Alberta, Canada, not in the Alps as many viewers assume."
-  - text: "The iconic 'kick' music (known as 'Time' by Hans Zimmer) was actually slowed-down French singer Édith Piaf's 'Non, je ne regrette rien'."
-trivia: 
+    name: Los Angeles - Richard J. Neutra VDL Research House
+    description: >-
+      The Modernist architecture of this landmark was used for the Saito's
+      Japanese castle interior scenes.
+    image: >-
+      https://images.unsplash.com/photo-1447958272669-9c551967f8c2?auto=format&fit=crop&w=800&q=80
+  - text: >-
+      The Pont de Bir-Hakeim bridge in Paris is easily accessible via metro and
+      offers great photo opportunities of the Eiffel Tower.
+  - text: >-
+      When visiting the filming locations in Tangier, consider hiring a local
+      guide who can show you exactly where scenes were shot.
+  - text: >-
+      University College London allows visitors to explore parts of the campus
+      where filming took place.
+  - text: >-
+      The best time to visit Fortress Mountain in Alberta is during winter
+      months when the snow creates a landscape similar to the movie.
+travelTips:
+  - text: >-
+      The famous Paris folding scene combined practical effects with CGI - real
+      buildings were not actually folded!
+  - text: >-
+      The zero-gravity hotel corridor fight scene took three weeks to film and
+      used a massive rotating set rather than digital effects.
+  - text: >-
+      Christopher Nolan built a full-scale Japanese castle interior inside a
+      warehouse for the scenes in Saito's dream.
+  - text: >-
+      The snow fortress scenes were filmed in the mountains of Alberta, Canada,
+      not in the Alps as many viewers assume.
+  - text: >-
+      The iconic 'kick' music (known as 'Time' by Hans Zimmer) was actually
+      slowed-down French singer Édith Piaf's 'Non, je ne regrette rien'.
 ---
 
 ## Inception: The World Inside Dreams

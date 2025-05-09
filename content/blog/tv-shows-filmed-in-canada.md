@@ -1,11 +1,16 @@
 ---
-title: "10 TV Shows You Didn't Know Were Filmed in Canada"
-description: "Discover popular TV shows filmed in Canada where Vancouver, Toronto, and Montreal stand in for American cities like New York, Seattle, and Chicago."
-slug: "tv-shows-filmed-in-canada"
-date: "2025-05-09"
-categories: ["TV Shows", "Filming Locations", "Canada"]
-author: "Film Location Explorer"
-featuredImage: "https://i.ibb.co/HLQg5sLy/photo-2025-05-09-17-26-00.jpg"
+title: 10 TV Shows You Didn't Know Were Filmed in Canada
+description: >-
+  Discover popular TV shows filmed in Canada where Vancouver, Toronto, and
+  Montreal stand in for American cities like New York, Seattle, and Chicago.
+slug: tv-shows-filmed-in-canada
+date: '2025-05-09'
+categories:
+  - TV Shows
+  - Filming Locations
+  - Canada
+author: Film Location Explorer
+featuredImage: 'https://i.ibb.co/HLQg5sLy/photo-2025-05-09-17-26-00.jpg'
 ---
 
 When you're watching your favorite TV show set in New York, Chicago, or Seattle, you might be surprised to learn you're actually seeing Vancouver, Toronto, or Montreal. Canada has become Hollywood's go-to filming destination, offering tax incentives, diverse landscapes, and versatile urban settings that can transform into almost any American city.

@@ -1,11 +1,16 @@
 ---
-title: "10 Iconic Movie Filming Locations in Chicago You Can Visit"
-description: "Discover the most famous filming locations in Chicago from blockbuster movies like The Dark Knight, Ferris Bueller's Day Off, and The Blues Brothers."
-slug: "best-filming-locations-in-chicago"
-date: "2023-06-18"
-categories: ["Travel Guides", "Chicago", "Movie Locations"]
-author: "Film Location Expert"
-featuredImage: "/images/chicago-skyline.jpg"
+title: 10 Iconic Movie Filming Locations in Chicago You Can Visit
+description: >-
+  Discover the most famous filming locations in Chicago from blockbuster movies
+  like The Dark Knight, Ferris Bueller's Day Off, and The Blues Brothers.
+slug: best-filming-locations-in-chicago
+date: '2023-06-18'
+categories:
+  - Travel Guides
+  - Chicago
+  - Movie Locations
+author: Film Location Expert
+featuredImage: /images/chicago-skyline.jpg
 ---
 
 # 10 Iconic Movie Filming Locations in Chicago You Can Visit

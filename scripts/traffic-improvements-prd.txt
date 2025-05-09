@@ -1,0 +1,111 @@
+# WWIF Traffic Improvement PRD
+
+## Overview
+This PRD outlines strategies to increase visitor traffic to the "Where Was It Filmed" (WWIF) website. The implementation will focus on content expansion, SEO optimization, user experience improvements, and monetization strategies.
+
+## Goals
+- Increase organic search traffic by 40%
+- Improve user engagement metrics (time on page, pages per session)
+- Create more shareable content to drive social media traffic
+- Implement monetization strategies without compromising user experience
+
+## Timeline
+- Phase 1: Content Expansion (2 weeks)
+- Phase 2: SEO Enhancements (2 weeks)
+- Phase 3: UX Improvements (2 weeks)
+- Phase 4: Monetization & Community Building (2 weeks)
+
+## Detailed Requirements
+
+### 1. Content Expansion Strategy
+
+#### Film Series Hub
+- Create dedicated landing pages for popular film franchises (Harry Potter, Marvel, Star Wars)
+- Implement a template system for franchise pages
+- Develop navigation between related films within each franchise
+- Add franchise-specific travel guides (e.g., "The Complete Harry Potter UK Tour")
+
+#### Blog Content Expansion
+- Create "Top 10" listicles for high search volume keywords
+- Develop location guides by country/region
+- Create travel itineraries based on film genres
+- Implement topic clusters around main keywords
+
+#### User-Generated Content
+- Add a "Submit Location" feature for visitors
+- Implement a rating and review system for locations
+- Create a photo gallery for user-submitted images
+- Develop moderation tools for user content
+
+### 2. SEO Enhancements
+
+#### Schema Markup Improvements
+- Enhance JSON-LD schema with additional structured data
+- Add VideoObject schema for any embedded trailers
+- Implement BreadcrumbList schema for navigation
+- Add FAQ schema to location pages
+
+#### Keyword Optimization
+- Update meta descriptions with location-specific keywords
+- Create FAQ sections addressing common visitor questions
+- Develop city/country index pages (e.g., "All Movies Filmed in London")
+- Implement long-tail keyword strategies for specific locations
+
+#### Technical SEO
+- Update robots.txt with advanced directives
+- Create an image sitemap for improved image search visibility
+- Implement canonical tags to prevent duplicate content
+- Add structured data testing and validation
+
+### 3. User Experience Improvements
+
+#### Interactive Maps Enhancement
+- Add custom clustering for areas with multiple filming locations
+- Implement a "Locations Near Me" feature using geolocation
+- Create a "Film Location Trip Planner" tool
+- Add distance calculations between related locations
+
+#### Mobile Optimization
+- Ensure full responsiveness for all maps and images
+- Optimize image loading for mobile users
+- Add a mobile-friendly filter system for location search
+- Implement touch-friendly UI elements
+
+#### Social Sharing Integration
+- Add prominent social sharing buttons for each location
+- Create shareable location cards for Instagram and Pinterest
+- Implement a "Save for Later" feature
+- Add one-click sharing for location collections
+
+### 4. Monetization & Traffic Drivers
+
+#### Affiliate Marketing
+- Add hotel booking links near popular filming locations
+- Include guided tour affiliate links where available
+- Add recommendations for filming equipment
+- Implement a commission tracking system
+
+#### Email Marketing
+- Create a newsletter signup system
+- Develop a "Location of the Month" feature
+- Create downloadable location guides for subscribers
+- Implement automated email sequences
+
+#### Community Building
+- Create a "Film Location Hunters" community section
+- Develop monthly location hunting challenges
+- Host virtual tours of popular filming locations
+- Implement a points/achievements system for community participation
+
+## Technical Considerations
+- All implementations must maintain or improve site performance metrics
+- Mobile responsiveness is a priority for all new features
+- SEO best practices must be followed for all new content
+- User data collection must comply with GDPR and other privacy regulations
+
+## Success Metrics
+- Organic search traffic increase (measured via Google Analytics)
+- User engagement metrics (time on site, pages per session)
+- Social shares and backlinks to content
+- Email subscriber growth rate
+- Affiliate marketing conversion rate 

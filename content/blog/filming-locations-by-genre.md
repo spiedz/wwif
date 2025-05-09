@@ -1,11 +1,15 @@
 ---
-title: "Exploring Movie Filming Locations Across Genres: A Film Fan's Travel Guide"
-description: "From romance to horror, visit real filming locations from your favorite movie genres around the world."
-slug: "filming-locations-by-genre"
-date: "2025-05-07"
-categories: ["Film Tourism", "Movie Genres"]
-author: "Michal Marcinko"
-featuredImage: "https://www.letsfame.com/admin/images/Film%20Location%20Scouting.png"
+title: 'Exploring Movie Filming Locations Across Genres: A Film Fan''s Travel Guide'
+description: >-
+  From romance to horror, visit real filming locations from your favorite movie
+  genres around the world.
+slug: filming-locations-by-genre
+date: '2025-05-07'
+categories:
+  - Film Tourism
+  - Movie Genres
+author: Michal Marcinko
+featuredImage: 'https://www.letsfame.com/admin/images/Film%20Location%20Scouting.png'
 ---
 
 # Exploring Movie Filming Locations Across Genres: A Film Fan's Travel Guide

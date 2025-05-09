@@ -1,0 +1,147 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
+import dynamic from 'next/dynamic';
+import { ParsedUrlQuery } from 'querystring';
+import { FranchiseData } from '../../types/franchise';
+import { getAllFranchises, getFranchiseBySlug } from '../../lib/franchise/franchiseUtils';
+import FranchiseNotFound from '../../components/FranchiseNotFound';
+
+// Dynamically import the franchise template with a loading state
+const FranchiseTemplate = dynamic(() => import('../../components/franchise/FranchiseTemplate'), {
+  loading: () => <div className="h-screen w-full flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-gray-600">Loading franchise data...</p>
+    </div>
+  </div>
+});
+
+// Import franchise components dynamically to improve performance
+const FranchiseHero = dynamic(() => import('../../components/franchise/FranchiseHero'));
+const FranchiseNavigation = dynamic(() => import('../../components/franchise/FranchiseNavigation'));
+const FranchiseOverview = dynamic(() => import('../../components/franchise/FranchiseOverview'));
+const FranchiseFilmGrid = dynamic(() => import('../../components/franchise/FranchiseFilmGrid'));
+const FranchiseLocationMap = dynamic(() => import('../../components/franchise/FranchiseLocationMap'));
+const FranchiseTravelGuide = dynamic(() => import('../../components/franchise/FranchiseTravelGuide'));
+const FranchiseGallery = dynamic(() => import('../../components/franchise/FranchiseGallery'));
+
+interface FranchisePageProps {
+  franchise: FranchiseData | null;
+}
+
+interface Params extends ParsedUrlQuery {
+  slug: string;
+}
+
+export default function FranchisePage({ franchise }: FranchisePageProps) {
+  // Handle case where franchise is not found
+  if (!franchise) {
+    return <FranchiseNotFound />;
+  }
+
+  // Calculate location count for each film
+  const filmsWithLocationCount = franchise.films?.map(film => {
+    const locationCount = film.locations?.length || 0;
+    return {
+      ...film,
+      locationCount
+    };
+  });
+
+  // Build updated franchise data with location counts
+  const franchiseWithCounts = {
+    ...franchise,
+    films: filmsWithLocationCount
+  };
+
+  return (
+    <FranchiseTemplate franchise={franchiseWithCounts}>
+      {/* Hero Section */}
+      <FranchiseHero
+        title={franchise.title}
+        description={franchise.description}
+        bannerImage={franchise.bannerImage}
+        logoImage={franchise.logoImage}
+      />
+      
+      {/* Navigation - only show if there are multiple films */}
+      {franchise.films && franchise.films.length > 1 && (
+        <FranchiseNavigation 
+          films={franchise.films}
+          franchiseTitle={franchise.title}
+        />
+      )}
+      
+      {/* Main content */}
+      <div className="container mx-auto px-4 py-8">
+        {/* Overview section with markdown content */}
+        {franchise.overview && (
+          <FranchiseOverview content={franchise.overview} />
+        )}
+        
+        {/* Films Grid */}
+        {franchise.films && franchise.films.length > 0 && (
+          <FranchiseFilmGrid 
+            films={franchiseWithCounts.films || []} 
+            franchiseTitle={franchise.title}
+          />
+        )}
+        
+        {/* Map of Locations */}
+        {franchise.mapLocations && franchise.mapLocations.length > 0 && (
+          <FranchiseLocationMap locations={franchise.mapLocations} />
+        )}
+        
+        {/* Travel Guide */}
+        {franchise.travelGuides && franchise.travelGuides.length > 0 && (
+          <FranchiseTravelGuide guides={franchise.travelGuides} />
+        )}
+        
+        {/* Gallery */}
+        {franchise.galleryImages && franchise.galleryImages.length > 0 && (
+          <FranchiseGallery images={franchise.galleryImages} />
+        )}
+      </div>
+    </FranchiseTemplate>
+  );
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const franchises = await getAllFranchises();
+  
+  // Generate paths for all franchises
+  const paths = franchises.map((franchise) => ({
+    params: { slug: franchise.slug },
+  }));
+
+  return {
+    paths,
+    fallback: 'blocking', // Show a loading state while generating new pages
+  };
+};
+
+export const getStaticProps: GetStaticProps<FranchisePageProps, Params> = async ({ params }) => {
+  try {
+    // Ensure params.slug exists
+    if (!params?.slug) {
+      return { notFound: true };
+    }
+
+    const franchise = await getFranchiseBySlug(params.slug);
+    
+    // If franchise not found, return 404
+    if (!franchise) {
+      return { notFound: true };
+    }
+
+    return {
+      props: {
+        franchise,
+      },
+      // Re-generate the page every hour (3600 seconds)
+      revalidate: 3600,
+    };
+  } catch (error) {
+    console.error('Error fetching franchise data:', error);
+    return { notFound: true };
+  }
+}; 

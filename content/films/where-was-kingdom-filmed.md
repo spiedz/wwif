@@ -1,4 +1,4 @@
-```yaml
+
 ---
 title: "Where Was Kingdom Filmed?"
 description: "Discover the stunning real-world locations that brought the thrilling historical drama 'Kingdom' to life on screen."
@@ -8,9 +8,8 @@ year: 2019 # Assuming you are referring to the 2019 series
 director: ["Kim Seong-hun", "Park In-je"]
 genre: ["Action", "Drama", "Horror"]
 posterImage: "https://image.tmdb.org/t/p/w500/xkRyopANOnO60KWm6DjozXlq9w4.jpg"
-coordinates:
-  -
-    lat: 36.5826
+coordinates: [
+  {     lat: 36.5826
     lng: 127.0135
     name: "Korean Folk Village, Yongin"
     description: "A key historical village setting used extensively for numerous scenes depicting the Joseon Dynasty."

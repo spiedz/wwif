@@ -3,17 +3,28 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ContentMeta, FilmMeta, BlogMeta } from '../types/content';
 
+// Base schema interface
+export interface SchemaObject {
+  '@context': string;
+  '@type': string | string[];
+  [key: string]: any;
+}
+
 interface SEOProps {
   meta: ContentMeta | FilmMeta | BlogMeta;
   imageUrl?: string;
   type?: 'website' | 'article' | 'movie';
   noindex?: boolean;
   nofollow?: boolean;
-  jsonLd?: Record<string, unknown> | string;
+  jsonLd?: SchemaObject | SchemaObject[] | string;
+  additionalMetaTags?: Array<{ name: string; content: string }>;
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
 
+/**
+ * Enhanced SEO component that supports structured data and OpenGraph metadata
+ */
 const SEO: React.FC<SEOProps> = ({
   meta,
   imageUrl,
@@ -21,6 +32,7 @@ const SEO: React.FC<SEOProps> = ({
   noindex = false,
   nofollow = false,
   jsonLd,
+  additionalMetaTags = [],
 }) => {
   const router = useRouter();
   const canonicalUrl = `${BASE_URL}${router.asPath}`;
@@ -38,23 +50,74 @@ const SEO: React.FC<SEOProps> = ({
   // Get the OpenGraph image URL
   const ogImage = imageUrl || 
     (isBlog && (meta as BlogMeta).featuredImage) || 
+    (isFilm && (meta as FilmMeta).posterImage) ||
     `${BASE_URL}/images/default-og.jpg`;
   
-  // Convert jsonLd to string if it's an object
-  const jsonLdString = typeof jsonLd === 'string' 
-    ? jsonLd 
-    : jsonLd 
-      ? JSON.stringify(jsonLd) 
-      : '';
-
+  /**
+   * Process and validate jsonLd data
+   * Handles string, object, or array of objects
+   */
+  const processJsonLd = (): string | undefined => {
+    if (!jsonLd) {
+      return undefined;
+    }
+    
+    // If it's already a string, validate it's proper JSON
+    if (typeof jsonLd === 'string') {
+      try {
+        // Just parse to validate it's proper JSON
+        JSON.parse(jsonLd);
+        return jsonLd;
+      } catch (error) {
+        console.error('Invalid JSON-LD string:', error);
+        return undefined;
+      }
+    }
+    
+    // If it's an object or array, stringify it
+    try {
+      // Basic validation for required schema.org fields
+      const validateSchema = (schema: SchemaObject): boolean => {
+        return (
+          typeof schema === 'object' &&
+          schema !== null &&
+          '@context' in schema &&
+          '@type' in schema
+        );
+      };
+      
+      // If array, validate each item
+      if (Array.isArray(jsonLd)) {
+        const validSchemas = jsonLd.filter(schema => validateSchema(schema));
+        if (validSchemas.length !== jsonLd.length) {
+          console.warn('Some schema objects were invalid and filtered out');
+        }
+        return JSON.stringify(validSchemas);
+      }
+      
+      // Single schema object
+      if (validateSchema(jsonLd as SchemaObject)) {
+        return JSON.stringify(jsonLd);
+      } else {
+        console.error('Invalid schema object, missing required fields');
+        return undefined;
+      }
+    } catch (error) {
+      console.error('Error processing JSON-LD data:', error);
+      return undefined;
+    }
+  };
+  
+  const jsonLdString = processJsonLd();
+  
   // Process film genre to ensure it's an array
-  const getGenreArray = (genre: string | string[]): string[] => {
+  const getGenreArray = (genre: string | string[] | undefined): string[] => {
     if (Array.isArray(genre)) {
       return genre;
     }
-    return [genre];
+    return genre ? [genre] : [];
   };
-
+  
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -89,8 +152,8 @@ const SEO: React.FC<SEOProps> = ({
       {/* Film-specific meta tags */}
       {isFilm && (
         <>
-          <meta property="og:movie:director" content={(meta as FilmMeta).director} />
-          <meta property="og:movie:release_date" content={String((meta as FilmMeta).year)} />
+          <meta property="og:movie:director" content={(meta as FilmMeta).director || ''} />
+          <meta property="og:movie:release_date" content={String((meta as FilmMeta).year || '')} />
           {getGenreArray((meta as FilmMeta).genre).map((genre, index) => (
             <meta key={index} property="og:movie:tag" content={genre} />
           ))}
@@ -101,6 +164,11 @@ const SEO: React.FC<SEOProps> = ({
       {isBlog && (meta as BlogMeta).author && (
         <meta property="article:author" content={(meta as BlogMeta).author} />
       )}
+      
+      {/* Additional meta tags */}
+      {additionalMetaTags.map((tag, index) => (
+        <meta key={`meta-${index}`} name={tag.name} content={tag.content} />
+      ))}
       
       {/* JSON-LD Schema */}
       {jsonLdString && (

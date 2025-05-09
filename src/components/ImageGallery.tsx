@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, TouchEvent } from 'react';
 
 interface ImageItem {
   src: string;
@@ -27,7 +27,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
   const carouselRef = useRef<HTMLDivElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
-
+  
+  // Touch handling for swipe gestures
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  
   // Set up lazy loading with Intersection Observer
   useEffect(() => {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
@@ -134,6 +138,36 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
+  
+  // Touch handlers for swipe gesture support
+  const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  
+  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+  
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const diffX = touchStartX.current - touchEndX.current;
+    const threshold = 50; // Minimum swipe distance
+    
+    if (Math.abs(diffX) > threshold) {
+      if (diffX > 0) {
+        // Swipe left - next image
+        nextImage();
+      } else {
+        // Swipe right - previous image
+        prevImage();
+      }
+    }
+    
+    // Reset touch coordinates
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   // Properly typed ref callback to avoid linter errors
   const setImageRef = (index: number) => (el: HTMLImageElement | null) => {
@@ -148,7 +182,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
     <div className={`mb-6 ${className}`}>
       {/* Grid Layout */}
       {layout === 'grid' && (
-        <div className={`grid gap-4 ${images.length === 1 ? 'grid-cols-1' : images.length === 2 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3'}`}>
+        <div className={`grid gap-4 ${images.length === 1 ? 'grid-cols-1' : images.length === 2 ? 'grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3'}`}>
           {images.map((image, index) => (
             <div 
               key={index} 
@@ -185,6 +219,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             ref={carouselRef}
             className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
             style={{ scrollbarWidth: 'none' }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             {images.map((image, index) => (
               <div 
@@ -218,7 +255,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
           {images.length > 1 && (
             <>
               <button
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none"
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-12 h-12 md:w-10 md:h-10 rounded-full flex items-center justify-center focus:outline-none"
                 onClick={(e) => {
                   e.stopPropagation();
                   const newIndex = (currentImageIndex - 1 + images.length) % images.length;
@@ -232,7 +269,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                 </svg>
               </button>
               <button
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-12 h-12 md:w-10 md:h-10 rounded-full flex items-center justify-center focus:outline-none"
                 onClick={(e) => {
                   e.stopPropagation();
                   const newIndex = (currentImageIndex + 1) % images.length;
@@ -258,7 +295,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                     setCurrentImageIndex(index);
                     scrollToImage(index);
                   }}
-                  className={`w-2 h-2 rounded-full mx-1 focus:outline-none ${
+                  className={`w-3 h-3 rounded-full mx-1 focus:outline-none ${
                     index === currentImageIndex ? 'bg-primary' : 'bg-gray-300'
                   }`}
                   aria-label={`Go to image ${index + 1}`}
@@ -274,6 +311,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
         <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={() => setLightboxOpen(false)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="relative w-full h-full flex items-center justify-center">
             <img
@@ -291,7 +331,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             
             {/* Close button */}
             <button
-              className="absolute top-4 right-4 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none"
+              className="absolute top-4 right-4 bg-black/60 text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none"
               onClick={() => setLightboxOpen(false)}
               aria-label="Close lightbox"
             >
@@ -304,7 +344,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             {images.length > 1 && (
               <>
                 <button
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white w-14 h-14 md:w-12 md:h-12 rounded-full flex items-center justify-center focus:outline-none"
                   onClick={(e) => {
                     e.stopPropagation();
                     prevImage();
@@ -316,7 +356,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                   </svg>
                 </button>
                 <button
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white w-14 h-14 md:w-12 md:h-12 rounded-full flex items-center justify-center focus:outline-none"
                   onClick={(e) => {
                     e.stopPropagation();
                     nextImage();

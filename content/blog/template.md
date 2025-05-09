@@ -1,10 +1,14 @@
 ---
-title: "Title of Your Blog Post"
-description: "A brief description of the blog post that will appear in cards and search results"
-date: "2023-11-15"
-author: "Your Name"
-categories: ["Filming Locations", "Travel Tips"]
-featuredImage: "/images/blog/your-featured-image.jpg"
+title: Title of Your Blog Post
+description: >-
+  A brief description of the blog post that will appear in cards and search
+  results
+date: '2023-11-15'
+author: Your Name
+categories:
+  - Filming Locations
+  - Travel Tips
+featuredImage: /images/blog/your-featured-image.jpg
 ---
 
 # Title of Your Blog Post

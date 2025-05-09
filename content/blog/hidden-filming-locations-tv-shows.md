@@ -1,11 +1,17 @@
 ---
-title: "Hidden Filming Locations From Popular TV Shows You Didn't Know About"
-description: "Discover secret filming locations from beloved TV shows like The Witcher, Stranger Things, and Ozark that fly under the radar but offer amazing behind-the-scenes exploration opportunities."
-slug: "hidden-filming-locations-tv-shows"
-date: "2025-05-09"
-categories: ["TV Tourism", "Travel Guides", "Behind the Scenes"]
-author: "Film Location Explorer"
-featuredImage: "https://i.ibb.co/ZpMRLVjQ/1c78f4c4589f.png"
+title: Hidden Filming Locations From Popular TV Shows You Didn't Know About
+description: >-
+  Discover secret filming locations from beloved TV shows like The Witcher,
+  Stranger Things, and Ozark that fly under the radar but offer amazing
+  behind-the-scenes exploration opportunities.
+slug: hidden-filming-locations-tv-shows
+date: '2025-05-09'
+categories:
+  - TV Tourism
+  - Travel Guides
+  - Behind the Scenes
+author: Film Location Explorer
+featuredImage: 'https://i.ibb.co/ZpMRLVjQ/1c78f4c4589f.png'
 ---
 
 # Hidden Filming Locations From Popular TV Shows You Didn't Know About

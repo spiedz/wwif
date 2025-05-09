@@ -1,123 +1,104 @@
 ---
-title: "Where Was Gen V Filmed?"
-description: "Explore the real-world filming locations of Gen V, from the fictional world of Godolkin University to sprawling cityscapes and unique sites."
-slug: "gen-v"
-overview: "Gen V, set in the electrifying backdrop of Godolkin University, has captivated audiences with its fresh take on the superhero genre. Despite being set in this fictional location, the series was primarily filmed in various vibrant locations across the United States."
+title: Where Was Gen V Filmed?
+description: >-
+  Explore the real-world filming locations of Gen V, from the fictional world of
+  Godolkin University to sprawling cityscapes and unique sites.
+slug: gen-v
+overview: >-
+  Gen V, set in the electrifying backdrop of Godolkin University, has captivated
+  audiences with its fresh take on the superhero genre. Despite being set in
+  this fictional location, the series was primarily filmed in various vibrant
+  locations across the United States.
 releaseYearStart: 2023
-releaseYearEnd: null
-creator: "Eric Kripke"
-genres: ["Action", "Drama", "Fantasy"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BZDc4MTliMTEtODk3My00YWRhLTg0NTktZDJjMTRlMmY4ZmIxXkEyXkFqcGc@._V1_SX300.jpg"
-bannerImage: "https://m.media-amazon.com/images/M/MV5BZDc4MTliMTEtODk3My00YWRhLTg0NTktZDJjMTRlMmY4ZmIxXkEyXkFqcGc@._V1_SX300.jpg"
-coordinates: [
-  { 
-    "lat": 40.7128, 
-    "lng": -74.0060, 
-    "name": "New York City",
-    "description": "Iconic scenes filmed in urban settings filled with superhero excitement."
-  },
-  { 
-    "lat": 34.0522, 
-    "lng": -118.2437, 
-    "name": "Los Angeles",
-    "description": "The heart of entertainment where many scenes were brought to life."
-  }
-]
-seasons: [
-  {
-    "number": 1,
-    "episodeCount": 8,
-    "releaseYear": 2023,
-    "episodes": [
-      {
-        "number": 1,
-        "title": "Pilot",
-        "description": "Introduction to the world of Gen V and its characters."
-      },
-      {
-        "number": 2,
-        "title": "The Reckoning",
-        "description": "Tensions rise as students face their first real challenge."
-      },
-      {
-        "number": 3,
-        "title": "The Test",
-        "description": "A physical test reveals the true nature of some students."
-      }
-    ]
-  }
-]
-locations: [
-  {
-    "id": "location-1-gen-v",
-    "name": "Godolkin University",
-    "description": "The main setting for the series, Godolkin University is a fictional institution for superheroes, vividly captured through various real-world college campuses.",
-    "coordinates": {
-      "lat": 40.730610,
-      "lng": -73.935242
-    },
-    "image": "https://example.com/godolkin-university.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 1,
-        "sceneDescription": "Opening scene where new students arrive at the university."
-      },
-      {
-        "season": 1,
-        "episode": 2,
-        "sceneDescription": "Key moments during orientation."
-      }
-    ]
-  },
-  {
-    "id": "location-2-gen-v",
-    "name": "Downtown Los Angeles",
-    "description": "A vibrant backdrop for many pivotal action scenes, blending urban life with extraordinary abilities.",
-    "coordinates": {
-      "lat": 34.0522,
-      "lng": -118.2437
-    },
-    "image": "https://example.com/downtown-la.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 3,
-        "sceneDescription": "Epic showdown between rival students."
-      }
-    ]
-  }
-]
-streamingServices: [
-  {
-    "name": "Prime Video",
-    "url": "https://www.amazon.com/gen-v"
-  }
-]
-bookingOptions: [
-  {
-    "name": "Super Tour Company",
-    "url": "https://www.supertourcompany.com/gen-v-tour",
-    "type": "tour",
-    "price": "$50",
-    "isPartner": true
-  },
-  {
-    "name": "Self-Guided Campus Tour",
-    "url": "https://www.example.com/self-guided-genv-tour",
-    "type": "tour",
-    "price": "Free self-guided tour"
-  }
-]
-behindTheScenes: {
-  "intro": "Gen V offers not only thrilling action and storytelling but also a fascinating behind-the-scenes look at its production.",
-  "facts": [
-    "The series is a spin-off of The Boys, expanding the universe with new characters.",
-    "Filming took place over several months across multiple states.",
-    "The show's creators focused on blending real educational institutions with CGI.",
-    "Many local actors were cast to bring authenticity to the series."
-  ]
-}
+creator: Eric Kripke
+genres:
+  - Action
+  - Drama
+  - Fantasy
+posterImage: >-
+  https://m.media-amazon.com/images/M/MV5BZDc4MTliMTEtODk3My00YWRhLTg0NTktZDJjMTRlMmY4ZmIxXkEyXkFqcGc@._V1_SX300.jpg
+bannerImage: >-
+  https://m.media-amazon.com/images/M/MV5BZDc4MTliMTEtODk3My00YWRhLTg0NTktZDJjMTRlMmY4ZmIxXkEyXkFqcGc@._V1_SX300.jpg
+coordinates:
+  - lat: 40.7128
+    lng: -74.006
+    name: New York City
+    description: Iconic scenes filmed in urban settings filled with superhero excitement.
+  - lat: 34.0522
+    lng: -118.2437
+    name: Los Angeles
+    description: The heart of entertainment where many scenes were brought to life.
+seasons:
+  - number: 1
+    episodeCount: 8
+    releaseYear: 2023
+    episodes:
+      - number: 1
+        title: Pilot
+        description: Introduction to the world of Gen V and its characters.
+      - number: 2
+        title: The Reckoning
+        description: Tensions rise as students face their first real challenge.
+      - number: 3
+        title: The Test
+        description: A physical test reveals the true nature of some students.
+locations:
+  - id: location-1-gen-v
+    name: Godolkin University
+    description: >-
+      The main setting for the series, Godolkin University is a fictional
+      institution for superheroes, vividly captured through various real-world
+      college campuses.
+    coordinates:
+      lat: 40.73061
+      lng: -73.935242
+    image: 'https://example.com/godolkin-university.jpg'
+    episodes:
+      - season: 1
+        episode: 1
+        sceneDescription: Opening scene where new students arrive at the university.
+      - season: 1
+        episode: 2
+        sceneDescription: Key moments during orientation.
+  - id: location-2-gen-v
+    name: Downtown Los Angeles
+    description: >-
+      A vibrant backdrop for many pivotal action scenes, blending urban life
+      with extraordinary abilities.
+    coordinates:
+      lat: 34.0522
+      lng: -118.2437
+    image: 'https://example.com/downtown-la.jpg'
+    episodes:
+      - season: 1
+        episode: 3
+        sceneDescription: Epic showdown between rival students.
+streamingServices:
+  - name: Prime Video
+    url: 'https://www.amazon.com/gen-v'
+bookingOptions:
+  - name: Super Tour Company
+    url: 'https://www.supertourcompany.com/gen-v-tour'
+    type: tour
+    price: $50
+    isPartner: true
+  - name: Self-Guided Campus Tour
+    url: 'https://www.example.com/self-guided-genv-tour'
+    type: tour
+    price: Free self-guided tour
+behindTheScenes:
+  intro: >-
+    Gen V offers not only thrilling action and storytelling but also a
+    fascinating behind-the-scenes look at its production.
+  facts:
+    - >-
+      The series is a spin-off of The Boys, expanding the universe with new
+      characters.
+    - Filming took place over several months across multiple states.
+    - >-
+      The show's creators focused on blending real educational institutions with
+      CGI.
+    - Many local actors were cast to bring authenticity to the series.
 ---
 
 ## About Gen V

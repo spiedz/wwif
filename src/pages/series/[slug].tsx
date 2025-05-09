@@ -10,6 +10,8 @@ import SEO from '../../components/SEO';
 import CommentSection from '../../components/CommentSection';
 import { addLocationBacklinks } from '../../utils/locationUtils';
 import Link from 'next/link';
+import { getVideoObjectSchema, combineSchemas } from '../../utils/schema';
+import VideoTrailer from '../../components/VideoTrailer';
 
 interface SeriesPageProps {
   series: TVSeries;
@@ -52,6 +54,54 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
 
   const { meta } = series;
   
+  // Create schema data
+  const jsonLdData = {
+    '@context': 'https://schema.org',
+    '@type': 'TVSeries',
+    'headline': meta.title,
+    'image': meta.posterImage || meta.bannerImage || '',
+    'author': 'Where Was It Filmed',
+    'genre': meta.genres?.join(', '),
+    'startDate': meta.startYear,
+    'endDate': meta.endYear || 'present',
+    'numberOfSeasons': typeof meta.seasons === 'number' ? meta.seasons : Array.isArray(meta.seasons) ? meta.seasons.length : undefined,
+    'creator': meta.creator ? {
+      '@type': 'Person',
+      'name': meta.creator
+    } : undefined,
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Where Was It Filmed',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://wherewasitfilmed.co/logo.png'
+      }
+    },
+    'url': `https://wherewasitfilmed.co/series/${meta.slug}`,
+    'datePublished': new Date().toISOString(),
+    'dateCreated': new Date().toISOString(),
+    'dateModified': new Date().toISOString(),
+    'description': meta.description,
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': `https://wherewasitfilmed.co/series/${meta.slug}`,
+    }
+  };
+
+  // Add video schema if trailer is available
+  const videoSchema = meta.trailer ? getVideoObjectSchema({
+    name: meta.trailer.title || `${meta.title} - Official Trailer`,
+    description: meta.trailer.description || `Watch the official trailer for ${meta.title}`,
+    thumbnailUrl: meta.trailer.thumbnailUrl || meta.posterImage || `${process.env.NEXT_PUBLIC_BASE_URL}/images/default-trailer-thumbnail.jpg`,
+    uploadDate: meta.trailer.uploadDate || new Date().toISOString().split('T')[0],
+    contentUrl: meta.trailer.contentUrl,
+    embedUrl: meta.trailer.embedUrl,
+    duration: meta.trailer.duration
+  }) : null;
+
+  // Combine schemas
+  const jsonLd = meta.trailer ? [jsonLdData, videoSchema] : jsonLdData;
+  
   return (
       <>
       <SEO 
@@ -62,31 +112,7 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
         }}
         imageUrl={meta.posterImage || meta.bannerImage}
         type="article"
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'Article',
-          'headline': meta.title,
-          'image': meta.posterImage || meta.bannerImage || '',
-          'author': 'Where Was It Filmed',
-          'genre': meta.genres?.join(', '),
-          'publisher': {
-            '@type': 'Organization',
-            'name': 'Where Was It Filmed',
-            'logo': {
-              '@type': 'ImageObject',
-              'url': 'https://wherewasitfilmed.co/logo.png'
-            }
-          },
-          'url': `https://wherewasitfilmed.co/series/${meta.slug}`,
-          'datePublished': new Date().toISOString(),
-          'dateCreated': new Date().toISOString(),
-          'dateModified': new Date().toISOString(),
-          'description': meta.description,
-          'mainEntityOfPage': {
-            '@type': 'WebPage',
-            '@id': `https://wherewasitfilmed.co/series/${meta.slug}`,
-          }
-        }}
+        jsonLd={jsonLd}
       />
       
       {/* Enhanced Hero Section with Netflix branding */}
@@ -417,6 +443,23 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
             </Link>
           </div>
         </div>
+
+        {/* Add trailer section if available */}
+        {meta.trailer && (
+          <div className="my-10">
+            <h3 className="text-2xl font-bold mb-5 flex items-center">
+              <svg className="w-6 h-6 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+              </svg>
+              {meta.trailer.title || `${meta.title} - Official Trailer`}
+            </h3>
+            <VideoTrailer 
+              video={meta.trailer} 
+              filmTitle={meta.title} 
+              showSchemaMarkup={false}
+            />
+          </div>
+        )}
       </div>
       </>
   );

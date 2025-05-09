@@ -1,90 +1,86 @@
 ---
-title: "Where Was What If...? Filmed?"
-description: "Explore the real-world filming locations of What If...?, from alternate realities to actual filming locations."
-slug: "what-if"
-overview: "What If...?, set in a multiverse of exciting possibilities, has captivated audiences with its unique twist on beloved characters. Despite being set in various fictional realities, the series was primarily filmed in Los Angeles and surrounding areas."
+title: Where Was What If...? Filmed?
+description: >-
+  Explore the real-world filming locations of What If...?, from alternate
+  realities to actual filming locations.
+slug: what-if
+overview: >-
+  What If...?, set in a multiverse of exciting possibilities, has captivated
+  audiences with its unique twist on beloved characters. Despite being set in
+  various fictional realities, the series was primarily filmed in Los Angeles
+  and surrounding areas.
 releaseYearStart: 2021
-releaseYearEnd: null
-creator: "A.C. Bradley"
-genres: ["Animation", "Action", "Adventure"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BYWFiOTcwNzItMTg5Mi00ZTU4LThkZWYtYWNmZWQ1ODE5ZTVmXkEyXkFqcGc@._V1_SX300.jpg"
-bannerImage: "https://m.media-amazon.com/images/M/MV5BYWFiOTcwNzItMTg5Mi00ZTU4LThkZWYtYWNmZWQ1ODE5ZTVmXkEyXkFqcGc@._V1_XL.jpg"
-coordinates: [
-  { 
-    "lat": 34.0522, 
-    "lng": -118.2437, 
-    "name": "Los Angeles",
-    "description": "Key filming and production hub for animation studios."
-  }
-]
-seasons: [
-  {
-    "number": 1,
-    "episodeCount": 9,
-    "releaseYear": 2021,
-    "episodes": [
-      {
-        "number": 1,
-        "title": "What If... Captain Carter Were the First Avenger?",
-        "description": "An alternate history where Peggy Carter takes the super soldier serum instead of Steve Rogers."
-      },
-      {
-        "number": 2,
-        "title": "What If... T'Challa Became a Star-Lord?",
-        "description": "The story explores what would happen if T'Challa was picked up instead of Peter Quill."
-      }
-    ]
-  }
-]
-locations: [
-  {
-    "id": "location-1-id",
-    "name": "Los Angeles Studios",
-    "description": "Where much of the animated series' production took place, with voice sessions recorded by top talent.",
-    "coordinates": {
-      "lat": 34.0522,
-      "lng": -118.2437
-    },
-    "image": "https://example.com/losangeles.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 1,
-        "sceneDescription": "Voiceover sessions for the first episode were held here."
-      }
-    ]
-  }
-]
-streamingServices: [
-  {
-    "name": "Disney+",
-    "url": "https://www.disneyplus.com/series/what-if"
-  }
-]
-bookingOptions: [
-  {
-    "name": "Studio Tour",
-    "url": "https://www.studiotour.com",
-    "type": "tour",
-    "price": "$50",
-    "isPartner": true
-  },
-  {
-    "name": "Self-Guided Film Tour",
-    "url": "https://www.filmtour.com/self-guided-tour",
-    "type": "tour",
-    "price": "Free self-guided tour"
-  }
-]
-behindTheScenes: {
-  "intro": "Take a look behind the scenes of What If...? to discover how this groundbreaking series was brought to life.",
-  "facts": [
-    "The series features an all-star voice cast including Chadwick Boseman and Hayley Atwell.",
-    "The animation style pays homage to classic comic book illustrations.",
-    "Each episode explores a different alternate reality within the Marvel universe.",
-    "The concept was inspired by the What If...? comic series that began in 1977."
-  ]
-}
+creator: A.C. Bradley
+genres:
+  - Animation
+  - Action
+  - Adventure
+posterImage: >-
+  https://m.media-amazon.com/images/M/MV5BYWFiOTcwNzItMTg5Mi00ZTU4LThkZWYtYWNmZWQ1ODE5ZTVmXkEyXkFqcGc@._V1_SX300.jpg
+bannerImage: >-
+  https://m.media-amazon.com/images/M/MV5BYWFiOTcwNzItMTg5Mi00ZTU4LThkZWYtYWNmZWQ1ODE5ZTVmXkEyXkFqcGc@._V1_XL.jpg
+coordinates:
+  - lat: 34.0522
+    lng: -118.2437
+    name: Los Angeles
+    description: Key filming and production hub for animation studios.
+seasons:
+  - number: 1
+    episodeCount: 9
+    releaseYear: 2021
+    episodes:
+      - number: 1
+        title: What If... Captain Carter Were the First Avenger?
+        description: >-
+          An alternate history where Peggy Carter takes the super soldier serum
+          instead of Steve Rogers.
+      - number: 2
+        title: What If... T'Challa Became a Star-Lord?
+        description: >-
+          The story explores what would happen if T'Challa was picked up instead
+          of Peter Quill.
+locations:
+  - id: location-1-id
+    name: Los Angeles Studios
+    description: >-
+      Where much of the animated series' production took place, with voice
+      sessions recorded by top talent.
+    coordinates:
+      lat: 34.0522
+      lng: -118.2437
+    image: 'https://example.com/losangeles.jpg'
+    episodes:
+      - season: 1
+        episode: 1
+        sceneDescription: Voiceover sessions for the first episode were held here.
+streamingServices:
+  - name: Disney+
+    url: 'https://www.disneyplus.com/series/what-if'
+bookingOptions:
+  - name: Studio Tour
+    url: 'https://www.studiotour.com'
+    type: tour
+    price: $50
+    isPartner: true
+  - name: Self-Guided Film Tour
+    url: 'https://www.filmtour.com/self-guided-tour'
+    type: tour
+    price: Free self-guided tour
+behindTheScenes:
+  intro: >-
+    Take a look behind the scenes of What If...? to discover how this
+    groundbreaking series was brought to life.
+  facts:
+    - >-
+      The series features an all-star voice cast including Chadwick Boseman and
+      Hayley Atwell.
+    - The animation style pays homage to classic comic book illustrations.
+    - >-
+      Each episode explores a different alternate reality within the Marvel
+      universe.
+    - >-
+      The concept was inspired by the What If...? comic series that began in
+      1977.
 ---
 
 ## About What If...?

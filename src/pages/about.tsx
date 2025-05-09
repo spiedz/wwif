@@ -3,39 +3,48 @@ import SEO from '../components/SEO';
 import { getWebPageSchema, getOrganizationSchema } from '../utils/schema';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-
-// FAQ Accordion Item Component
-const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  return (
-    <div className="border-b border-gray-200 pb-4">
-      <button
-        className="flex justify-between items-center w-full py-4 px-2 text-left"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span className="text-lg font-medium text-gray-800">{question}</span>
-        <svg
-          className={`w-5 h-5 text-primary transition-transform ${isOpen ? 'transform rotate-180' : ''}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
-      </button>
-      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="py-2 px-4 text-gray-600">{answer}</div>
-      </div>
-    </div>
-  );
-};
+import FAQSection, { FAQItem } from '../components/FAQSection';
 
 export default function AboutPage() {
   const router = useRouter();
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
   const currentUrl = `${BASE_URL}${router.asPath}`;
+  
+  // Define FAQ items
+  const faqItems: FAQItem[] = [
+    {
+      question: "How do you verify filming locations?",
+      answer: "We use a rigorous verification process that includes research from official sources, production notes, and interviews. We then verify these locations through visual comparison of film scenes with actual locations, satellite imagery, and when possible, visiting the locations ourselves. Finally, we document them with precise coordinates and details."
+    },
+    {
+      question: "Can I suggest a filming location?",
+      answer: "Absolutely! We welcome suggestions from our community. You can submit a location through our contact form with as much detail as possible, including the film or TV show name, approximate location, and any images or scene references that might help us verify it."
+    },
+    {
+      question: "Do you provide guided tours of filming locations?",
+      answer: "While we don't directly operate tours, we do partner with reputable local tour companies in many popular filming locations. We provide links to these partners on our location pages, along with information about self-guided options for those who prefer to explore independently."
+    },
+    {
+      question: "Are all the locations accessible to the public?",
+      answer: "Not all filming locations are publicly accessible. Some may be on private property, require permits, or have restricted access. We always include accessibility information in our location details, along with any requirements for visiting (such as tours, fees, or opening hours)."
+    },
+    {
+      question: "How often do you add new locations?",
+      answer: "We're constantly adding new locations! We typically add several new film or TV show location guides each week, prioritizing recent releases and popular requests from our community."
+    },
+    {
+      question: "Do you cover international filming locations?",
+      answer: "Yes! We cover filming locations worldwide. Our database includes locations from North America, Europe, Asia, Australia, and beyond. We're particularly focused on expanding our coverage of international locations."
+    },
+    {
+      question: "How can I contribute to Where Was It Filmed?",
+      answer: "There are several ways to contribute: suggest new locations, provide updated information about existing locations, submit your photos from visits, or even join our team as a contributor. Check our 'Join Our Team' section or contact us for more details."
+    },
+    {
+      question: "Is there a mobile app available?",
+      answer: "Yes, we offer mobile apps for both iOS and Android platforms. Our apps include offline maps, location-based notifications when you're near filming locations, and the ability to create custom filming location itineraries for your travels."
+    }
+  ];
   
   // Create page metadata
   const pageMeta = {
@@ -53,7 +62,7 @@ export default function AboutPage() {
   
   const organizationSchema = getOrganizationSchema();
   
-  // Combine schemas
+  // Combine schemas (without FAQ schema as it's included in the FAQSection component)
   const jsonLdData = JSON.stringify([webpageSchema, organizationSchema]);
 
   return (
@@ -854,55 +863,11 @@ export default function AboutPage() {
             </div>
           </section>
           
-          <section id="faq" className="mb-20">
-            {/* FAQ section - will be implemented in subtask 7 */}
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Frequently Asked Questions</h2>
-            <div className="w-20 h-1 bg-primary/30 rounded mx-auto mb-10"></div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-                <FAQItem 
-                  question="How do you verify filming locations?" 
-                  answer="We use a rigorous verification process that includes research from official sources, production notes, and interviews. We then verify these locations through visual comparison of film scenes with actual locations, satellite imagery, and when possible, visiting the locations ourselves. Finally, we document them with precise coordinates and details."
-                />
-                
-                <FAQItem 
-                  question="Can I suggest a filming location?" 
-                  answer="Absolutely! We welcome suggestions from our community. You can submit a location through our contact form with as much detail as possible, including the film or TV show name, approximate location, and any images or scene references that might help us verify it."
-                />
-                
-                <FAQItem 
-                  question="Do you provide guided tours of filming locations?" 
-                  answer="While we don't directly operate tours, we do partner with reputable local tour companies in many popular filming locations. We provide links to these partners on our location pages, along with information about self-guided options for those who prefer to explore independently."
-                />
-                
-                <FAQItem 
-                  question="Are all the locations accessible to the public?" 
-                  answer="Not all filming locations are publicly accessible. Some may be on private property, require permits, or have restricted access. We always include accessibility information in our location details, along with any requirements for visiting (such as tours, fees, or opening hours)."
-                />
-                
-                <FAQItem 
-                  question="How often do you add new locations?" 
-                  answer="We're constantly adding new locations! We typically add several new film or TV show location guides each week, prioritizing recent releases and popular requests from our community."
-                />
-                
-                <FAQItem 
-                  question="Do you cover international filming locations?" 
-                  answer="Yes! We cover filming locations worldwide. Our database includes locations from North America, Europe, Asia, Australia, and beyond. We're particularly focused on expanding our coverage of international locations."
-                />
-                
-                <FAQItem 
-                  question="How can I contribute to Where Was It Filmed?" 
-                  answer="There are several ways to contribute: suggest new locations, provide updated information about existing locations, submit your photos from visits, or even join our team as a contributor. Check our 'Join Our Team' section or contact us for more details."
-                />
-                
-                <FAQItem 
-                  question="Is there a mobile app available?" 
-                  answer="Yes, we offer mobile apps for both iOS and Android platforms. Our apps include offline maps, location-based notifications when you're near filming locations, and the ability to create custom filming location itineraries for your travels."
-                />
-              </div>
-            </div>
-          </section>
+          {/* Replace the entire FAQ section with the FAQSection component */}
+          <FAQSection 
+            items={faqItems}
+            title="Frequently Asked Questions"
+          />
         </div>
       </div>
     </>

@@ -1,123 +1,110 @@
 ---
-title: "Where Was Ms. Marvel Filmed?"
-description: "Explore the real-world filming locations of Ms. Marvel, from Jersey City to various picturesque locations in the UK."
-slug: "ms-marvel"
-overview: "Ms. Marvel, set in Jersey City, has captivated audiences with its unique blend of superhero action and vibrant cultural representation. Despite being primarily set in Jersey City, the series was primarily filmed in various locations across the UK, including Scotland and the iconic streets of London."
+title: Where Was Ms. Marvel Filmed?
+description: >-
+  Explore the real-world filming locations of Ms. Marvel, from Jersey City to
+  various picturesque locations in the UK.
+slug: ms-marvel
+overview: >-
+  Ms. Marvel, set in Jersey City, has captivated audiences with its unique blend
+  of superhero action and vibrant cultural representation. Despite being
+  primarily set in Jersey City, the series was primarily filmed in various
+  locations across the UK, including Scotland and the iconic streets of London.
 releaseYearStart: 2022
-releaseYearEnd: null
-creator: "Bisha K. Ali"
-genres: ["Action", "Adventure", "Superhero"]
-posterImage: "https://example.com/poster.jpg"
-bannerImage: "https://m.media-amazon.com/images/M/MV5BNzlkNjBmOWUtOTgzZS00OWIzLThkNWEtZTg5MGY2ODAyYzZjXkEyXkFqcGc@._V1_SX300.jpg"
-coordinates: [
-  { 
-    "lat": 40.7170, 
-    "lng": -74.0430, 
-    "name": "Jersey City", 
-    "description": "The primary setting of the series, representing Kamala's home."
-  },
-  { 
-    "lat": 51.509865, 
-    "lng": -0.118092, 
-    "name": "London", 
-    "description": "Various iconic scenes filmed in the streets of London."
-  }
-]
-seasons: [
-  {
-    "number": 1,
-    "episodeCount": 6,
-    "releaseYear": 2022,
-    "episodes": [
-      {
-        "number": 1,
-        "title": "Generation Why",
-        "description": "Kamala Khan discovers her powers and navigates her dual identity."
-      },
-      {
-        "number": 2,
-        "title": "Crushed",
-        "description": "Kamala's life takes an unexpected turn as she embraces her hero journey."
-      },
-      {
-        "number": 3,
-        "title": "Destined",
-        "description": "New challenges arise as Kamala deals with her newfound abilities."
-      }
-    ]
-  }
-]
-locations: [
-  {
-    "id": "jersey-city-id",
-    "name": "Jersey City",
-    "description": "Jersey City serves as the vibrant backdrop for Kamala Khan's adventures, showcasing its diverse culture. Key scenes such as Kamala's school and local hangouts were shot here.",
-    "coordinates": {
-      "lat": 40.7170,
-      "lng": -74.0430
-    },
-    "image": "https://example.com/jersey-city.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 1,
-        "sceneDescription": "Kamala navigates the streets of Jersey City after discovering her powers."
-      },
-      {
-        "season": 1,
-        "episode": 2,
-        "sceneDescription": "The iconic scenes of Kamala hanging out with her friends."
-      }
-    ]
-  },
-  {
-    "id": "london-id",
-    "name": "London",
-    "description": "The bustling streets of London were transformed into various locales for key action sequences and pivotal moments in Kamala's journey, bringing a global angle to her story.",
-    "coordinates": {
-      "lat": 51.509865,
-      "lng": -0.118092
-    },
-    "image": "https://example.com/london.jpg",
-    "episodes": [
-      {
-        "season": 1,
-        "episode": 3,
-        "sceneDescription": "Kamala travels to London for a pivotal showdown."
-      }
-    ]
-  }
-]
-streamingServices: [
-  {
-    "name": "Disney+",
-    "url": "https://www.disneyplus.com/series/ms-marvel"
-  }
-]
-bookingOptions: [
-  {
-    "name": "Superhero Tour Co.",
-    "url": "https://www.superherotour.com/ms-marvel",
-    "type": "tour",
-    "price": "$49",
-    "isPartner": true
-  },
-  {
-    "name": "Self-Guided Tour",
-    "url": "https://www.example.com/self-guided-tour-ms-marvel",
-    "type": "tour",
-    "price": "Free self-guided tour"
-  }
-]
-behindTheScenes: {
-  "intro": "Ms. Marvel not only showcases superhero action but also presents behind-the-scenes insights into its creative processes.",
-  "facts": [
-    "The series is the first Marvel project centered around a Muslim superhero.",
-    "Filming in the UK provided a unique aesthetic different from typical Marvel locales.",
-    "Different languages are incorporated into the series to reflect Kamala's multicultural background.",
-    "The show's vibrant color palette was designed to resonate with its youthful audience."
-  ]
-}
+creator: Bisha K. Ali
+genres:
+  - Action
+  - Adventure
+  - Superhero
+posterImage: 'https://example.com/poster.jpg'
+bannerImage: >-
+  https://m.media-amazon.com/images/M/MV5BNzlkNjBmOWUtOTgzZS00OWIzLThkNWEtZTg5MGY2ODAyYzZjXkEyXkFqcGc@._V1_SX300.jpg
+coordinates:
+  - lat: 40.717
+    lng: -74.043
+    name: Jersey City
+    description: 'The primary setting of the series, representing Kamala''s home.'
+  - lat: 51.509865
+    lng: -0.118092
+    name: London
+    description: Various iconic scenes filmed in the streets of London.
+seasons:
+  - number: 1
+    episodeCount: 6
+    releaseYear: 2022
+    episodes:
+      - number: 1
+        title: Generation Why
+        description: Kamala Khan discovers her powers and navigates her dual identity.
+      - number: 2
+        title: Crushed
+        description: >-
+          Kamala's life takes an unexpected turn as she embraces her hero
+          journey.
+      - number: 3
+        title: Destined
+        description: New challenges arise as Kamala deals with her newfound abilities.
+locations:
+  - id: jersey-city-id
+    name: Jersey City
+    description: >-
+      Jersey City serves as the vibrant backdrop for Kamala Khan's adventures,
+      showcasing its diverse culture. Key scenes such as Kamala's school and
+      local hangouts were shot here.
+    coordinates:
+      lat: 40.717
+      lng: -74.043
+    image: 'https://example.com/jersey-city.jpg'
+    episodes:
+      - season: 1
+        episode: 1
+        sceneDescription: >-
+          Kamala navigates the streets of Jersey City after discovering her
+          powers.
+      - season: 1
+        episode: 2
+        sceneDescription: The iconic scenes of Kamala hanging out with her friends.
+  - id: london-id
+    name: London
+    description: >-
+      The bustling streets of London were transformed into various locales for
+      key action sequences and pivotal moments in Kamala's journey, bringing a
+      global angle to her story.
+    coordinates:
+      lat: 51.509865
+      lng: -0.118092
+    image: 'https://example.com/london.jpg'
+    episodes:
+      - season: 1
+        episode: 3
+        sceneDescription: Kamala travels to London for a pivotal showdown.
+streamingServices:
+  - name: Disney+
+    url: 'https://www.disneyplus.com/series/ms-marvel'
+bookingOptions:
+  - name: Superhero Tour Co.
+    url: 'https://www.superherotour.com/ms-marvel'
+    type: tour
+    price: $49
+    isPartner: true
+  - name: Self-Guided Tour
+    url: 'https://www.example.com/self-guided-tour-ms-marvel'
+    type: tour
+    price: Free self-guided tour
+behindTheScenes:
+  intro: >-
+    Ms. Marvel not only showcases superhero action but also presents
+    behind-the-scenes insights into its creative processes.
+  facts:
+    - The series is the first Marvel project centered around a Muslim superhero.
+    - >-
+      Filming in the UK provided a unique aesthetic different from typical
+      Marvel locales.
+    - >-
+      Different languages are incorporated into the series to reflect Kamala's
+      multicultural background.
+    - >-
+      The show's vibrant color palette was designed to resonate with its
+      youthful audience.
 ---
 
 ## About Ms. Marvel
