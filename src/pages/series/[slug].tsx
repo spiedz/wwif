@@ -12,6 +12,7 @@ import { addLocationBacklinks } from '../../utils/locationUtils';
 import Link from 'next/link';
 import { getVideoObjectSchema, combineSchemas } from '../../utils/schema';
 import VideoTrailer from '../../components/VideoTrailer';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 interface SeriesPageProps {
   series: TVSeries;
@@ -201,48 +202,59 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
         {/* SEO-optimized introductory paragraph */}
         <div className="mb-12 bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
           <div className="p-6 md:p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center group">
+              <svg className="w-7 h-7 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
               </svg>
-              About {meta.title.replace("Where Was ", "").replace(" Filmed?", "")}
+              <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                About {meta.title.replace("Where Was ", "").replace(" Filmed?", "")}
+              </span>
             </h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-gray-700 leading-relaxed">{meta.overview}</p>
-              
-              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Quick Facts</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span><strong>Release:</strong> {meta.releaseYearStart}{meta.releaseYearEnd ? ` - ${meta.releaseYearEnd}` : ' - Present'}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span><strong>Creator:</strong> {meta.creator}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span><strong>Genres:</strong> {meta.genres?.join(', ')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span><strong>Primary Filming Locations:</strong> {series.locations && series.locations.length > 0 
-                        ? `${series.locations.slice(0, 3).map(loc => loc.name).join(', ')}${series.locations.length > 3 ? ', and more' : ''}`
-                        : 'Information not available'}</span>
-                    </li>
-                  </ul>
-                </div>
+            <ErrorBoundary>
+              <div className="prose prose-lg max-w-none">
+                <p className="text-gray-700 leading-relaxed">{meta.overview}</p>
                 
-                <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Why Visit These Locations</h3>
-                  <p className="text-gray-700">Fans of {meta.title.replace("Where Was ", "").replace(" Filmed?", "")} can experience the magic of the show by visiting these iconic filming locations. Explore the real-world settings that brought this beloved series to life, and create unforgettable memories connecting with the scenes you know and love.</p>
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Quick Facts</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span><strong>Release:</strong> {meta.releaseYearStart}{meta.releaseYearEnd ? ` - ${meta.releaseYearEnd}` : ' - Present'}</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span><strong>Creator:</strong> {meta.creator}</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span><strong>Genres:</strong> {meta.genres?.join(', ')}</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span><strong>Primary Filming Locations:</strong> {series.locations && series.locations.length > 0 
+                          ? `${series.locations.slice(0, 3).map(loc => loc.name).join(', ')}${series.locations.length > 3 ? ', and more' : ''}`
+                          : 'Information not available'}</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Why Visit These Locations</h3>
+                    <p className="text-gray-700">Fans of {meta.title.replace("Where Was ", "").replace(" Filmed?", "")} can experience the magic of the show by visiting these iconic filming locations. Explore the real-world settings that brought this beloved series to life, and create unforgettable memories connecting with the scenes you know and love.</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ErrorBoundary>
           </div>
         </div>
+      
+        {/* Series content from markdown */}
+        {series.html && (
+          <div className="prose prose-lg max-w-none mt-8 prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
+            <div dangerouslySetInnerHTML={{ __html: series.html }} />
+          </div>
+        )}
       
         {/* Tab navigation for different sections */}
         <div className="mb-12">

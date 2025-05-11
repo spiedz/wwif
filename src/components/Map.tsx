@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { MapMarker } from '../types/blog-interfaces';
+import { Coordinates } from '../types/content';
 
 export interface MapProps {
-  markers?: MapMarker[];
+  markers?: (MapMarker | Coordinates)[];
   center?: { lat: number; lng: number };
   zoom?: number;
   height?: string;
@@ -112,13 +113,19 @@ const Map: React.FC<MapProps> = ({
     const map = googleMapRef.current; // Create a local variable for TypeScript
 
     markers.forEach((markerData) => {
+      // Ensure marker has required properties
+      if (!('lat' in markerData) || !('lng' in markerData)) {
+        console.error('Invalid marker data:', markerData);
+        return;
+      }
+
       const position = new google.maps.LatLng(markerData.lat, markerData.lng);
       bounds.extend(position);
 
       const marker = new google.maps.Marker({
         position,
-        map, // Use the local variable instead of googleMapRef.current
-        title: markerData.title,
+        map, 
+        title: 'title' in markerData ? markerData.title : '',
         animation: google.maps.Animation.DROP,
       });
 
@@ -131,11 +138,15 @@ const Map: React.FC<MapProps> = ({
           const padding = isMobile ? '15px' : '10px';
           const maxWidth = isMobile ? '280px' : '300px';
           
+          const title = 'title' in markerData ? markerData.title : (markerData.name || 'Location');
+          const description = 'description' in markerData ? markerData.description : '';
+          const image = 'image' in markerData ? markerData.image : undefined;
+          
           const content = `
             <div style="max-width: ${maxWidth}; padding: ${padding};">
-              <h3 style="margin-top: 0; color: #333; font-size: ${isMobile ? '18px' : '16px'}; font-weight: bold;">${markerData.title}</h3>
-              ${markerData.image ? `<img src="${markerData.image}" alt="${markerData.title}" style="width: 100%; height: auto; margin-bottom: 8px; border-radius: 4px;">` : ''}
-              ${markerData.description ? `<p style="margin-bottom: 0; font-size: ${fontSize}; color: #666;">${markerData.description}</p>` : ''}
+              <h3 style="margin-top: 0; color: #333; font-size: ${isMobile ? '18px' : '16px'}; font-weight: bold;">${title}</h3>
+              ${image ? `<img src="${image}" alt="${title}" style="width: 100%; height: auto; margin-bottom: 8px; border-radius: 4px;">` : ''}
+              ${description ? `<p style="margin-bottom: 0; font-size: ${fontSize}; color: #666;">${description}</p>` : ''}
             </div>
           `;
           
@@ -152,12 +163,10 @@ const Map: React.FC<MapProps> = ({
       map.fitBounds(bounds);
       
       // If on mobile, we want a reasonable zoom level for touch
-      // Instead of getZoom/setZoom which have type issues, use a single setZoom on mobile
       if (isMobile && markers.length > 3) {
         // Use setTimeout to wait for bounds to be applied
         setTimeout(() => {
-          // For mobile, set a reasonable zoom level that works well for touch
-          // This avoids the type issues with getZoom
+          // Set a reasonable zoom level that works well for touch on mobile
           map.setZoom(5);
         }, 100);
       }

@@ -1,0 +1,43 @@
+# Bug Fixing PRD for Where Was It Filmed Project
+
+## Project Overview
+"Where Was It Filmed" is a website that displays filming locations for movies and TV shows. The project has recently been enhanced with new markdown image formatting capabilities, but there are several bugs that need to be fixed to ensure it builds properly.
+
+## Core Issues
+1. TypeScript errors in the serverMarkdown.ts file
+2. Potential rendering issues with the new markdown image formats
+3. Missing or improperly configured dependencies (rehype-raw, remark-gfm)
+4. Possible build errors with next.js config
+
+## Requirements
+
+### Fix TypeScript Errors in serverMarkdown.ts
+- Resolve property errors related to FilmMeta type (categories property)
+- Fix the TVSeries type missing 'seasons' property
+- Resolve parseInt type incompatibilities
+- Ensure proper typing for all functions and return values
+
+### Test Markdown Image Rendering
+- Verify that images with custom HTML formatting render correctly
+- Test responsive behavior of image layouts (side-by-side, galleries, etc.)
+- Ensure captions and custom styling work as expected
+- Fix any issues with HTML escape/processing
+
+### Dependency Configuration
+- Ensure rehype-raw and remark-gfm packages are properly installed
+- Fix import/require statements to handle missing TypeScript typings
+- Update package.json if necessary 
+- Make sure node_modules cache is clean
+
+### Build Process
+- Fix any issues preventing successful development server startup
+- Resolve problems that would prevent a production build
+- Test the build process to ensure it completes successfully
+- Verify the built site renders correctly
+
+## Success Criteria
+- No TypeScript errors or warnings
+- Development server runs without errors
+- Production build completes successfully
+- All enhanced markdown image capabilities function correctly
+- Site renders properly in both development and production mode 

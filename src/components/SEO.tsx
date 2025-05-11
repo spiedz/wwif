@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 import { useRouter } from 'next/router';
-import { ContentMeta, FilmMeta, BlogMeta } from '../types/content';
+import { ContentMeta, FilmMeta, BlogMeta, SeriesMeta } from '../types/content';
 
 // Base schema interface
 export interface SchemaObject {
@@ -11,9 +12,9 @@ export interface SchemaObject {
 }
 
 interface SEOProps {
-  meta: ContentMeta | FilmMeta | BlogMeta;
+  meta: FilmMeta | BlogMeta | SeriesMeta;
   imageUrl?: string;
-  type?: 'website' | 'article' | 'movie';
+  type?: 'website' | 'article' | 'movie' | 'tv_show';
   noindex?: boolean;
   nofollow?: boolean;
   jsonLd?: SchemaObject | SchemaObject[] | string;
@@ -119,65 +120,76 @@ const SEO: React.FC<SEOProps> = ({
   };
   
   return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Robots Meta */}
-      <meta 
-        name="robots" 
-        content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} 
-      />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Where Was It Filmed" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Film-specific meta tags */}
-      {isFilm && (
-        <>
-          <meta property="og:movie:director" content={(meta as FilmMeta).director || ''} />
-          <meta property="og:movie:release_date" content={String((meta as FilmMeta).year || '')} />
-          {getGenreArray((meta as FilmMeta).genre).map((genre, index) => (
-            <meta key={index} property="og:movie:tag" content={genre} />
-          ))}
-        </>
-      )}
-      
-      {/* Blog-specific meta tags */}
-      {isBlog && (meta as BlogMeta).author && (
-        <meta property="article:author" content={(meta as BlogMeta).author} />
-      )}
-      
-      {/* Additional meta tags */}
-      {additionalMetaTags.map((tag, index) => (
-        <meta key={`meta-${index}`} name={tag.name} content={tag.content} />
-      ))}
-      
-      {/* JSON-LD Schema */}
-      {jsonLdString && (
-        <script 
-          type="application/ld+json" 
-          dangerouslySetInnerHTML={{ __html: jsonLdString }} 
+    <>
+      <Head>
+        {/* Basic Meta Tags */}
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Robots Meta */}
+        <meta 
+          name="robots" 
+          content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} 
         />
-      )}
-    </Head>
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="Where Was It Filmed" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonicalUrl} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* Film-specific meta tags */}
+        {isFilm && (
+          <>
+            <meta property="og:movie:director" content={(meta as FilmMeta).director || ''} />
+            <meta property="og:movie:release_date" content={String((meta as FilmMeta).year || '')} />
+            {getGenreArray((meta as FilmMeta).genre).map((genre, index) => (
+              <meta key={index} property="og:movie:tag" content={genre} />
+            ))}
+          </>
+        )}
+        
+        {/* Blog-specific meta tags */}
+        {isBlog && (meta as BlogMeta).author && (
+          <meta property="article:author" content={(meta as BlogMeta).author} />
+        )}
+        
+        {/* Additional meta tags */}
+        {additionalMetaTags.map((tag, index) => (
+          <meta key={`meta-${index}`} name={tag.name} content={tag.content} />
+        ))}
+        
+        {/* JSON-LD Schema */}
+        {jsonLdString && (
+          <script 
+            type="application/ld+json" 
+            dangerouslySetInnerHTML={{ __html: jsonLdString }} 
+          />
+        )}
+      </Head>
+      
+      {/* Google AdSense Script - Using next/script */}
+      <Script
+        id="google-adsense"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1419518181504900"
+        strategy="lazyOnload"
+        crossOrigin="anonymous"
+      />
+    </>
   );
 };
 

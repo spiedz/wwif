@@ -1,4 +1,4 @@
-import { ContentMeta, Coordinate, StreamingService, BookingOption } from './content';
+import { ContentMeta, Coordinate, StreamingService, BookingOption, VideoContent } from './content';
 
 /**
  * Interface for a TV series episode
@@ -69,6 +69,9 @@ export interface SeriesMeta extends ContentMeta {
   streamingServices?: StreamingService[];
   bookingOptions?: BookingOption[];
   behindTheScenes?: SeriesBehindTheScenes;
+  trailer?: VideoContent;
+  seasons?: Season[];
+  episodes?: Episode[];
 }
 
 /**
