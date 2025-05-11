@@ -82,7 +82,7 @@ export interface FilmMeta extends ContentMeta {
   director?: string;
   year?: string;
   genre?: string;
-  coordinates?: [number, number][];
+  coordinates?: Coordinates[];
   location?: string | string[];
   posterImage?: string;
   featuredImage?: string;
@@ -91,10 +91,11 @@ export interface FilmMeta extends ContentMeta {
   travelTips?: TravelTip[];
   trivia?: FilmTrivia[];
   useRegionLayout?: boolean;
-  behindTheScenes?: string;
+  behindTheScenes?: string | BehindTheScenes;
   streamingServices?: StreamingService[];
   bookingOptions?: BookingOption[];
   trailer?: VideoContent;
+  components?: string[];
 }
 
 /**
@@ -118,6 +119,7 @@ export interface BlogMeta extends ContentMeta {
   content?: string;
   date?: string;
   estimatedReadingTime?: number;
+  coordinates?: Coordinates[];
 }
 
 export interface SearchResult {

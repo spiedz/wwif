@@ -166,7 +166,7 @@ export default function LocationPage({ location }: LocationPageProps) {
                 
                 <div>
                   <h3 className="font-semibold text-gray-700">Coordinates</h3>
-                  <p>Lat: {location.lat.toFixed(4)}, Lng: {location.lng.toFixed(4)}</p>
+                  <p>Lat: {location.lat ? location.lat.toFixed(4) : 'N/A'}, Lng: {location.lng ? location.lng.toFixed(4) : 'N/A'}</p>
                 </div>
               </div>
               

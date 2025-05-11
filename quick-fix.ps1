@@ -1,9 +1,48 @@
+# PowerShell script for quick fix without any npm installs
+Write-Host "Starting quick fix script..." -ForegroundColor Cyan
+
+# Clear Next.js cache
+Write-Host "Clearing Next.js cache..." -ForegroundColor Yellow
+if (Test-Path ".next") {
+    Remove-Item -Recurse -Force ".next"
+    Write-Host "✅ Cleared Next.js cache" -ForegroundColor Green
+} else {
+    Write-Host "No .next directory found, nothing to clear" -ForegroundColor Green
+}
+
+# Create empty .next directory to avoid startup errors
+if (-not (Test-Path ".next")) {
+    New-Item -ItemType Directory -Path ".next"
+    New-Item -ItemType Directory -Path ".next\cache"
+    New-Item -ItemType Directory -Path ".next\server"
+    New-Item -ItemType Directory -Path ".next\static"
+    Write-Host "✅ Created empty .next directory structure" -ForegroundColor Green
+}
+
+# Build the modified version of serverMarkdown.ts to use only the fallback approach
+Write-Host "Setting up serverMarkdown.ts to use fallback processor..." -ForegroundColor Yellow
+
+# The target directory
+$libServerDir = "src\lib\server"
+if (-not (Test-Path $libServerDir)) {
+    Write-Host "❌ Could not find $libServerDir directory!" -ForegroundColor Red
+    exit 1
+}
+
+# Check if serverMarkdown.ts exists
+$serverMarkdownPath = "$libServerDir\serverMarkdown.ts"
+if (-not (Test-Path $serverMarkdownPath)) {
+    Write-Host "❌ Could not find $serverMarkdownPath!" -ForegroundColor Red
+    exit 1
+}
+
+# Create the simplified serverMarkdown.ts content
+$simplifiedContent = @'
 /**
- * SERVER-ONLY MARKDOWN UTILITIES
+ * SERVER-ONLY MARKDOWN UTILITIES 
  * 
- * IMPORTANT: This file contains utilities that use Node.js fs module and should ONLY
- * be imported in server-side code (getStaticProps, getServerSideProps, API routes).
- * DO NOT import this file in client components or any file that may be used on the client.
+ * This is a simplified version that doesn't rely on rehype-raw or remark-gfm.
+ * It uses a fallback processor instead for maximum compatibility.
  */
 
 import fs from 'fs';
@@ -11,16 +50,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
-import rehypePrettyCode from 'rehype-pretty-code';
-// Import modules properly
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
-// Import our custom fallback processor
 import processMixedContent from '../../utils/fallbackMarkdown';
-// Import template parser for auto-images
-import { enhanceContentWithCoordinates } from '../../utils/templateParser';
 import { BlogMeta, Content, FilmMeta, Coordinates } from '../../types/content';
 import { TVSeries, SeriesMeta, Season } from '../../types/series';
 
@@ -29,51 +59,18 @@ const filmsDirectory = path.join(process.cwd(), 'content/films');
 const blogDirectory = path.join(process.cwd(), 'content/blog');
 const seriesDirectory = path.join(process.cwd(), 'content/series');
 const locationsDirectory = path.join(process.cwd(), 'content/locations');
-const templatesDirectory = path.join(process.cwd(), 'content/templates');
-
-/**
- * Default rehype-pretty-code configuration options
- */
-const prettycodeOptions = {
-  theme: 'one-dark-pro',
-};
 
 /**
  * Enhanced markdown processing function that properly handles inline images
- * and custom HTML - using a simplified approach for compatibility
+ * and custom HTML - using a simple fallback approach
  */
-async function processMarkdownContent(content: string, coordinates?: Coordinates[]) {
+async function processMarkdownContent(content: string) {
   try {
-    // First, enhance content with auto-images if coordinates are provided
-    const enhancedContent = coordinates ? enhanceContentWithCoordinates(content, coordinates) : content;
-    
-    // Then try: Standard remark-html approach
-    const processedContent = await remark()
-      .use(html, { sanitize: false }) // Use remark-html instead for wider compatibility
-      .process(enhancedContent);
-
-    // Check if the result properly preserves HTML
-    const result = processedContent.toString();
-    
-    // If basic HTML from markdown isn't preserved, fall back to our custom processor
-    if (enhancedContent.includes('<div') && !result.includes('<div')) {
-      console.log('Using fallback markdown processor for content with HTML elements');
-      return processMixedContent(enhancedContent);
-    }
-    
-    return result;
+    // Use our custom processor directly to handle HTML in markdown
+    return processMixedContent(content);
   } catch (error) {
-    console.error('Error processing markdown content with remark-html:', error);
-    console.log('Falling back to custom markdown processor');
-    
-    // Fallback to our custom processor
-    try {
-      const enhancedContent = coordinates ? enhanceContentWithCoordinates(content, coordinates) : content;
-      return processMixedContent(enhancedContent);
-    } catch (fallbackError) {
-      console.error('Error with fallback processor:', fallbackError);
-      return '<p>Error processing content</p>';
-    }
+    console.error('Error processing markdown content:', error);
+    return '<p>Error processing content</p>';
   }
 }
 
@@ -182,8 +179,7 @@ export async function getFilmBySlug(slug: string): Promise<Content<FilmMeta> | n
       });
     }
 
-    // Process content with coordinates for auto-images
-    const processedContent = await processMarkdownContent(content, coordinates);
+    const processedContent = await processMarkdownContent(content);
 
     // Create trailer object from trailerUrl if present and trailer isn't
     const trailer = data.trailer || (data.trailerUrl ? { url: data.trailerUrl } : null);
@@ -261,9 +257,7 @@ export async function getBlogBySlug(slug: string): Promise<Content<BlogMeta> | n
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    // Process content with coordinates for auto-images if available
-    const coordinates = data.coordinates || [];
-    const processedContent = await processMarkdownContent(content, coordinates);
+    const processedContent = await processMarkdownContent(content);
 
     const blogData: Content<BlogMeta> = {
       meta: {
@@ -275,7 +269,6 @@ export async function getBlogBySlug(slug: string): Promise<Content<BlogMeta> | n
         categories: data.categories || [],
         tags: data.tags || [],
         featuredImage: data.featuredImage || '',
-        coordinates: coordinates,
       },
       content: content,
       html: processedContent,
@@ -376,8 +369,7 @@ export async function getSeriesBySlug(slug: string): Promise<TVSeries | null> {
       });
     }
 
-    // Process content with coordinates for auto-images
-    const processedContent = await processMarkdownContent(content, coordinates);
+    const processedContent = await processMarkdownContent(content);
 
     // Handle releaseYearStart correctly for safe parsing
     let releaseYearStart = 0;
@@ -543,4 +535,171 @@ export async function updateLocationWithMedia(locationSlug: string, mediaType: s
     console.error(`Error updating location with media (${locationSlug}):`, error);
     return false;
   }
-} 
+}
+'@
+
+# Create a backup of the original file if we haven't already
+$backupPath = "$serverMarkdownPath.bak"
+if (-not (Test-Path $backupPath)) {
+    Copy-Item $serverMarkdownPath $backupPath
+    Write-Host "✅ Created backup of original serverMarkdown.ts" -ForegroundColor Green
+}
+
+# Write the simplified version
+Set-Content $serverMarkdownPath $simplifiedContent
+Write-Host "✅ Updated serverMarkdown.ts to use fallback processor" -ForegroundColor Green
+
+# Ensure the fallback processor utility exists
+$fallbackPath = "src\utils\fallbackMarkdown.ts"
+if (-not (Test-Path $fallbackPath)) {
+    # Create the directory if it doesn't exist
+    $fallbackDir = Split-Path $fallbackPath
+    if (-not (Test-Path $fallbackDir)) {
+        New-Item -ItemType Directory -Path $fallbackDir -Force | Out-Null
+    }
+    
+    $fallbackContent = @'
+/**
+ * FALLBACK MARKDOWN PROCESSOR
+ * 
+ * This file provides a fallback markdown processor that uses basic string
+ * replacement to handle simple HTML in markdown content. It's used when
+ * rehype-raw and remark-gfm are unavailable.
+ */
+
+/**
+ * Processes raw markdown and HTML content into HTML with basic formatting preserved
+ * This is used as a fallback when rehype-raw is unavailable
+ * 
+ * @param content The mixed markdown and HTML content to process
+ * @returns The processed HTML content
+ */
+export function processMixedContent(content: string): string {
+  let processedContent = content;
+  
+  // Preserve important HTML elements
+  const htmlElementsToPreserve = [
+    { tag: 'div', attributes: ['style', 'class'] },
+    { tag: 'img', attributes: ['src', 'alt', 'style'] },
+    { tag: 'figure', attributes: ['style', 'class'] },
+    { tag: 'figcaption', attributes: ['style', 'class'] },
+    { tag: 'p', attributes: ['style', 'class'] },
+    { tag: 'span', attributes: ['style', 'class'] },
+    { tag: 'h1', attributes: ['style', 'class'] },
+    { tag: 'h2', attributes: ['style', 'class'] },
+    { tag: 'h3', attributes: ['style', 'class'] },
+    { tag: 'h4', attributes: ['style', 'class'] },
+    { tag: 'h5', attributes: ['style', 'class'] },
+    { tag: 'h6', attributes: ['style', 'class'] },
+    { tag: 'ul', attributes: ['style', 'class'] },
+    { tag: 'ol', attributes: ['style', 'class'] },
+    { tag: 'li', attributes: ['style', 'class'] },
+    { tag: 'a', attributes: ['href', 'style', 'class', 'target'] },
+  ];
+  
+  // Temporarily replace HTML elements with placeholders
+  let placeholders: { placeholder: string; original: string }[] = [];
+  let placeholderIndex = 0;
+  
+  htmlElementsToPreserve.forEach(({ tag }) => {
+    // Match opening tags with attributes
+    const openRegex = new RegExp(`<${tag}\\s+[^>]*>`, 'g');
+    processedContent = processedContent.replace(openRegex, (match) => {
+      const placeholder = `__HTML_PLACEHOLDER_${placeholderIndex++}__`;
+      placeholders.push({ placeholder, original: match });
+      return placeholder;
+    });
+    
+    // Match closing tags
+    const closeRegex = new RegExp(`</${tag}>`, 'g');
+    processedContent = processedContent.replace(closeRegex, (match) => {
+      const placeholder = `__HTML_PLACEHOLDER_${placeholderIndex++}__`;
+      placeholders.push({ placeholder, original: match });
+      return placeholder;
+    });
+    
+    // Match self-closing tags
+    const selfClosingRegex = new RegExp(`<${tag}\\s+[^>]*/>`, 'g');
+    processedContent = processedContent.replace(selfClosingRegex, (match) => {
+      const placeholder = `__HTML_PLACEHOLDER_${placeholderIndex++}__`;
+      placeholders.push({ placeholder, original: match });
+      return placeholder;
+    });
+  });
+  
+  // Perform basic markdown to HTML conversion
+  processedContent = basicMarkdownToHtml(processedContent);
+  
+  // Restore HTML elements from placeholders
+  placeholders.forEach(({ placeholder, original }) => {
+    processedContent = processedContent.replace(placeholder, original);
+  });
+  
+  return processedContent;
+}
+
+/**
+ * Very basic markdown to HTML conversion for simple elements
+ * This is used as a fallback when remark/rehype processors are unavailable
+ * It only handles the most common markdown syntax
+ * 
+ * @param markdown The markdown content to convert
+ * @returns Basic HTML conversion
+ */
+function basicMarkdownToHtml(markdown: string): string {
+  let html = markdown;
+  
+  // Headers
+  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
+  html = html.replace(/^##### (.+)$/gm, '<h5>$1</h5>');
+  html = html.replace(/^###### (.+)$/gm, '<h6>$1</h6>');
+  
+  // Bold
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+  
+  // Italic
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  html = html.replace(/_(.+?)_/g, '<em>$1</em>');
+  
+  // Links
+  html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
+  
+  // Images not handled here as they're preserved by the placeholder system
+  
+  // Lists - unordered
+  html = html.replace(/^\* (.+)$/gm, '<li>$1</li>');
+  html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+  
+  // Lists - ordered
+  html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+  
+  // Paragraphs (only apply to text not already in HTML tags)
+  const paragraphs = html.split('\n\n');
+  html = paragraphs.map(paragraph => {
+    // Skip if it's a placeholder or already has HTML tags
+    if (paragraph.trim().startsWith('__HTML_PLACEHOLDER_') || 
+        paragraph.trim().startsWith('<') ||
+        paragraph.trim() === '') {
+      return paragraph;
+    }
+    return `<p>${paragraph}</p>`;
+  }).join('\n\n');
+  
+  return html;
+}
+
+export default processMixedContent;
+'@
+    
+    Set-Content $fallbackPath $fallbackContent
+    Write-Host "✅ Created fallbackMarkdown.ts utility" -ForegroundColor Green
+}
+
+Write-Host "Quick fix completed!" -ForegroundColor Cyan
+Write-Host "You can now run 'npm run dev' to start the development server." -ForegroundColor Cyan
+Write-Host "This approach uses a custom fallback HTML processor instead of relying on rehype-raw and remark-gfm." -ForegroundColor Yellow
+Write-Host "If you want to restore the original file, just copy $backupPath back to $serverMarkdownPath" -ForegroundColor Yellow 

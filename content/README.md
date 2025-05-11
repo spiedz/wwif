@@ -136,4 +136,177 @@ See `films/where-was-inception-filmed.md` for a complete example of the region-b
 2. Fill in the frontmatter with your film's details
 3. Add the main content in markdown format
 4. Put the file in the appropriate directory (`films/` or `blog/`)
-5. The new content will be automatically published on the next site build 
+5. The new content will be automatically published on the next site build
+
+# Content Creation Guide
+
+This guide explains how to create and format content for the "Where Was It Filmed" website, including how to embed images, format text, and use special markdown features.
+
+## Table of Contents
+- [Basic Content Structure](#basic-content-structure)
+- [Embedding Images](#embedding-images)
+- [Text Formatting](#text-formatting)
+- [Adding Locations](#adding-locations)
+- [Creating Sections](#creating-sections)
+- [Best Practices](#best-practices)
+
+## Basic Content Structure
+
+Each content file (film, series, or blog) consists of two parts:
+1. **Frontmatter**: Metadata at the top of the file between `---` markers
+2. **Content**: The actual markdown content that appears on the page
+
+Example:
+```markdown
+---
+title: Where Was The Matrix Filmed?
+description: Explore the iconic filming locations of The Matrix.
+slug: where-was-the-matrix-filmed
+date: '2023-11-15'
+year: 1999
+director: Wachowski Sisters
+genre:
+  - Sci-Fi
+  - Action
+posterImage: 'https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg'
+coordinates:
+  - lat: 33.8688
+    lng: 151.2093
+    name: 'Sydney, Australia'
+    description: 'The city served as the primary backdrop for most filming locations.'
+---
+
+Your content goes here...
+```
+
+## Embedding Images
+
+You can now embed images directly within your markdown content using standard markdown or HTML syntax.
+
+### Markdown Image Syntax
+```markdown
+![Alt text for the image](https://example.com/path/to/image.jpg)
+```
+
+### HTML Image Syntax (with more control)
+```html
+<img 
+  src="https://example.com/path/to/image.jpg" 
+  alt="Description of the image" 
+  class="rounded-lg shadow-md my-4" 
+  style="width: 100%; max-width: 600px; margin: 20px auto; display: block;"
+/>
+```
+
+### Image with Caption
+```html
+<figure>
+  <img src="https://example.com/path/to/image.jpg" alt="Scene from the film" />
+  <figcaption>This famous scene was filmed at Griffith Observatory in Los Angeles</figcaption>
+</figure>
+```
+
+### Side-by-Side Images
+```html
+<div style="display: flex; gap: 16px; margin: 20px 0;">
+  <img src="https://example.com/image1.jpg" alt="Before" style="width: 50%;" />
+  <img src="https://example.com/image2.jpg" alt="After" style="width: 50%;" />
+</div>
+```
+
+## Text Formatting
+
+The site supports standard markdown formatting plus some enhanced features:
+
+### Basic Formatting
+
+```markdown
+# Main Heading
+## Secondary Heading
+### Tertiary Heading
+
+**Bold text**
+*Italic text*
+~~Strikethrough~~
+
+> Blockquote text appears indented and highlighted
+
+[Link text](https://example.com)
+
+- Bullet point list
+- Another item
+  - Nested item
+
+1. Numbered list
+2. Second item
+```
+
+### Callouts and Highlights
+
+```markdown
+**Tip:** Special tips for travelers can use this format.
+
+**Note:** Important information can be highlighted like this.
+
+**Warning:** Critical details to be aware of.
+```
+
+## Adding Locations
+
+The most effective way to organize filming locations is to use headings and lists:
+
+```markdown
+## 1. The Matrix Building
+
+### The Location
+This iconic building seen in the film is actually the [Name] located in [City, Country]. It served as the exterior for the [scene description].
+
+### Where to Visit
+The building is located at [Address]. Visitors can access the exterior view from [specific directions].
+
+### Visitor Experience
+- Best time to visit: Early morning for fewer crowds
+- Photography: Allowed from the street, but interior requires permission
+- Nearby attractions: [List related places to visit]
+
+## 2. The Rooftop Chase Scene
+
+... and so on for each major location
+```
+
+## Creating Sections
+
+Divide your content into clear sections for better readability:
+
+```markdown
+## Behind the Scenes
+
+The production of [Film Name] involved several interesting challenges...
+
+## Fun Facts
+
+1. **Unexpected Weather**: The famous rain scene was actually...
+2. **Stunt Work**: The lead actor performed 90% of their own stunts...
+3. **Set Construction**: The elaborate set took over 6 months to build...
+
+## Travel Tips
+
+If you're planning to visit these filming locations, consider these tips:
+- **Best Season**: Spring offers the ideal weather and fewer tourists
+- **Transportation**: Public transit passes are available for...
+- **Guided Tours**: Several companies offer specialized filming location tours
+```
+
+## Best Practices
+
+1. **Use high-quality images** - Preferably at least 1200px wide
+2. **Keep paragraphs concise** - Aim for 3-5 sentences per paragraph
+3. **Break up content with headings** - Use a logical hierarchy
+4. **Include practical information** - Address, visiting hours, costs
+5. **Add personal insights** - What makes this location special?
+6. **Cite sources** - Credit information from books, interviews, etc.
+7. **Update content** - If locations change, add renovation notes
+
+---
+
+For technical support or questions about content creation, please contact the website administrator. 
