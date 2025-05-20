@@ -1,5 +1,5 @@
 ---
-title: Where Was Final Destination: Bloodlines Filmed?
+title: "Where Was Final Destination: Bloodlines Filmed?"
 description: >-
   Discover the chilling real-world filming locations of Final Destination: Bloodlines, from Vancouver's eerie landmarks to the suspenseful settings of Surrey. Explore behind-the-scenes facts and plan your visit to every filming site used in this thrilling horror sequel.
 slug: where-was-final-destination-bloodlines-filmed
