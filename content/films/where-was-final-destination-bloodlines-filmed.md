@@ -9,23 +9,23 @@ director: Zach Lipovsky, Adam B. Stein
 genre:
   - Horror
   - Thriller
-posterImage: 'https://www.themoviedb.org/t/p/w500/your-poster-image.jpg'
+posterImage: 'https://m.media-amazon.com/images/M/MV5BMzc3OWFhZWItMTE2Yy00N2NmLTg1YTktNGVlNDY0ODQ5YjNlXkEyXkFqcGc@._V1_.jpg'
 coordinates:
   - lat: 49.2827
     lng: -123.1207
     name: 'Museum of Vancouver'
     description: 'Used as the base of the Skyview tower in the film’s opening disaster sequence.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/your-image.jpg'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ShiFJ2JnFk0sYIN7kaU6XjqdrKKIO0BSwg&s'
   - lat: 49.1913
     lng: -122.8490
     name: 'Surrey Hospital'
     description: 'Filming location for the hospital scenes where characters confront their fate.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/your-image.jpg'
+    image: 'https://static.wikia.nocookie.net/finaldestination/images/5/56/Final-Destination-2-final-destination-8598027-720-480.jpg/revision/latest?cb=20110621015042'
   - lat: 49.1044
     lng: -122.7326
     name: 'Cloverdale Town Center'
     description: 'Featured in scenes where characters experience eerie premonitions.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/your-image.jpg'
+    image: 'https://ehq-production-canada.imgix.net/8e99a9b5c3a7d7b7f21e4de60a1590a0047dc1a0/original/1715021044/8d1b121b30e9084637ead638053ec91b_blob?1715021044-unsplash--undefined&auto=compress%2Cformat&w=1080'
 streamingServices:
   - name: Max
     url: 'https://www.max.com/movies/final-destination-bloodlines'
@@ -61,7 +61,7 @@ behindTheScenes:
 
 In this sixth installment, college student Stefani Reyes is plagued by visions of a catastrophic tower collapse. As she delves into her family’s past, she uncovers a deadly legacy tied to her grandmother’s survival of a similar disaster in 1968. The film intertwines fate, family, and fatality, delivering a suspenseful narrative that honors the franchise’s roots.
 
-![Skyview Tower Collapse Scene](https://upload.wikimedia.org/wikipedia/commons/your-image.jpg)
+![Skyview Tower Collapse Scene](https://www.digitaltrends.com/wp-content/uploads/2025/05/The-Skyview-collapse-in-Final-Destination-Bloodlines.jpeg?resize=1200%2C720&p=1)
 
 *Final Destination: Bloodlines* was primarily filmed in various locations across British Columbia, Canada, utilizing the region’s diverse landscapes to create an atmosphere of impending doom.
 
@@ -71,7 +71,7 @@ In this sixth installment, college student Stefani Reyes is plagued by visions o
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 30px 0;">
   <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/your-image.jpg" 
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSysMjUhNVTG2yXxVe2CDbXKVFTh6x6UmQmiQ&s" 
     alt="Museum of Vancouver as seen in the film"
     style="flex: 1; min-width: 300px; border-radius: 8px; object-fit: cover; max-height: 400px;"
   />
@@ -98,7 +98,7 @@ In this sixth installment, college student Stefani Reyes is plagued by visions o
 
 <figure style="margin: 30px 0;">
   <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/your-image.jpg" 
+    src="https://static.wikia.nocookie.net/finaldestination/images/5/56/Final-Destination-2-final-destination-8598027-720-480.jpg/revision/latest?cb=20110621015042" 
     alt="Surrey Hospital"
     style="width: 100%; border-radius: 8px;"
   />
@@ -125,7 +125,7 @@ The hospital’s interiors and exteriors were used for scenes where characters c
 
 <figure style="margin: 30px 0;">
   <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/your-image.jpg" 
+    src="https://ehq-production-canada.imgix.net/8e99a9b5c3a7d7b7f21e4de60a1590a0047dc1a0/original/1715021044/8d1b121b30e9084637ead638053ec91b_blob?1715021044-unsplash--undefined&auto=compress%2Cformat&w=1080" 
     alt="Cloverdale Town Center"
     style="width: 100%; border-radius: 8px;"
   />
@@ -153,7 +153,7 @@ The town center’s streets were used for scenes where characters experience uns
 <div style="display: flex; flex-wrap: wrap; gap: 16px; margin: 30px 0;">
   <div style="flex: 1; min-width: 300px;">
     <img 
-      src="https://upload.wikimedia.org/wikipedia/commons/your-image.jpg" 
+      src="https://images.squarespace-cdn.com/content/v1/555f43ace4b09cfed988524e/1747614817363-5IBY56G9YO4UVI5DHG68/IMG_9615.JPG" 
       alt="Scene from Final Destination: Bloodlines"
       style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;"
     />
@@ -161,7 +161,7 @@ The town center’s streets were used for scenes where characters experience uns
   </div>
   <div style="flex: 1; min-width: 300px;">
     <img 
-      src="https://upload.wikimedia.org/wikipedia/commons/your-image.jpg" 
+      src="https://hollywoodnorthbuzz.com/wp-content/uploads/2025/03/final-destination-6-space-needle.png" 
       alt="Museum of Vancouver today"
       style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;"
     />
@@ -175,7 +175,7 @@ While the main locations are prominent, several lesser-known spots in British Co
 
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin: 30px 0;">
   <div style="border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/your-image.jpg" alt="Hidden location 1" style="width: 100%; height: 180px; object-fit: cover;" />
+    <img src="https://images.squarespace-cdn.com/content/v1/555f43ace4b09cfed988524e/1597203639322-39TMBGCE5JQPH27AOI3Y/001.jpg" alt="Hidden location 1" style="width: 100%; height: 180px; object-fit: cover;" />
     <div style="padding: 12px;">
       <h4 style="margin-top: 0;">Burnaby Warehouse</h4>
       <p>Interior scenes of the survivors' meetings were filmed here, providing a claustrophobic feel.</p>
@@ -204,7 +204,7 @@ While the main locations are prominent, several lesser-known spots in British Co
 
 **Best Time to Visit:** Spring and Fall offer great weather and fewer tourists.  
 **Transportation:** SkyTrain and car rentals are best for reaching outlying sets.  
-**Tours:** Consider the [Vancouver Horror Film Tour](https://example.com/vancouver-horror-tour) for curated stops.  
+**Tours:** Consider the [Vancouver Horror Film Tour](https://www.getyourguide.com/en-gb/vancouver-l189/the-haunting-of-vancouver-film-tour-t524972/?visitor-id=VA6ZW3N9LC6BIBJHHSTUU5WW7D348CRN) for curated stops.  
 **Stay:** Downtown Vancouver offers the best access to all filming locations.
 
 ## Related Articles
