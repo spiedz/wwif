@@ -9,7 +9,7 @@ director: Jon Watts
 genre:
   - Superhero
   - Action
-posterImage: 'https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg'
+posterImage: 'https://m.media-amazon.com/images/I/91-INW-yQRL.jpg'
 coordinates:
   - lat: 40.7312
     lng: -73.9548
