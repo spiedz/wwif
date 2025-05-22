@@ -14,38 +14,39 @@ posterImage: 'https://upload.wikimedia.org/wikipedia/en/5/56/Lilo_%26_Stitch_202
 coordinates:
   - lat: 21.3069
     lng: -157.8583
-    name: 'Oahu, Hawaii, USA'
-    description: 'The primary island in Hawaii where much of the on-location filming took place.'
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCuLCcJhDkdmwh-JRQjqt_DHPYuN6fg-e_4A&s'
+    name: "Oahu, Hawaii, USA"
+    description: "The primary island in Hawaii where much of the on-location filming took place."
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCuLCcJhDkdmwh-JRQjqt_DHPYuN6fg-e_4A&s"
   - lat: 51.5074
     lng: 0.1278
-    name: 'Pinewood Studios, UK (Likely)'
-    description: 'A potential studio location for interior sets and special effects work.'
-    image: 'https://tvstudiohistory.co.uk/wp-content/uploads/2021/07/pinewood-aerial-from-east-600p.jpg'
+    name: "Pinewood Studios, UK"
+    description: "A likely studio location for interior sets and special effects work."
+    image: "https://tvstudiohistory.co.uk/wp-content/uploads/2021/07/pinewood-aerial-from-east-600p.jpg"
 streamingServices:
   - name: "Disney+ (Expected)"
-    url: 'PLEASE PROVIDE STREAMING URL HERE'
+    url: "PLEASE PROVIDE STREAMING URL HERE"
 bookingOptions:
-  - name: 'Oahu Island Tours'
-    url: 'https://www.viator.com/tours/Oahu/d672-ttd'
+  - name: "Oahu Island Tours"
+    url: "https://www.viator.com/tours/Oahu/d672-ttd"
     type: tour
-    price: '$75+'
+    price: "$75+"
     isPartner: false
-  - name: 'Hotels in Oahu'
-    url: 'https://www.booking.com/searchresults.html?ss=Oahu'
+  - name: "Hotels in Oahu"
+    url: "https://www.booking.com/searchresults.html?ss=Oahu"
     type: booking
-    price: '$150/night'
+    price: "$150/night"
     isPartner: false
 behindTheScenes:
   intro: >-
     The live-action adaptation of Disney's beloved *Lilo & Stitch* (2025) promises to bring the heartwarming story and vibrant setting to a new generation. Capturing the essence of Hawaii is crucial to the film's magic.
   facts:
-    - 'Principal photography reportedly took place on the island of Oahu, staying true to the original animated film's setting.'
-    - 'The production aimed to showcase the natural beauty of Hawaii, from its stunning beaches to its lush landscapes.'
-    - 'Pinewood Studios in the UK, known for its large-scale productions, was a likely location for soundstage work and special effects.'
-    - 'The filmmakers likely worked closely with local Hawaiian communities to ensure cultural authenticity and respect.'
-    - 'While specific details are still emerging, the use of practical locations in Hawaii is expected to be a significant aspect of the film.'
+    - "Principal photography reportedly took place on the island of Oahu, staying true to the original animated film's setting."
+    - "The production aimed to showcase the natural beauty of Hawaii, from its stunning beaches to its lush landscapes."
+    - "Pinewood Studios in the UK, known for its large-scale productions, was a likely location for soundstage work and special effects."
+    - "The filmmakers likely worked closely with local Hawaiian communities to ensure cultural authenticity and respect."
+    - "While specific details are still emerging, the use of practical locations in Hawaii is expected to be a significant aspect of the film."
 ---
+
 
 
 # Where Was *Lilo & Stitch* (2025) Filmed? Exploring the Real Hawaiian Islands
