@@ -10,54 +10,55 @@ genre:
   - Action
   - Sci-Fi
   - Thriller
-posterImage: 'https://m.media-amazon.com/images/I/91-liN-0JbS._AC_UF894,1000_QL80_.jpg'
+posterImage: "https://m.media-amazon.com/images/I/91-liN-0JbS._AC_UF8941000_QL80_.jpg"
 coordinates:
   - lat: 47.4979
     lng: 19.0402
-    name: 'Budapest, Hungary'
-    description: 'Served as the backdrop for many of the film\'s intense street scenes and spy encounters.'
-    image: 'https://images.squarespace-cdn.com/content/v1/5677dccbb204d55fb34808a2/1629560944915-89EOIQT6S03ADP4PPLRU/Screenshot+2021-08-21+at+17.45.44.png'
+    name: "Budapest, Hungary"
+    description: "Served as the backdrop for many of the film's intense street scenes and spy encounters."
+    image: "https://images.squarespace-cdn.com/content/v1/5677dccbb204d55fb34808a2/1629560944915-89EOIQT6S03ADP4PPLRU/Screenshot+2021-08-21+at+17.45.44.png"
   - lat: 60.4720
     lng: 8.4689
-    name: 'Sognefjord, Norway'
-    description: 'The dramatic fjords and landscapes of Norway were used for key flashback sequences and remote locations.'
-    image: 'https://youngwayfarer.com/wp-content/uploads/2022/09/20220819-DSC05806_1800.jpg.webp'
+    name: "Sognefjord, Norway"
+    description: "The dramatic fjords and landscapes of Norway were used for key flashback sequences and remote locations."
+    image: "https://youngwayfarer.com/wp-content/uploads/2022/09/20220819-DSC05806_1800.jpg.webp"
   - lat: 51.5074
     lng: 0.1278
-    name: 'Pinewood Studios, UK'
-    description: 'The primary production hub where many interior sets, including the Red Room, were constructed.'
-    image: 'https://i.dailymail.co.uk/1s/2019/06/06/17/14462602-7112809-image-a-41_1559839618419.jpg'
+    name: "Pinewood Studios, UK"
+    description: "The primary production hub where many interior sets, including the Red Room, were constructed."
+    image: "https://i.dailymail.co.uk/1s/2019/06/06/17/14462602-7112809-image-a-41_1559839618419.jpg"
 streamingServices:
-  - name: Disney+
-    url: 'https://www.disneyplus.com/movies/marvel-studios-black-widow/4zOhkwakFQM'
-  - name: Amazon Prime Video (for purchase/rental)
-    url: 'https://www.amazon.com/Black-Widow-Scarlett-Johansson/dp/B091JTS35Y'
+  - name: "Disney+"
+    url: "https://www.disneyplus.com/movies/marvel-studios-black-widow/4zOhkwakFQM"
+  - name: "Amazon Prime Video (for purchase/rental)"
+    url: "https://www.amazon.com/Black-Widow-Scarlett-Johansson/dp/B091JTS35Y"
 bookingOptions:
-  - name: 'Budapest Spy Walking Tour'
-    url: 'https://example.com/budapest-spy-tour'
+  - name: "Budapest Spy Walking Tour"
+    url: "https://example.com/budapest-spy-tour"
     type: tour
-    price: '$60'
+    price: "$60"
     isPartner: true
-  - name: 'Fjord Tours in Norway'
-    url: 'https://www.fjordtours.com/'
+  - name: "Fjord Tours in Norway"
+    url: "https://www.fjordtours.com/"
     type: tour
-    price: '"$150+"'
+    price: "$150+"
     isPartner: false
-  - name: 'Hotels in Budapest'
-    url: 'https://www.booking.com/searchresults.html?ss=Budapest'
+  - name: "Hotels in Budapest"
+    url: "https://www.booking.com/searchresults.html?ss=Budapest"
     type: booking
-    price: '$80/night'
+    price: "$80/night"
     isPartner: false
 behindTheScenes:
   intro: >-
     Black Widow offered fans a deeper look into Natasha Romanoff's past, set between the events of Captain America: Civil War and Avengers: Infinity War. The film's diverse locations played a crucial role in establishing its gritty and action-packed tone.
   facts:
-    - 'While Budapest is central to the plot, much of the street-level action was filmed in studio backlots designed to resemble the Hungarian capital.'
-    - 'The stunning Norwegian landscapes provided a stark and beautiful contrast to the urban environments, highlighting Natasha\'s isolated past.'
-    - 'Pinewood Studios, a legendary filmmaking facility in the UK, housed elaborate sets like the Red Room and various interior locations.'
-    - 'The filmmakers utilized drone footage extensively to capture the scale and beauty of the Norwegian fjords.'
-    - 'Some second-unit filming for action sequences also took place in the United Kingdom, adding to the film\'s European flavor.'
+    - "While Budapest is central to the plot, much of the street-level action was filmed in studio backlots designed to resemble the Hungarian capital."
+    - "The stunning Norwegian landscapes provided a stark and beautiful contrast to the urban environments, highlighting Natasha's isolated past."
+    - "Pinewood Studios, a legendary filmmaking facility in the UK, housed elaborate sets like the Red Room and various interior locations."
+    - "The filmmakers utilized drone footage extensively to capture the scale and beauty of the Norwegian fjords."
+    - "Some second-unit filming for action sequences also took place in the United Kingdom, adding to the film's European flavor."
 ---
+
 
 # Where Was Marvel's *Black Widow* Filmed? Exploring the Spy Thriller's Real Locations
 
