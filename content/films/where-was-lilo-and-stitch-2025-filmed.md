@@ -23,7 +23,7 @@ coordinates:
     description: 'A potential studio location for interior sets and special effects work.'
     image: 'https://tvstudiohistory.co.uk/wp-content/uploads/2021/07/pinewood-aerial-from-east-600p.jpg'
 streamingServices:
-  - name: Disney+ (Expected)
+  - name: "Disney+ (Expected)"
     url: 'PLEASE PROVIDE STREAMING URL HERE'
 bookingOptions:
   - name: 'Oahu Island Tours'
@@ -46,6 +46,7 @@ behindTheScenes:
     - 'The filmmakers likely worked closely with local Hawaiian communities to ensure cultural authenticity and respect.'
     - 'While specific details are still emerging, the use of practical locations in Hawaii is expected to be a significant aspect of the film.'
 ---
+
 
 # Where Was *Lilo & Stitch* (2025) Filmed? Exploring the Real Hawaiian Islands
 
