@@ -36,17 +36,17 @@ bookingOptions:
   - name: 'Budapest Spy Walking Tour'
     url: 'https://example.com/budapest-spy-tour'
     type: tour
-    price: $60
+    price: '$60'
     isPartner: true
   - name: 'Fjord Tours in Norway'
     url: 'https://www.fjordtours.com/'
     type: tour
-    price: $150+
+    price: '"$150+"'
     isPartner: false
   - name: 'Hotels in Budapest'
     url: 'https://www.booking.com/searchresults.html?ss=Budapest'
     type: booking
-    price: $80/night
+    price: '$80/night'
     isPartner: false
 behindTheScenes:
   intro: >-
