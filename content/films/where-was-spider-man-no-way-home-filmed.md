@@ -5,7 +5,7 @@ description: >-
 slug: where-was-spider-man-no-way-home-filmed
 date: '2025-05-22'
 year: 2021
-director: Jon Watts
+director: "Jon Watts"
 genre:
   - Superhero
   - Action
@@ -13,50 +13,51 @@ posterImage: 'https://m.media-amazon.com/images/I/91-INW-yQRL.jpg'
 coordinates:
   - lat: 40.7312
     lng: -73.9548
-    name: 'Peter Pan Donut & Pastry Shop, Brooklyn, NY'
-    description: 'The donut shop where MJ works.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Peter_Pan_Donut_%26_Pastry_Shop.jpg'
+    name: "Peter Pan Donut & Pastry Shop, Brooklyn, NY"
+    description: "The donut shop where MJ works."
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Peter_Pan_Donut_%26_Pastry_Shop.jpg"
   - lat: 40.7128
     lng: -74.0060
-    name: 'Queensboro Bridge, New York, NY'
-    description: 'Site of the climactic battle scenes.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Queensboro_Bridge.jpg'
+    name: "Queensboro Bridge, New York, NY"
+    description: "Site of the climactic battle scenes."
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Queensboro_Bridge.jpg"
   - lat: 33.7488
     lng: -84.3877
-    name: 'Trilith Studios, Atlanta, GA'
-    description: 'Primary studio for interior and VFX-heavy scenes.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Trilith_Studios.jpg'
+    name: "Trilith Studios, Atlanta, GA"
+    description: "Primary studio for interior and VFX-heavy scenes."
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Trilith_Studios.jpg"
   - lat: 40.7122
     lng: -74.0134
-    name: 'Statue of Liberty, New York, NY'
-    description: 'Featured prominently during the final battle.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Statue_of_Liberty.jpg'
+    name: "Statue of Liberty, New York, NY"
+    description: "Featured prominently during the final battle."
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Statue_of_Liberty.jpg"
 streamingServices:
-  - name: Disney+
-    url: 'https://www.disneyplus.com/movies/spider-man-no-way-home/12345678'
-  - name: Amazon Prime Video
-    url: 'https://www.amazon.com/Spider-Man-No-Way-Home/dp/B09XYZ1234'
+  - name: "Disney+"
+    url: "https://www.disneyplus.com/movies/spider-man-no-way-home/12345678"
+  - name: "Amazon Prime Video"
+    url: "https://www.amazon.com/Spider-Man-No-Way-Home/dp/B09XYZ1234"
 bookingOptions:
-  - name: 'NYC Superhero Tour'
-    url: 'https://example.com/nyc-superhero-tour'
+  - name: "NYC Superhero Tour"
+    url: "https://example.com/nyc-superhero-tour"
     type: tour
-    price: $60
+    price: "$60"
     isPartner: true
-  - name: 'Hotels in Atlanta'
-    url: 'https://www.booking.com/searchresults.html?ss=Atlanta'
+  - name: "Hotels in Atlanta"
+    url: "https://www.booking.com/searchresults.html?ss=Atlanta"
     type: booking
-    price: $110/night
+    price: "$110/night"
     isPartner: false
 behindTheScenes:
   intro: >-
     *Spider-Man: No Way Home* brings together multiple universes, requiring a blend of real-world locations and cutting-edge visual effects. Here's a look behind the curtain.
   facts:
-    - 'The production utilized both New York City and Atlanta to represent various settings.'
-    - 'Trilith Studios in Atlanta was used extensively for interior shots and complex VFX scenes.'
-    - 'The climactic battle was filmed using a combination of practical sets and CGI to recreate the Statue of Liberty under renovation.'
-    - 'Peter Pan Donut & Pastry Shop in Brooklyn served as the real-world location for MJ’s workplace.'
-    - 'The film's visual effects team used advanced techniques to seamlessly integrate characters from different universes.'
+    - "The production utilized both New York City and Atlanta to represent various settings."
+    - "Trilith Studios in Atlanta was used extensively for interior shots and complex VFX scenes."
+    - "The climactic battle was filmed using a combination of practical sets and CGI to recreate the Statue of Liberty under renovation."
+    - "Peter Pan Donut & Pastry Shop in Brooklyn served as the real-world location for MJ’s workplace."
+    - "The film's visual effects team used advanced techniques to seamlessly integrate characters from different universes."
 ---
+
 
 # Where Was *Spider-Man: No Way Home* Filmed?
 
