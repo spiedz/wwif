@@ -1,4 +1,3 @@
-
 ---
 title: "Where Was The Quilters Filmed?"
 description: "Discover the authentic Texas filming locations that brought the heartfelt stories of The Quilters to life."
@@ -7,7 +6,7 @@ date: "2024-07-30"
 year: 1984
 director: "Neal Miller"
 genre: ["Drama", "Family"]
-posterImage: "https://image.tmdb.org/t/p/w500/a123bCde456fGh789jKlmNoPqrS.jpg" # This is a placeholder URL, replace with an actual image if available
+posterImage: "https://image.tmdb.org/t/p/w500/a123bCde456fGh789jKlmNoPqrS.jpg"
 coordinates:
   - lat: 31.9686
     lng: -99.9018
@@ -15,20 +14,18 @@ coordinates:
     description: "The film was primarily shot in Texas, capturing the authentic landscapes and architectural styles of the region."
   - lat: 31.7700
     lng: -97.1440
-    name: "Unknown Town in Texas" # Specific town not widely documented, representing a typical rural Texas setting
+    name: "Unknown Town in Texas"
     description: "Though precise town locations are not well-documented, filming took place in rural Texas to reflect the setting of Sarah's life."
   - lat: 30.2672
     lng: -97.7431
-    name: "Austin, Texas (Possible Production Base)" # Often used as a base for Texas productions
+    name: "Austin, Texas (Possible Production Base)"
     description: "It's possible that parts of the production were based in or around Austin, a common hub for filming in Texas."
 streamingServices:
-  # Note: Availability of this film on streaming services may be limited or require rental/purchase.
   - name: "Amazon Prime"
     url: "https://www.amazon.com/gp/video/search?phrase=The%20Quilters"
   - name: "Vudu"
     url: "https://www.vudu.com/content/movies/search?searchString=The%20Quilters"
 bookingOptions:
-  # As the film is a period piece with limited specific locations tied to public tourism, general Texas resources are more relevant.
   - name: "Visit Texas"
     url: "https://www.traveltexas.com/"
     type: "info"

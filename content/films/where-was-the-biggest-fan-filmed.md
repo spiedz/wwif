@@ -1,4 +1,3 @@
-
 ---
 title: "Where Was The Biggest Fan Filmed?"
 description: "Uncover the filming locations of 'The Biggest Fan,' a music-fueled journey into the world of teen idol drama and obsessive fandom."
@@ -8,23 +7,20 @@ year: 2002
 director: "Michael Criscione"
 genre: ["Comedy", "Drama", "Fantasy"]
 posterImage: "https://image.tmdb.org/t/p/w500/5Aqro3YbTvVRK7m4SfkWy6pIjKj.jpg"
-coordinates: [
-  {     lat: 34.0522
+coordinates:
+  - lat: 34.0522
     lng: -118.2437
     name: "Los Angeles, California"
     description: "The primary setting for the film, capturing the essence of the Hollywood music industry and suburban life."
-  -
-    lat: 34.0522
+  - lat: 34.0522
     lng: -118.2437
     name: "Various Studio Locations in Los Angeles"
     description: "Interior shots and controlled environments likely filmed within a studio setting in LA."
-  -
-    lat: 34.0522
+  - lat: 34.0522
     lng: -118.2437
     name: "Suburban Neighborhoods around Los Angeles"
     description: "Depicting the home life of the protagonist and typical American suburban streets."
-  -
-    lat: 34.0522
+  - lat: 34.0522
     lng: -118.2437
     name: "Concert Venues in the Los Angeles Area"
     description: "Used for performance scenes featuring the teen idol Jonathan Taylor Thomas."
