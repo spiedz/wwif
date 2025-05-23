@@ -3,6 +3,12 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { ContentMeta, FilmMeta, BlogMeta, SeriesMeta } from '../types/content';
+import { 
+  generateAutoMetaDescription, 
+  validateMetaDescription,
+  MetaDescriptionOptions 
+} from '../utils/metaDescriptions';
+import { getCanonicalUrl } from '../utils/canonicalUrl';
 
 // Base schema interface
 export interface SchemaObject {
@@ -19,12 +25,16 @@ interface SEOProps {
   nofollow?: boolean;
   jsonLd?: SchemaObject | SchemaObject[] | string;
   additionalMetaTags?: Array<{ name: string; content: string }>;
+  // New props for meta description optimization
+  autoOptimizeDescription?: boolean;
+  descriptionOptions?: MetaDescriptionOptions;
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
 
 /**
  * Enhanced SEO component that supports structured data and OpenGraph metadata
+ * with automatic meta description optimization
  */
 const SEO: React.FC<SEOProps> = ({
   meta,
@@ -34,9 +44,11 @@ const SEO: React.FC<SEOProps> = ({
   nofollow = false,
   jsonLd,
   additionalMetaTags = [],
+  autoOptimizeDescription = true,
+  descriptionOptions = {},
 }) => {
   const router = useRouter();
-  const canonicalUrl = `${BASE_URL}${router.asPath}`;
+  const canonicalUrl = getCanonicalUrl(router.asPath);
   
   // Check if the meta is for a film
   const isFilm = 'genre' in meta && 'director' in meta;
@@ -44,15 +56,197 @@ const SEO: React.FC<SEOProps> = ({
   // Check if the meta is for a blog
   const isBlog = 'author' in meta;
   
+  // Check if the meta is for a series
+  const isSeries = 'filmingLocations' in meta || ('network' in meta);
+  
+  // Determine content type for meta description generation
+  const getContentType = (): 'film' | 'series' | 'blog' => {
+    if (isFilm) return 'film';
+    if (isSeries) return 'series';
+    return 'blog';
+  };
+
+  // Generate optimized meta description
+  const getOptimizedDescription = (): string => {
+    const defaultDescription = 'Discover real-world filming locations from your favorite movies and TV shows';
+    
+    // If auto-optimization is disabled, use the original description
+    if (!autoOptimizeDescription) {
+      return meta.description || defaultDescription;
+    }
+
+    // If no description exists, auto-generate one
+    if (!meta.description) {
+      return generateAutoMetaDescription(meta, getContentType(), descriptionOptions);
+    }
+
+    // Validate existing description
+    const validation = validateMetaDescription(meta.description);
+    
+    // If the existing description has significant issues (score < 70), regenerate
+    if (validation.score < 70) {
+      console.log(`SEO: Auto-generating improved description for "${meta.title}" (score: ${validation.score})`);
+      return generateAutoMetaDescription(meta, getContentType(), descriptionOptions);
+    }
+
+    // Use the existing description if it's good enough
+    return meta.description;
+  };
+  
   // Default title and description
   const title = `${meta.title} | Where Was It Filmed`;
-  const description = meta.description || 'Discover real-world filming locations from your favorite movies and TV shows';
+  const description = getOptimizedDescription();
   
-  // Get the OpenGraph image URL
-  const ogImage = imageUrl || 
-    (isBlog && (meta as BlogMeta).featuredImage) || 
-    (isFilm && (meta as FilmMeta).posterImage) ||
-    `${BASE_URL}/images/default-og.jpg`;
+  // Process film genre to ensure it's an array
+  const getGenreArray = (genre: string | string[] | undefined): string[] => {
+    if (Array.isArray(genre)) {
+      return genre;
+    }
+    return genre ? [genre] : [];
+  };
+
+  // Enhanced OpenGraph image selection with fallbacks
+  const getOptimizedOGImage = (): string => {
+    // Priority order: custom imageUrl > content-specific images > default
+    if (imageUrl) return imageUrl;
+    
+    if (isFilm) {
+      const filmMeta = meta as FilmMeta;
+      return filmMeta.posterImage || 
+             filmMeta.featuredImage || 
+             `${BASE_URL}/images/og/film-default.jpg`;
+    }
+    
+    if (isSeries) {
+      const seriesMeta = meta as SeriesMeta;
+      return seriesMeta.posterImage || 
+             seriesMeta.featuredImage || 
+             `${BASE_URL}/images/og/series-default.jpg`;
+    }
+    
+    if (isBlog) {
+      const blogMeta = meta as BlogMeta;
+      return blogMeta.featuredImage || 
+             `${BASE_URL}/images/og/blog-default.jpg`;
+    }
+    
+    return `${BASE_URL}/images/og/default.jpg`;
+  };
+
+  // Generate content-specific OpenGraph titles
+  const getOGTitle = (): string => {
+    if (isFilm) {
+      const filmMeta = meta as FilmMeta;
+      return `${filmMeta.title} (${filmMeta.year}) Filming Locations | Where Was It Filmed`;
+    }
+    
+    if (isSeries) {
+      const seriesMeta = meta as SeriesMeta;
+      return `${seriesMeta.title} TV Series Filming Locations | Where Was It Filmed`;
+    }
+    
+    if (isBlog) {
+      return `${meta.title} | Where Was It Filmed Blog`;
+    }
+    
+    return title;
+  };
+
+  // Generate Twitter-specific descriptions (shorter for better display)
+  const getTwitterDescription = (): string => {
+    const maxLength = 200; // Twitter optimal length
+    if (description.length <= maxLength) {
+      return description;
+    }
+    
+    // Truncate at word boundary
+    const truncated = description.substring(0, maxLength);
+    const lastSpace = truncated.lastIndexOf(' ');
+    return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+  };
+
+  // Get content-specific Twitter card type
+  const getTwitterCardType = (): string => {
+    // Use summary_large_image for visual content, summary for text-heavy content
+    if (isFilm || isSeries) return 'summary_large_image';
+    if (isBlog) return 'summary_large_image'; // Blog posts benefit from large images
+    return 'summary';
+  };
+
+  // Generate additional OpenGraph properties based on content type
+  const getAdditionalOGProperties = () => {
+    const properties: Array<{ property: string; content: string }> = [];
+    
+    if (isFilm) {
+      const filmMeta = meta as FilmMeta;
+      
+      // Film-specific properties
+      if (filmMeta.director) {
+        properties.push({ property: 'og:movie:director', content: filmMeta.director });
+      }
+      if (filmMeta.year) {
+        properties.push({ property: 'og:movie:release_date', content: String(filmMeta.year) });
+      }
+      
+      // Add genre tags
+      getGenreArray(filmMeta.genre).forEach(genre => {
+        properties.push({ property: 'og:movie:tag', content: genre });
+      });
+      
+      // Add location tags if available
+      if (filmMeta.coordinates && Array.isArray(filmMeta.coordinates)) {
+        filmMeta.coordinates.forEach(coord => {
+          if (coord.name) {
+            properties.push({ property: 'og:movie:tag', content: coord.name });
+          }
+        });
+      }
+    }
+    
+    if (isSeries) {
+      const seriesMeta = meta as SeriesMeta;
+      
+      // Series-specific properties
+      if (seriesMeta.creator) {
+        properties.push({ property: 'og:tv_show:creator', content: seriesMeta.creator });
+      }
+      if (seriesMeta.network) {
+        properties.push({ property: 'og:tv_show:network', content: seriesMeta.network });
+      }
+      
+      // Add genre tags
+      getGenreArray(seriesMeta.genre).forEach(genre => {
+        properties.push({ property: 'og:tv_show:tag', content: genre });
+      });
+    }
+    
+    if (isBlog) {
+      const blogMeta = meta as BlogMeta;
+      
+      // Article-specific properties
+      if (blogMeta.author) {
+        properties.push({ property: 'article:author', content: blogMeta.author });
+      }
+      if (blogMeta.date) {
+        properties.push({ property: 'article:published_time', content: blogMeta.date });
+      }
+      
+      // Add tags if available
+      if (blogMeta.tags && Array.isArray(blogMeta.tags)) {
+        blogMeta.tags.forEach(tag => {
+          properties.push({ property: 'article:tag', content: tag });
+        });
+      }
+    }
+    
+    return properties;
+  };
+
+  const ogImage = getOptimizedOGImage();
+  const ogTitle = getOGTitle();
+  const twitterDescription = getTwitterDescription();
+  const twitterCardType = getTwitterCardType();
+  const additionalOGProps = getAdditionalOGProperties();
   
   /**
    * Process and validate jsonLd data
@@ -111,14 +305,6 @@ const SEO: React.FC<SEOProps> = ({
   
   const jsonLdString = processJsonLd();
   
-  // Process film genre to ensure it's an array
-  const getGenreArray = (genre: string | string[] | undefined): string[] => {
-    if (Array.isArray(genre)) {
-      return genre;
-    }
-    return genre ? [genre] : [];
-  };
-  
   return (
     <>
       <Head>
@@ -136,35 +322,85 @@ const SEO: React.FC<SEOProps> = ({
         {/* Canonical URL */}
         <link rel="canonical" href={canonicalUrl} />
         
-        {/* Open Graph / Facebook */}
+        {/* Enhanced Open Graph / Facebook */}
         <meta property="og:type" content={type} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={ogTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${meta.title} - Where Was It Filmed`} />
         <meta property="og:site_name" content="Where Was It Filmed" />
+        <meta property="og:locale" content="en_US" />
         
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* Enhanced Twitter Cards */}
+        <meta name="twitter:card" content={twitterCardType} />
+        <meta name="twitter:site" content="@wherewasitfilmed" />
+        <meta name="twitter:creator" content="@wherewasitfilmed" />
         <meta name="twitter:url" content={canonicalUrl} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
         <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={`${meta.title} - Where Was It Filmed`} />
         
-        {/* Film-specific meta tags */}
+        {/* LinkedIn specific (uses OpenGraph but benefits from these) */}
+        <meta property="og:image:type" content="image/jpeg" />
+        
+        {/* Pinterest specific */}
+        <meta name="pinterest-rich-pin" content="true" />
+        
+        {/* Additional content-specific meta tags */}
+        {additionalOGProps.map((prop, index) => (
+          <meta key={`og-${index}`} property={prop.property} content={prop.content} />
+        ))}
+        
+        {/* Content-specific additional tags */}
         {isFilm && (
           <>
-            <meta property="og:movie:director" content={(meta as FilmMeta).director || ''} />
-            <meta property="og:movie:release_date" content={String((meta as FilmMeta).year || '')} />
-            {getGenreArray((meta as FilmMeta).genre).map((genre, index) => (
-              <meta key={index} property="og:movie:tag" content={genre} />
-            ))}
+            <meta name="movie:title" content={(meta as FilmMeta).title} />
+            <meta name="movie:year" content={String((meta as FilmMeta).year || '')} />
+            {(meta as FilmMeta).director && (
+              <meta name="movie:director" content={(meta as FilmMeta).director} />
+            )}
           </>
         )}
         
-        {/* Blog-specific meta tags */}
-        {isBlog && (meta as BlogMeta).author && (
-          <meta property="article:author" content={(meta as BlogMeta).author} />
+        {isSeries && (
+          <>
+            <meta name="tv:title" content={(meta as SeriesMeta).title} />
+            {(meta as SeriesMeta).network && (
+              <meta name="tv:network" content={(meta as SeriesMeta).network} />
+            )}
+          </>
+        )}
+        
+        {/* Geographic meta tags for location-based content */}
+        {isFilm && (meta as FilmMeta).coordinates && (
+          <>
+            <meta name="geo.region" content="US" />
+            <meta name="geo.placename" content={(meta as FilmMeta).coordinates?.[0]?.name || ''} />
+            {(meta as FilmMeta).coordinates?.[0]?.lat && (
+              <>
+                <meta name="geo.position" content={`${(meta as FilmMeta).coordinates?.[0]?.lat};${(meta as FilmMeta).coordinates?.[0]?.lng}`} />
+                <meta name="ICBM" content={`${(meta as FilmMeta).coordinates?.[0]?.lat}, ${(meta as FilmMeta).coordinates?.[0]?.lng}`} />
+              </>
+            )}
+          </>
+        )}
+        
+        {/* Geographic meta tags for blog content with coordinates */}
+        {isBlog && (meta as BlogMeta).coordinates && (
+          <>
+            <meta name="geo.region" content="US" />
+            <meta name="geo.placename" content={(meta as BlogMeta).coordinates?.[0]?.name || ''} />
+            {(meta as BlogMeta).coordinates?.[0]?.lat && (
+              <>
+                <meta name="geo.position" content={`${(meta as BlogMeta).coordinates?.[0]?.lat};${(meta as BlogMeta).coordinates?.[0]?.lng}`} />
+                <meta name="ICBM" content={`${(meta as BlogMeta).coordinates?.[0]?.lat}, ${(meta as BlogMeta).coordinates?.[0]?.lng}`} />
+              </>
+            )}
+          </>
         )}
         
         {/* Additional meta tags */}

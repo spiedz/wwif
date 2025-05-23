@@ -1,62 +1,64 @@
 ---
-title: Where Was The Batman (2022) Filmed?
-description: >-
-  Explore the dark and atmospheric filming locations of The Batman (2022),
-  showcasing the gritty underbelly of Gotham City and the stunning visuals
-  brought to life by director Matt Reeves.
-slug: where-was-the-batman-2022-filmed
-date: '2023-06-15'
+title: "Where Was The Batman (2022) Filmed?"
+description: "Explore the dark and atmospheric filming locations of The Batman (2022), showcasing the gritty underbelly of Gotham City and the stunning visuals brought to life by director Matt Reeves."
+slug: "where-was-the-batman-2022-filmed"
+date: "2023-06-15"
 year: 2022
-director: Matt Reeves
-genre:
-  - Action
-  - Crime
-  - Drama
-posterImage: 'https://static.posters.cz/image/1300/122127.jpg'
-coordinates:
-  - lat: 47.6062
-    lng: -122.3321
-    name: 'Seattle, Washington'
-    description: >-
-      Many exterior shots of Gotham City were filmed in Seattle, known for its
-      iconic skyline and moody atmosphere.
-  - lat: 34.0522
-    lng: -118.2437
-    name: 'Los Angeles, California'
-    description: >-
-      Some interior scenes were shot in various studios around Los Angeles,
-      utilizing soundstages and backlots.
-  - lat: 47.6553
-    lng: -122.3037
-    name: 'University of Washington, Gotham Square'
-    description: >-
-      The distinctive architecture of the University of Washington served as
-      Gotham Square in several key scenes.
-  - lat: 51.5074
-    lng: -0.1278
-    name: 'London, England'
-    description: >-
-      Parts of the film, particularly Wayne Tower exteriors, were shot in
-      various locations around London.
-  - lat: 51.4546
-    lng: -0.969
-    name: 'Wollaton Hall, Wayne Manor'
-    description: >-
-      This Elizabethan country house in Nottinghamshire provided the exterior
-      shots for Wayne Manor.
-  - lat: 51.4982
-    lng: -0.1066
-    name: 'St. George''s Hall, Liverpool'
-    description: >-
-      This neoclassical building was transformed into Gotham City Hall for
-      several pivotal scenes in the film.
-streamingServices:
-  - name: HBO Max
-    url: 'https://www.hbomax.com/feature/urn:hbo:feature:GYiDbSAmHpr7DwgEAAAAI'
-  - name: Amazon Prime Video
-    url: 'https://www.amazon.com/Batman-Robert-Pattinson/dp/B09TPKPGVM'
-  - name: Apple TV
-    url: 'https://tv.apple.com/us/movie/the-batman/umc.cmc.2rz10mgipk1wzcv8p75vhtmv2'
+director: "Matt Reeves"
+genre: ["Action", "Crime", "Drama"]
+posterImage: "https://m.media-amazon.com/images/M/MV5BOTY2M2Y4MTAtYzgzOC00MjA3LTg0ZTctOTI4MzRjNDc3NGY2XkEyXkFqcGdeQXVyNTI4NjIwMjU@._V1_FMjpg_UX1000_.jpg"
+coordinates: [
+  { 
+    "lat": 47.6062, 
+    "lng": -122.3321,
+    "name": "Seattle, Washington",
+    "description": "Many exterior shots of Gotham City were filmed in Seattle, known for its iconic skyline and moody atmosphere."
+  },
+  {
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "name": "Los Angeles, California",
+    "description": "Some interior scenes were shot in various studios around Los Angeles, utilizing soundstages and backlots."
+  },
+  {
+    "lat": 47.6553,
+    "lng": -122.3037,
+    "name": "University of Washington, Gotham Square",
+    "description": "The distinctive architecture of the University of Washington served as Gotham Square in several key scenes."
+  },
+  {
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "name": "London, England",
+    "description": "Parts of the film, particularly Wayne Tower exteriors, were shot in various locations around London."
+  },
+  {
+    "lat": 51.4546,
+    "lng": -0.9690,
+    "name": "Wollaton Hall, Wayne Manor",
+    "description": "This Elizabethan country house in Nottinghamshire provided the exterior shots for Wayne Manor."
+  },
+  {
+    "lat": 51.4982,
+    "lng": -0.1066,
+    "name": "St. George's Hall, Liverpool",
+    "description": "This neoclassical building was transformed into Gotham City Hall for several pivotal scenes in the film."
+  }
+]
+streamingServices: [
+  {
+    "name": "HBO Max",
+    "url": "https://www.hbomax.com/feature/urn:hbo:feature:GYiDbSAmHpr7DwgEAAAAI"
+  },
+  {
+    "name": "Amazon Prime Video",
+    "url": "https://www.amazon.com/Batman-Robert-Pattinson/dp/B09TPKPGVM"
+  },
+  {
+    "name": "Apple TV",
+    "url": "https://tv.apple.com/us/movie/the-batman/umc.cmc.2rz10mgipk1wzcv8p75vhtmv2"
+  }
+]
 ---
 
 ## The Batman (2022): A Dark Journey Through Gotham's Underbelly
