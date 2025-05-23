@@ -3,226 +3,371 @@
  * This file contains structured keyword data for use in SEO optimization
  */
 
-// Keyword types for different page types
-export interface Keyword {
-  value: string;
-  volume: 'very high' | 'high' | 'medium' | 'low' | 'very low';
-  priority: 'very high' | 'high' | 'medium' | 'low' | 'very low';
+import { FilmMeta, BlogMeta, SeriesMeta } from '../types/content';
+
+// Comprehensive keyword research data for film locations
+export interface KeywordData {
+  primary: string[];
+  secondary: string[];
+  longTail: string[];
+  location: string[];
+  genre: string[];
+  semantic: string[];
 }
 
-// Page type keyword structures
-export interface FilmPageKeywords {
-  primary: Keyword[];
-  secondary: Keyword[];
-  longTail: Keyword[];
-}
-
-export interface LocationPageKeywords {
-  primary: Keyword[];
-  secondary: Keyword[];
-  longTail: Keyword[];
-}
-
-export interface FranchisePageKeywords {
-  primary: Keyword[];
-  secondary: Keyword[];
-  longTail: Keyword[];
-}
-
-// Generic film location keywords
-export const genericFilmLocationKeywords: Keyword[] = [
-  { value: "filming locations", volume: 'high', priority: 'high' },
-  { value: "where was [film] filmed", volume: 'high', priority: 'high' },
-  { value: "movie filming locations", volume: 'medium', priority: 'high' },
-  { value: "real life movie locations", volume: 'medium', priority: 'high' },
-  { value: "film location tours", volume: 'medium', priority: 'medium' },
-  { value: "visit movie sets", volume: 'medium', priority: 'medium' },
-  { value: "famous film locations", volume: 'medium', priority: 'medium' },
-  { value: "movie scene locations", volume: 'low', priority: 'medium' },
-  { value: "film tourism", volume: 'low', priority: 'low' },
-  { value: "behind the scenes locations", volume: 'low', priority: 'low' }
-];
-
-// Franchise-specific keywords
-export const franchiseKeywords: Record<string, Keyword[]> = {
-  'harryPotter': [
-    { value: "harry potter filming locations", volume: 'very high', priority: 'very high' },
-    { value: "where was harry potter filmed", volume: 'very high', priority: 'very high' },
-    { value: "hogwarts filming location", volume: 'high', priority: 'high' },
-    { value: "harry potter film locations london", volume: 'medium', priority: 'high' },
-    { value: "harry potter studio tour", volume: 'high', priority: 'high' }
+// Film location keyword categories
+export const FILM_LOCATION_KEYWORDS = {
+  primary: [
+    'filming locations',
+    'where was filmed',
+    'movie locations',
+    'film sites',
+    'filming spots',
+    'shooting locations'
   ],
-  'lordOfTheRings': [
-    { value: "lord of the rings filming locations", volume: 'high', priority: 'high' },
-    { value: "where was lord of the rings filmed", volume: 'high', priority: 'high' },
-    { value: "hobbiton movie set", volume: 'medium', priority: 'high' },
-    { value: "new zealand lotr locations", volume: 'medium', priority: 'high' },
-    { value: "mount doom filming location", volume: 'low', priority: 'medium' }
+  secondary: [
+    'behind the scenes',
+    'production locations',
+    'real locations',
+    'actual filming sites',
+    'movie sets',
+    'filming destinations'
   ],
-  'gameOfThrones': [
-    { value: "game of thrones filming locations", volume: 'high', priority: 'high' },
-    { value: "where was game of thrones filmed", volume: 'high', priority: 'high' },
-    { value: "winterfell filming location", volume: 'medium', priority: 'high' },
-    { value: "king's landing filming location", volume: 'medium', priority: 'high' },
-    { value: "game of thrones locations ireland", volume: 'medium', priority: 'medium' }
+  longTail: [
+    'exact filming location',
+    'visit filming locations',
+    'film location guide',
+    'movie tourism destinations',
+    'where to visit filming sites',
+    'film location travel guide'
   ],
-  'starWars': [
-    { value: "star wars filming locations", volume: 'medium', priority: 'high' },
-    { value: "where was star wars filmed", volume: 'medium', priority: 'medium' },
-    { value: "tatooine filming location", volume: 'low', priority: 'medium' },
-    { value: "star wars tunisia locations", volume: 'low', priority: 'medium' },
-    { value: "star wars ireland filming", volume: 'low', priority: 'medium' }
+  actionWords: [
+    'discover',
+    'explore',
+    'visit',
+    'find',
+    'uncover',
+    'journey to'
   ],
-  'marvel': [
-    { value: "marvel movie locations", volume: 'medium', priority: 'high' },
-    { value: "avengers filming locations", volume: 'medium', priority: 'high' },
-    { value: "wakanda filming location", volume: 'low', priority: 'medium' },
-    { value: "where was black panther filmed", volume: 'medium', priority: 'medium' },
-    { value: "thor new asgard filming location", volume: 'low', priority: 'medium' }
+  callToActions: [
+    'Plan your visit',
+    'Explore the locations',
+    'Discover the magic',
+    'Visit these iconic spots',
+    'See where it was filmed'
   ]
 };
 
-// Geographic location keywords
-export const locationKeywords: Record<string, Keyword[]> = {
-  'newYork': [
-    { value: "movies filmed in new york", volume: 'high', priority: 'high' },
-    { value: "new york filming locations", volume: 'medium', priority: 'high' },
-    { value: "famous movie scenes new york", volume: 'medium', priority: 'medium' },
-    { value: "tv shows filmed in nyc", volume: 'medium', priority: 'medium' },
-    { value: "central park movie locations", volume: 'low', priority: 'medium' }
-  ],
-  'london': [
-    { value: "movies filmed in london", volume: 'high', priority: 'high' },
-    { value: "london filming locations", volume: 'medium', priority: 'high' },
-    { value: "british movie locations", volume: 'low', priority: 'medium' },
-    { value: "harry potter locations london", volume: 'high', priority: 'high' },
-    { value: "sherlock holmes filming locations", volume: 'medium', priority: 'medium' }
-  ],
-  'losAngeles': [
-    { value: "movies filmed in los angeles", volume: 'medium', priority: 'high' },
-    { value: "hollywood filming locations", volume: 'medium', priority: 'high' },
-    { value: "la la land filming locations", volume: 'medium', priority: 'medium' },
-    { value: "famous movie studios los angeles", volume: 'low', priority: 'medium' },
-    { value: "movies filmed in beverly hills", volume: 'low', priority: 'low' }
-  ],
-  'newZealand': [
-    { value: "movies filmed in new zealand", volume: 'medium', priority: 'medium' },
-    { value: "new zealand lord of the rings locations", volume: 'high', priority: 'high' },
-    { value: "hobbiton movie set visit", volume: 'medium', priority: 'high' },
-    { value: "wellington film locations", volume: 'low', priority: 'low' },
-    { value: "avatar filming locations nz", volume: 'low', priority: 'medium' }
-  ]
-};
-
-// Long-tail keywords
-export const longTailKeywords: Keyword[] = [
-  { value: "how to visit hogwarts filming location", volume: 'medium', priority: 'high' },
-  { value: "where was the mountain scene in lord of the rings filmed", volume: 'low', priority: 'high' },
-  { value: "can you visit the real jurassic park location", volume: 'low', priority: 'high' },
-  { value: "game of thrones filming locations you can actually visit", volume: 'low', priority: 'medium' },
-  { value: "best harry potter filming locations to visit in london", volume: 'low', priority: 'medium' },
-  { value: "is the joker stairs a real location in new york", volume: 'low', priority: 'medium' },
-  { value: "how to take photos at famous movie locations", volume: 'very low', priority: 'low' },
-  { value: "filming locations from [movie] that are now abandoned", volume: 'very low', priority: 'low' },
-  { value: "secret filming locations tourists don't know about", volume: 'very low', priority: 'low' },
-  { value: "how to plan a trip to visit movie filming locations", volume: 'very low', priority: 'low' }
-];
-
-// Travel-related keywords
-export const travelKeywords: Keyword[] = [
-  { value: "film location tours", volume: 'medium', priority: 'high' },
-  { value: "movie location vacation ideas", volume: 'low', priority: 'high' },
-  { value: "visit game of thrones filming locations", volume: 'medium', priority: 'high' },
-  { value: "harry potter studio tour tickets", volume: 'high', priority: 'high' },
-  { value: "film location travel guide", volume: 'low', priority: 'medium' },
-  { value: "best movie locations to visit in europe", volume: 'low', priority: 'medium' },
-  { value: "movie location road trip", volume: 'very low', priority: 'medium' },
-  { value: "budget travel to film locations", volume: 'very low', priority: 'low' },
-  { value: "family friendly movie location tours", volume: 'very low', priority: 'low' },
-  { value: "film location photography tips", volume: 'very low', priority: 'low' }
-];
-
-/**
- * Generate film page keywords by substituting the film name
- */
-export function getFilmPageKeywords(filmName: string): FilmPageKeywords {
-  return {
-    primary: [
-      { value: `where was ${filmName} filmed`, volume: 'high', priority: 'high' },
-      { value: `${filmName} filming locations`, volume: 'high', priority: 'high' },
-      { value: `${filmName} movie locations`, volume: 'medium', priority: 'high' }
-    ],
-    secondary: [
-      { value: `${filmName} film locations to visit`, volume: 'medium', priority: 'medium' },
-      { value: `${filmName} behind the scenes locations`, volume: 'low', priority: 'medium' },
-      { value: `where to find ${filmName} filming sites`, volume: 'low', priority: 'medium' }
-    ],
-    longTail: [
-      { value: `how to visit ${filmName} filming locations`, volume: 'low', priority: 'high' },
-      { value: `is ${filmName} filmed in real locations`, volume: 'low', priority: 'medium' },
-      { value: `${filmName} location tour guide`, volume: 'very low', priority: 'medium' }
-    ]
-  };
-}
-
-/**
- * Generate location page keywords by substituting the location name
- */
-export function getLocationPageKeywords(locationName: string): LocationPageKeywords {
-  return {
-    primary: [
-      { value: `movies filmed in ${locationName}`, volume: 'high', priority: 'high' },
-      { value: `${locationName} filming locations`, volume: 'high', priority: 'high' },
-      { value: `films shot in ${locationName}`, volume: 'medium', priority: 'high' }
-    ],
-    secondary: [
-      { value: `famous scenes filmed in ${locationName}`, volume: 'medium', priority: 'medium' },
-      { value: `${locationName} in movies`, volume: 'medium', priority: 'medium' },
-      { value: `${locationName} movie tour`, volume: 'medium', priority: 'medium' }
-    ],
-    longTail: [
-      { value: `best filming locations to visit in ${locationName}`, volume: 'low', priority: 'high' },
-      { value: `self guided movie tour of ${locationName}`, volume: 'low', priority: 'medium' },
-      { value: `hidden movie locations in ${locationName}`, volume: 'very low', priority: 'medium' }
-    ]
-  };
-}
-
-/**
- * Generate franchise page keywords by substituting the franchise name
- */
-export function getFranchisePageKeywords(franchiseName: string): FranchisePageKeywords {
-  return {
-    primary: [
-      { value: `${franchiseName} filming locations`, volume: 'high', priority: 'high' },
-      { value: `where was ${franchiseName} filmed`, volume: 'high', priority: 'high' },
-      { value: `${franchiseName} movie locations`, volume: 'medium', priority: 'high' }
-    ],
-    secondary: [
-      { value: `visit ${franchiseName} locations`, volume: 'medium', priority: 'medium' },
-      { value: `${franchiseName} filming sites`, volume: 'medium', priority: 'medium' },
-      { value: `real ${franchiseName} locations`, volume: 'medium', priority: 'medium' }
-    ],
-    longTail: [
-      { value: `complete guide to ${franchiseName} filming locations`, volume: 'low', priority: 'high' },
-      { value: `best ${franchiseName} locations to visit`, volume: 'low', priority: 'medium' },
-      { value: `${franchiseName} filming locations map`, volume: 'low', priority: 'medium' }
-    ]
-  };
-}
-
-/**
- * Get optimal keywords for meta description based on page type and name
- */
-export function getOptimalMetaKeywords(pageType: 'film' | 'location' | 'franchise', name: string): string[] {
-  switch (pageType) {
-    case 'film':
-      return getFilmPageKeywords(name).primary.map(k => k.value);
-    case 'location':
-      return getLocationPageKeywords(name).primary.map(k => k.value);
-    case 'franchise':
-      return getFranchisePageKeywords(name).primary.map(k => k.value);
-    default:
-      return [];
+// Location-specific keyword patterns
+export const LOCATION_KEYWORDS = {
+  countries: {
+    'new zealand': ['middle earth', 'lord of the rings', 'hobbiton'],
+    'uk': ['british locations', 'england filming', 'scotland locations'],
+    'usa': ['hollywood locations', 'american filming', 'los angeles sets'],
+    'ireland': ['irish landscapes', 'emerald isle filming'],
+    'iceland': ['nordic locations', 'game of thrones'],
+    'spain': ['spanish locations', 'european filming'],
+    'france': ['french filming', 'paris locations'],
+    'germany': ['german locations', 'european productions'],
+    'canada': ['canadian filming', 'vancouver productions'],
+    'australia': ['australian locations', 'sydney filming']
+  },
+  cities: {
+    'london': ['london filming', 'british capital', 'uk movie locations'],
+    'new york': ['nyc filming', 'manhattan locations', 'big apple sets'],
+    'los angeles': ['hollywood filming', 'la locations', 'california sets'],
+    'paris': ['paris filming', 'french locations', 'city of light'],
+    'sydney': ['sydney filming', 'australian locations', 'harbor city'],
+    'dublin': ['dublin filming', 'irish capital', 'ireland locations'],
+    'berlin': ['berlin filming', 'german capital', 'european locations'],
+    'toronto': ['toronto filming', 'canadian locations', 'ontario sets']
   }
+};
+
+// Genre-specific keywords
+export const GENRE_KEYWORDS = {
+  action: ['action sequences', 'stunts', 'chase scenes', 'explosive'],
+  adventure: ['epic journeys', 'exploration', 'quest locations', 'adventure'],
+  drama: ['dramatic scenes', 'emotional', 'powerful locations', 'intimate'],
+  fantasy: ['magical locations', 'enchanting', 'mystical', 'otherworldly'],
+  horror: ['spooky locations', 'haunting', 'eerie', 'terrifying scenes'],
+  comedy: ['comedic scenes', 'funny moments', 'lighthearted', 'amusing'],
+  thriller: ['suspenseful', 'tense locations', 'edge-of-seat', 'gripping'],
+  scifi: ['futuristic', 'sci-fi locations', 'otherworldly', 'cutting-edge'],
+  romance: ['romantic locations', 'love scenes', 'beautiful', 'enchanting'],
+  war: ['historical locations', 'battlefield', 'wartime', 'historical']
+};
+
+// Seasonal and travel-related keywords
+export const TRAVEL_KEYWORDS = {
+  accessibility: ['visit', 'tour', 'accessible', 'open to public'],
+  planning: ['travel guide', 'visit planning', 'tour options', 'how to get there'],
+  seasonal: ['best time to visit', 'year-round', 'seasonal access'],
+  experience: ['film location tours', 'behind-the-scenes tours', 'guided visits']
+};
+
+/**
+ * Extract keywords based on content type and metadata
+ */
+export function extractContentKeywords(
+  meta: FilmMeta | BlogMeta | SeriesMeta,
+  contentType: 'film' | 'series' | 'blog'
+): KeywordData {
+  const keywords: KeywordData = {
+    primary: [...FILM_LOCATION_KEYWORDS.primary],
+    secondary: [...FILM_LOCATION_KEYWORDS.secondary],
+    longTail: [...FILM_LOCATION_KEYWORDS.longTail],
+    location: [],
+    genre: [],
+    semantic: []
+  };
+
+  // Add content-specific keywords
+  if (contentType === 'film' || contentType === 'series') {
+    const content = meta as FilmMeta;
+    
+    // Add title variations
+    keywords.primary.push(`${content.title.toLowerCase()} filming locations`);
+    keywords.primary.push(`where was ${content.title.toLowerCase()} filmed`);
+    
+    // Add genre keywords
+    if (content.genre) {
+      const genres = Array.isArray(content.genre) ? content.genre : [content.genre];
+      genres.forEach(genre => {
+        const genreKey = genre.toLowerCase() as keyof typeof GENRE_KEYWORDS;
+        if (GENRE_KEYWORDS[genreKey]) {
+          keywords.genre.push(...GENRE_KEYWORDS[genreKey]);
+        }
+      });
+    }
+
+    // Add director keywords
+    if (content.director) {
+      keywords.secondary.push(`${content.director} filming locations`);
+    }
+
+    // Add year keywords
+    if (content.year) {
+      keywords.secondary.push(`${content.year} filming locations`);
+    }
+  }
+
+  // Extract location keywords from coordinates
+  if ('coordinates' in meta && meta.coordinates) {
+    meta.coordinates.forEach(coord => {
+      if (coord.name) {
+        // Extract city/country from location names
+        const locationParts = coord.name.toLowerCase().split(',').map(s => s.trim());
+        locationParts.forEach(part => {
+          // Check if it matches known countries/cities
+          Object.entries(LOCATION_KEYWORDS.countries).forEach(([country, countryKeywords]) => {
+            if (part.includes(country)) {
+              keywords.location.push(...countryKeywords);
+            }
+          });
+          
+          Object.entries(LOCATION_KEYWORDS.cities).forEach(([city, cityKeywords]) => {
+            if (part.includes(city)) {
+              keywords.location.push(...cityKeywords);
+            }
+          });
+        });
+      }
+    });
+  }
+
+  // Add semantic/related keywords
+  keywords.semantic.push(
+    'movie tourism',
+    'film tourism',
+    'cinematic locations',
+    'movie destinations',
+    'film travel guide',
+    'movie set visits'
+  );
+
+  // Remove duplicates
+  Object.keys(keywords).forEach(key => {
+    keywords[key as keyof KeywordData] = [...new Set(keywords[key as keyof KeywordData])];
+  });
+
+  return keywords;
+}
+
+/**
+ * Generate keyword-optimized content snippets
+ */
+export function generateKeywordSnippets(title: string, keywords: KeywordData): {
+  titleVariations: string[];
+  descriptionStarters: string[];
+  callToActions: string[];
+} {
+  const titleVariations = [
+    `Where Was ${title} Filmed?`,
+    `${title} Filming Locations`,
+    `${title} Movie Locations Guide`,
+    `Discover ${title} Film Sites`,
+    `${title} Behind the Scenes Locations`
+  ];
+
+  const descriptionStarters = [
+    `Discover the breathtaking filming locations of ${title}`,
+    `Explore where ${title} was filmed`,
+    `Visit the iconic locations from ${title}`,
+    `Uncover the real-world filming sites of ${title}`,
+    `Journey to the stunning locations where ${title} was shot`,
+    `Find the exact filming locations from ${title}`
+  ];
+
+  const callToActions = [
+    'Plan your visit to these iconic film locations',
+    'Explore the filming sites with our complete guide',
+    'Discover the magic behind the movie locations',
+    'Visit these stunning filming destinations',
+    'See where the movie magic happened'
+  ];
+
+  return {
+    titleVariations,
+    descriptionStarters,
+    callToActions
+  };
+}
+
+/**
+ * Optimize text for specific keywords while maintaining readability
+ */
+export function optimizeTextForKeywords(
+  text: string,
+  targetKeywords: string[],
+  maxLength: number = 160
+): string {
+  let optimizedText = text;
+  
+  // Ensure primary keywords are included
+  const textLower = text.toLowerCase();
+  
+  // Add missing high-priority keywords if there's space
+  const missingKeywords = targetKeywords.filter(keyword => 
+    !textLower.includes(keyword.toLowerCase())
+  );
+
+  if (missingKeywords.length > 0 && optimizedText.length < maxLength - 20) {
+    const keywordToAdd = missingKeywords[0];
+    optimizedText = `${optimizedText} ${keywordToAdd}`;
+  }
+
+  // Trim to max length
+  if (optimizedText.length > maxLength) {
+    optimizedText = optimizedText.substring(0, maxLength - 3) + '...';
+  }
+
+  return optimizedText;
+}
+
+/**
+ * Calculate keyword density and SEO score
+ */
+export function calculateSEOScore(text: string, keywords: KeywordData): {
+  score: number;
+  suggestions: string[];
+  keywordDensity: { [key: string]: number };
+} {
+  const textLower = text.toLowerCase();
+  const words = textLower.split(/\s+/);
+  const totalWords = words.length;
+  
+  let score = 0;
+  const suggestions: string[] = [];
+  const keywordDensity: { [key: string]: number } = {};
+
+  // Check for primary keywords (high weight)
+  keywords.primary.forEach(keyword => {
+    const keywordLower = keyword.toLowerCase();
+    const occurrences = (textLower.match(new RegExp(keywordLower, 'g')) || []).length;
+    keywordDensity[keyword] = (occurrences / totalWords) * 100;
+    
+    if (occurrences > 0) {
+      score += 20;
+    } else {
+      suggestions.push(`Consider adding primary keyword: "${keyword}"`);
+    }
+  });
+
+  // Check for secondary keywords (medium weight)
+  keywords.secondary.forEach(keyword => {
+    const keywordLower = keyword.toLowerCase();
+    const occurrences = (textLower.match(new RegExp(keywordLower, 'g')) || []).length;
+    keywordDensity[keyword] = (occurrences / totalWords) * 100;
+    
+    if (occurrences > 0) {
+      score += 10;
+    }
+  });
+
+  // Length optimization
+  if (text.length >= 150 && text.length <= 160) {
+    score += 20;
+  } else if (text.length < 150) {
+    suggestions.push('Description could be longer for better SEO (150-160 chars optimal)');
+  } else {
+    suggestions.push('Description too long - may be truncated by search engines');
+  }
+
+  // Readability check
+  if (text.includes('discover') || text.includes('explore') || text.includes('visit')) {
+    score += 10;
+  } else {
+    suggestions.push('Consider adding action words like "discover", "explore", or "visit"');
+  }
+
+  return {
+    score: Math.min(score, 100),
+    suggestions,
+    keywordDensity
+  };
+}
+
+/**
+ * Get location-specific SEO recommendations
+ */
+export function getLocationSEORecommendations(locationName: string): {
+  keywords: string[];
+  phrases: string[];
+  localSEO: string[];
+} {
+  const location = locationName.toLowerCase();
+  let keywords: string[] = [];
+  let phrases: string[] = [];
+  let localSEO: string[] = [];
+
+  // Check for known locations
+  Object.entries(LOCATION_KEYWORDS.countries).forEach(([country, countryKeywords]) => {
+    if (location.includes(country)) {
+      keywords.push(...countryKeywords);
+      phrases.push(`filming in ${country}`, `${country} movie locations`);
+      localSEO.push(`${country} film tourism`, `visit ${country} filming sites`);
+    }
+  });
+
+  Object.entries(LOCATION_KEYWORDS.cities).forEach(([city, cityKeywords]) => {
+    if (location.includes(city)) {
+      keywords.push(...cityKeywords);
+      phrases.push(`${city} filming locations`, `movies filmed in ${city}`);
+      localSEO.push(`${city} movie tours`, `${city} film sites guide`);
+    }
+  });
+
+  // Generic location keywords if no specific match
+  if (keywords.length === 0) {
+    keywords.push('filming locations', 'movie locations', 'film sites');
+    phrases.push(`${locationName} filming`, `movies filmed at ${locationName}`);
+    localSEO.push(`visit ${locationName}`, `${locationName} tours`);
+  }
+
+  return {
+    keywords: [...new Set(keywords)],
+    phrases: [...new Set(phrases)],
+    localSEO: [...new Set(localSEO)]
+  };
 } 
