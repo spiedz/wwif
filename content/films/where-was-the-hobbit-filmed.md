@@ -87,16 +87,14 @@ bookingOptions: [
     "price": "Varies"
   }
 ]
-behindTheScenes: {
-  "intro": "The Hobbit trilogy, directed by Peter Jackson, was filmed entirely in New Zealand, showcasing the country's diverse and breathtaking landscapes. The production was a massive undertaking, employing thousands of local crew members and utilizing cutting-edge technology.",
-  "facts": [
-    "The Hobbiton movie set in Matamata was rebuilt with permanent materials, making it a lasting tourist attraction.",
-    "The three films were shot simultaneously over a period of 266 days.",
-    "The production team created over 5,000 costumes and used hundreds of prosthetics for the various races of Middle-earth.",
-    "Weta Workshop and Weta Digital created thousands of props and visual effects for the trilogy.",
-    "Peter Jackson used revolutionary 48 frames-per-second technology and 3D cameras to capture the films."
-  ]
-}
+behindTheScenes:
+  intro: "The Hobbit trilogy, directed by Peter Jackson, was filmed entirely in New Zealand, showcasing the country's diverse and breathtaking landscapes. The production was a massive undertaking, employing thousands of local crew members and utilizing cutting-edge technology."
+  facts:
+    - "The Hobbiton movie set in Matamata was rebuilt with permanent materials, making it a lasting tourist attraction."
+    - "The three films were shot simultaneously over a period of 266 days."
+    - "The production team created over 5,000 costumes and used hundreds of prosthetics for the various races of Middle-earth."
+    - "Weta Workshop and Weta Digital created thousands of props and visual effects for the trilogy."
+    - "Peter Jackson used revolutionary 48 frames-per-second technology and 3D cameras to capture the films."
 ---
 
 ## The Hobbit Trilogy: New Zealand's Middle-earth Adventure

@@ -1,80 +1,67 @@
-```
 ---
 title: "Where Was Lost in Starlight Filmed?"
 description: "Discover the enchanting filming locations of 'Lost in Starlight,' a film that transported audiences to breathtakingly beautiful and diverse settings across the globe."
 slug: "where-was-lost-in-starlight-filmed"
 date: "2024-10-27"
 year: 2024
-director: "Emma Roberts" # Assuming a director for the example
-genre: ["Romance", "Sci-Fi", "Drama"] # Assuming genres for the example
-posterImage: "https://image.tmdb.org/t/p/w500/lostinstarlight_poster.jpg" # Replace with actual poster URL
-coordinates: [
-  {     "lat": 45.5017,
-    "lng": -73.5673,
-    "name": "Montreal, Quebec, Canada",
-    "description": "Used for futuristic urban landscapes and key interior scenes."  },
-  { 
-    "lat": 46.8139,
-    "lng": -71.2080,
-    "name": "Quebec City, Quebec, Canada",
-    "description": "Provided charming, historic backdrops blended with sci-fi elements."  },
-  { 
-    "lat": 41.9028,
-    "lng": 12.4964,
-    "name": "Rome, Italy",
-    "description": "Iconic Roman landmarks are featured in pivotal romantic sequences."  },
-  { 
-    "lat": 35.6895,
-    "lng": 139.6917,
-    "name": "Tokyo, Japan",
-    "description": "Vibrant and futuristic cityscape featured in action-packed scenes."  },
-  { 
-    "lat": -33.8688,
-    "lng": 151.2093,
-    "name": "Sydney, New South Wales, Australia",
-    "description": "Served as a backdrop for stunning coastal and harbor views."  },
-  { 
-    "lat": 25.2048,
-    "lng": 55.2708,
-    "name": "Dubai, UAE",
-    "description": "Modern and visually striking architecture used for a significant sequence."  },
-  { 
-    "lat": 52.5200,
-    "lng": 13.4050,
-    "name": "Berlin, Germany",
-    "description": "Provided a mix of historical and modern locations for diverse scenes."  },
-  { 
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "name": "Paris, France",
-    "description": "The iconic city of love featured in romantic and reflective moments."
+director: "Emma Roberts"
+genre: ["Romance", "Sci-Fi", "Drama"]
+posterImage: "https://image.tmdb.org/t/p/w500/lostinstarlight_poster.jpg"
+coordinates:
+  - lat: 45.5017
+    lng: -73.5673
+    name: "Montreal, Quebec, Canada"
+    description: "Used for futuristic urban landscapes and key interior scenes."
+  - lat: 46.8139
+    lng: -71.2080
+    name: "Quebec City, Quebec, Canada"
+    description: "Provided charming, historic backdrops blended with sci-fi elements."
+  - lat: 41.9028
+    lng: 12.4964
+    name: "Rome, Italy"
+    description: "Iconic Roman landmarks are featured in pivotal romantic sequences."
+  - lat: 35.6895
+    lng: 139.6917
+    name: "Tokyo, Japan"
+    description: "Vibrant and futuristic cityscape featured in action-packed scenes."
+  - lat: -33.8688
+    lng: 151.2093
+    name: "Sydney, New South Wales, Australia"
+    description: "Served as a backdrop for stunning coastal and harbor views."
+  - lat: 25.2048
+    lng: 55.2708
+    name: "Dubai, UAE"
+    description: "Modern and visually striking architecture used for a significant sequence."
+  - lat: 52.5200
+    lng: 13.4050
+    name: "Berlin, Germany"
+    description: "Provided a mix of historical and modern locations for diverse scenes."
+  - lat: 48.8566
+    lng: 2.3522
+    name: "Paris, France"
+    description: "The iconic city of love featured in romantic and reflective moments."
 streamingServices:
-  -
-    "name": "NexStream" # Hypothetical Streaming Service
-    "url": "https://www.nexstream.com/lostinstarlight" # Hypothetical URL
-  -
-    "name": "CineVerse" # Hypothetical Streaming Service
-    "url": "https://www.cineverse.com/movie/lost-in-starlight" # Hypothetical URL
+  - name: "NexStream"
+    url: "https://www.nexstream.com/lostinstarlight"
+  - name: "CineVerse"
+    url: "https://www.cineverse.com/movie/lost-in-starlight"
 bookingOptions:
-  -
-    "name": "Montreal Film Tour" # Hypothetical Tour
-    "url": "https://www.montrealfilmtours.com/lostinstarlight" # Hypothetical URL
-    "type": "tour"
-    "price": "$55"
-    "isPartner": true
-  -
-    "name": "Booking.com - Rome Hotels"
-    "url": "https://www.booking.com/searchresults.html?ss=Rome"
-    "type": "booking"
-    "price": "$150/night"
-  -
-    "name": "Airbnb - Tokyo Stays"
-    "url": "https://www.airbnb.com/s/Tokyo"
-    "type": "booking"
-    "price": "$90/night"
+  - name: "Montreal Film Tour"
+    url: "https://www.montrealfilmtours.com/lostinstarlight"
+    type: "tour"
+    price: "$55"
+    isPartner: true
+  - name: "Booking.com - Rome Hotels"
+    url: "https://www.booking.com/searchresults.html?ss=Rome"
+    type: "booking"
+    price: "$150/night"
+  - name: "Airbnb - Tokyo Stays"
+    url: "https://www.airbnb.com/s/Tokyo"
+    type: "booking"
+    price: "$90/night"
 behindTheScenes:
-  "intro": "'Lost in Starlight' took its production across continents to capture the unique blend of futuristic wonder and heartfelt human connection central to its story. The team meticulously selected locations that would enhance the visual narrative and immerse viewers in its innovative world.",
-  "facts":
+  intro: "'Lost in Starlight' took its production across continents to capture the unique blend of futuristic wonder and heartfelt human connection central to its story. The team meticulously selected locations that would enhance the visual narrative and immerse viewers in its innovative world."
+  facts:
     - "Filming in multiple international locations required a complex logistical operation involving diverse crews and permits."
     - "Practical effects were extensively used alongside CGI to create the film's distinctive look and feel."
     - "The production team worked closely with local authorities in each city to ensure a smooth and efficient filming process."

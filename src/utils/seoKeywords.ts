@@ -370,4 +370,73 @@ export function getLocationSEORecommendations(locationName: string): {
     phrases: [...new Set(phrases)],
     localSEO: [...new Set(localSEO)]
   };
+}
+
+/**
+ * Get film-specific page keywords for meta utils
+ */
+export function getFilmPageKeywords(filmTitle: string): {
+  primary: Array<{value: string; priority: string}>;
+  secondary: Array<{value: string; priority: string}>;
+} {
+  const titleLower = filmTitle.toLowerCase();
+  
+  return {
+    primary: [
+      { value: `where was ${titleLower} filmed`, priority: 'high' },
+      { value: `${titleLower} filming locations`, priority: 'high' },
+      { value: `${titleLower} movie locations`, priority: 'medium' }
+    ],
+    secondary: [
+      { value: `${titleLower} behind the scenes`, priority: 'medium' },
+      { value: `${titleLower} real locations`, priority: 'medium' },
+      { value: `visit ${titleLower} locations`, priority: 'low' }
+    ]
+  };
+}
+
+/**
+ * Get location-specific page keywords for meta utils
+ */
+export function getLocationPageKeywords(locationName: string): {
+  primary: Array<{value: string; priority: string}>;
+  secondary: Array<{value: string; priority: string}>;
+} {
+  const locationLower = locationName.toLowerCase();
+  
+  return {
+    primary: [
+      { value: `movies filmed in ${locationLower}`, priority: 'high' },
+      { value: `${locationLower} filming locations`, priority: 'high' },
+      { value: `${locationLower} movie locations`, priority: 'medium' }
+    ],
+    secondary: [
+      { value: `${locationLower} film tourism`, priority: 'medium' },
+      { value: `visit ${locationLower} filming sites`, priority: 'medium' },
+      { value: `${locationLower} movie tours`, priority: 'low' }
+    ]
+  };
+}
+
+/**
+ * Get franchise-specific page keywords for meta utils
+ */
+export function getFranchisePageKeywords(franchiseName: string): {
+  primary: Array<{value: string; priority: string}>;
+  secondary: Array<{value: string; priority: string}>;
+} {
+  const franchiseLower = franchiseName.toLowerCase();
+  
+  return {
+    primary: [
+      { value: `${franchiseLower} filming locations`, priority: 'high' },
+      { value: `where was ${franchiseLower} filmed`, priority: 'high' },
+      { value: `${franchiseLower} movie locations`, priority: 'medium' }
+    ],
+    secondary: [
+      { value: `${franchiseLower} film sites`, priority: 'medium' },
+      { value: `visit ${franchiseLower} locations`, priority: 'medium' },
+      { value: `${franchiseLower} behind the scenes`, priority: 'low' }
+    ]
+  };
 } 

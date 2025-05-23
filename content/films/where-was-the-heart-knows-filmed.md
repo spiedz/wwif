@@ -1,47 +1,25 @@
-```
 ---
 title: "Where Was The Heart Knows Filmed?"
 description: "Discover the enchanting filming locations of The Heart Knows, a film that beautifully captures the essence of its settings."
 slug: "where-was-the-heart-knows-filmed"
 date: "2023-10-27"
 year: 2023
-director: "Unknown" # Replace with actual director if known
-genre: ["Romance", "Drama"] # Replace with actual genres if known
+director: "Unknown"
+genre: ["Romance", "Drama"]
 posterImage: "https://image.tmdb.org/t/p/w500/7kmrAUFLbOOs70xmGJbBsmkDlel.jpg"
-coordinates: [
-  { 
-    "lat": 35.6895, 
-    "lng": 139.6917, 
-    "name": "Tokyo, Japan", 
-    "description": "Likely a key location given the film's potential setting, showcasing the blend of modern cityscapes and traditional charm." # Placeholder - adjust description based on actual locations
-  }
-  # Add more coordinates as actual locations are confirmed
-]
-streamingServices: [
-  # Add streaming services once known
-  # {
-  #  "name": "Streaming Service Name",
-  #  "url": "URL to streaming service"
-  # }
-]
-bookingOptions: [
-  # Add booking options if locations are publically accessible or tours exist
-  # {
-  #  "name": "Tour or Booking Name",
-  #  "url": "URL for booking or tour",
-  #  "type": "tour" or "booking",
-  #  "price": "Price information"
-  # }
-]
-behindTheScenes: {
-  "intro": "While specific details about the filming of 'The Heart Knows' are still emerging, the film promises to immerse viewers in its emotionally rich narrative, likely utilizing locations that resonate with the story's themes of love and discovery.  Much of the magic happens behind the scenes, where the crew works to bring the script to life through careful selection and utilization of settings.",
-  "facts": [
-    "Specific filming locations are anticipated to be announced closer to the film's release.", # Placeholder - replace or remove with actual facts
-    "The director likely chose locations that visually complement the film's romantic and dramatic elements.", # Placeholder
-    "Behind-the-scenes efforts focus on capturing the authentic atmosphere of the chosen settings." # Placeholder
-    # Add more interesting facts once known
-  ]
-}
+coordinates:
+  - lat: 35.6895
+    lng: 139.6917
+    name: "Tokyo, Japan"
+    description: "Likely a key location given the film's potential setting, showcasing the blend of modern cityscapes and traditional charm."
+streamingServices: []
+bookingOptions: []
+behindTheScenes:
+  intro: "While specific details about the filming of 'The Heart Knows' are still emerging, the film promises to immerse viewers in its emotionally rich narrative, likely utilizing locations that resonate with the story's themes of love and discovery. Much of the magic happens behind the scenes, where the crew works to bring the script to life through careful selection and utilization of settings."
+  facts:
+    - "Specific filming locations are anticipated to be announced closer to the film's release."
+    - "The director likely chose locations that visually complement the film's romantic and dramatic elements."
+    - "Behind-the-scenes efforts focus on capturing the authentic atmosphere of the chosen settings."
 ---
 
 <TheHeartKnowsGuide />

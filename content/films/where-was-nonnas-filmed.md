@@ -75,16 +75,14 @@ bookingOptions: [
     "price": "from €90/night"
   }
 ]
-behindTheScenes: {
-  "intro": "Film Nonnas (original title: Le mie ragazze di carta) offers a heartfelt and humorous glimpse into 1970s Italy, seen through the eyes of young Tiberio as his family relocates. The film's authentic period feel is masterfully achieved by its choice of filming locations, primarily nestled within the Veneto region, with Treviso at its core. This area's timeless charm has also attracted other notable productions, highlighting its cinematic versatility.",
-  "facts": [
-    "The film is predominantly set and filmed in Treviso and its surrounding areas in Italy's Veneto region, authentically recreating the atmosphere of the late 1970s with meticulous attention to detail.",
-    "Its original Italian title, 'Le mie ragazze di carta' ('My Paper Girls'), directly references the pin-up magazines that spark Tiberio's coming-of-age journey and challenge local sensibilities.",
-    "Film Nonnas explores themes of adolescence, family bonds, rural-to-urban transition, and the evolving cultural landscape of Italy, particularly regarding censorship and the rise of adult cinema.",
-    "Director Luca Lucini skillfully blends comedy with poignant moments, focusing on Tiberio's personal growth amidst the backdrop of significant societal shifts.",
-    "Many of the film's contemplative and adventurous sequences featuring Tiberio were captured along the scenic Sile River, a dominant natural landmark that enhances Treviso's picturesque quality."
-  ]
-}
+behindTheScenes:
+  intro: "Film Nonnas (original title: Le mie ragazze di carta) offers a heartfelt and humorous glimpse into 1970s Italy, seen through the eyes of young Tiberio as his family relocates. The film's authentic period feel is masterfully achieved by its choice of filming locations, primarily nestled within the Veneto region, with Treviso at its core. This area's timeless charm has also attracted other notable productions, highlighting its cinematic versatility."
+  facts:
+    - "The film is predominantly set and filmed in Treviso and its surrounding areas in Italy's Veneto region, authentically recreating the atmosphere of the late 1970s with meticulous attention to detail."
+    - "Its original Italian title, 'Le mie ragazze di carta' ('My Paper Girls'), directly references the pin-up magazines that spark Tiberio's coming-of-age journey and challenge local sensibilities."
+    - "Film Nonnas explores themes of adolescence, family bonds, rural-to-urban transition, and the evolving cultural landscape of Italy, particularly regarding censorship and the rise of adult cinema."
+    - "Director Luca Lucini skillfully blends comedy with poignant moments, focusing on Tiberio's personal growth amidst the backdrop of significant societal shifts."
+    - "Many of the film's contemplative and adventurous sequences featuring Tiberio were captured along the scenic Sile River, a dominant natural landmark that enhances Treviso's picturesque quality."
 ---
 
 <FilmNonnasGuide />
