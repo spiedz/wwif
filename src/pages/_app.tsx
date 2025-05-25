@@ -1,6 +1,7 @@
 import '../../styles/globals.css';
 import type { AppProps, AppContext } from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 import { getOrganizationSchema } from '../utils/schema';
 import Layout from '../components/Layout';
 import React from 'react';
@@ -43,12 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         {/* Google AdSense account */}
         <meta name="google-adsense-account" content="ca-pub-1419518181504900" />
         
-        {/* Google AdSense script */}
-        <script 
-          async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1419518181504900"
-          crossOrigin="anonymous"
-        />
+        {/* Google AdSense script - moved to Script component below */}
         
         {/* Global JSON-LD schema for the organization */}
         <script
@@ -61,6 +57,28 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:site" content="@wherewasitfilmed" />
       </Head>
+      
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-TY8J6W6KBM"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TY8J6W6KBM');
+        `}
+      </Script>
+      
+      {/* Google AdSense */}
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1419518181504900"
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+      />
+      
       <Layout>
         <Component {...pageProps} />
       </Layout>

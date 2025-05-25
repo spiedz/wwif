@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { FilmMeta } from '../types/content';
+import SafeImage from './SafeImage';
 
 interface FilmHeroProps {
   film: FilmMeta;
@@ -13,7 +13,7 @@ const FilmHero: React.FC<FilmHeroProps> = ({ film, posterImage }) => {
   
   // Get a background image based on the first location if no poster
   const defaultBgImage = film.coordinates && film.coordinates.length > 0
-    ? `https://maps.googleapis.com/maps/api/staticmap?center=${film.coordinates[0][0]},${film.coordinates[0][1]}&zoom=12&size=1200x600&scale=2&maptype=roadmap&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`
+    ? `https://maps.googleapis.com/maps/api/staticmap?center=${film.coordinates[0].lat},${film.coordinates[0].lng}&zoom=12&size=1200x600&scale=2&maptype=roadmap&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`
     : '/images/default-film-bg.jpg';
 
   const backgroundImage = posterImage || defaultBgImage;
@@ -51,16 +51,15 @@ const FilmHero: React.FC<FilmHeroProps> = ({ film, posterImage }) => {
       <div className="h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] relative">
         {/* Background image using Next.js Image */}
         <div className="absolute inset-0">
-          <Image 
+          <SafeImage 
             src={backgroundImage}
             alt={`${film.title} backdrop`}
             fill
             priority
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQIGAwAAAAAAAAAAAAABAgADBAUGITESE1GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBdmFrU/YzVhUSqrEbg6H9igCaf/9k="
-            className={`object-cover transition-opacity ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+            className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
-            onLoadingComplete={() => setImageLoaded(true)}
+            onLoad={() => setImageLoaded(true)}
+            fallbackSrc="/images/default-location.jpg"
           />
           
           {/* Show a blurred low-quality image placeholder if the real image is loading */}

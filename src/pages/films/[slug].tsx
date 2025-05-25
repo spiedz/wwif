@@ -11,6 +11,7 @@ import AffiliateLink from '../../components/AffiliateLink';
 import HarryPotterGuide from '../../components/HarryPotterGuide';
 import CommentSection from '../../components/CommentSection';
 import SEO from '../../components/SEO';
+import SafeImage from '../../components/SafeImage';
 import { getFilmSchema, getFilmingLocationSchema, getBreadcrumbSchema, getVideoObjectSchema, combineSchemas } from '../../utils/schema';
 import FilmLocationsGuide from '../../components/FilmLocationsGuide';
 import { extractTravelTips, extractTrivia } from '../../utils/locationFormatters';
@@ -28,6 +29,18 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
   const router = useRouter();
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState<'locations' | 'overview'>('overview');
+  
+  // Handle cases where film data might not be loaded yet
+  if (!film || !film.meta) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading film details...</p>
+        </div>
+      </div>
+    );
+  }
   
   /**
    * Checks if the film has valid coordinates data
@@ -206,41 +219,39 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
                 <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
                 
                 {/* Film Introduction or custom component */}
-                {!useRegionLayout && (
-                  <div className="relative">
-                    <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center group">
-                      <svg className="w-7 h-7 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-                      </svg>
-                      <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">About <span className="text-primary">{film.meta.title}</span></span>
-                    </h2>
-                    <div className="w-32 h-1 bg-gradient-to-r from-primary/20 to-primary/60 rounded-full mb-8"></div>
-                    
-                    {/* Show trailer if available */}
-                    {film.meta.trailer && (
-                      <div className="mb-8">
-                        <h3 className="text-xl font-semibold mb-4 flex items-center">
-                          <svg className="w-5 h-5 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                          </svg>
-                          {film.meta.trailer.title || "Official Trailer"}
-                        </h3>
-                        <VideoTrailer 
-                          video={film.meta.trailer} 
-                          filmTitle={film.meta.title}
-                          showSchemaMarkup={false} // Schema is already added at page level
-                        />
-                      </div>
-                    )}
-                    
-                    <div className="prose prose-lg max-w-none mb-8 prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
-                      {renderContentWithComponents()}
+                <div className="relative">
+                  <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center group">
+                    <svg className="w-7 h-7 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                    </svg>
+                    <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">About <span className="text-primary">{film.meta.title}</span></span>
+                  </h2>
+                  <div className="w-32 h-1 bg-gradient-to-r from-primary/20 to-primary/60 rounded-full mb-8"></div>
+                  
+                  {/* Show trailer if available */}
+                  {film.meta.trailer && (
+                    <div className="mb-8">
+                      <h3 className="text-xl font-semibold mb-4 flex items-center">
+                        <svg className="w-5 h-5 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                        </svg>
+                        {film.meta.trailer.title || "Official Trailer"}
+                      </h3>
+                      <VideoTrailer 
+                        video={film.meta.trailer} 
+                        filmTitle={film.meta.title}
+                        showSchemaMarkup={false} // Schema is already added at page level
+                      />
                     </div>
+                  )}
+                  
+                  <div className="prose prose-lg max-w-none mb-8 prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
+                    {renderContentWithComponents()}
                   </div>
-                )}
+                </div>
                 
                 {/* Quick Film Facts */}
-                {!hasHarryPotterGuide && !useRegionLayout && (
+                {!hasHarryPotterGuide && (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 bg-gray-50 p-6 rounded-xl border border-gray-100">
                     <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                       <svg className="w-10 h-10 text-primary mb-3" fill="currentColor" viewBox="0 0 20 20">
@@ -270,8 +281,8 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
                   </div>
                 )}
                 
-                {/* Behind the Scenes section - only show if not using region layout */}
-                {!useRegionLayout && film.meta.behindTheScenes && (
+                {/* Behind the Scenes section */}
+                {film.meta.behindTheScenes && (
                   <section className="mt-12 mb-4 transform transition-all duration-500 hover:translate-y-[-5px]">
                     <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
                       <svg className="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -319,13 +330,12 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                       {locationImages.map((image, index) => (
                         <div key={index} className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-48 transform hover:scale-[1.02]">
-                          <img 
+                          <SafeImage 
                             src={image.url} 
                             alt={image.name} 
-                            className="w-full h-full object-cover transition-transform duration-3000 group-hover:scale-110"
-                            onError={(e) => {
-                              e.currentTarget.src = '/images/default-location.jpg';
-                            }}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            fallbackSrc="/images/default-location.jpg"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                             <p className="text-white font-medium px-4 py-3 text-sm">{image.name}</p>
@@ -587,15 +597,6 @@ export default function FilmPage({ film, locationBacklinks }: FilmPageProps & { 
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Temporarily disable film pages to prevent build errors
-  // TODO: Fix component import issues causing "Element type is invalid" errors
-  return {
-    paths: [],
-    fallback: false
-  };
-  
-  // Original code commented out:
-  /*
   try {
     const slugs = await getFilmSlugs();
     console.log(`Found ${slugs.length} film slugs for static generation`);
@@ -609,7 +610,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     console.error('Error in getStaticPaths for films:', error);
     return { paths: [], fallback: true };
   }
-  */
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

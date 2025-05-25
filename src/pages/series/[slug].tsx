@@ -7,6 +7,7 @@ import SeriesEpisodesDisplay from '../../components/SeriesEpisodesDisplay';
 import { getSeriesBySlug, getSeriesSlugs } from '../../lib/server/serverMarkdown';
 import { TVSeries } from '../../types/series';
 import SEO from '../../components/SEO';
+import SafeImage from '../../components/SafeImage';
 import CommentSection from '../../components/CommentSection';
 // Removed location utilities import
 import Link from 'next/link';
@@ -120,10 +121,12 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
         {/* Hero background image */}
         <div className="absolute inset-0 opacity-50">
           {meta.bannerImage && (
-            <img 
+            <SafeImage 
               src={meta.bannerImage} 
               alt={meta.title} 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              fallbackSrc="/images/default-location.jpg"
             />
           )}
           {/* Overlay gradient */}
@@ -146,11 +149,15 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
             {/* Poster image */}
             <div className="hidden sm:block sm:col-span-3 lg:col-span-2">
               {meta.posterImage && (
-                <img 
-                  src={meta.posterImage} 
-                  alt={meta.title} 
-                  className="w-full rounded-lg shadow-2xl transform -translate-y-8 aspect-[2/3] object-cover"
-                />
+                <div className="relative w-full aspect-[2/3] rounded-lg shadow-2xl transform -translate-y-8 overflow-hidden">
+                  <SafeImage 
+                    src={meta.posterImage} 
+                    alt={meta.title} 
+                    fill
+                    className="object-cover"
+                    fallbackSrc="/images/default-location.jpg"
+                  />
+                </div>
               )}
             </div>
             
@@ -457,15 +464,6 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Temporarily disable series pages to prevent build errors
-  // TODO: Fix component import issues causing "Element type is invalid" errors
-  return {
-    paths: [],
-    fallback: false
-  };
-  
-  // Original code commented out:
-  /*
   try {
     const slugs = await getSeriesSlugs();
     console.log(`Found ${slugs.length} series slugs for static generation`);
@@ -479,7 +477,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     console.error('Error in getStaticPaths for series:', error);
     return { paths: [], fallback: true };
   }
-  */
 };
 
 export const getStaticProps: GetStaticProps<SeriesPageProps, Params> = async ({ params }) => {

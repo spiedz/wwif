@@ -44,7 +44,7 @@ export function processMixedContent(content: string): string {
     // Match opening tags with attributes
     const openRegex = new RegExp(`<${tag}\\s+[^>]*>`, 'g');
     processedContent = processedContent.replace(openRegex, (match) => {
-      const placeholder = `__HTML_PLACEHOLDER_${placeholderIndex++}__`;
+      const placeholder = `HTMLPLACEHOLDER${placeholderIndex++}HTMLPLACEHOLDER`;
       placeholders.push({ placeholder, original: match });
       return placeholder;
     });
@@ -52,7 +52,7 @@ export function processMixedContent(content: string): string {
     // Match closing tags
     const closeRegex = new RegExp(`</${tag}>`, 'g');
     processedContent = processedContent.replace(closeRegex, (match) => {
-      const placeholder = `__HTML_PLACEHOLDER_${placeholderIndex++}__`;
+      const placeholder = `HTMLPLACEHOLDER${placeholderIndex++}HTMLPLACEHOLDER`;
       placeholders.push({ placeholder, original: match });
       return placeholder;
     });
@@ -60,7 +60,7 @@ export function processMixedContent(content: string): string {
     // Match self-closing tags
     const selfClosingRegex = new RegExp(`<${tag}\\s+[^>]*/>`, 'g');
     processedContent = processedContent.replace(selfClosingRegex, (match) => {
-      const placeholder = `__HTML_PLACEHOLDER_${placeholderIndex++}__`;
+      const placeholder = `HTMLPLACEHOLDER${placeholderIndex++}HTMLPLACEHOLDER`;
       placeholders.push({ placeholder, original: match });
       return placeholder;
     });
@@ -71,7 +71,9 @@ export function processMixedContent(content: string): string {
   
   // Restore HTML elements from placeholders
   placeholders.forEach(({ placeholder, original }) => {
-    processedContent = processedContent.replace(placeholder, original);
+    // Use global replace to ensure all instances are replaced
+    const regex = new RegExp(placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+    processedContent = processedContent.replace(regex, original);
   });
   
   return processedContent;
@@ -96,18 +98,20 @@ function basicMarkdownToHtml(markdown: string): string {
   html = html.replace(/^##### (.+)$/gm, '<h5>$1</h5>');
   html = html.replace(/^###### (.+)$/gm, '<h6>$1</h6>');
   
-  // Bold
+  // Bold (process before italic to avoid conflicts)
   html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
   
-  // Italic
-  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  html = html.replace(/_(.+?)_/g, '<em>$1</em>');
+  // Italic (be more careful with single asterisks and underscores)
+  // Only match if not part of a bold pattern
+  html = html.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, '<em>$1</em>');
+  html = html.replace(/(?<!_)_(?!_)(.+?)(?<!_)_(?!_)/g, '<em>$1</em>');
   
   // Links
   html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
   
-  // Images not handled here as they're preserved by the placeholder system
+  // Images (handle markdown images)
+  html = html.replace(/!\[(.+?)\]\((.+?)\)/g, '<img src="$2" alt="$1" />');
   
   // Lists - unordered
   html = html.replace(/^\* (.+)$/gm, '<li>$1</li>');
@@ -116,14 +120,21 @@ function basicMarkdownToHtml(markdown: string): string {
   // Lists - ordered
   html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
   
+  // Blockquotes
+  html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
+  
   // Paragraphs (only apply to text not already in HTML tags)
   const paragraphs = html.split('\n\n');
   html = paragraphs.map(paragraph => {
     // Skip if it's a placeholder or already has HTML tags
-    if (paragraph.trim().startsWith('__HTML_PLACEHOLDER_') || 
+    if (paragraph.trim().includes('HTMLPLACEHOLDER') || 
         paragraph.trim().startsWith('<') ||
         paragraph.trim() === '') {
       return paragraph;
+    }
+    // Don't wrap list items in paragraphs
+    if (paragraph.includes('<li>')) {
+      return `<ul>${paragraph}</ul>`;
     }
     return `<p>${paragraph}</p>`;
   }).join('\n\n');

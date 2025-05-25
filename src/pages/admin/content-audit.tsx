@@ -46,38 +46,92 @@ interface ContentAuditProps {
   blogPosts: BlogPost[];
 }
 
-// Content quality scoring algorithm
+// Enhanced content quality scoring algorithm (matches API)
 const calculateQualityScore = (item: any, type: string): number => {
   let score = 0;
   
-  // Title quality (0-20 points)
-  if (item.title && item.title.length > 0) {
-    score += item.title.length >= 10 && item.title.length <= 60 ? 20 : 10;
-  }
+  const content = item.content || '';
+  const wordCount = content.split(/\s+/).filter((word: string) => word.length > 0).length;
   
-  // Description quality (0-20 points)
+  // Word count scoring (0-25 points) - More lenient
+  if (wordCount > 1500) score += 25;
+  else if (wordCount > 800) score += 23;
+  else if (wordCount > 400) score += 20;
+  else if (wordCount > 200) score += 18;
+  else if (wordCount > 100) score += 15;
+  else if (wordCount > 50) score += 10;
+  else score += 5;
+  
+  // Meta description quality (0-15 points)
   if (item.description) {
-    score += item.description.length >= 120 && item.description.length <= 160 ? 20 : 10;
+    const metaLength = item.description.length;
+    if (metaLength >= 120 && metaLength <= 160) score += 15;
+    else if (metaLength >= 100 && metaLength <= 180) score += 12;
+    else if (metaLength >= 80 && metaLength <= 200) score += 10;
+    else if (metaLength > 0) score += 7;
   }
   
-  // Content length (0-25 points)
-  const wordCount = item.content ? item.content.split(' ').length : 0;
-  if (wordCount > 1000) score += 25;
-  else if (wordCount > 500) score += 20;
-  else if (wordCount > 300) score += 15;
-  else if (wordCount > 100) score += 10;
+  // Rich metadata content (0-20 points) - New section for film/series content
+  if (type === 'film' || type === 'series') {
+    // Coordinates/locations (0-8 points)
+    if (item.meta?.coordinates) {
+      const coordCount = item.meta.coordinates.length;
+      if (coordCount >= 8) score += 8;
+      else if (coordCount >= 5) score += 6;
+      else if (coordCount >= 3) score += 4;
+      else if (coordCount >= 1) score += 2;
+    }
+    
+    // Behind the scenes content (0-6 points)
+    if (item.meta?.behindTheScenes) {
+      if (item.meta.behindTheScenes.facts && item.meta.behindTheScenes.facts.length >= 3) score += 6;
+      else if (item.meta.behindTheScenes.facts && item.meta.behindTheScenes.facts.length >= 1) score += 4;
+      else if (item.meta.behindTheScenes.intro) score += 2;
+    }
+    
+    // Streaming/booking options (0-6 points)
+    let optionsCount = 0;
+    if (item.meta?.streamingServices) optionsCount += item.meta.streamingServices.length;
+    if (item.meta?.bookingOptions) optionsCount += item.meta.bookingOptions.length;
+    if (optionsCount >= 5) score += 6;
+    else if (optionsCount >= 3) score += 4;
+    else if (optionsCount >= 1) score += 2;
+  }
   
-  // Media presence (0-15 points)
-  if (item.meta?.posterImage || item.posterImage) score += 10;
-  if (item.meta?.coordinates && item.meta.coordinates.length > 0) score += 5;
+  // Images and media (0-10 points)
+  const hasImages = content.includes('<img') || content.includes('![') || item.meta?.posterImage;
+  if (hasImages) score += 8;
+  if (item.meta?.posterImage) score += 2; // Extra for poster
   
-  // SEO elements (0-20 points)
-  if (item.meta?.genre && item.meta.genre.length > 0) score += 5;
-  if (item.meta?.director || item.meta?.author) score += 5;
-  if (item.meta?.year || item.meta?.date) score += 5;
-  if (item.slug && item.slug.length > 0) score += 5;
+  // Structure and headings (0-10 points)
+  const headingCount = (content.match(/#+ /g) || []).length;
+  if (headingCount >= 5) score += 10;
+  else if (headingCount >= 3) score += 8;
+  else if (headingCount >= 2) score += 6;
+  else if (headingCount >= 1) score += 4;
   
-  return Math.min(Math.round(score), 100);
+  // Links (0-10 points)
+  const linkCount = (content.match(/\[.*?\]\(.*?\)/g) || []).length;
+  if (linkCount >= 8) score += 10;
+  else if (linkCount >= 5) score += 8;
+  else if (linkCount >= 3) score += 6;
+  else if (linkCount >= 1) score += 4;
+  
+  // Type-specific metadata scoring (0-10 points)
+  if (type === 'film' || type === 'series') {
+    if (item.meta?.genre && item.meta.genre.length > 0) score += 3;
+    if (item.meta?.director || item.meta?.creator) score += 2;
+    if (item.meta?.year) score += 2;
+    if (item.meta?.countries && item.meta.countries.length > 0) score += 2;
+    if (item.slug && item.slug.length > 10) score += 1;
+  } else if (type === 'blog') {
+    if (item.meta?.tags && item.meta.tags.length > 0) score += 4;
+    if (item.meta?.category) score += 3;
+    if (item.meta?.author) score += 2;
+    if (item.meta?.datePublished) score += 1;
+  }
+  
+  return Math.min(100, Math.round(score));
 };
 
 const convertToContentItem = (item: any, type: 'film' | 'series' | 'blog'): ContentItem | null => {
@@ -132,7 +186,36 @@ const convertToContentItem = (item: any, type: 'film' | 'series' | 'blog'): Cont
     });
   }
 
-  const wordCount = item.content ? item.content.split(' ').length : 0;
+  // Enhanced word count that includes rich frontmatter content
+  let totalWordCount = item.content ? item.content.split(/\s+/).filter((word: string) => word.length > 0).length : 0;
+  
+  // Add words from rich metadata for films/series
+  if (type === 'film' || type === 'series') {
+    // Count words in descriptions and behind-the-scenes content
+    if (description) {
+      totalWordCount += description.split(/\s+/).filter((word: string) => word.length > 0).length;
+    }
+    
+    if (coordinates && coordinates.length > 0) {
+      coordinates.forEach((coord: any) => {
+        if (coord.description) {
+          totalWordCount += coord.description.split(/\s+/).filter((word: string) => word.length > 0).length;
+        }
+      });
+    }
+    
+    if (item.meta?.behindTheScenes) {
+      if (item.meta.behindTheScenes.intro) {
+        totalWordCount += item.meta.behindTheScenes.intro.split(/\s+/).filter((word: string) => word.length > 0).length;
+      }
+      if (item.meta.behindTheScenes.facts) {
+        item.meta.behindTheScenes.facts.forEach((fact: string) => {
+          totalWordCount += fact.split(/\s+/).filter((word: string) => word.length > 0).length;
+        });
+      }
+    }
+  }
+
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
   
   return {
@@ -141,7 +224,7 @@ const convertToContentItem = (item: any, type: 'film' | 'series' | 'blog'): Cont
     slug: finalSlug,
     type,
     description: description,
-    wordCount,
+    wordCount: totalWordCount,
     qualityScore: calculateQualityScore({
       title,
       description,
