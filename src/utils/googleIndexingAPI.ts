@@ -13,10 +13,17 @@ export class GoogleIndexingAPI {
     
     if (serviceAccountKeyString) {
       try {
+        // Try to parse as JSON first
         serviceAccountKey = JSON.parse(serviceAccountKeyString);
       } catch (error) {
-        console.error('Error parsing GOOGLE_SERVICE_ACCOUNT_KEY for indexing:', error);
-        throw new Error('Invalid GOOGLE_SERVICE_ACCOUNT_KEY format');
+        // If JSON parsing fails, try base64 decoding first
+        try {
+          const decodedString = Buffer.from(serviceAccountKeyString, 'base64').toString('utf8');
+          serviceAccountKey = JSON.parse(decodedString);
+        } catch (base64Error) {
+          console.error('Error parsing GOOGLE_SERVICE_ACCOUNT_KEY for indexing (tried both JSON and base64):', error, base64Error);
+          throw new Error('Invalid GOOGLE_SERVICE_ACCOUNT_KEY format');
+        }
       }
     } else {
       throw new Error('GOOGLE_SERVICE_ACCOUNT_KEY environment variable is required for indexing API');

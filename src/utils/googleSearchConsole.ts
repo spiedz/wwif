@@ -362,9 +362,16 @@ export const getGSCConfig = (): GSCConfig => {
   
   if (serviceAccountKeyString) {
     try {
+      // Try to parse as JSON first
       serviceAccountKey = JSON.parse(serviceAccountKeyString);
     } catch (error) {
-      console.error('Error parsing GOOGLE_SERVICE_ACCOUNT_KEY:', error);
+      // If JSON parsing fails, try base64 decoding first
+      try {
+        const decodedString = Buffer.from(serviceAccountKeyString, 'base64').toString('utf8');
+        serviceAccountKey = JSON.parse(decodedString);
+      } catch (base64Error) {
+        console.error('Error parsing GOOGLE_SERVICE_ACCOUNT_KEY (tried both JSON and base64):', error, base64Error);
+      }
     }
   }
 
