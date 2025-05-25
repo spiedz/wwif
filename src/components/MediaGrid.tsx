@@ -1,6 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MediaItem } from '../utils/locationUtils';
+
+// Define MediaItem type locally since locationUtils is removed
+interface MediaItem {
+  type: 'film' | 'series';
+  slug: string;
+  title: string;
+  year: string;
+  description?: string;
+  posterImage?: string;
+}
 
 interface MediaGridProps {
   items: MediaItem[];

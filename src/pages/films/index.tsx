@@ -19,8 +19,8 @@ import {
   encodeFilterState,
   decodeFilterState
 } from '../../utils/contentFiltering';
-import BannerAd from '../../components/ads/BannerAd';
-import { AD_SLOTS } from '../../utils/adManager';
+// import BannerAd from '../../components/ads/BannerAd';
+// import { AD_SLOTS } from '../../utils/adManager';
 
 interface FilmsPageProps {
   allFilms: Content<FilmMeta>[];
@@ -189,8 +189,8 @@ export default function FilmsPage({ allFilms, allSeries }: FilmsPageProps) {
           </p>
         </div>
         
-        {/* Ad Banner */}
-        <BannerAd slot={AD_SLOTS.FILM_PAGE_BANNER} className="mb-8" />
+        {/* Ad Banner - temporarily disabled */}
+        {/* <BannerAd slot={AD_SLOTS.FILM_PAGE_BANNER} className="mb-8" /> */}
         
         {/* Filter and Sort Panel */}
         <FilterSortPanel
@@ -352,21 +352,15 @@ export default function FilmsPage({ allFilms, allSeries }: FilmsPageProps) {
 }
 
 export const getStaticProps: GetStaticProps<FilmsPageProps> = async () => {
-  // Temporarily disable films index page to prevent build errors
-  // TODO: Fix component import issues causing "Element type is invalid" errors
-  return {
-    notFound: true,
-  };
-  
-  // Original code commented out:
-  /*
   try {
-    const films = await getAllFilms();
-    console.log(`Found ${films.length} films for page generation`);
+    const allFilms = await getAllFilms();
+    const allSeries = await getAllSeries();
+    console.log(`Found ${allFilms.length} films and ${allSeries.length} series for page generation`);
 
     return {
       props: {
-        films,
+        allFilms,
+        allSeries,
       },
       revalidate: 86400, // 24 hours
     };
@@ -376,5 +370,4 @@ export const getStaticProps: GetStaticProps<FilmsPageProps> = async () => {
       notFound: true,
     };
   }
-  */
 }; 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDownIcon, ChevronUpIcon, XMarkIcon } from '@heroicons/react/24/outline';
+// Temporarily remove heroicons to fix null component issue
+// import { ChevronDownIcon, ChevronUpIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 export interface FilterOptions {
   genres: string[];
@@ -35,6 +36,25 @@ interface FilterSortPanelProps {
   isLoading?: boolean;
   contentType: 'films' | 'series';
 }
+
+// Simple SVG icons to replace heroicons
+const ChevronDownIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+  </svg>
+);
+
+const ChevronUpIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+  </svg>
+);
+
+const XMarkIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+  </svg>
+);
 
 const FilterSortPanel: React.FC<FilterSortPanelProps> = ({
   filterOptions,
@@ -138,6 +158,9 @@ const FilterSortPanel: React.FC<FilterSortPanelProps> = ({
 
   const getYearRange = () => {
     const years = filterOptions.years;
+    if (years.length === 0) {
+      return { min: 1900, max: new Date().getFullYear() };
+    }
     return {
       min: Math.min(...years),
       max: Math.max(...years)
@@ -160,11 +183,7 @@ const FilterSortPanel: React.FC<FilterSortPanelProps> = ({
               className="sm:hidden flex items-center text-sm text-gray-600 hover:text-gray-900"
             >
               {isExpanded ? 'Hide' : 'Show'} Filters
-              {isExpanded ? (
-                <ChevronUpIcon className="w-4 h-4 ml-1" />
-              ) : (
-                <ChevronDownIcon className="w-4 h-4 ml-1" />
-              )}
+              {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
             </button>
           </div>
 
@@ -179,7 +198,7 @@ const FilterSortPanel: React.FC<FilterSortPanelProps> = ({
                 className="text-sm text-primary hover:text-red-700 font-medium flex items-center"
               >
                 Clear all
-                <XMarkIcon className="w-4 h-4 ml-1" />
+                <XMarkIcon />
               </button>
             )}
           </div>
@@ -202,175 +221,133 @@ const FilterSortPanel: React.FC<FilterSortPanelProps> = ({
             />
           </div>
         </div>
-
-        {/* Sort dropdown */}
-        <div className="mt-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">Sort by</label>
-          <select
-            value={state.sortBy}
-            onChange={(e) => handleSortChange(e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-          >
-            {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
       </div>
 
-      {/* Filter sections */}
-      <div className={`${isExpanded ? 'block' : 'hidden'} sm:block p-4 space-y-6`}>
-        {/* Genres Filter */}
-        <div>
-          <button
-            onClick={() => toggleSection('genres')}
-            className="flex items-center justify-between w-full text-left"
-          >
-            <h4 className="text-md font-medium text-gray-900">Genres</h4>
-            {expandedSections.genres ? (
-              <ChevronUpIcon className="w-5 h-5 text-gray-500" />
-            ) : (
-              <ChevronDownIcon className="w-5 h-5 text-gray-500" />
-            )}
-          </button>
+      {/* Filters and Sort Content */}
+      <div className={`transition-all duration-300 ${isExpanded ? 'block' : 'hidden'} sm:block`}>
+        <div className="p-4 grid grid-cols-1 lg:grid-cols-4 gap-6">
           
-          {expandedSections.genres && (
-            <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-              {filterOptions.genres.map((genre) => (
-                <label key={genre} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={state.filters.genres.includes(genre)}
-                    onChange={() => handleGenreChange(genre)}
-                    className="rounded border-gray-300 text-primary focus:ring-primary"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">{genre}</span>
-                </label>
+          {/* Sort Options */}
+          <div className="lg:col-span-1">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Sort by
+            </label>
+            <select
+              value={state.sortBy}
+              onChange={(e) => handleSortChange(e.target.value)}
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+            >
+              {sortOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
               ))}
-            </div>
-          )}
-        </div>
-
-        {/* Year Range Filter */}
-        <div>
-          <button
-            onClick={() => toggleSection('years')}
-            className="flex items-center justify-between w-full text-left"
-          >
-            <h4 className="text-md font-medium text-gray-900">Release Year</h4>
-            {expandedSections.years ? (
-              <ChevronUpIcon className="w-5 h-5 text-gray-500" />
-            ) : (
-              <ChevronDownIcon className="w-5 h-5 text-gray-500" />
-            )}
-          </button>
-          
-          {expandedSections.years && (
-            <div className="mt-3 grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">From</label>
-                <select
-                  value={state.filters.yearRange[0] || ''}
-                  onChange={(e) => handleYearRangeChange('min', e.target.value)}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-                >
-                  <option value="">Any</option>
-                  {filterOptions.years.sort((a, b) => a - b).map((year) => (
-                    <option key={year} value={year}>{year}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">To</label>
-                <select
-                  value={state.filters.yearRange[1] || ''}
-                  onChange={(e) => handleYearRangeChange('max', e.target.value)}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-                >
-                  <option value="">Any</option>
-                  {filterOptions.years.sort((a, b) => b - a).map((year) => (
-                    <option key={year} value={year}>{year}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Countries Filter */}
-        <div>
-          <button
-            onClick={() => toggleSection('countries')}
-            className="flex items-center justify-between w-full text-left"
-          >
-            <h4 className="text-md font-medium text-gray-900">Countries</h4>
-            {expandedSections.countries ? (
-              <ChevronUpIcon className="w-5 h-5 text-gray-500" />
-            ) : (
-              <ChevronDownIcon className="w-5 h-5 text-gray-500" />
-            )}
-          </button>
-          
-          {expandedSections.countries && (
-            <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-              {filterOptions.countries.map((country) => (
-                <label key={country} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={state.filters.countries.includes(country)}
-                    onChange={() => handleCountryChange(country)}
-                    className="rounded border-gray-300 text-primary focus:ring-primary"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">{country}</span>
-                </label>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Active filters summary */}
-        {hasActiveFilters && (
-          <div className="pt-4 border-t border-gray-200">
-            <h4 className="text-sm font-medium text-gray-700 mb-2">Active Filters:</h4>
-            <div className="flex flex-wrap gap-2">
-              {state.filters.genres.map((genre) => (
-                <span key={genre} className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                  {genre}
-                  <button
-                    onClick={() => handleGenreChange(genre)}
-                    className="ml-1 text-primary/60 hover:text-primary"
-                  >
-                    <XMarkIcon className="w-3 h-3" />
-                  </button>
-                </span>
-              ))}
-              {state.filters.countries.map((country) => (
-                <span key={country} className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                  {country}
-                  <button
-                    onClick={() => handleCountryChange(country)}
-                    className="ml-1 text-blue-600 hover:text-blue-800"
-                  >
-                    <XMarkIcon className="w-3 h-3" />
-                  </button>
-                </span>
-              ))}
-              {(state.filters.yearRange[0] || state.filters.yearRange[1]) && (
-                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                  {state.filters.yearRange[0] || 'Any'} - {state.filters.yearRange[1] || 'Any'}
-                  <button
-                    onClick={() => updateState({ filters: { ...state.filters, yearRange: [null, null] } })}
-                    className="ml-1 text-green-600 hover:text-green-800"
-                  >
-                    <XMarkIcon className="w-3 h-3" />
-                  </button>
-                </span>
-              )}
-            </div>
+            </select>
           </div>
-        )}
+
+          {/* Genre Filter */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-sm font-medium text-gray-700">
+                Genres
+              </label>
+              <button
+                onClick={() => toggleSection('genres')}
+                className="text-sm text-gray-500 hover:text-gray-700 flex items-center"
+              >
+                {expandedSections.genres ? <ChevronUpIcon /> : <ChevronDownIcon />}
+              </button>
+            </div>
+            {expandedSections.genres && (
+              <div className="max-h-40 overflow-y-auto border border-gray-200 rounded-md">
+                {filterOptions.genres.slice(0, 10).map((genre) => (
+                  <label key={genre} className="flex items-center p-2 hover:bg-gray-50 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={state.filters.genres.includes(genre)}
+                      onChange={() => handleGenreChange(genre)}
+                      className="mr-2 text-primary focus:ring-primary"
+                    />
+                    <span className="text-sm text-gray-700">{genre}</span>
+                  </label>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Year Range Filter */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-sm font-medium text-gray-700">
+                Year Range
+              </label>
+              <button
+                onClick={() => toggleSection('years')}
+                className="text-sm text-gray-500 hover:text-gray-700 flex items-center"
+              >
+                {expandedSections.years ? <ChevronUpIcon /> : <ChevronDownIcon />}
+              </button>
+            </div>
+            {expandedSections.years && (
+              <div className="space-y-2">
+                <div>
+                  <label className="block text-xs text-gray-500 mb-1">From</label>
+                  <input
+                    type="number"
+                    min={yearRange.min}
+                    max={yearRange.max}
+                    value={state.filters.yearRange[0] || ''}
+                    onChange={(e) => handleYearRangeChange('min', e.target.value)}
+                    placeholder="Min year"
+                    className="block w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-500 mb-1">To</label>
+                  <input
+                    type="number"
+                    min={yearRange.min}
+                    max={yearRange.max}
+                    value={state.filters.yearRange[1] || ''}
+                    onChange={(e) => handleYearRangeChange('max', e.target.value)}
+                    placeholder="Max year"
+                    className="block w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Country Filter */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-sm font-medium text-gray-700">
+                Countries
+              </label>
+              <button
+                onClick={() => toggleSection('countries')}
+                className="text-sm text-gray-500 hover:text-gray-700 flex items-center"
+              >
+                {expandedSections.countries ? <ChevronUpIcon /> : <ChevronDownIcon />}
+              </button>
+            </div>
+            {expandedSections.countries && (
+              <div className="max-h-40 overflow-y-auto border border-gray-200 rounded-md">
+                {filterOptions.countries.slice(0, 10).map((country) => (
+                  <label key={country} className="flex items-center p-2 hover:bg-gray-50 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={state.filters.countries.includes(country)}
+                      onChange={() => handleCountryChange(country)}
+                      className="mr-2 text-primary focus:ring-primary"
+                    />
+                    <span className="text-sm text-gray-700">{country}</span>
+                  </label>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

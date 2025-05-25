@@ -8,7 +8,7 @@ import { getSeriesBySlug, getSeriesSlugs } from '../../lib/server/serverMarkdown
 import { TVSeries } from '../../types/series';
 import SEO from '../../components/SEO';
 import CommentSection from '../../components/CommentSection';
-import { addLocationBacklinks } from '../../utils/locationUtils';
+// Removed location utilities import
 import Link from 'next/link';
 import { getVideoObjectSchema, combineSchemas } from '../../utils/schema';
 import ErrorBoundary from '../../components/ErrorBoundary';
@@ -446,12 +446,9 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
           )}
           
           <div className="mt-6">
-            <Link href="/locations" className="text-primary font-medium hover:underline flex items-center">
-              Browse all filming locations
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+            <p className="text-gray-600">
+              Explore more filming locations in our films and series sections.
+            </p>
           </div>
         </div>
       </div>
@@ -502,8 +499,8 @@ export const getStaticProps: GetStaticProps<SeriesPageProps, Params> = async ({ 
     };
   }
   
-  // Generate location backlinks for SEO
-  const locationBacklinks = await addLocationBacklinks(series);
+  // Generate empty location backlinks since locations feature is removed
+  const locationBacklinks: string[] = [];
   
   return {
     props: {

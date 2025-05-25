@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { getFilmSlugs, getBlogSlugs, getSeriesSlugs } from '../lib/server/serverMarkdown';
-import { getAllLocationSlugs } from '../utils/locationUtils';
+// Removed location utilities import
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';

@@ -38,9 +38,11 @@ export default function FranchisePage({ franchise }: FranchisePageProps) {
     return <FranchiseNotFound />;
   }
 
-  // Calculate location count for each film
+  // Calculate location count for each film based on mapLocations
   const filmsWithLocationCount = franchise.films?.map(film => {
-    const locationCount = film.locations?.length || 0;
+    const locationCount = franchise.mapLocations?.filter(
+      location => location.filmSlugs.includes(film.slug)
+    ).length || 0;
     return {
       ...film,
       locationCount
@@ -67,7 +69,6 @@ export default function FranchisePage({ franchise }: FranchisePageProps) {
       {franchise.films && franchise.films.length > 1 && (
         <FranchiseNavigation 
           films={franchise.films}
-          franchiseTitle={franchise.title}
         />
       )}
       
@@ -75,14 +76,13 @@ export default function FranchisePage({ franchise }: FranchisePageProps) {
       <div className="container mx-auto px-4 py-8">
         {/* Overview section with markdown content */}
         {franchise.overview && (
-          <FranchiseOverview content={franchise.overview} />
+          <FranchiseOverview overview={franchise.overview} />
         )}
         
         {/* Films Grid */}
         {franchise.films && franchise.films.length > 0 && (
           <FranchiseFilmGrid 
             films={franchiseWithCounts.films || []} 
-            franchiseTitle={franchise.title}
           />
         )}
         

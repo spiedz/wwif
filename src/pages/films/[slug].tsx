@@ -14,7 +14,7 @@ import SEO from '../../components/SEO';
 import { getFilmSchema, getFilmingLocationSchema, getBreadcrumbSchema, getVideoObjectSchema, combineSchemas } from '../../utils/schema';
 import FilmLocationsGuide from '../../components/FilmLocationsGuide';
 import { extractTravelTips, extractTrivia } from '../../utils/locationFormatters';
-import { addLocationBacklinks } from '../../utils/locationUtils';
+// Removed location utilities import
 import VideoTrailer from '../../components/VideoTrailer';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import RelatedFilms from '../../components/RelatedFilms';
@@ -632,8 +632,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
   
-  // Generate location backlinks for SEO
-  const locationBacklinks = await addLocationBacklinks(film);
+  // Generate empty location backlinks since locations feature is removed
+  const locationBacklinks: string[] = [];
   
   return {
     props: {

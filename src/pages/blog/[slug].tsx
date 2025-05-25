@@ -44,6 +44,11 @@ const BlogPostPage = ({ post, relatedPosts }: BlogPostPageProps) => {
   const router = useRouter();
   const contentRef = useRef<HTMLDivElement>(null);
   
+  // Check if post exists first
+  if (!post) {
+    return <div>Loading...</div>;
+  }
+  
   const currentUrl = process.env.NEXT_PUBLIC_BASE_URL ? 
     `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}` : 
     `https://wherewasitfilmed.co${router.asPath}`;
@@ -73,10 +78,6 @@ const BlogPostPage = ({ post, relatedPosts }: BlogPostPageProps) => {
       { platform: 'website', url: 'https://wherewasitfilmed.co' }
     ]
   };
-
-  if (!post) {
-    return <div>Loading...</div>;
-  }
 
   const { meta, content, html } = post;
 
@@ -197,15 +198,6 @@ const BlogPostPage = ({ post, relatedPosts }: BlogPostPageProps) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Temporarily disable blog pages to prevent build errors
-  // TODO: Fix component import issues causing "Element type is invalid" errors
-  return {
-    paths: [],
-    fallback: false
-  };
-  
-  // Original code commented out:
-  /*
   try {
     const slugs = await getBlogSlugs();
     console.log(`Found ${slugs.length} blog slugs for static generation`);
@@ -219,7 +211,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     console.error('Error in getStaticPaths for blog:', error);
     return { paths: [], fallback: true };
   }
-  */
 };
 
 export const getStaticProps: GetStaticProps<BlogPostPageProps, Params> = async ({ params }) => {

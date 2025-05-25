@@ -1,5 +1,5 @@
 import React from 'react';
-import LocationsGuide from './LocationsGuide';
+// Removed LocationsGuide import
 
 // Default images for locations - in a real app, these would be actual images from your content
 const defaultImages = {
@@ -144,7 +144,33 @@ const HarryPotterGuide: React.FC = () => {
 
   return (
     <>
-      <LocationsGuide title={title} intro={intro} regions={regions} />
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">{title}</h2>
+        <p className="text-lg text-gray-600 mb-8">{intro}</p>
+        
+        {regions.map((region, index) => (
+          <div key={index} className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">{region.name}</h3>
+            <p className="text-gray-600 mb-6">{region.description}</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {region.locations.map((location, locationIndex) => (
+                <div key={locationIndex} className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <img 
+                    src={location.image} 
+                    alt={location.name}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{location.name}</h4>
+                    <p className="text-gray-600 text-sm">{location.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
       
       {/* Travel Tips and Trivia Sections */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
