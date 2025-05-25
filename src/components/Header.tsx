@@ -54,12 +54,6 @@ const Header: React.FC = () => {
               Series
             </Link>
             <Link 
-              href="/locations" 
-              className={`nav-link ${isActive('/locations') ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary'}`}
-            >
-              Locations
-            </Link>
-            <Link 
               href="/about" 
               className={`nav-link ${isActive('/about') ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary'}`}
             >
@@ -71,7 +65,7 @@ const Header: React.FC = () => {
           <div className="hidden md:block w-1/3 max-w-sm">
             <SearchBar 
               onSearch={handleHeaderSearch}
-              placeholder="Search films, locations..."
+              placeholder="Search films, series..."
               className="w-full"
               showSuggestions={true}
             />
@@ -123,13 +117,6 @@ const Header: React.FC = () => {
               Series
             </Link>
             <Link 
-              href="/locations" 
-              className={`nav-link py-2 ${isActive('/locations') ? 'text-primary font-medium' : 'text-gray-700'}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Locations
-            </Link>
-            <Link 
               href="/about" 
               className={`nav-link py-2 ${isActive('/about') ? 'text-primary font-medium' : 'text-gray-700'}`}
               onClick={() => setIsMenuOpen(false)}
@@ -142,7 +129,7 @@ const Header: React.FC = () => {
                   handleHeaderSearch(query);
                   setIsMenuOpen(false);
                 }}
-                placeholder="Search films, locations..."
+                placeholder="Search films, series..."
               />
             </div>
           </nav>

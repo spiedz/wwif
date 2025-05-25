@@ -71,11 +71,6 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/locations" className="text-gray-300 hover:text-white transition-colors">
-                  Locations
-                </Link>
-              </li>
-              <li>
                 <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
                   Blog
                 </Link>
@@ -93,9 +88,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          {/* Popular Locations */}
+          {/* Popular Content */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Popular Locations</h3>
+            <h3 className="text-lg font-semibold mb-4">Popular Content</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/films/where-was-joker-filmed" className="text-gray-300 hover:text-white transition-colors">

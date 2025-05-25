@@ -15,7 +15,7 @@ coordinates:
     lng: -109.5498
     name: 'Moab, Utah'
     description: 'Thunderbolts* used Moab’s red rock landscapes for its desert convoy and ambush scenes.'
-    image: 'https://example.com/path/to/moab-image.jpg'
+    image: 'https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=800'
   - lat: 3.1390
     lng: 101.6869
     name: 'Kuala Lumpur, Malaysia'
@@ -26,7 +26,7 @@ streamingServices:
     url: 'https://www.disneyplus.com/movies/thunderbolts/12345678'
 bookingOptions:
   - name: 'Utah Desert Film Tour'
-    url: 'https://example.com/utah-film-tour'
+    url: 'https://www.viator.com/tours/Moab/Film-Locations-Tour/d4175-6889P1'
     type: tour
     price: $60
     isPartner: true
@@ -134,7 +134,7 @@ Also featured in:
 
 ## Travel Tips for Film Tourists
 
-- **Moab, Utah:** Best visited in Spring or Fall. Join the [Thunderbolts Film Tour](https://example.com).
+- **Moab, Utah:** Best visited in Spring or Fall. Book a desert film tour to see the actual locations.
 - **Kuala Lumpur:** Avoid monsoon season (May–October). Visit Merdeka 118’s new observatory.
 - **Budapest:** Explore Castle District and Andrassy Avenue—featured in both *Black Widow* and *Thunderbolts*.
 

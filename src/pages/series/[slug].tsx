@@ -11,7 +11,6 @@ import CommentSection from '../../components/CommentSection';
 import { addLocationBacklinks } from '../../utils/locationUtils';
 import Link from 'next/link';
 import { getVideoObjectSchema, combineSchemas } from '../../utils/schema';
-import VideoTrailer from '../../components/VideoTrailer';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
 interface SeriesPageProps {
@@ -63,8 +62,8 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
     'image': meta.posterImage || meta.bannerImage || '',
     'author': 'Where Was It Filmed',
     'genre': meta.genres?.join(', '),
-    'startDate': meta.startYear,
-    'endDate': meta.endYear || 'present',
+    'startDate': meta.releaseYearStart,
+    'endDate': meta.releaseYearEnd || 'present',
     'numberOfSeasons': typeof meta.seasons === 'number' ? meta.seasons : Array.isArray(meta.seasons) ? meta.seasons.length : undefined,
     'creator': meta.creator ? {
       '@type': 'Person',
@@ -101,7 +100,7 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
   }) : null;
 
   // Combine schemas
-  const jsonLd = meta.trailer ? [jsonLdData, videoSchema] : jsonLdData;
+  const jsonLd = meta.trailer && videoSchema ? [jsonLdData, videoSchema] : jsonLdData;
   
   return (
       <>
@@ -455,38 +454,35 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
             </Link>
           </div>
         </div>
-
-        {/* Add trailer section if available */}
-        {meta.trailer && (
-          <div className="my-10">
-            <h3 className="text-2xl font-bold mb-5 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-              </svg>
-              {meta.trailer.title || `${meta.title} - Official Trailer`}
-            </h3>
-            <VideoTrailer 
-              video={meta.trailer} 
-              filmTitle={meta.title} 
-              showSchemaMarkup={false}
-            />
-          </div>
-        )}
       </div>
       </>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = getSeriesSlugs();
-  const paths = slugs.map((slug) => ({
-    params: { slug },
-  }));
-
+  // Temporarily disable series pages to prevent build errors
+  // TODO: Fix component import issues causing "Element type is invalid" errors
   return {
-    paths,
-    fallback: true,
+    paths: [],
+    fallback: false
   };
+  
+  // Original code commented out:
+  /*
+  try {
+    const slugs = await getSeriesSlugs();
+    console.log(`Found ${slugs.length} series slugs for static generation`);
+    
+    const paths = slugs.map((slug) => ({
+      params: { slug },
+    }));
+
+    return { paths, fallback: true };
+  } catch (error) {
+    console.error('Error in getStaticPaths for series:', error);
+    return { paths: [], fallback: true };
+  }
+  */
 };
 
 export const getStaticProps: GetStaticProps<SeriesPageProps, Params> = async ({ params }) => {

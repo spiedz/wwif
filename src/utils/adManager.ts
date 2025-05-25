@@ -5,6 +5,7 @@ export const AD_SLOTS = {
   SIDEBAR: 'your-sidebar-slot-id',
   IN_CONTENT: 'your-in-content-slot-id',
   FILM_PAGE_BANNER: 'your-film-page-banner-slot-id',
+  SERIES_PAGE_BANNER: 'your-series-page-banner-slot-id',
   BLOG_TOP_BANNER: 'your-blog-top-banner-slot-id',
   FOOTER: 'your-footer-slot-id',
 };
@@ -62,13 +63,8 @@ export const refreshAds = (): void => {
   }
 
   try {
-    // Request ad refresh
-    if (Array.isArray(window.adsbygoogle)) {
-      // For manually placed ads
-      (window.adsbygoogle = window.adsbygoogle || []).forEach(ad => {
-        if (ad.refresh) ad.refresh();
-      });
-    }
+    // Push new ad configurations to refresh ads
+    (window.adsbygoogle as any[]).push({});
   } catch (e) {
     console.error('Failed to refresh ads', e);
   }

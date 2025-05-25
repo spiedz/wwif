@@ -151,7 +151,7 @@ const SEO: React.FC<SEOProps> = ({
     
     return title;
   };
-
+  
   // Generate Twitter-specific descriptions (shorter for better display)
   const getTwitterDescription = (): string => {
     const maxLength = 200; // Twitter optimal length
