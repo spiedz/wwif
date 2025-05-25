@@ -248,7 +248,7 @@ This 19th-century complex provided versatile spaces that became everything from 
 The production's commitment to period authenticity went far beyond surface details. Every element was carefully researched and recreated to transport viewers back to 1988.
 
 <div align="center">
-  <img src="https://www.hollywoodreporter.com/wp-content/uploads/2025/05/Fear-Street-Prom-Queen.jpg?w=1296&h=730&crop=1" alt="Set decoration" width="80%">
+  <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="Set decoration" width="80%">
   <p><em>The prom set took 2 weeks to decorate with period-perfect details</em></p>
 </div>
 
@@ -297,7 +297,7 @@ The young cast underwent extensive preparation to authentically portray 1988 tee
 - **Stunt Training:** Safe falling and running techniques
 
 <div align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYPBMvtksZdSdMeh_LbASJrWdwwqdtlRqVw&s" alt="Cast rehearsal" width="80%">
+  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="Cast rehearsal" width="80%">
   <p><em>The cast learning authentic 1988 dance moves</em></p>
 </div>
 
@@ -358,7 +358,7 @@ The location team spent 4 months finding the perfect spots to recreate R.L. Stin
 ### Virtual Reality Experience
 
 <div align="center">
-  <img src="https://i.imgur.com/vr-experience.jpg" alt="VR Experience Poster" width="60%">
+  <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc696?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="VR Experience Poster" width="60%">
   <p><em>Experience the prom massacre in VR at select locations</em></p>
 </div>
 
@@ -376,7 +376,7 @@ The location team spent 4 months finding the perfect spots to recreate R.L. Stin
 > "Georgia gave us everything we needed to create Shadyside. From Madison's perfect small-town aesthetic to Atlanta's versatile soundstages, we could realize the full scope of 1988 horror." — Matt Palmer
 
 <div align="center">
-  <img src="https://deadline.com/wp-content/uploads/2024/03/India-Fowler-Suzanna-Son-Fina-Strazza-David-Iacono-Ella-Rubin-Chris-Klein-Lili-Taylor-and-Katherine-Waterston.jpg?w=1024" alt="Main cast image" width="70%">
+  <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="Main cast image" width="70%">
   <p><em>The main cast of Fear Street: Prom Queen on set</em></p>
 </div>
 
@@ -405,7 +405,7 @@ The production employed over 200 Georgia-based crew members, many veterans of th
 ### Where to Watch
 
 <div align="center">
-  <img src="https://i.imgur.com/streaming-devices.jpg" alt="Streaming Devices" width="70%">
+  <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="Streaming Devices" width="70%">
   <p><em>Fear Street: Prom Queen available on multiple platforms</em></p>
 </div>
 
@@ -450,7 +450,7 @@ The production employed over 200 Georgia-based crew members, many veterans of th
 Since the film's release, Georgia has seen a significant increase in horror tourism, with Fear Street locations becoming pilgrimage sites for fans.
 
 <div align="center">
-  <img src="https://i.imgur.com/tourism-stats.jpg" alt="Tourism Statistics Infographic" width="80%">
+  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="Tourism Statistics Infographic" width="80%">
   <p><em>Tourism impact statistics for Fear Street locations</em></p>
 </div>
 
@@ -498,7 +498,7 @@ Atlanta Film Tourism:
 ### Best Times to Visit
 
 <div align="center">
-  <img src="https://i.imgur.com/seasonal-guide.jpg" alt="Seasonal Visiting Guide" width="80%">
+  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="Seasonal Visiting Guide" width="80%">
   <p><em>Year-round visiting guide for Fear Street locations</em></p>
 </div>
 
@@ -557,7 +557,7 @@ Decatur Square Hotels
 ### Photography Tips
 
 <div align="center">
-  <img src="https://i.imgur.com/photo-tips.jpg" alt="Photography Tips Guide" width="70%">
+  <img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" alt="Photography Tips Guide" width="70%">
   <p><em>Capture the perfect Fear Street shots with these pro tips</em></p>
 </div>
 
@@ -642,7 +642,7 @@ Whether you come for the scares, the 80s nostalgia, or simply to see how movie m
 So grab your Members Only jacket, tease up that hair, and prepare for a journey to 1988 Shadyside. Just remember—in this town, prom queen is a title you might not survive.
 
 <div align="center">
-  <img src="https://i.imgur.com/fear-street-end.jpg" alt="Fear Street Prom Queen Final Shot" width="100%">
+  <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400" alt="Fear Street Prom Queen Final Shot" width="100%">
   <p><em>Will you survive your visit to Shadyside?</em></p>
 </div>
 
