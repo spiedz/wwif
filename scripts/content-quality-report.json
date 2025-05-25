@@ -1,0 +1,2402 @@
+{
+  "generatedAt": "2025-05-24T11:21:05.205Z",
+  "statistics": {
+    "total": 227,
+    "highQuality": 203,
+    "mediumQuality": 22,
+    "lowQuality": 2,
+    "averageScore": 92.18061674008811
+  },
+  "thresholds": {
+    "MIN_CONTENT_LENGTH": 800,
+    "MIN_DESCRIPTION_LENGTH": 120,
+    "MAX_DESCRIPTION_LENGTH": 160,
+    "MIN_COORDINATES": 2,
+    "MIN_BEHIND_SCENES_FACTS": 3
+  },
+  "results": [
+    {
+      "filePath": "content\\films\\where-was-mission-impossible-the-final-reckoning-filmed.md",
+      "title": "Where Was Mission: Impossible – The Final Reckoning Filmed?",
+      "qualityScore": 55,
+      "issues": [
+        "Contains problematic pattern: \"[Mission Impossible train stunt]\"",
+        "Contains problematic pattern: \"example.com\""
+      ],
+      "warnings": [
+        "Description too long: 270 chars (may be truncated)"
+      ],
+      "wordCount": 532,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-black-widow-filmed.md",
+      "title": "Where Was Marvel's Black Widow Filmed? Exploring the Spy Thriller's Real Locations",
+      "qualityScore": 55,
+      "issues": [
+        "Contains problematic pattern: \"[Natasha Romanoff in Budapest]\"",
+        "Contains problematic pattern: \"example.com\""
+      ],
+      "warnings": [
+        "Description too long: 269 chars (may be truncated)"
+      ],
+      "wordCount": 1423,
+      "coordinateCount": 3
+    },
+    {
+      "filePath": "content\\films\\where-was-suicide-squad-filmed.md",
+      "title": "Where Was Suicide Squad Filmed?",
+      "qualityScore": 65,
+      "issues": [],
+      "warnings": [
+        "Description too long: 176 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 4 appears to be generic (40.7128, -74.006)",
+        "Coordinate 5 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 220,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-spider-man-no-way-home-filmed.md",
+      "title": "Where Was Spider-Man: No Way Home Filmed? NYC Landmarks, Multiverse Sets & More",
+      "qualityScore": 65,
+      "issues": [
+        "Contains problematic pattern: \"[Peter Pan Donut & Pastry Shop]\""
+      ],
+      "warnings": [
+        "Description too long: 215 chars (may be truncated)",
+        "Coordinate 2 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 601,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-marvel-thunderbolts-filmed.md",
+      "title": "Where Was Marvel's Thunderbolts Filmed?",
+      "qualityScore": 65,
+      "issues": [
+        "Contains problematic pattern: \"[Yelena Belova]\""
+      ],
+      "warnings": [
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)",
+        "Few behind-the-scenes facts: 0 (recommended: 3+)"
+      ],
+      "wordCount": 374,
+      "coordinateCount": 3
+    },
+    {
+      "filePath": "content\\films\\where-was-the-prestige-filmed.md",
+      "title": "Where Was The Prestige Filmed?",
+      "qualityScore": 70,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (51.5074, -0.1278)",
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 4 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 184,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-rocketman-filmed.md",
+      "title": "Where Was Rocketman Filmed?",
+      "qualityScore": 70,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (51.5074, -0.1278)",
+        "Coordinate 5 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 7 appears to be generic (51.5073, -0.1276)"
+      ],
+      "wordCount": 171,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-captain-america-civil-war-filmed.md",
+      "title": "Where Was Captain America: Civil War Filmed?",
+      "qualityScore": 70,
+      "issues": [],
+      "warnings": [
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 4 appears to be generic (51.5074, -0.1278)",
+        "Coordinate 5 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 269,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-whiplash-filmed.md",
+      "title": "Where Was Whiplash Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Description too long: 187 chars (may be truncated)",
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 5 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 231,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-thunderbolts-filmed.md",
+      "title": "Where Was Thunderbolts* Filmed?",
+      "qualityScore": 75,
+      "issues": [
+        "Contains problematic pattern: \"[Where Was *Black Widow* Filmed?]\""
+      ],
+      "warnings": [
+        "Description too long: 259 chars (may be truncated)"
+      ],
+      "wordCount": 676,
+      "coordinateCount": 2
+    },
+    {
+      "filePath": "content\\films\\where-was-the-big-short-filmed.md",
+      "title": "Where Was The Big Short Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Description too long: 167 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 2 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 226,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-the-batman-2022-filmed.md",
+      "title": "Where Was The Batman (2022) Filmed? Explore Gotham's Real-World Locations",
+      "qualityScore": 75,
+      "issues": [
+        "Contains problematic pattern: \"[St George's Hall]\""
+      ],
+      "warnings": [
+        "Description too long: 249 chars (may be truncated)"
+      ],
+      "wordCount": 776,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-oppenheimer-filmed.md",
+      "title": "Where Was Oppenheimer Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Description too long: 161 chars (may be truncated)",
+        "Coordinate 2 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 4 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 234,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-nonnas-filmed.md",
+      "title": "Film Nonnas: Charming 1970s Italian Filming Locations & Veneto's Cinematic Allure",
+      "qualityScore": 75,
+      "issues": [
+        "Contains problematic pattern: \"[*The Merchant of Venice* (2004)]\""
+      ],
+      "warnings": [
+        "Description too long: 191 chars (may be truncated)"
+      ],
+      "wordCount": 516,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-mockingjay-filmed.md",
+      "title": "Where Was Mockingjay Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Description too long: 171 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 5 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 227,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-lilo-and-stitch-2025-filmed.md",
+      "title": "Where Was Lilo & Stitch (2025) Filmed? Exploring the Real Hawaiian Islands",
+      "qualityScore": 75,
+      "issues": [
+        "Contains problematic pattern: \"[Lilo & Stitch (2025) Poster]\""
+      ],
+      "warnings": [
+        "Description too long: 210 chars (may be truncated)"
+      ],
+      "wordCount": 1072,
+      "coordinateCount": 2
+    },
+    {
+      "filePath": "content\\films\\where-was-indiana-jones-and-the-last-crusade-filmed.md",
+      "title": "Where Was Indiana Jones and the Last Crusade Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Description too long: 164 chars (may be truncated)",
+        "Coordinate 3 appears to be generic (40.7128, -74.006)",
+        "Coordinate 5 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 204,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-inception-filmed.md",
+      "title": "Where Was Inception Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Coordinate 4 appears to be generic (51.5074, -0.1278)",
+        "Coordinate 7 appears to be generic (34.0522, -118.2437)",
+        "Few behind-the-scenes facts: 0 (recommended: 3+)"
+      ],
+      "wordCount": 225,
+      "coordinateCount": 11
+    },
+    {
+      "filePath": "content\\films\\where-was-guardians-of-the-galaxy-filmed.md",
+      "title": "Where Was Guardians of the Galaxy Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Description too long: 169 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 3 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 204,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-final-destination-bloodlines-filmed.md",
+      "title": "Where Was Final Destination: Bloodlines Filmed?",
+      "qualityScore": 75,
+      "issues": [
+        "Contains problematic pattern: \"[Skyview Tower Collapse Scene]\""
+      ],
+      "warnings": [
+        "Description too long: 268 chars (may be truncated)"
+      ],
+      "wordCount": 827,
+      "coordinateCount": 3
+    },
+    {
+      "filePath": "content\\films\\where-was-f1-2025-filmed.md",
+      "title": "Where Was *F1* (2025) Filmed?",
+      "qualityScore": 75,
+      "issues": [
+        "Contains problematic pattern: \"[Where Was *Rush* Filmed?](/films/where-was-rush-filmed) and [Where Was *Grand Prix* Filmed?]\""
+      ],
+      "warnings": [
+        "Description too long: 198 chars (may be truncated)"
+      ],
+      "wordCount": 844,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-deadpool-and-wolverine-filmed.md",
+      "title": "Where Was Deadpool & Wolverine Filmed? Explore TVA Sets, Dogpool Beach & More",
+      "qualityScore": 75,
+      "issues": [
+        "Contains problematic pattern: \"[Deadpool & Wolverine set at Pitstone Quarry]\""
+      ],
+      "warnings": [
+        "Description too long: 235 chars (may be truncated)"
+      ],
+      "wordCount": 541,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-catch-me-if-you-can-filmed.md",
+      "title": "Where Was Catch Me If You Can Filmed?",
+      "qualityScore": 75,
+      "issues": [],
+      "warnings": [
+        "Description too long: 177 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 2 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 191,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-barbie-2023-filmed.md",
+      "title": "Where Was Barbie (2023) Filmed?",
+      "qualityScore": 75,
+      "issues": [
+        "Description too short: 117 chars"
+      ],
+      "warnings": [
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 193,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-lego-batman-movie-filmed.md",
+      "title": "Where Was The Lego Batman Movie Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 2 appears to be generic (51.5074, -0.1278)",
+        "Coordinate 5 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 194,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-flash-filmed.md",
+      "title": "Where Was The Flash Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 4 appears to be generic (34.0523, -118.2436)"
+      ],
+      "wordCount": 173,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-dark-knight-rises-filmed.md",
+      "title": "Where Was The Dark Knight Rises Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)",
+        "Coordinate 7 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 191,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-the-aviator-filmed.md",
+      "title": "Where Was The Aviator Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 157,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-shazam-fury-of-the-gods-filmed.md",
+      "title": "Where Was Shazam! Fury of the Gods Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 223,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-pulp-fiction-filmed.md",
+      "title": "Where Was Pulp Fiction Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 4 appears to be generic (34.0523, -118.2434)"
+      ],
+      "wordCount": 218,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-john-wick-filmed.md",
+      "title": "Where Was John Wick Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)",
+        "Coordinate 5 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 227,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-iron-man-filmed.md",
+      "title": "Where Was Iron Man Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 9 appears to be generic (34.0523, -118.2437)"
+      ],
+      "wordCount": 196,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-indiana-jones-and-the-dial-of-destiny-filmed.md",
+      "title": "Where Was Indiana Jones and the Dial of Destiny Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 4 appears to be generic (51.5074, -0.1278)",
+        "Coordinate 5 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 177,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-dont-look-up-filmed.md",
+      "title": "Where Was Don’t Look Up Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)",
+        "Coordinate 5 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 202,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-dark-knight-filmed.md",
+      "title": "Where Was The Dark Knight Filmed?",
+      "qualityScore": 80,
+      "issues": [
+        "Description too short: 112 chars"
+      ],
+      "warnings": [
+        "Few behind-the-scenes facts: 0 (recommended: 3+)"
+      ],
+      "wordCount": 317,
+      "coordinateCount": 10
+    },
+    {
+      "filePath": "content\\films\\where-was-black-panther-filmed.md",
+      "title": "Where Was Black Panther Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 7 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 226,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-avengers-infinity-war-filmed.md",
+      "title": "Where Was Avengers: Infinity War Filmed?",
+      "qualityScore": 80,
+      "issues": [],
+      "warnings": [
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)",
+        "Coordinate 5 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 223,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-28-days-later-filmed.md",
+      "title": "Where Was 28 Days Later Filmed?",
+      "qualityScore": 80,
+      "issues": [
+        "Missing required field: year",
+        "Missing required field: director"
+      ],
+      "warnings": [],
+      "wordCount": 283,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-10-things-i-hate-about-you-filmed.md",
+      "title": "Where Was *10 Things I Hate About You* Filmed?",
+      "qualityScore": 80,
+      "issues": [
+        "Contains problematic pattern: \"[Where Was *Sleepless in Seattle* Filmed?](/films/where-was-sleepless-in-seattle-filmed) and [Where Was *The Ring* Filmed?]\""
+      ],
+      "warnings": [],
+      "wordCount": 799,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-zack-snyders-justice-league-filmed.md",
+      "title": "Where Was Zack Snyder's Justice League Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 171 chars (may be truncated)",
+        "Coordinate 3 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 177,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-vice-filmed.md",
+      "title": "Where Was Vice Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 166 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 184,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-matrix-filmed.md",
+      "title": "Where Was The Matrix Filmed?",
+      "qualityScore": 85,
+      "issues": [
+        "Description too short: 118 chars"
+      ],
+      "warnings": [],
+      "wordCount": 203,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-the-joker-filmed.md",
+      "title": "Where Was Joker Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 188 chars (may be truncated)",
+        "Coordinate 6 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 338,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-irishman-filmed.md",
+      "title": "Where Was The Irishman Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 161 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 175,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-book-of-boba-fett-tv-filmed.md",
+      "title": "Where Was The Book of Boba Fett (TV) Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 178 chars (may be truncated)",
+        "Coordinate 5 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 188,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-bling-ring-filmed.md",
+      "title": "Where Was The Bling Ring Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 166 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 196,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-revenge-of-the-sith-filmed.md",
+      "title": "Where Was Star Wars: Revenge of the Sith Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 180 chars (may be truncated)",
+        "Coordinate 4 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 162,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-spider-man-homecoming-filmed.md",
+      "title": "Where Was Spider-Man: Homecoming Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 191 chars (may be truncated)",
+        "Coordinate 2 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 207,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-rogue-one-a-star-wars-story-filmed.md",
+      "title": "Where Was Rogue One: A Star Wars Story Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 176 chars (may be truncated)",
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 239,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-poor-things-filmed.md",
+      "title": "Where Was Poor Things Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 166 chars (may be truncated)",
+        "Coordinate 5 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 195,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-minority-report-filmed.md",
+      "title": "Where Was Minority Report Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 167 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 167,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-last-bullet-filmed.md",
+      "title": "Where Was Last Bullet Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 165 chars (may be truncated)",
+        "Coordinate 3 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 157,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-kingdom-filmed.md",
+      "title": "Where Was Kingdom Filmed?",
+      "qualityScore": 85,
+      "issues": [
+        "Description too short: 115 chars"
+      ],
+      "warnings": [],
+      "wordCount": 261,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-catching-fire-filmed.md",
+      "title": "Where Was Catching Fire Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 162 chars (may be truncated)",
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 226,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-bohemian-rhapsody-filmed.md",
+      "title": "Where Was Bohemian Rhapsody Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 196 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 207,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-aquaman-filmed.md",
+      "title": "Where Was Aquaman Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 170 chars (may be truncated)",
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 190,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-a-beautiful-mind-filmed.md",
+      "title": "Where Was A Beautiful Mind Filmed?",
+      "qualityScore": 85,
+      "issues": [],
+      "warnings": [
+        "Description too long: 167 chars (may be truncated)",
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 202,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-wonder-woman-filmed.md",
+      "title": "Where Was Wonder Woman Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 2 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 190,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-wonder-woman-1984-filmed.md",
+      "title": "Where Was Wonder Woman 1984 Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 160,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-war-of-the-worlds-filmed.md",
+      "title": "Where Was War of the Worlds Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 188,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-tÃ¡r-filmed.md",
+      "title": "Where Was Tár Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 186,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-titanic-filmed.md",
+      "title": "Where Was Titanic Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 176,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-wolf-of-wall-street-filmed.md",
+      "title": "Where Was The Wolf of Wall Street Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 2 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 193,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-whale-filmed.md",
+      "title": "Where Was The Whale Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 200,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-terminal-filmed.md",
+      "title": "Where Was The Terminal Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 6 appears to be generic (40.7131, -74.006)"
+      ],
+      "wordCount": 196,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-the-suicide-squad-filmed.md",
+      "title": "Where Was The Suicide Squad Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 4 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 186,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-matrix-resurrections-filmed.md",
+      "title": "Where Was The Matrix Resurrections Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 2 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 234,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-mandalorian-tv-filmed.md",
+      "title": "Where Was The Mandalorian (TV) Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 169,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-lego-movie-filmed.md",
+      "title": "Where Was The Lego Movie Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 180,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-godfather-part-ii-filmed.md",
+      "title": "Where Was The Godfather Part II Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 173,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-tenet-filmed.md",
+      "title": "Where Was Tenet Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 217,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-the-phantom-menace-filmed.md",
+      "title": "Where Was Star Wars: The Phantom Menace Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 9 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 214,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-nightcrawler-filmed.md",
+      "title": "Where Was Nightcrawler Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 202,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-memento-filmed.md",
+      "title": "Where Was Memento Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 193,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-la-la-land-filmed.md",
+      "title": "Where Was La La Land Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 169,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-kill-bill-vol-2-filmed.md",
+      "title": "Where Was Kill Bill: Vol. 2 Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 2 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 170,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-kill-bill-vol-1-filmed.md",
+      "title": "Where Was Kill Bill: Vol. 1 Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 166,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-john-wick-chapter-4-filmed.md",
+      "title": "Where Was John Wick: Chapter 4 Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 5 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 219,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-indiana-jones-and-the-raiders-of-the-lost-ark-filmed.md",
+      "title": "Where Was Indiana Jones and the Raiders of the Lost Ark Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 6 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 182,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-fight-club-filmed.md",
+      "title": "Where Was Fight Club Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 2 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 180,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-et-the-extra-terrestrial-filmed.md",
+      "title": "Where Was E.T. the Extra-Terrestrial Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 3 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 201,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-bridge-of-spies-filmed.md",
+      "title": "Where Was Bridge of Spies Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 230,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-blade-runner-2049-filmed.md",
+      "title": "Where Was Blade Runner 2049 Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (34.0522, -118.2437)"
+      ],
+      "wordCount": 197,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-black-adam-filmed.md",
+      "title": "Where Was Black Adam Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 3 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 196,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-batman-begins-filmed.md",
+      "title": "Where Was Batman Begins Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 186,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-avengers-endgame-filmed.md",
+      "title": "Where Was Avengers: Endgame Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 3 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 209,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-aquaman-and-the-lost-kingdom-filmed.md",
+      "title": "Where Was Aquaman and the Lost Kingdom Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 7 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 236,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-american-hustle-filmed.md",
+      "title": "Where Was American Hustle Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (40.7128, -74.006)"
+      ],
+      "wordCount": 188,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-aliens-filmed.md",
+      "title": "Where Was Aliens Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 2 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 219,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-alien-filmed.md",
+      "title": "Where Was Alien Filmed?",
+      "qualityScore": 90,
+      "issues": [],
+      "warnings": [
+        "Coordinate 1 appears to be generic (51.5074, -0.1278)"
+      ],
+      "wordCount": 183,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-wailing-filmed.md",
+      "title": "Where Was The Wailing Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 162 chars (may be truncated)"
+      ],
+      "wordCount": 194,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-social-network-filmed.md",
+      "title": "Where Was The Social Network Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 186 chars (may be truncated)"
+      ],
+      "wordCount": 169,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-pianist-filmed.md",
+      "title": "Where Was The Pianist Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 171 chars (may be truncated)"
+      ],
+      "wordCount": 183,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-lord-of-the-rings-filmed.md",
+      "title": "Where Was The Lord of the Rings Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 168 chars (may be truncated)"
+      ],
+      "wordCount": 267,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-the-lighthouse-filmed.md",
+      "title": "Where Was The Lighthouse Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 175 chars (may be truncated)"
+      ],
+      "wordCount": 216,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-hobbit-filmed.md",
+      "title": "Where Was The Hobbit Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 172 chars (may be truncated)"
+      ],
+      "wordCount": 289,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-handmaiden-filmed.md",
+      "title": "Where Was The Handmaiden Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 174 chars (may be truncated)"
+      ],
+      "wordCount": 220,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-grand-budapest-hotel-filmed.md",
+      "title": "Where Was The Grand Budapest Hotel Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Few behind-the-scenes facts: 0 (recommended: 3+)"
+      ],
+      "wordCount": 218,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-the-favourite-filmed.md",
+      "title": "Where Was The Favourite Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 166 chars (may be truncated)"
+      ],
+      "wordCount": 168,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-the-banshees-of-inisherin-filmed.md",
+      "title": "Where Was The Banshees of Inisherin Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 176 chars (may be truncated)"
+      ],
+      "wordCount": 217,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-stranger-things-filmed.md",
+      "title": "Where Was Stranger Things Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Few behind-the-scenes facts: 0 (recommended: 3+)"
+      ],
+      "wordCount": 505,
+      "coordinateCount": 13
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-the-rise-of-skywalker-filmed.md",
+      "title": "Where Was Star Wars: The Rise of Skywalker Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 181 chars (may be truncated)"
+      ],
+      "wordCount": 220,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-return-of-the-jedi-filmed.md",
+      "title": "Where Was Star Wars: Return of the Jedi Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 167 chars (may be truncated)"
+      ],
+      "wordCount": 188,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-attack-of-the-clones-filmed.md",
+      "title": "Where Was Star Wars: Attack of the Clones Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 167 chars (may be truncated)"
+      ],
+      "wordCount": 230,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-a-new-hope-filmed.md",
+      "title": "Where Was Star Wars: A New Hope Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 167 chars (may be truncated)"
+      ],
+      "wordCount": 192,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-skyfall-filmed.md",
+      "title": "Where Was Skyfall Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 179 chars (may be truncated)"
+      ],
+      "wordCount": 247,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-sicario-filmed.md",
+      "title": "Where Was Sicario Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 169 chars (may be truncated)"
+      ],
+      "wordCount": 192,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-shutter-island-filmed.md",
+      "title": "Where Was Shutter Island Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 167 chars (may be truncated)"
+      ],
+      "wordCount": 163,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-reservoir-dogs-filmed.md",
+      "title": "Where Was Reservoir Dogs Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 162 chars (may be truncated)"
+      ],
+      "wordCount": 204,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-prisoners-filmed.md",
+      "title": "Where Was Prisoners Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 161 chars (may be truncated)"
+      ],
+      "wordCount": 191,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-peninsula-filmed.md",
+      "title": "Where Was Peninsula Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 184 chars (may be truncated)"
+      ],
+      "wordCount": 166,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-pathaan-filmed.md",
+      "title": "Where Was Pathaan Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 163 chars (may be truncated)"
+      ],
+      "wordCount": 172,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-parasite-filmed.md",
+      "title": "Where Was Parasite Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 163 chars (may be truncated)"
+      ],
+      "wordCount": 176,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-okja-filmed.md",
+      "title": "Where Was Okja Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 168 chars (may be truncated)"
+      ],
+      "wordCount": 176,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-no-time-to-die-filmed.md",
+      "title": "Where Was No Time to Die Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 163 chars (may be truncated)"
+      ],
+      "wordCount": 211,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-me-and-earl-and-the-dying-girl-filmed.md",
+      "title": "Where Was Me and Earl and the Dying Girl Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 206 chars (may be truncated)"
+      ],
+      "wordCount": 195,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-lost-in-starlight-filmed.md",
+      "title": "Where Was Lost in Starlight Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 166 chars (may be truncated)"
+      ],
+      "wordCount": 302,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-little-women-2019-filmed.md",
+      "title": "Where Was Little Women (2019) Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 162 chars (may be truncated)"
+      ],
+      "wordCount": 196,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-jackie-filmed.md",
+      "title": "Where Was Jackie Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 164 chars (may be truncated)"
+      ],
+      "wordCount": 204,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-indiana-jones-and-the-temple-of-doom-filmed.md",
+      "title": "Where Was Indiana Jones and the Temple of Doom Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 180 chars (may be truncated)"
+      ],
+      "wordCount": 200,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-if-beale-street-could-talk-filmed.md",
+      "title": "Where Was If Beale Street Could Talk Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 163 chars (may be truncated)"
+      ],
+      "wordCount": 180,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-film-nonnas-filmed-veneto.md",
+      "title": "Where Was Film Nonna's Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 170 chars (may be truncated)"
+      ],
+      "wordCount": 967,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-everything-everywhere-all-at-once-filmed.md",
+      "title": "Where Was Everything Everywhere All at Once Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 161 chars (may be truncated)"
+      ],
+      "wordCount": 164,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-elvis-filmed.md",
+      "title": "Where Was Elvis Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 168 chars (may be truncated)"
+      ],
+      "wordCount": 199,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-dunkirk-filmed.md",
+      "title": "Where Was Dunkirk Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 181 chars (may be truncated)"
+      ],
+      "wordCount": 160,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-django-unchained-filmed.md",
+      "title": "Where Was Django Unchained Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 173 chars (may be truncated)"
+      ],
+      "wordCount": 177,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-dangal-filmed.md",
+      "title": "Where Was Dangal Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 168 chars (may be truncated)"
+      ],
+      "wordCount": 186,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-brooklyn-filmed.md",
+      "title": "Where Was Brooklyn Filmed?",
+      "qualityScore": 95,
+      "issues": [],
+      "warnings": [
+        "Description too long: 165 chars (may be truncated)"
+      ],
+      "wordCount": 179,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-zodiac-filmed.md",
+      "title": "Where Was Zodiac Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 202,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-war-horse-filmed.md",
+      "title": "Where Was War Horse Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 173,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-train-to-busan-filmed.md",
+      "title": "Where Was Train to Busan Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 172,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-theory-of-everything-filmed.md",
+      "title": "Where Was The Theory of Everything Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 169,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-shawshank-redemption-filmed.md",
+      "title": "Where Was The Shawshank Redemption Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 177,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-rose-of-versailles-filmed.md",
+      "title": "Where Was The Rose of Versailles Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 270,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-revenant-filmed.md",
+      "title": "Where Was The Revenant Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 194,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-queen-s-gambit-tv-filmed.md",
+      "title": "Where Was The Queen's Gambit Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 170,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-perks-of-being-a-wallflower-filmed.md",
+      "title": "Where Was The Perks of Being a Wallflower Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 179,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-northman-filmed.md",
+      "title": "Where Was The Northman Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 207,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-martian-filmed.md",
+      "title": "Where Was The Martian Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 178,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-imitation-game-filmed.md",
+      "title": "Where Was The Imitation Game Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 195,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-the-hunger-games-filmed.md",
+      "title": "Where Was The Hunger Games Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 207,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-the-host-filmed.md",
+      "title": "Where Was The Host Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 187,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-hateful-eight-filmed.md",
+      "title": "Where Was The Hateful Eight Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 180,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-green-knight-filmed.md",
+      "title": "Where Was The Green Knight Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 213,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-godfather-part-iii-filmed.md",
+      "title": "Where Was The Godfather Part III Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 201,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-godfather-filmed.md",
+      "title": "Where Was The Godfather Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 188,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-the-florida-project-filmed.md",
+      "title": "Where Was The Florida Project Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 178,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-the-fighter-filmed.md",
+      "title": "Where Was The Fighter Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 209,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-the-departed-filmed.md",
+      "title": "Where Was The Departed Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 179,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-the-curious-case-of-benjamin-button-filmed.md",
+      "title": "Where Was The Curious Case of Benjamin Button Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 210,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-the-amazing-spider-man-filmed.md",
+      "title": "Where Was The Amazing Spider-Man Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 214,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-taxi-driver-filmed.md",
+      "title": "Where Was Taxi Driver Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 228,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-the-last-jedi-filmed.md",
+      "title": "Where Was Star Wars: The Last Jedi Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 195,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-the-force-awakens-filmed.md",
+      "title": "Where Was Star Wars: The Force Awakens Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 209,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-star-wars-the-empire-strikes-back-filmed.md",
+      "title": "Where Was Star Wars: The Empire Strikes Back Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 222,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-spring-breakers-filmed.md",
+      "title": "Where Was Spring Breakers Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 161,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-spencer-filmed.md",
+      "title": "Where Was Spencer Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 165,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-solo-a-star-wars-story-filmed.md",
+      "title": "Where Was Solo: A Star Wars Story Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 203,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-snowpiercer-filmed.md",
+      "title": "Where Was Snowpiercer Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 154,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-silver-linings-playbook-filmed.md",
+      "title": "Where Was Silver Linings Playbook Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 162,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-sicario-day-of-the-soldado-filmed.md",
+      "title": "Where Was Sicario: Day of the Soldado Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 203,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-shazam-filmed.md",
+      "title": "Where Was Shazam! Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 169,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-se7en-filmed.md",
+      "title": "Where Was Se7en Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 166,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-schindlers-list-filmed.md",
+      "title": "Where Was Schindler’s List Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 212,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-saving-private-ryan-filmed.md",
+      "title": "Where Was Saving Private Ryan Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 194,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-saltburn-filmed.md",
+      "title": "Where Was Saltburn Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 160,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-rrr-filmed.md",
+      "title": "Where Was RRR Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 155,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-room-filmed.md",
+      "title": "Where Was Room Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 192,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-rockstar-filmed.md",
+      "title": "Where Was Rockstar Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 164,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-ready-player-one-filmed.md",
+      "title": "Where Was Ready Player One Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 227,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-pushpa-the-rise-filmed.md",
+      "title": "Where Was Pushpa: The Rise Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 183,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-pushpa-2-the-rule-filmed.md",
+      "title": "Where Was Pushpa 2: The Rule Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 170,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-prometheus-filmed.md",
+      "title": "Where Was Prometheus Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 183,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-pk-filmed.md",
+      "title": "Where Was PK Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 153,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-once-upon-a-time-in-hollywood-filmed.md",
+      "title": "Where Was Once Upon a Time in Hollywood Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 207,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-oldboy-filmed.md",
+      "title": "Where Was Oldboy Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 171,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-obi-wan-kenobi-tv-filmed.md",
+      "title": "Where Was Obi-Wan Kenobi (TV) Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 185,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-munich-filmed.md",
+      "title": "Where Was Munich Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 169,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-moonlight-filmed.md",
+      "title": "Where Was Moonlight Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 202,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-mission-impossible-fallout-filmed.md",
+      "title": "Where Was Mission: Impossible – Fallout Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 218,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-memories-of-murder-filmed.md",
+      "title": "Where Was Memories of Murder Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 206,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-man-of-steel-filmed.md",
+      "title": "Where Was Man of Steel Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 242,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-lincoln-filmed.md",
+      "title": "Where Was Lincoln Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 211,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-lady-bird-filmed.md",
+      "title": "Where Was Lady Bird Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 164,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-kgf-chapter-2-filmed.md",
+      "title": "Where Was KGF: Chapter 2 Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 215,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-kgf-chapter-1-filmed.md",
+      "title": "Where Was KGF: Chapter 1 Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 195,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-justice-league-filmed.md",
+      "title": "Where Was Justice League Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 177,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-jawan-filmed.md",
+      "title": "Where Was Jawan Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 222,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-inglourious-basterds-filmed.md",
+      "title": "Where Was Inglourious Basterds Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 209,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-indiana-jones-and-the-kingdom-of-the-crystal-skull-filmed.md",
+      "title": "Where Was Indiana Jones and the Kingdom of the Crystal Skull Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 207,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-i-saw-the-devil-filmed.md",
+      "title": "Where Was I Saw the Devil Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 184,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-harry-potter-filmed.md",
+      "title": "Where Was Harry Potter Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 257,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-harry-potter-and-the-sorcerer-s-stone-filmed.md",
+      "title": "Where Was Harry Potter and the Sorcerer's Stone Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 223,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-harry-potter-and-the-deathly-hallows-filmed.md",
+      "title": "Where Was Harry Potter and the Deathly Hallows Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 212,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-goodfellas-filmed.md",
+      "title": "Where Was Goodfellas Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 210,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-gone-girl-filmed.md",
+      "title": "Where Was Gone Girl Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 182,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-gladiator-filmed.md",
+      "title": "Where Was Gladiator Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 200,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-forrest-gump-filmed.md",
+      "title": "Where Was Forrest Gump Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 177,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-enemy-filmed.md",
+      "title": "Where Was Enemy Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 175,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-dune-2021-filmed.md",
+      "title": "Where Was Dune (2021) Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 225,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-drishyam-filmed.md",
+      "title": "Where Was Drishyam Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 180,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-drishyam-2-filmed.md",
+      "title": "Where Was Drishyam 2 Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 142,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-doctor-strange-filmed.md",
+      "title": "Where Was Doctor Strange Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 217,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-decision-to-leave-filmed.md",
+      "title": "Where Was Decision to Leave Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 191,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-close-encounters-of-the-third-kind-filmed.md",
+      "title": "Where Was Close Encounters of the Third Kind Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 201,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-cast-away-filmed.md",
+      "title": "Where Was Cast Away Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 198,
+      "coordinateCount": 3
+    },
+    {
+      "filePath": "content\\films\\where-was-casino-royale-filmed.md",
+      "title": "Where Was Casino Royale Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 209,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-captain-phillips-filmed.md",
+      "title": "Where Was Captain Phillips Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 226,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-call-me-by-your-name-filmed.md",
+      "title": "Where Was Call Me by Your Name Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 196,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-burning-filmed.md",
+      "title": "Where Was Burning Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 188,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-bones-and-all-filmed.md",
+      "title": "Where Was Bones and All Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 182,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-blade-runner-filmed.md",
+      "title": "Where Was Blade Runner Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 187,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-birds-of-prey-filmed.md",
+      "title": "Where Was Birds of Prey Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 201,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-barfi-filmed.md",
+      "title": "Where Was Barfi! Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 174,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-baahubali-the-conclusion-filmed.md",
+      "title": "Where Was Baahubali: The Conclusion Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 167,
+      "coordinateCount": 9
+    },
+    {
+      "filePath": "content\\films\\where-was-baahubali-the-beginning-filmed.md",
+      "title": "Where Was Baahubali: The Beginning Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 181,
+      "coordinateCount": 8
+    },
+    {
+      "filePath": "content\\films\\where-was-avatar-the-way-of-water-filmed.md",
+      "title": "Where Was Avatar: The Way of Water Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 208,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-avatar-filmed.md",
+      "title": "Where Was Avatar Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 199,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-arrival-filmed.md",
+      "title": "Where Was Arrival Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 172,
+      "coordinateCount": 4
+    },
+    {
+      "filePath": "content\\films\\where-was-andor-tv-filmed.md",
+      "title": "Where Was Andor (TV) Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 168,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-american-honey-filmed.md",
+      "title": "Where Was American Honey Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 199,
+      "coordinateCount": 7
+    },
+    {
+      "filePath": "content\\films\\where-was-alien-covenant-filmed.md",
+      "title": "Where Was Alien: Covenant Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 183,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-alien-3-filmed.md",
+      "title": "Where Was Alien 3 Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 184,
+      "coordinateCount": 5
+    },
+    {
+      "filePath": "content\\films\\where-was-aftersun-filmed.md",
+      "title": "Where Was Aftersun Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 170,
+      "coordinateCount": 3
+    },
+    {
+      "filePath": "content\\films\\where-was-a-deadly-american-marriage-filmed.md",
+      "title": "Where Was A Deadly American Marriage Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 226,
+      "coordinateCount": 3
+    },
+    {
+      "filePath": "content\\films\\where-was-3-idiots-filmed.md",
+      "title": "Where Was 3 Idiots Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 198,
+      "coordinateCount": 6
+    },
+    {
+      "filePath": "content\\films\\where-was-1917-filmed.md",
+      "title": "Where Was 1917 Filmed?",
+      "qualityScore": 100,
+      "issues": [],
+      "warnings": [],
+      "wordCount": 188,
+      "coordinateCount": 5
+    }
+  ]
+}
