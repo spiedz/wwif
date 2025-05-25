@@ -39,13 +39,13 @@ coordinates:
   - lat: 34.8431
     lng: 136.5419
     name: 'Suzuka International Racing Course'
-    description: 'Japanese track featured in the film's international racing scenes.'
+    description: 'Japanese track featured in the film international racing scenes.'
     image: 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Suzuka_Circuit.jpg'
   - lat: 19.4042
     lng: -99.0907
     name: 'Autódromo Hermanos Rodríguez'
     description: 'Mexican circuit used for dynamic racing sequences.'
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez.jpg'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Autodromo_Hermanos_Rodriguez.jpg'
   - lat: 36.1699
     lng: -115.1398
     name: 'Las Vegas Strip Circuit'
