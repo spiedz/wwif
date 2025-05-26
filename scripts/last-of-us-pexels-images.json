@@ -1,0 +1,632 @@
+{
+  "Calgary Downtown (Boston Quarantine Zone)": {
+    "name": "Calgary Downtown (Boston Quarantine Zone)",
+    "searchTerms": [
+      "Calgary downtown skyline",
+      "urban cityscape",
+      "modern city buildings",
+      "downtown architecture"
+    ],
+    "type": "city",
+    "coordinates": {
+      "lat": 51.0447,
+      "lng": -114.0719
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/13210825/pexels-photo-13210825.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/13210825/pexels-photo-13210825.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/13210825/pexels-photo-13210825.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "A striking cityscape of Calgary at night with lightning illuminating the skyline.",
+        "source": "Pexels",
+        "query": "Calgary downtown skyline",
+        "width": 7008,
+        "height": 4672,
+        "photographer": "Donovan Kelly",
+        "photographerUrl": "https://www.pexels.com/@donovan-kelly-110228397",
+        "pexelsUrl": "https://www.pexels.com/photo/city-buildings-in-lightning-at-night-13210825/",
+        "credit": "Photo by Donovan Kelly from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/28489011/pexels-photo-28489011.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/28489011/pexels-photo-28489011.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/28489011/pexels-photo-28489011.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Stunning view of Calgary's skyline under a clear sky during sunrise, showing modern architecture.",
+        "source": "Pexels",
+        "query": "Calgary downtown skyline",
+        "width": 5472,
+        "height": 3648,
+        "photographer": "RUIQING BI",
+        "photographerUrl": "https://www.pexels.com/@ruiqing-bi-1624301131",
+        "pexelsUrl": "https://www.pexels.com/photo/calgary-skyline-at-sunrise-with-clear-skies-28489011/",
+        "credit": "Photo by RUIQING BI from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32204746/pexels-photo-32204746.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32204746/pexels-photo-32204746.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32204746/pexels-photo-32204746.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Vibrant colonial architecture in San Francisco de Campeche, showcasing colorful building facades under a clear sky.",
+        "source": "Pexels",
+        "query": "urban cityscape",
+        "width": 6000,
+        "height": 4000,
+        "photographer": "Edgar Mosqueda Camacho",
+        "photographerUrl": "https://www.pexels.com/@edgar-mosqueda-camacho-544076702",
+        "pexelsUrl": "https://www.pexels.com/photo/colorful-facades-in-colonial-san-francisco-de-campeche-32204746/",
+        "credit": "Photo by Edgar Mosqueda Camacho from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 8,
+    "usedFallback": false
+  },
+  "Fort Macleod Main Street (Austin Texas)": {
+    "name": "Fort Macleod Main Street (Austin Texas)",
+    "searchTerms": [
+      "historic main street",
+      "small town Alberta",
+      "heritage buildings",
+      "western town street"
+    ],
+    "type": "historic_town",
+    "coordinates": {
+      "lat": 49.7225,
+      "lng": -113.4047
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/11818901/pexels-photo-11818901.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/11818901/pexels-photo-11818901.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/11818901/pexels-photo-11818901.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Picturesque view of Hallstatt's iconic lakeside church with misty mountains and serene water.",
+        "source": "Pexels",
+        "query": "historic main street",
+        "width": 4032,
+        "height": 3024,
+        "photographer": "Frank J",
+        "photographerUrl": "https://www.pexels.com/@frank-j-199437862",
+        "pexelsUrl": "https://www.pexels.com/photo/brown-and-black-concrete-building-near-lake-and-mountains-11818901/",
+        "credit": "Photo by Frank J from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32193150/pexels-photo-32193150.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32193150/pexels-photo-32193150.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32193150/pexels-photo-32193150.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Free stock photo of 1950s style, american graffiti, bel air",
+        "source": "Pexels",
+        "query": "historic main street",
+        "width": 3000,
+        "height": 1966,
+        "photographer": "Robby McCullough",
+        "photographerUrl": "https://www.pexels.com/@robbymccullough",
+        "pexelsUrl": "https://www.pexels.com/photo/classic-1955-chevy-in-petaluma-s-historic-main-street-32193150/",
+        "credit": "Photo by Robby McCullough from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/12905877/pexels-photo-12905877.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/12905877/pexels-photo-12905877.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/12905877/pexels-photo-12905877.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Picturesque Banff, Canada with mountains and autumn trees lining the road.",
+        "source": "Pexels",
+        "query": "small town Alberta",
+        "width": 6000,
+        "height": 4000,
+        "photographer": "Alizain Hirani",
+        "photographerUrl": "https://www.pexels.com/@alizain-hirani-274856182",
+        "pexelsUrl": "https://www.pexels.com/photo/scenic-view-of-the-snowy-mountain-near-a-town-12905877/",
+        "credit": "Photo by Alizain Hirani from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 8,
+    "usedFallback": false
+  },
+  "Canmore Engine Bridge (Jackson Wyoming)": {
+    "name": "Canmore Engine Bridge (Jackson Wyoming)",
+    "searchTerms": [
+      "mountain town",
+      "rocky mountains",
+      "alpine village",
+      "mountain railway bridge"
+    ],
+    "type": "mountain_town",
+    "coordinates": {
+      "lat": 51.0884,
+      "lng": -115.3581
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/14187938/pexels-photo-14187938.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/14187938/pexels-photo-14187938.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/14187938/pexels-photo-14187938.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "A captivating nighttime view of Zermatt, Switzerland, with illuminated houses and snow-covered mountains.",
+        "source": "Pexels",
+        "query": "mountain town",
+        "width": 5990,
+        "height": 3993,
+        "photographer": "Léonard Dinichert",
+        "photographerUrl": "https://www.pexels.com/@skydream",
+        "pexelsUrl": "https://www.pexels.com/photo/illuminated-town-houses-in-mountain-landscape-14187938/",
+        "credit": "Photo by Léonard Dinichert from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/7276736/pexels-photo-7276736.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/7276736/pexels-photo-7276736.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/7276736/pexels-photo-7276736.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Cyclists riding through Whistler village surrounded by buildings and mountain scenery.",
+        "source": "Pexels",
+        "query": "mountain town",
+        "width": 5249,
+        "height": 3499,
+        "photographer": "Rachel Claire",
+        "photographerUrl": "https://www.pexels.com/@rachel-claire",
+        "pexelsUrl": "https://www.pexels.com/photo/bikers-walking-with-their-bikes-in-whistler-canada-7276736/",
+        "credit": "Photo by Rachel Claire from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/879443/pexels-photo-879443.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/879443/pexels-photo-879443.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/879443/pexels-photo-879443.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Stunning view of snow-capped mountains under a cloudy sky in Leh, India.",
+        "source": "Pexels",
+        "query": "rocky mountains",
+        "width": 5184,
+        "height": 3456,
+        "photographer": "Shashank Kumawat",
+        "photographerUrl": "https://www.pexels.com/@shashank",
+        "pexelsUrl": "https://www.pexels.com/photo/house-near-pine-tree-879443/",
+        "credit": "Photo by Shashank Kumawat from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 8,
+    "usedFallback": false
+  },
+  "Alberta Legislature Building (Massachusetts State House)": {
+    "name": "Alberta Legislature Building (Massachusetts State House)",
+    "searchTerms": [
+      "government building",
+      "capitol building dome",
+      "neoclassical architecture",
+      "legislative building"
+    ],
+    "type": "government_building",
+    "coordinates": {
+      "lat": 53.5344,
+      "lng": -113.5019
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/937524/pexels-photo-937524.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/937524/pexels-photo-937524.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/937524/pexels-photo-937524.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "The Idaho State Capitol Building stands majestically under a clear blue sky with surrounding gardens.",
+        "source": "Pexels",
+        "query": "government building",
+        "width": 4608,
+        "height": 3072,
+        "photographer": "Brett Sayles",
+        "photographerUrl": "https://www.pexels.com/@brett-sayles",
+        "pexelsUrl": "https://www.pexels.com/photo/gray-concrete-building-937524/",
+        "credit": "Photo by Brett Sayles from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/208755/pexels-photo-208755.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/208755/pexels-photo-208755.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/208755/pexels-photo-208755.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Front view of the Riksdag building with Swedish and EU flags on a sunny day.",
+        "source": "Pexels",
+        "query": "government building",
+        "width": 5939,
+        "height": 3959,
+        "photographer": "Pixabay",
+        "photographerUrl": "https://www.pexels.com/@pixabay",
+        "pexelsUrl": "https://www.pexels.com/photo/grey-and-blue-palace-under-blue-sky-during-day-time-208755/",
+        "credit": "Photo by Pixabay from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/1771262/pexels-photo-1771262.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/1771262/pexels-photo-1771262.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/1771262/pexels-photo-1771262.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "A stunning view of an illuminated capitol building dome against the night sky.",
+        "source": "Pexels",
+        "query": "capitol building dome",
+        "width": 4235,
+        "height": 2823,
+        "photographer": "Brett Sayles",
+        "photographerUrl": "https://www.pexels.com/@brett-sayles",
+        "pexelsUrl": "https://www.pexels.com/photo/capitol-hill-at-night-1771262/",
+        "credit": "Photo by Brett Sayles from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 7,
+    "usedFallback": false
+  },
+  "High River (Miller Family Home)": {
+    "name": "High River (Miller Family Home)",
+    "searchTerms": [
+      "suburban houses",
+      "residential neighborhood",
+      "prairie town",
+      "small town homes"
+    ],
+    "type": "residential",
+    "coordinates": {
+      "lat": 50.5833,
+      "lng": -113.6833
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/32237270/pexels-photo-32237270.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32237270/pexels-photo-32237270.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32237270/pexels-photo-32237270.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "suburban houses",
+        "source": "Pexels",
+        "query": "suburban houses",
+        "width": 6626,
+        "height": 4417,
+        "photographer": "Boris Hamer",
+        "photographerUrl": "https://www.pexels.com/@borishamer",
+        "pexelsUrl": "https://www.pexels.com/photo/scenic-view-of-riverside-town-with-red-roofs-32237270/",
+        "credit": "Photo by Boris Hamer from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/9875685/pexels-photo-9875685.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/9875685/pexels-photo-9875685.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/9875685/pexels-photo-9875685.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Top view of houses with solar panels, showcasing clean energy and sustainability.",
+        "source": "Pexels",
+        "query": "suburban houses",
+        "width": 4000,
+        "height": 3000,
+        "photographer": "Kindel Media",
+        "photographerUrl": "https://www.pexels.com/@kindelmedia",
+        "pexelsUrl": "https://www.pexels.com/photo/aerial-view-of-two-houses-with-roof-tiles-9875685/",
+        "credit": "Photo by Kindel Media from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32243267/pexels-photo-32243267.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32243267/pexels-photo-32243267.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32243267/pexels-photo-32243267.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Two-story residential house with lush trees and brick wall on a sunny day.",
+        "source": "Pexels",
+        "query": "residential neighborhood",
+        "width": 4416,
+        "height": 2944,
+        "photographer": "Roman Biernacki",
+        "photographerUrl": "https://www.pexels.com/@szafran",
+        "pexelsUrl": "https://www.pexels.com/photo/charming-residential-house-with-trees-and-brick-wall-32243267/",
+        "credit": "Photo by Roman Biernacki from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 8,
+    "usedFallback": false
+  },
+  "Waterton Lakes National Park": {
+    "name": "Waterton Lakes National Park",
+    "searchTerms": [
+      "mountain lake",
+      "national park",
+      "rocky mountains",
+      "alpine landscape"
+    ],
+    "type": "national_park",
+    "coordinates": {
+      "lat": 49.05,
+      "lng": -113.9
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/448714/pexels-photo-448714.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/448714/pexels-photo-448714.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/448714/pexels-photo-448714.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Serene mountain lake with crystal-clear reflections under a bright daytime sky.",
+        "source": "Pexels",
+        "query": "mountain lake",
+        "width": 5404,
+        "height": 3638,
+        "photographer": "eberhard grossgasteiger",
+        "photographerUrl": "https://www.pexels.com/@eberhardgross",
+        "pexelsUrl": "https://www.pexels.com/photo/body-of-water-448714/",
+        "credit": "Photo by eberhard grossgasteiger from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Capture the serene beauty of Moraine Lake with sunrise reflections in Banff National Park.",
+        "source": "Pexels",
+        "query": "mountain lake",
+        "width": 4226,
+        "height": 2847,
+        "photographer": "James Wheeler",
+        "photographerUrl": "https://www.pexels.com/@souvenirpixels",
+        "pexelsUrl": "https://www.pexels.com/photo/lake-and-mountain-417074/",
+        "credit": "Photo by James Wheeler from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/1867601/pexels-photo-1867601.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/1867601/pexels-photo-1867601.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/1867601/pexels-photo-1867601.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Majestic view of Yosemite Valley featuring El Capitan and surrounding mountains under a blue sky.",
+        "source": "Pexels",
+        "query": "national park",
+        "width": 2856,
+        "height": 2000,
+        "photographer": "Robby McCullough",
+        "photographerUrl": "https://www.pexels.com/@robbymccullough",
+        "pexelsUrl": "https://www.pexels.com/photo/rocky-mountain-1867601/",
+        "credit": "Photo by Robby McCullough from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 7,
+    "usedFallback": false
+  },
+  "Calgary Zoo (Giraffe Scene)": {
+    "name": "Calgary Zoo (Giraffe Scene)",
+    "searchTerms": [
+      "giraffes",
+      "zoo animals",
+      "wildlife park",
+      "african animals"
+    ],
+    "type": "zoo",
+    "coordinates": {
+      "lat": 51.0447,
+      "lng": -114.0325
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/38534/giraffe-wild-wildlife-nature-38534.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/38534/giraffe-wild-wildlife-nature-38534.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/38534/giraffe-wild-wildlife-nature-38534.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "A herd of giraffes in the African savannah with scenic mountain backdrop.",
+        "source": "Pexels",
+        "query": "giraffes",
+        "width": 2240,
+        "height": 1452,
+        "photographer": "Pixabay",
+        "photographerUrl": "https://www.pexels.com/@pixabay",
+        "pexelsUrl": "https://www.pexels.com/photo/group-of-giraffe-surrounded-by-the-green-trees-38534/",
+        "credit": "Photo by Pixabay from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/1233286/pexels-photo-1233286.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/1233286/pexels-photo-1233286.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/1233286/pexels-photo-1233286.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "A group of giraffes grazing in the lush grassland of Uganda's savanna, showcasing natural wildlife beauty.",
+        "source": "Pexels",
+        "query": "giraffes",
+        "width": 5767,
+        "height": 3845,
+        "photographer": "Francesco Ungaro",
+        "photographerUrl": "https://www.pexels.com/@francesco-ungaro",
+        "pexelsUrl": "https://www.pexels.com/photo/giraffes-standing-on-grass-field-surrounded-by-plants-1233286/",
+        "credit": "Photo by Francesco Ungaro from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32181429/pexels-photo-32181429.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32181429/pexels-photo-32181429.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32181429/pexels-photo-32181429.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "zoo animals",
+        "source": "Pexels",
+        "query": "zoo animals",
+        "width": 5695,
+        "height": 4556,
+        "photographer": "Jay Brand",
+        "photographerUrl": "https://www.pexels.com/@jay-brand-1763356224",
+        "pexelsUrl": "https://www.pexels.com/photo/gorilla-in-natural-habitat-side-profile-view-32181429/",
+        "credit": "Photo by Jay Brand from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 8,
+    "usedFallback": false
+  },
+  "Lethbridge Viaduct (High Level Bridge)": {
+    "name": "Lethbridge Viaduct (High Level Bridge)",
+    "searchTerms": [
+      "railway bridge",
+      "steel bridge",
+      "viaduct architecture",
+      "train bridge"
+    ],
+    "type": "bridge",
+    "coordinates": {
+      "lat": 49.6928,
+      "lng": -112.8281
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/32235061/pexels-photo-32235061.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32235061/pexels-photo-32235061.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32235061/pexels-photo-32235061.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Discover the historic Long Bien Bridge in Hanoi with a vibrant red train crossing it against a clear sky.",
+        "source": "Pexels",
+        "query": "railway bridge",
+        "width": 4176,
+        "height": 2784,
+        "photographer": "Nguyễn Hưng",
+        "photographerUrl": "https://www.pexels.com/@nguy-n-h-ng-2011500463",
+        "pexelsUrl": "https://www.pexels.com/photo/red-train-crossing-long-bien-bridge-in-hanoi-32235061/",
+        "credit": "Photo by Nguyễn Hưng from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32235062/pexels-photo-32235062.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32235062/pexels-photo-32235062.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32235062/pexels-photo-32235062.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "A train crosses the iconic Long Bien Bridge in Hanoi, showcasing historic architecture and bustling movement.",
+        "source": "Pexels",
+        "query": "railway bridge",
+        "width": 4176,
+        "height": 2784,
+        "photographer": "Nguyễn Hưng",
+        "photographerUrl": "https://www.pexels.com/@nguy-n-h-ng-2011500463",
+        "pexelsUrl": "https://www.pexels.com/photo/long-bien-bridge-with-train-in-hanoi-vietnam-32235062/",
+        "credit": "Photo by Nguyễn Hưng from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32241770/pexels-photo-32241770.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32241770/pexels-photo-32241770.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32241770/pexels-photo-32241770.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Urban bridge crossing river with backdrop of city buildings under clear blue sky.",
+        "source": "Pexels",
+        "query": "steel bridge",
+        "width": 6000,
+        "height": 4000,
+        "photographer": "Hunter Schroeder",
+        "photographerUrl": "https://www.pexels.com/@hunter-schroeder-2149144899",
+        "pexelsUrl": "https://www.pexels.com/photo/scenic-urban-bridge-over-river-with-buildings-32241770/",
+        "credit": "Photo by Hunter Schroeder from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 7,
+    "usedFallback": false
+  },
+  "Fish Creek Provincial Park": {
+    "name": "Fish Creek Provincial Park",
+    "searchTerms": [
+      "urban park",
+      "creek bridge",
+      "park pathway",
+      "nature trail"
+    ],
+    "type": "park",
+    "coordinates": {
+      "lat": 50.9333,
+      "lng": -114.0833
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/32202799/pexels-photo-32202799.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32202799/pexels-photo-32202799.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32202799/pexels-photo-32202799.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "urban park",
+        "source": "Pexels",
+        "query": "urban park",
+        "width": 6000,
+        "height": 4000,
+        "photographer": "Lorenza Magnaghi",
+        "photographerUrl": "https://www.pexels.com/@lorenza-magnaghi-660554185",
+        "pexelsUrl": "https://www.pexels.com/photo/scenic-riverside-pathway-under-dramatic-skies-32202799/",
+        "credit": "Photo by Lorenza Magnaghi from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32257124/pexels-photo-32257124.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32257124/pexels-photo-32257124.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32257124/pexels-photo-32257124.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "A young woman sitting on grass in a sunny park surrounded by trees.",
+        "source": "Pexels",
+        "query": "urban park",
+        "width": 5184,
+        "height": 3456,
+        "photographer": "Marco Antonio  Casique Reyes",
+        "photographerUrl": "https://www.pexels.com/@thalittlemarc",
+        "pexelsUrl": "https://www.pexels.com/photo/young-woman-relaxing-in-park-setting-32257124/",
+        "credit": "Photo by Marco Antonio  Casique Reyes from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32208557/pexels-photo-32208557.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32208557/pexels-photo-32208557.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32208557/pexels-photo-32208557.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "creek bridge",
+        "source": "Pexels",
+        "query": "creek bridge",
+        "width": 3500,
+        "height": 2625,
+        "photographer": "Jared Brotman",
+        "photographerUrl": "https://www.pexels.com/@jared-brotman-108846542",
+        "pexelsUrl": "https://www.pexels.com/photo/scenic-wooden-bridge-in-harbison-state-forest-32208557/",
+        "credit": "Photo by Jared Brotman from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 8,
+    "usedFallback": false
+  },
+  "Barrier Lake Kananaskis": {
+    "name": "Barrier Lake Kananaskis",
+    "searchTerms": [
+      "mountain lake",
+      "alpine lake",
+      "rocky mountains lake",
+      "pristine lake"
+    ],
+    "type": "lake",
+    "coordinates": {
+      "lat": 51.0333,
+      "lng": -115.05
+    },
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/448714/pexels-photo-448714.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/448714/pexels-photo-448714.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/448714/pexels-photo-448714.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Serene mountain lake with crystal-clear reflections under a bright daytime sky.",
+        "source": "Pexels",
+        "query": "mountain lake",
+        "width": 5404,
+        "height": 3638,
+        "photographer": "eberhard grossgasteiger",
+        "photographerUrl": "https://www.pexels.com/@eberhardgross",
+        "pexelsUrl": "https://www.pexels.com/photo/body-of-water-448714/",
+        "credit": "Photo by eberhard grossgasteiger from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Capture the serene beauty of Moraine Lake with sunrise reflections in Banff National Park.",
+        "source": "Pexels",
+        "query": "mountain lake",
+        "width": 4226,
+        "height": 2847,
+        "photographer": "James Wheeler",
+        "photographerUrl": "https://www.pexels.com/@souvenirpixels",
+        "pexelsUrl": "https://www.pexels.com/photo/lake-and-mountain-417074/",
+        "credit": "Photo by James Wheeler from Pexels",
+        "license": "Pexels License (Free to use)"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32200067/pexels-photo-32200067.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "fullUrl": "https://images.pexels.com/photos/32200067/pexels-photo-32200067.jpeg",
+        "thumbnailUrl": "https://images.pexels.com/photos/32200067/pexels-photo-32200067.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "alt": "Stunning view of the submerged tower in Lake Resia, Italy, with reflections.",
+        "source": "Pexels",
+        "query": "alpine lake",
+        "width": 4032,
+        "height": 3024,
+        "photographer": "Daciana  Cristina  Visan",
+        "photographerUrl": "https://www.pexels.com/@daciana-cristina-visan-2149801141",
+        "pexelsUrl": "https://www.pexels.com/photo/tower-in-lake-resia-with-snow-capped-mountains-32200067/",
+        "credit": "Photo by Daciana  Cristina  Visan from Pexels",
+        "license": "Pexels License (Free to use)"
+      }
+    ],
+    "totalFound": 8,
+    "usedFallback": false
+  }
+}

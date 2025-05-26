@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
 const cheerio = require('cheerio');
+// Using built-in fetch (Node.js 18+)
 
 class ScraperAPIImageService {
   constructor(apiKey) {

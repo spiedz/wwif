@@ -67,23 +67,26 @@ export function generateFilmMetaDescription(
   // Add genre/theme context
   if (meta.genre) {
     const genres = Array.isArray(meta.genre) ? meta.genre : [meta.genre];
-    const primaryGenre = genres[0].toLowerCase();
+    const primaryGenre = genres[0]?.toLowerCase();
     
-    const genreDescriptors = {
-      action: 'action-packed scenes',
-      adventure: 'epic adventures',
-      drama: 'powerful dramatic moments',
-      fantasy: 'magical landscapes',
-      horror: 'spine-chilling locations',
-      comedy: 'hilarious moments',
-      thriller: 'suspenseful sequences',
-      scifi: 'futuristic settings',
-      romance: 'romantic backdrops',
-      war: 'historic battlefields'
-    };
+    if (primaryGenre) {
+      const genreDescriptors = {
+        action: 'action-packed scenes',
+        adventure: 'epic adventures',
+        drama: 'powerful dramatic moments',
+        fantasy: 'magical landscapes',
+        horror: 'spine-chilling locations',
+        comedy: 'hilarious moments',
+        thriller: 'suspenseful sequences',
+        scifi: 'futuristic settings',
+        romance: 'romantic backdrops',
+        war: 'historic battlefields',
+        'post-apocalyptic': 'post-apocalyptic landscapes'
+      };
 
-    const descriptor = genreDescriptors[primaryGenre as keyof typeof genreDescriptors] || 'stunning scenes';
-    description += `${descriptor}, `;
+      const descriptor = genreDescriptors[primaryGenre as keyof typeof genreDescriptors] || 'stunning scenes';
+      description += `${descriptor}, `;
+    }
   }
 
   // Add location count if multiple locations
@@ -180,7 +183,12 @@ export function generateSeriesMetaDescription(
   // Add genre context
   if (meta.genre) {
     const genres = Array.isArray(meta.genre) ? meta.genre : [meta.genre];
-    description += `${genres[0].toLowerCase()} series. `;
+    const primaryGenre = genres[0]?.toLowerCase();
+    if (primaryGenre) {
+      description += `${primaryGenre} series. `;
+    } else {
+      description += 'complete series guide. ';
+    }
   } else {
     description += 'complete series guide. ';
   }

@@ -6,6 +6,46 @@ const withBundleAnalyzer = process.env.ANALYZE === 'true'
 const nextConfig = {
   reactStrictMode: true,
   
+  // Completely disable fast refresh and hot reloading
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      // Disable hot module replacement completely
+      config.plugins = config.plugins.filter(plugin => 
+        plugin.constructor.name !== 'HotModuleReplacementPlugin'
+      );
+      
+      // Disable fast refresh
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'react-refresh/runtime': false,
+        '@next/react-refresh-utils/runtime': false,
+      };
+      
+      // Use polling for file watching
+      config.watchOptions = {
+        poll: 2000,
+        aggregateTimeout: 500,
+        ignored: /node_modules/,
+      };
+    }
+    
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+      };
+    }
+    
+    return config;
+  },
+  
+  // Disable experimental features that might cause issues
+  experimental: {
+    optimizeCss: false,
+    scrollRestoration: false,
+  },
+  
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
@@ -22,6 +62,11 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: [
+      'images.unsplash.com',
+      'images.pexels.com',
+      'cdn.mos.cms.futurecdn.net'
+    ],
   },
 
   // Headers for better caching and security
@@ -63,12 +108,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-
-  // Experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
   },
 
   // Bundle analyzer in development
@@ -113,55 +152,6 @@ const nextConfig = {
         permanent: true,
       }
     ]
-  },
-  
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        path: false,
-      };
-    }
-    
-    if (process.env.NODE_ENV === 'production') {
-      config.cache = {
-        type: 'filesystem',
-        buildDependencies: {
-          config: [__filename],
-        },
-      };
-      
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            default: false,
-            vendors: false,
-            commons: {
-              name: 'commons',
-              chunks: 'all',
-              minChunks: 2,
-            },
-            react: {
-              name: 'react',
-              test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
-              chunks: 'all',
-              priority: 20,
-            },
-            ui: {
-              name: 'ui',
-              test: /[\\/]node_modules[\\/](tailwindcss)[\\/]/,
-              chunks: 'all',
-              priority: 15,
-            },
-          },
-        },
-      };
-    }
-    
-    return config;
   },
 };
 

@@ -74,7 +74,7 @@ export default function Home() {
     {
       title: "Game of Thrones Locations",
       subtitle: "Discover the stunning locations that brought Westeros to life",
-      image: "https://images.unsplash.com/photo-1576549116895-29f97be12d6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+      image: "https://images.pexels.com/photos/937524/pexels-photo-937524.jpeg",
       slug: "/series/where-was-game-of-thrones-filmed",
       isNew: false
     }
@@ -390,7 +390,7 @@ export default function Home() {
               {
                 title: "Where Was Game of Thrones Filmed?",
                 description: "Discover the stunning locations that brought Westeros to life.",
-                image: "https://images.unsplash.com/photo-1576549116895-29f97be12d6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+                image: "https://images.pexels.com/photos/937524/pexels-photo-937524.jpeg",
                 slug: "where-was-game-of-thrones-filmed"
               },
               {

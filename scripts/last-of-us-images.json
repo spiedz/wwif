@@ -1,0 +1,152 @@
+{
+  "Calgary Downtown (Boston Quarantine Zone)": {
+    "name": "Calgary Downtown (Boston Quarantine Zone)",
+    "searchTerms": [
+      "Calgary downtown skyline Alberta Canada",
+      "Calgary 4th Avenue Flyover bridge",
+      "Calgary Inglewood neighborhood historic buildings"
+    ],
+    "type": "city",
+    "coordinates": {
+      "lat": 51.0447,
+      "lng": -114.0719
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Fort Macleod Main Street (Austin Texas)": {
+    "name": "Fort Macleod Main Street (Austin Texas)",
+    "searchTerms": [
+      "Fort Macleod Main Street Alberta historic buildings",
+      "Fort Macleod Empress Theatre Alberta",
+      "Fort Macleod downtown heritage district"
+    ],
+    "type": "historic_town",
+    "coordinates": {
+      "lat": 49.7225,
+      "lng": -113.4047
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Canmore Engine Bridge (Jackson Wyoming)": {
+    "name": "Canmore Engine Bridge (Jackson Wyoming)",
+    "searchTerms": [
+      "Canmore Engine Bridge Alberta Rocky Mountains",
+      "Canmore Main Street Alberta mountain town",
+      "Canmore Bow River bridge historic railway"
+    ],
+    "type": "mountain_town",
+    "coordinates": {
+      "lat": 51.0884,
+      "lng": -115.3581
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Alberta Legislature Building (Massachusetts State House)": {
+    "name": "Alberta Legislature Building (Massachusetts State House)",
+    "searchTerms": [
+      "Alberta Legislature Building Edmonton dome",
+      "Edmonton Legislature grounds North Saskatchewan River",
+      "Alberta Parliament Building Beaux Arts architecture"
+    ],
+    "type": "government_building",
+    "coordinates": {
+      "lat": 53.5344,
+      "lng": -113.5019
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "High River (Miller Family Home)": {
+    "name": "High River (Miller Family Home)",
+    "searchTerms": [
+      "High River Alberta residential neighborhood",
+      "High River Sullivan Road houses",
+      "High River Alberta small town streets"
+    ],
+    "type": "residential",
+    "coordinates": {
+      "lat": 50.5833,
+      "lng": -113.6833
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Waterton Lakes National Park": {
+    "name": "Waterton Lakes National Park",
+    "searchTerms": [
+      "Waterton Lakes National Park Alberta winter",
+      "Waterton Lakes snow covered mountains",
+      "Waterton Lakes National Park UNESCO World Heritage"
+    ],
+    "type": "national_park",
+    "coordinates": {
+      "lat": 49.05,
+      "lng": -113.9
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Calgary Zoo (Giraffe Scene)": {
+    "name": "Calgary Zoo (Giraffe Scene)",
+    "searchTerms": [
+      "Calgary Zoo giraffes Alberta",
+      "Wilder Institute Calgary Zoo animals",
+      "Calgary Zoo giraffe exhibit enclosure"
+    ],
+    "type": "zoo",
+    "coordinates": {
+      "lat": 51.0447,
+      "lng": -114.0325
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Lethbridge Viaduct (High Level Bridge)": {
+    "name": "Lethbridge Viaduct (High Level Bridge)",
+    "searchTerms": [
+      "Lethbridge Viaduct High Level Bridge Alberta",
+      "Lethbridge railway bridge Oldman River",
+      "High Level Bridge Lethbridge longest highest"
+    ],
+    "type": "bridge",
+    "coordinates": {
+      "lat": 49.6928,
+      "lng": -112.8281
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Fish Creek Provincial Park": {
+    "name": "Fish Creek Provincial Park",
+    "searchTerms": [
+      "Fish Creek Provincial Park Calgary Shannon Terrace Bridge",
+      "Fish Creek Park Calgary urban park pathways",
+      "Shannon Terrace pedestrian bridge Calgary"
+    ],
+    "type": "park",
+    "coordinates": {
+      "lat": 50.9333,
+      "lng": -114.0833
+    },
+    "images": [],
+    "totalFound": 0
+  },
+  "Barrier Lake Kananaskis": {
+    "name": "Barrier Lake Kananaskis",
+    "searchTerms": [
+      "Barrier Lake Kananaskis Alberta Rocky Mountains",
+      "Barrier Lake Bow Valley Provincial Park",
+      "Kananaskis Country Barrier Lake hiking trails"
+    ],
+    "type": "lake",
+    "coordinates": {
+      "lat": 51.0333,
+      "lng": -115.05
+    },
+    "images": [],
+    "totalFound": 0
+  }
+}

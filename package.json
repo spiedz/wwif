@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev-no-refresh": "FAST_REFRESH=false next dev",
     "build": "next build",
     "build:optimized": "npm run optimize-content && cross-env NODE_ENV=production next build",
     "build:analyze": "cross-env ANALYZE=true next build",
@@ -28,7 +29,11 @@
     "upgrade:next": "npm install next@latest react@latest react-dom@latest",
     "upgrade:check": "npx @next/codemod@latest next-11-to-12",
     "build:report": "cross-env ANALYZE=true next build",
-    "dev:turbo": "next dev --turbo"
+    "dev:turbo": "next dev --turbo",
+    "analyze": "ANALYZE=true npm run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build && changeset publish"
   },
   "keywords": [],
   "author": "",
