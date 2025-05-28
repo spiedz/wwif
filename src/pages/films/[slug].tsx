@@ -601,7 +601,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const slugs = await getFilmSlugs();
     console.log(`Found ${slugs.length} film slugs for static generation`);
     
-    const paths = slugs.map((slug) => ({
+    // Filter out any slugs that could conflict with the /films route
+    const validSlugs = slugs.filter((slug) => {
+      // Exclude empty slugs, "films", and any other problematic values
+      if (!slug || slug === 'films' || slug === '' || slug.trim() === '') {
+        console.warn(`Filtering out problematic slug: "${slug}"`);
+        return false;
+      }
+      return true;
+    });
+    
+    console.log(`Filtered to ${validSlugs.length} valid slugs`);
+    
+    const paths = validSlugs.map((slug) => ({
       params: { slug },
     }));
 

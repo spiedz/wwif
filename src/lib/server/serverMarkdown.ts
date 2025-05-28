@@ -45,9 +45,20 @@ export function getFilmSlugs() {
     }
     
     const fileNames = fs.readdirSync(filmsDirectory);
-    return fileNames
+    const slugs = fileNames
       .filter((fileName) => fileName.endsWith('.md'))
-      .map((fileName) => fileName.replace(/\.md$/, ''));
+      .map((fileName) => fileName.replace(/\.md$/, ''))
+      .filter((slug) => {
+        // Filter out any problematic slugs
+        if (!slug || slug === 'films' || slug === '' || slug.trim() === '') {
+          console.warn(`Filtering out problematic slug from filename: "${slug}"`);
+          return false;
+        }
+        return true;
+      });
+    
+    console.log(`getFilmSlugs returning ${slugs.length} valid slugs`);
+    return slugs;
   } catch (error) {
     console.error('Error getting film slugs:', error);
     return [];
