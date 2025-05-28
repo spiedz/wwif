@@ -69,7 +69,7 @@ behindTheScenes:
     - 'The production employed over 2,000 local crew members during filming.'
     - 'Director James Cameron spent 6 months in pre-production scouting locations.'
     - 'Over 500 hours of footage were shot for the final cut.'
-    - 'The film's budget exceeded $200 million, with 40% spent on location work.'
+    - 'The film budget exceeded $200 million, with 40% spent on location work.'
     - 'Local communities were involved in every aspect of the production process.'
     - 'Weather delays added an additional 3 weeks to the filming schedule.'
     - 'The cast underwent extensive training for location-specific scenes.'
