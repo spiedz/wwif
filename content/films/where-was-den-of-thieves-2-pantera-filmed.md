@@ -6,7 +6,7 @@ date: 2025-01-20
 year: 2025
 director: Christian Gudegast
 genre: ["Action", "Crime", "Thriller", "Heist"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BMGUyOTEzNWItNzgwOS00ZGNjLWI3YjktMWFmMGQ4NjI5YzU3XkEyXkFqcGdeQXVyMTM1MzQ1MTQ0._V1_.jpg"
+posterImage: "https://locations.friendsgroupname.com/wp-content/uploads/2025/01/Den-of-Thieves-2-Pantera-Filming-Locations-yf.webp"
 coordinates:
   - name: "Avenida de Anaga, Santa Cruz de Tenerife"
     lat: 28.4698
