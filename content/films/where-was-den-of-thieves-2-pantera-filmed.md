@@ -183,7 +183,7 @@ The avenue's consistent width and relatively straight layout made it ideal for p
 
 
 <div align="center">
-  <img src="https://i.guim.co.uk/img/media/cd0aa9b62d439c8a62d4c5c15c34d3e15f1ea4b89/0_31_640_384/master/640.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=813a57541d2fa5f190c9a4df4da36a2b" alt="Harland and Wolff shipyard showing massive cranes and industrial infrastructure" width="100%" style="border-radius: 8px; margin: 20px 0;">
+  <img src="https://www.falmouthpacket.co.uk/resources/images/18898287/?type=responsive-gallery-fullscreen" alt="Harland and Wolff shipyard showing massive cranes and industrial infrastructure" width="100%" style="border-radius: 8px; margin: 20px 0;">
   <p><em>The iconic Harland & Wolff shipyard with its distinctive yellow cranes provided a dramatic industrial backdrop for key sequences</em></p>
 </div>
 
