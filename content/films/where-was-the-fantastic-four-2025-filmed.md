@@ -6,7 +6,7 @@ date: 2024-12-19
 year: 2025
 director: Matt Shakman
 genre: ["Superhero", "Action", "Adventure", "Sci-Fi"]
-posterImage: "https://variety.com/wp-content/uploads/2024/07/fantastic-four-first-steps-logo.jpg"
+posterImage: "https://www.rollingstone.com/wp-content/uploads/2025/02/MFB1420_TRL_comp_DDO_v0137.1038_R8.jpg"
 coordinates:
   - name: "Pinewood Studios"
     lat: 51.5581
