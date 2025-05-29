@@ -13,7 +13,7 @@ director: "Alexandra La Roche"
 
 genre: "Romantic Drama, Comedy, Adventure, Fantasy"
 
-posterImage: "https://example.com/juliet-and-romeo-poster.jpg"
+posterImage: https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7blskUl-2UfHtiBtoH2l0ha-TYA7nnPsW7A4IcOP5p6VfhBNfCdB1aZPk7_0xDrhba7UC
 
 coordinates: 
   - name: "Chapultepec Castle"

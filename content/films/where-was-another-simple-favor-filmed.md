@@ -6,7 +6,7 @@ date: 2023-10-07
 year: 2018
 director: Paul Feig
 genre: Comedy, Mystery, Thriller
-posterImage: https://example.com/poster.jpg
+posterImage: https://lh5.googleusercontent.com/proxy/p-vfE2DXZF0ZEecqLqGNsdna9Jm7Jm8fl8TpkZ4ARwpLSIHK_CWt_WzMPYshsyf4l-lKdmI1JhIv48KT12wJgkUAoiXFrDK2D01d8EsJtFvnFZbPh2tN
 coordinates: 
   - { location: "Marina Grande, Capri, Italy", lat: 40.5562, lng: 14.2246 }
   - { location: "Piazzetta di Capri, Capri, Italy", lat: 40.5509, lng: 14.2269 }

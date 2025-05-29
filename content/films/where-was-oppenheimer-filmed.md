@@ -10,8 +10,8 @@ genre:
   - Drama
   - History
   - Thriller
-posterImage: 'https://image.tmdb.org/t/p/w500/placeholder.jpg'
-bannerImage: 'https://example.com/banners/oppenheimer-banner.jpg'
+posterImage: https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg
+bannerImage: https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg
 coordinates:
   - lat: 35.8801
     lng: -106.3031

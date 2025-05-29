@@ -10,8 +10,8 @@ genre:
   - Adventure
   - Drama
   - Action
-posterImage: 'https://image.tmdb.org/t/p/w500/placeholder.jpg'
-bannerImage: 'https://example.com/banners/dune-part-two-banner.jpg'
+posterImage: https://deadline.com/wp-content/uploads/2024/01/MCDDUPA_WB041-e1708041579639.jpg?w=681&h=383&crop=1
+bannerImage: https://deadline.com/wp-content/uploads/2024/01/MCDDUPA_WB041-e1708041579639.jpg?w=681&h=383&crop=1
 coordinates:
   - lat: 30.3285
     lng: 35.4444

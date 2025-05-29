@@ -10,8 +10,8 @@ genre:
   - Adventure
   - Action
   - Family
-posterImage: 'https://image.tmdb.org/t/p/w500/placeholder.jpg'
-bannerImage: 'https://example.com/banners/avatar-the-way-of-water-banner.jpg'
+posterImage: https://m.media-amazon.com/images/I/71s3cEqEZTL.jpg
+bannerImage: https://m.media-amazon.com/images/I/71s3cEqEZTL.jpg
 coordinates:
   - lat: -36.8485
     lng: 174.7633

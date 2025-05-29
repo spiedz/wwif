@@ -6,7 +6,7 @@ date: "2024-01-15"
 year: 2014
 director: "Christopher Nolan"
 genre: ["Sci-Fi", "Adventure", "Drama"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5M2QJLWY3XkEyXkFqcGc@._V1_SX300.jpg"
+posterImage: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSngBJ0B7UDrLUkDlp6DCQLsEYuWR-DiHwbnxFFCniB3HiP3f3NZmR1-lKSC34ge6YXu4LX
 coordinates:
   - lat: 49.722
     lng: -113.630

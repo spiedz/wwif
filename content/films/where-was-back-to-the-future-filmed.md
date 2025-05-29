@@ -6,7 +6,7 @@ date: "2024-01-15"
 year: 1985
 director: "Robert Zemeckis"
 genre: ["Sci-Fi", "Comedy", "Adventure"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BZmM3ZjE0NzctNjBiOC00MDZmLTgzMTUtNGVlOWFlOTNiMDBiXkEyXkFqcGc@._V1_SX300.jpg"
+posterImage: "https://m.media-amazon.com/images/M/MV5BMjA4MzI0NzI3MF5BMl5BanBnXkFtZTcwOTc4Mzg0OQ@@._V1_.jpg"
 coordinates:
   - lat: 33.9788
     lng: -118.0360

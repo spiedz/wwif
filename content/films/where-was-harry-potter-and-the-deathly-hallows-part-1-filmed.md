@@ -6,7 +6,7 @@ date: "2024-01-15"
 year: 2010
 director: "David Yates"
 genre: ["Adventure", "Fantasy", "Mystery"]
-posterImage: ""
+posterImage: https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRowc4eNtwSbKVY8dCK_7tJdvEBvOJVeoEVYRfKyw5bmULXTi7rVdP-ep48vQZ75hhYjGc3XQ
 coordinates:
   - lat: 51.5098
     lng: -0.1349

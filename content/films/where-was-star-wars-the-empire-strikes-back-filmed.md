@@ -6,7 +6,7 @@ date: "2024-01-15"
 year: 1980
 director: "Irvin Kershner"
 genre: ["Sci-Fi", "Adventure", "Action"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BZTY2ZTNjMGItMTEyNy00ZDkxLTgzMmMtZzhiZGY2NzMxNjE0XkEyXkFqcGc@._V1_SX300.jpg"
+posterImage: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSmPLuX6fI7ZerePFQEV6KjR-y3QQNJIIEyoZ6bexjYRs_rbnVbLu1BBVjFOd_rhfQO2RFS
 coordinates:
   - lat: 60.4079
     lng: 7.5029

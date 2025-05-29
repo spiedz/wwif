@@ -6,7 +6,7 @@ date: "2024-01-15"
 year: 1983
 director: "Richard Marquand"
 genre: ["Science Fiction", "Adventure", "Fantasy"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BYjVkYzYxNGItZTk5MC00NGZlLWIxNjMtMjFjOTY5OGOGMyNmYwXkEyXkFqcGc@._V1_SX300.jpg"
+posterImage: https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTn3_WWnedq7QR4lHDrTZj0t2TzC7gLAIt-btmy9C1ywhqsoB0-FHPVlII9Znd8Gyl4QNaIfg
 coordinates:
   - lat: 32.7302
     lng: -114.9228
