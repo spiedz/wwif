@@ -6,7 +6,7 @@ date: "2024-01-15"
 year: 1977
 director: "George Lucas"
 genre: ["Sci-Fi", "Adventure", "Fantasy", "Action"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BYWVmNDU2ZGEtZjcxZC00MjI3LWFkZGQtMzg3MmFkZmJhZDA4XkEyXkFqcGc@._V1_SX300.jpg"
+posterImage: "https://m.media-amazon.com/images/I/91YXgocJn5L._UF1000,1000_QL80_.jpg"
 coordinates:
   - lat: 33.9184
     lng: 8.4417
