@@ -10,29 +10,29 @@ posterImage: "https://m.media-amazon.com/images/M/MV5BYjI3NDU0ZGYtYjA2YS00Y2RlLT
 coordinates:
   - lat: 51.6967
     lng: -0.4079
-    name: Warner Bros. Studios Leavesden
-    description: The heart of Barbieland's creation.
-    image: https://www.wbsl.com/studios/wp-content/uploads/sites/6/2023/07/BAR-ARCHD-00340r-1536x1152-1.jpg
+    name: "Warner Bros. Studios Leavesden"
+    description: "The heart of Barbieland's creation."
+    image: "https://images.unsplash.com/photo-1489599735734-79b4169c2a78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
   - lat: 33.9877
     lng: -118.4720
-    name: Venice Beach Skatepark
-    description: Where Barbie and Ken first encountered the real world.
-    image: https://static.standard.co.uk/2022/06/28/08/SPL5322400_046.jpg?quality=75&auto=webp&width=960
+    name: "Venice Beach Skatepark"
+    description: "Where Barbie and Ken first encountered the real world."
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
   - lat: 34.0089
     lng: -118.4975
-    name: Santa Monica Pier
-    description: Iconic Los Angeles landmark featured in their real-world journey.
-    image: https://imagelocations-laravel.s3.us-west-1.amazonaws.com/media/261387/conversions/mobile-medium.jpg
+    name: "Santa Monica Pier"
+    description: "Iconic Los Angeles landmark featured in their real-world journey."
+    image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
   - lat: 34.0583
     lng: -118.4184
-    name: Westfield Century City
-    description: A modern LA shopping mall that stood in for a pivotal retail scene.
-    image: https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3144737965884765268
+    name: "Westfield Century City"
+    description: "A modern LA shopping mall that stood in for a pivotal retail scene."
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
   - lat: 34.0522
     lng: -118.2437
-    name: Downtown Los Angeles
-    description: General city streets representing the hustle and bustle of the real world.
-    image: https://media.cntraveler.com/photos/64b7facf4c5fe8af9fb0ecaa/master/w_1600%2Cc_limit/Barbie_rev-1-BARBIE-TP-0002_High_Res_JPEG.jpeg
+    name: "Downtown Los Angeles"
+    description: "General city streets representing the hustle and bustle of the real world."
+    image: "https://images.unsplash.com/photo-1544913974-fdd2e1e1d6c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
 streamingServices:
   - name: "Max"
     url: "https://www.max.com/"
@@ -50,7 +50,7 @@ bookingOptions:
     type: "attraction"
     description: "Ride the iconic Ferris wheel from the film!"
 behindTheScenes:
-  intro: "Greta Gerwig’s vision for Barbie was to blend hyper-stylized artificiality with relatable human experiences. This meant constructing most of Barbieland at Leavesden Studios with practical sets, minimizing CGI where possible to give it a tangible, childlike quality. When Barbie and Ken enter the 'Real World,' the filming shifts to authentic Los Angeles locations, creating a stark, hilarious contrast to their perfect pink parallel universe. The attention to detail in transforming these spaces, or letting their natural chaos shine, was key to the film's playful narrative."
+  intro: "Greta Gerwig's vision for Barbie was to blend hyper-stylized artificiality with relatable human experiences. This meant constructing most of Barbieland at Leavesden Studios with practical sets, minimizing CGI where possible to give it a tangible, childlike quality. When Barbie and Ken enter the 'Real World,' the filming shifts to authentic Los Angeles locations, creating a stark, hilarious contrast to their perfect pink parallel universe. The attention to detail in transforming these spaces, or letting their natural chaos shine, was key to the film's playful narrative."
   facts:
     - "The production bought so much pink paint for Barbieland, it reportedly caused a global shortage!"
     - "Margot Robbie, who plays Barbie, was also a producer on the film, passionately driving it forward for years."
@@ -60,7 +60,7 @@ behindTheScenes:
     - "The dream house sequences were meticulously crafted on soundstages at Leavesden, inspired by mid-century modern architecture."
     - "Director Greta Gerwig insisted on a diverse cast of Barbies and Kens to reflect the doll's broad appeal."
     - "The film's satirical take on gender roles was explored not just through dialogue but also through the visual contrast of Barbieland and the real world."
-    - "The "Perfect Day" sequence in Barbieland was shot with precise choreography, almost like a musical number."
+    - "The 'Perfect Day' sequence in Barbieland was shot with precise choreography, almost like a musical number."
     - "Many of the film's costumes were custom-made, with designers drawing inspiration from various eras of Barbie fashion."
     - "The final scene with Barbie's momentous decision was filmed in a surprisingly ordinary location, emphasizing her journey to humanity."
     - "Part of the real-world scenes necessitated capturing genuine reaction from passersby, adding to the comedic chaos."
