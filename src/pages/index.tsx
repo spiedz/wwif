@@ -58,11 +58,11 @@ export default function Home() {
   // Hero carousel content
   const heroSlides = [
     {
-      title: "Harry Potter Filming Locations",
-      subtitle: "Explore the magical world across the UK",
-      image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
-      slug: "/films/where-was-harry-potter-filmed",
-      isNew: false
+      title: "The Fantastic Four (2025) Filming Locations",
+      subtitle: "Marvel's First Family returns - filmed in Buckinghamshire & London",
+      image: "https://www.rollingstone.com/wp-content/uploads/2025/02/MFB1420_TRL_comp_DDO_v0137.1038_R8.jpg",
+      slug: "/films/where-was-the-fantastic-four-2025-filmed",
+      isNew: true
     },
     {
       title: "Thunderbolts* Filming Locations",
@@ -72,11 +72,11 @@ export default function Home() {
       isNew: true
     },
     {
-      title: "Game of Thrones Locations",
-      subtitle: "Discover the stunning locations that brought Westeros to life",
-      image: "https://images.pexels.com/photos/937524/pexels-photo-937524.jpeg",
-      slug: "/series/where-was-game-of-thrones-filmed",
-      isNew: false
+      title: "Final Destination: Bloodlines Filming Locations",
+      subtitle: "The deadly franchise returns - filmed in Vancouver with spectacular tower collapse scenes",
+      image: "https://m.media-amazon.com/images/M/MV5BMzc3OWFhZWItMTE2Yy00N2NmLTg1YTktNGVlNDY0ODQ5YjNlXkEyXkFqcGc@._V1_.jpg",
+      slug: "/films/where-was-final-destination-bloodlines-filmed",
+      isNew: true
     }
   ];
 
@@ -285,7 +285,7 @@ export default function Home() {
           maxCategories={6}
         />
         
-        {/* Recent Additions Section */}
+        {/* Recently Added Section */}
         <section className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold text-gray-800">Recently Added</h2>
@@ -302,28 +302,28 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
+                title: "Where Was Back to the Future Filmed?",
+                description: "Travel back in time to discover the iconic California locations from the classic time-travel adventure.",
+                image: "https://m.media-amazon.com/images/M/MV5BMjA4MzI0NzI3MF5BMl5BanBnXkFtZTcwOTc4Mzg0OQ@@._V1_.jpg",
+                slug: "where-was-back-to-the-future-filmed",
+                isNew: false,
+                year: 1985
+              },
+              {
+                title: "Where Was Interstellar Filmed?",
+                description: "Journey beyond the dust to discover Interstellar's stunning real-world filming locations in Canada and Iceland.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSngBJ0B7UDrLUkDlp6DCQLsEYuWR-DiHwbnxFFCniB3HiP3f3NZmR1-lKSC34ge6YXu4LX",
+                slug: "where-was-interstellar-filmed",
+                isNew: false,
+                year: 2014
+              },
+              {
                 title: "Where Was Thunderbolts* Filmed?",
                 description: "Discover the filming locations of Marvel's latest anti-hero team movie across Utah, Malaysia, and more.",
                 image: "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:0,cw:1920,ch:1080,q:80,w:1920/t6ons9A2MQVtKmAFDejv24.jpg",
                 slug: "where-was-thunderbolts-filmed",
                 isNew: true,
                 year: 2025
-              },
-              {
-                title: "Where Was The Last of Us Filmed?",
-                description: "Explore the post-apocalyptic world locations from HBO's acclaimed series.",
-                image: "https://images.unsplash.com/photo-1571889934833-e0dbb54ee42b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-                slug: "where-was-the-last-of-us-filmed",
-                isNew: false,
-                year: 2023
-              },
-              {
-                title: "Where Was Wednesday Filmed?",
-                description: "Visit the Gothic locations that brought Nevermore Academy to life.",
-                image: "https://images.unsplash.com/photo-1520637836862-4d197d17c825?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-                slug: "where-was-wednesday-filmed",
-                isNew: false,
-                year: 2022
               }
             ].map((item, index) => (
               <Link key={index} href={`/films/${item.slug}`} className="block group">
@@ -350,72 +350,6 @@ export default function Home() {
                   <div className="p-5">
                     <h3 className="font-bold text-lg text-gray-800 mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
                     <p className="text-gray-600 text-sm mb-4 line-clamp-2">{item.description}</p>
-                    <div className="flex justify-end">
-                      <span className="text-primary group-hover:text-red-700 font-medium text-sm flex items-center transition-colors">
-                        Explore Locations
-                        <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* TV Series Section */}
-        <section className="mb-16">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-800">Popular TV Series</h2>
-            <Link 
-              href="/series" 
-              className="text-primary hover:text-red-700 font-medium flex items-center"
-            >
-              View All {stats.series}+ Series
-              <svg className="w-5 h-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Where Was Stranger Things Filmed?",
-                description: "Explore the real-world locations behind the supernatural hit series.",
-                image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-                slug: "where-was-stranger-things-filmed"
-              },
-              {
-                title: "Where Was Game of Thrones Filmed?",
-                description: "Discover the stunning locations that brought Westeros to life.",
-                image: "https://images.pexels.com/photos/937524/pexels-photo-937524.jpeg",
-                slug: "where-was-game-of-thrones-filmed"
-              },
-              {
-                title: "Where Was Breaking Bad Filmed?",
-                description: "Visit the real Albuquerque locations from the iconic crime drama.",
-                image: "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-                slug: "where-was-breaking-bad-filmed"
-              }
-            ].map((series, index) => (
-              <Link key={index} href={`/series/${series.slug}`} className="block group">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100">
-                  <div className="h-48 overflow-hidden relative">
-                    <img 
-                      src={series.image} 
-                      alt={series.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      onError={(e) => {
-                        e.currentTarget.src = "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300";
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-bold text-lg text-gray-800 mb-2 group-hover:text-primary transition-colors">{series.title}</h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">{series.description}</p>
                     <div className="flex justify-end">
                       <span className="text-primary group-hover:text-red-700 font-medium text-sm flex items-center transition-colors">
                         Explore Locations
