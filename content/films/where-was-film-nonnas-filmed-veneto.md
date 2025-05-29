@@ -11,7 +11,7 @@ genre:
   - Drama
   - Family
   - Comedy
-posterImage: 'https://images.unsplash.com/photo-1567604130959-7a3d871ad467?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
+posterImage: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRz5HgLOHUKFVOu-Gsh1A-Z2A_bSC9X1Q_C94p46lvfP_cRhy30oW8oUeuAAKDqPkS3uX-l
 coordinates:
   - lat: 45.4408
     lng: 10.9929
