@@ -6,6 +6,9 @@ function generateRobotsTxt() {
   return `# Robots.txt for Where Was It Filmed
 # Optimized for SEO and crawl efficiency
 
+# Host declaration
+Host: ${BASE_URL}
+
 # Allow all crawlers access to public content
 User-agent: *
 Allow: /
@@ -36,9 +39,8 @@ Disallow: /debug/
 Disallow: /tmp/
 Disallow: /cache/
 Disallow: /*.json$
-Disallow: /*.xml$ 
 
-# Allow important static assets
+# Allow important static assets and sitemaps
 Allow: /images/
 Allow: /css/
 Allow: /js/
@@ -70,13 +72,9 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Host declaration
-Host: ${BASE_URL}
-
 # Sitemap references
 Sitemap: ${BASE_URL}/sitemap.xml
 Sitemap: ${BASE_URL}/image-sitemap.xml
-Sitemap: ${BASE_URL}/video-sitemap.xml
 `;
 }
 

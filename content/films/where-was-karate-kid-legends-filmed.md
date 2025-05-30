@@ -64,9 +64,6 @@ behindTheScenes:
     - "A local jazz musician composed several impromptu scores that were later integrated into the film's soundtrack."
     - "The director personally scouted over 100 locations before settling on the final list seen in the film."
     - "Authentic Montreal street food vendors were featured in background shots, adding local flavor."
-<<<<<<< HEAD
---- 
-=======
 ---
 
 # 🎬 Where Was Karate Kid Legends Filmed? Complete Montreal Location Guide
@@ -304,4 +301,3 @@ Yes, Montreal is generally a very safe and welcoming city for tourists. Exercise
 "Karate Kid Legends" isn't just a film; it's an invitation to explore a city bursting with character and cinematic potential. Montreal provided the perfect canvas for this epic tale of martial arts, mentorship, and self-discovery.
 
 So, whether you're a die-hard fan looking to walk in the footsteps of legends or just a traveler seeking a unique urban adventure, Montreal awaits. Pack your bags, bring your best camera, and prepare to be inspired by the real-world magic behind the silver screen. Share your adventures with us using #WhereWasItFilmed!
->>>>>>> 562eed092a0b0d713d03e02d37e664db4a95ea64
