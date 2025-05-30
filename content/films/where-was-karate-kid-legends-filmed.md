@@ -6,33 +6,33 @@ date: "2024-01-15"
 year: 2024
 director: "Hiroshi Tanaka"
 genre: ["Action", "Drama", "Martial Arts", "Adventure"]
-posterImage: "https://m.media-amazon.com/images/M/MV5BM2MwYTlkY2MtNmUzNy00MTljLThjNDAtGGUzNzMxMzcxNzM5XkEyXkFqcGc@._V1_SX300.jpg"
+posterImage: https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2500/production/4756/d103f43b2bfb75bb1566e7cf168eddaf.jpg
 coordinates:
   - lat: 45.4985
     lng: -73.5668
     name: "1080 Beaver Hall Hill"
     description: "A prominent street in downtown Montreal, known for its mix of historic and modern architecture."
-    image: "https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTvIXKXPzOBjQbmqaqbp8fDRJ8DBe2hyELwA&s"
   - lat: 45.5085
     lng: -73.5604
     name: "Wing's Restaurant, Chinatown"
     description: "A classic eatery nestled in the vibrant heart of Montreal's bustling Chinatown district."
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+    image: "https://s1.dmcdn.net/v/YRkSE1eBks84_U2vI/x720"
   - lat: 45.5048
     lng: -73.5794
     name: "McGill University, McConnell Engineering Building"
     description: "Part of the prestigious McGill University campus, featuring impressive collegiate gothic architecture."
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+    image: "https://nypost.com/wp-content/uploads/sites/2/2025/05/legends-ben-wang-2025-105170408.jpg?quality=75&strip=all&w=1024"
   - lat: 45.5097
     lng: -73.5670
     name: "Sainte-Catherine Street"
     description: "Montreal's longest commercial street, a vibrant hub of shopping, entertainment, and cultural events."
-    image: "https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+    image: "https://www.odeon.co.uk/media/qsvedfjw/df-45204_45224_rv2_-3.jpg?width=570"
   - lat: 45.4947
     lng: -73.5413
     name: "MELS Studios"
     description: "One of Canada's premier film and television production facilities, located on Cité du Havre."
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+    image: "https://townsquare.media/site/442/files/2025/05/attachment-DF-45734_r_2000x1333_thumbnail.jpg?w=780&q=75"
 streamingServices:
   - name: "Cinematic+"
     url: "https://www.cinematicplus.com"
@@ -66,6 +66,7 @@ behindTheScenes:
     - "Authentic Montreal street food vendors were featured in background shots, adding local flavor."
 ---
 
+
 # 🎬 Where Was Karate Kid Legends Filmed? Complete Montreal Location Guide
 
 Ever wondered if you could train like a legend or walk in the footsteps of martial arts masters? The highly anticipated "Karate Kid Legends" doesn't just deliver on epic fight sequences and heartfelt mentorship; it also crafts a stunning visual journey through the vibrant streets of Montreal, Quebec, Canada.
@@ -80,7 +81,7 @@ Get ready to punch, kick, and journey through the legendary filming locations of
 
 ### 🎬 1080 Beaver Hall Hill - Urban Dojo Dynamics 🏢
 
-<img src="https://mediafiles.cineplex.com/Central/Film/Posters/35631_320_470.jpg" alt="Dramatic lighting from the Karate Kid Legends poster, highlighting the dynamic urban landscape of Beaver Hall Hill." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
+<img src="https://lanntair.com/wp-content/uploads/2025/05/Karate-Kid-Legends-WEB-Image.jpg" alt="Dramatic lighting from the Karate Kid Legends poster, highlighting the dynamic urban landscape of Beaver Hall Hill." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
 
 **🏛️ The Location**
 
@@ -105,7 +106,7 @@ This iconic street served as the backdrop for several intense training montages 
 
 ### 🎬 Wing's Restaurant, Chinatown - Culinary Combat Zone 🥢
 
-<img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/10/karate-kid-legends-poster.jpg" alt="Iconic imagery from the Karate Kid Legends poster, evoking the classic charm of Wing's Restaurant in Chinatown." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
+<img src="https://images.kinorium.com/movie/shot/537426/h280_53799903.jpg?21740335519" alt="Iconic imagery from the Karate Kid Legends poster, evoking the classic charm of Wing's Restaurant in Chinatown." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
 
 **🏛️ The Location**
 
@@ -130,7 +131,7 @@ This traditional restaurant was depicted as a local hangout for the old masters,
 
 ### 🎬 McGill University, McConnell Engineering Building area - Scholarly Showdowns 🎓
 
-<img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1130912299041811" alt="Beautiful view of McGill University showcasing its historic McConnell Engineering Building area." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTafHGBoBhOCGbdoBxSHi4QV33YqVPT0kINFg&s" alt="Beautiful view of McGill University showcasing its historic McConnell Engineering Building area." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
 
 **🏛️ The Location**
 
@@ -155,7 +156,7 @@ The serene courtyards and grand halls of McGill University served as the setting
 
 ### 🎬 Sainte-Catherine Street (near Quartier des spectacles) - Neon & Nocturnal Nunchakus 🌃
 
-<img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3524482961047503009" alt="Impressive facade along Sainte-Catherine Street, displaying vibrant street life near Quartier des spectacles." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
+<img src="https://pacmusee.qc.ca/image/1/976/0/uploads/modeles/images/rue_sainte-catherine_vue_vol_oiseau-fr-1470155479.jpg" alt="Impressive facade along Sainte-Catherine Street, displaying vibrant street life near Quartier des spectacles." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
 
 **🏛️ The Location**
 
@@ -180,7 +181,7 @@ The lively and illuminated stretch of Sainte-Catherine Street was integral to ca
 
 ### 🎬 MELS Studios, Cité du Havre - Inside the Legendary Training Ground 🎥
 
-<img src="https://www.sonypictures.ca/sites/canada/files/2024-12/KKL_OnLine_1080x1350_TSR_02_0.jpg" alt="Authentic production snapshot from MELS Studios, capturing the scale of a film set." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUIj1vbXEatKfxkRTf8ftZ_DvUJ695Dpp4IQ&s" alt="Authentic production snapshot from MELS Studios, capturing the scale of a film set." style="width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
 
 **🏛️ The Location**
 
