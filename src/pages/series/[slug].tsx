@@ -2,16 +2,26 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { ParsedUrlQuery } from 'querystring';
+import { useState, useEffect } from 'react';
 import SeriesLocationsGuide from '../../components/SeriesLocationsGuide';
 import SeriesEpisodesDisplay from '../../components/SeriesEpisodesDisplay';
+import SeasonTabNavigation from '../../components/SeasonTabNavigation';
+import SeasonImageGallery from '../../components/SeasonImageGallery';
+import SeriesBreadcrumbs from '../../components/SeriesBreadcrumbs';
 import { getSeriesBySlug, getSeriesSlugs } from '../../lib/server/serverMarkdown';
 import { TVSeries } from '../../types/series';
 import SEO from '../../components/SEO';
 import SafeImage from '../../components/SafeImage';
 import CommentSection from '../../components/CommentSection';
-// Removed location utilities import
 import Link from 'next/link';
 import { getVideoObjectSchema, combineSchemas } from '../../utils/schema';
+import {
+  generateSeriesStructuredData,
+  generateSeriesBreadcrumbs,
+  generateSeriesMetaTags,
+  generateSeriesCanonicalUrl,
+  generateSeriesFAQSchema
+} from '../../utils/seriesSEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
 interface SeriesPageProps {
@@ -25,6 +35,39 @@ interface Params extends ParsedUrlQuery {
 
 export default function SeriesPage({ series, locationBacklinks }: SeriesPageProps) {
   const router = useRouter();
+  const [selectedSeason, setSelectedSeason] = useState<number>(1);
+  const [activeTab, setActiveTab] = useState<'overview' | 'locations' | 'episodes' | 'gallery'>('overview');
+
+  // Initialize selected season from URL or default to first season
+  useEffect(() => {
+    if (series?.seasons && series.seasons.length > 0) {
+      const seasonFromUrl = router.query.season ? parseInt(router.query.season as string) : null;
+      if (seasonFromUrl && series.seasons.some(s => s.number === seasonFromUrl)) {
+        setSelectedSeason(seasonFromUrl);
+      } else {
+        setSelectedSeason(series.seasons[0].number);
+      }
+    }
+  }, [router.query.season, series?.seasons]);
+
+  // Update active tab from URL hash
+  useEffect(() => {
+    const hash = router.asPath.split('#')[1];
+    if (hash && ['overview', 'locations', 'episodes', 'gallery'].includes(hash)) {
+      setActiveTab(hash as any);
+    }
+  }, [router.asPath]);
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab as any);
+    // Update URL hash without page reload
+    const newUrl = `${router.asPath.split('#')[0]}#${tab}`;
+    router.replace(newUrl, undefined, { shallow: true });
+  };
+
+  const handleSeasonChange = (seasonNumber: number) => {
+    setSelectedSeason(seasonNumber);
+  };
 
   if (router.isFallback) {
     return (
@@ -55,39 +98,12 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
 
   const { meta } = series;
   
-  // Create schema data
-  const jsonLdData = {
-    '@context': 'https://schema.org',
-    '@type': 'TVSeries',
-    'headline': meta.title,
-    'image': meta.posterImage || meta.bannerImage || '',
-    'author': 'Where Was It Filmed',
-    'genre': meta.genres?.join(', '),
-    'startDate': meta.releaseYearStart,
-    'endDate': meta.releaseYearEnd || 'present',
-    'numberOfSeasons': typeof meta.seasons === 'number' ? meta.seasons : Array.isArray(meta.seasons) ? meta.seasons.length : undefined,
-    'creator': meta.creator ? {
-      '@type': 'Person',
-      'name': meta.creator
-    } : undefined,
-    'publisher': {
-      '@type': 'Organization',
-      'name': 'Where Was It Filmed',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': 'https://wherewasitfilmed.co/logo.png'
-      }
-    },
-    'url': `https://wherewasitfilmed.co/series/${meta.slug}`,
-    'datePublished': new Date().toISOString(),
-    'dateCreated': new Date().toISOString(),
-    'dateModified': new Date().toISOString(),
-    'description': meta.description,
-    'mainEntityOfPage': {
-      '@type': 'WebPage',
-      '@id': `https://wherewasitfilmed.co/series/${meta.slug}`,
-    }
-  };
+  // Generate comprehensive SEO data
+  const structuredData = generateSeriesStructuredData(series, selectedSeason);
+  const breadcrumbsSchema = generateSeriesBreadcrumbs(series, selectedSeason, activeTab);
+  const faqSchema = generateSeriesFAQSchema(series);
+  const metaTags = generateSeriesMetaTags(series, selectedSeason, activeTab);
+  const canonicalUrl = generateSeriesCanonicalUrl(series, selectedSeason, activeTab);
 
   // Add video schema if trailer is available
   const videoSchema = meta.trailer ? getVideoObjectSchema({
@@ -100,23 +116,56 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
     duration: meta.trailer.duration
   }) : null;
 
-  // Combine schemas
-  const jsonLd = meta.trailer && videoSchema ? [jsonLdData, videoSchema] : jsonLdData;
+  // Combine all schemas
+  const allSchemas = [
+    structuredData,
+    breadcrumbsSchema,
+    faqSchema,
+    ...(videoSchema ? [videoSchema] : [])
+  ].filter(Boolean);
   
   return (
       <>
-      <SEO 
-        meta={{
-          title: `${meta.title} - Filming Locations`,
-          description: meta.description || `Discover the real filming locations of ${meta.title}`,
-          slug: meta.slug
-        }}
-        imageUrl={meta.posterImage || meta.bannerImage}
-        type="article"
-        jsonLd={jsonLd}
+      <Head>
+        <title>{metaTags.title}</title>
+        <meta name="description" content={metaTags.description} />
+        <meta name="keywords" content={metaTags.keywords} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph tags */}
+        <meta property="og:title" content={metaTags.ogTitle} />
+        <meta property="og:description" content={metaTags.ogDescription} />
+        <meta property="og:type" content={metaTags.ogType} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={metaTags.ogImage} />
+        <meta property="og:site_name" content="Where Was It Filmed" />
+        
+        {/* Twitter tags */}
+        <meta name="twitter:card" content={metaTags.twitterCard} />
+        <meta name="twitter:title" content={metaTags.twitterTitle} />
+        <meta name="twitter:description" content={metaTags.twitterDescription} />
+        <meta name="twitter:image" content={metaTags.twitterImage} />
+        <meta name="twitter:site" content="@wherewasitfilmed" />
+        
+        {/* Additional meta tags */}
+        <meta name="author" content="Where Was It Filmed" />
+        <meta name="publisher" content="Where Was It Filmed" />
+        <meta property="article:publisher" content="https://wherewasitfilmed.co" />
+        
+        {/* Structured Data */}
+        {allSchemas.map((schema, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema)
+            }}
       />
+        ))}
+      </Head>
       
-      {/* Enhanced Hero Section with Netflix branding */}
+      {/* Enhanced Hero Section */}
       <div className="relative bg-black h-[60vh] sm:h-[70vh] overflow-hidden">
         {/* Hero background image */}
         <div className="absolute inset-0 opacity-50">
@@ -173,6 +222,11 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
                   {meta.releaseYearStart}
                   {meta.releaseYearEnd ? ` - ${meta.releaseYearEnd}` : ' - Present'}
                 </span>
+                {series.seasons && (
+                  <span className="text-xs font-medium py-1 px-3 bg-gray-800/70 rounded-full">
+                    {series.seasons.length} Season{series.seasons.length !== 1 ? 's' : ''}
+                  </span>
+                )}
               </div>
               
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 drop-shadow-md">{meta.title}</h1>
@@ -205,8 +259,60 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
       
       {/* Main content */}
       <div className="container mx-auto py-12 px-4">
+        {/* Breadcrumbs */}
+        <SeriesBreadcrumbs
+          series={series}
+          selectedSeason={selectedSeason}
+          activeTab={activeTab}
+          className="mb-8"
+        />
+
+        {/* Season Navigation */}
+        {series.seasons && series.seasons.length > 0 && (
+          <SeasonTabNavigation
+            seasons={series.seasons}
+            activeSeasonNumber={selectedSeason}
+            onSeasonChange={handleSeasonChange}
+            className="mb-12"
+          />
+        )}
+
+        {/* Enhanced Tab Navigation */}
+        <div className="mb-12">
+          <div className="border-b border-gray-200">
+            <nav className="-mb-px flex space-x-8 overflow-x-auto">
+              {[
+                { id: 'overview', label: 'Overview', icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
+                { id: 'locations', label: 'Filming Locations', icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z' },
+                { id: 'episodes', label: 'Episodes', icon: 'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z' },
+                { id: 'gallery', label: 'Gallery', icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z' }
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => handleTabChange(tab.id)}
+                  className={`whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 flex items-center space-x-2 ${
+                    activeTab === tab.id
+                      ? 'border-primary text-primary'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={tab.icon} />
+                  </svg>
+                  <span>{tab.label}</span>
+                </button>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Tab Content */}
+        <div className="tab-content">
+          {/* Overview Tab */}
+          {activeTab === 'overview' && (
+            <div className="space-y-12">
         {/* SEO-optimized introductory paragraph */}
-        <div className="mb-12 bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
+              <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
           <div className="p-6 md:p-8">
             <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center group">
               <svg className="w-7 h-7 mr-3 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,6 +342,14 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
                         <span className="text-primary mr-2">•</span>
                         <span><strong>Genres:</strong> {meta.genres?.join(', ')}</span>
                       </li>
+                            <li className="flex items-start">
+                              <span className="text-primary mr-2">•</span>
+                              <span><strong>Seasons:</strong> {series.seasons?.length || 0}</span>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="text-primary mr-2">•</span>
+                              <span><strong>Episodes:</strong> {series.seasons?.reduce((total, season) => total + season.episodeCount, 0) || 0}</span>
+                            </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">•</span>
                         <span><strong>Primary Filming Locations:</strong> {series.locations && series.locations.length > 0 
@@ -257,36 +371,37 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
       
         {/* Series content from markdown */}
         {series.html && (
-          <div className="prose prose-lg max-w-none mt-8 prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
+                <div className="prose prose-lg max-w-none prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
             <div dangerouslySetInnerHTML={{ __html: series.html }} />
           </div>
         )}
-      
-        {/* Tab navigation for different sections */}
-        <div className="mb-12">
-          <div className="border-b border-gray-200">
-            <nav className="-mb-px flex space-x-8">
-              <a href="#locations" className="whitespace-nowrap py-4 px-1 border-b-2 border-primary text-sm font-medium text-primary">
-                Filming Locations
-              </a>
-              <a href="#episodes" className="whitespace-nowrap py-4 px-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                Episodes
-              </a>
-              <a href="#behind" className="whitespace-nowrap py-4 px-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                Behind The Scenes
-              </a>
-            </nav>
           </div>
-        </div>
+          )}
         
-        {/* Locations Section */}
-        <div id="locations" className="mb-16">
+          {/* Locations Tab */}
+          {activeTab === 'locations' && (
+            <div>
           <SeriesLocationsGuide series={series} hideTitle={true} />
         </div>
+          )}
         
-        {/* Episodes Section */}
-        <div id="episodes" className="mb-16">
+          {/* Episodes Tab */}
+          {activeTab === 'episodes' && (
+            <div>
           <SeriesEpisodesDisplay series={series} />
+            </div>
+          )}
+
+          {/* Gallery Tab */}
+          {activeTab === 'gallery' && (
+            <div>
+              <SeasonImageGallery
+                series={series}
+                selectedSeason={selectedSeason}
+                showSeasonFilter={true}
+              />
+            </div>
+          )}
         </div>
         
         {/* Streaming Services Section */}
@@ -424,7 +539,7 @@ export default function SeriesPage({ series, locationBacklinks }: SeriesPageProp
               <p className="text-gray-600 mt-1">Share your experiences or ask questions about visiting the filming locations of {meta.title.replace("Where Was ", "").replace(" Filmed?", "")}.</p>
             </div>
             <div className="p-6">
-              <CommentSection pageSlug={meta.slug} pageType="film" />
+              <CommentSection pageSlug={meta.slug} pageType="series" />
             </div>
           </div>
         </div>

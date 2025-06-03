@@ -1,0 +1,462 @@
+{
+  "meta": {
+    "title": "Where Was Stranger Things Filmed?",
+    "slug": "stranger-things",
+    "description": "Discover the real filming locations of Netflix's hit series Stranger Things. From Hawkins High School to the Upside Down portal locations, explore where this supernatural thriller was actually filmed.",
+    "overview": "Stranger Things, Netflix's supernatural thriller set in the fictional town of Hawkins, Indiana, was primarily filmed in Georgia. The show's creators, the Duffer Brothers, chose various locations throughout Georgia to bring the 1980s small-town atmosphere to life. From the iconic Hawkins High School to the mysterious laboratory, each location was carefully selected to create the perfect backdrop for this nostalgic sci-fi adventure.",
+    "releaseYearStart": 2016,
+    "releaseYearEnd": 2025,
+    "genres": ["Science Fiction", "Horror", "Drama", "Thriller"],
+    "creator": "The Duffer Brothers",
+    "posterImage": "https://placehold.co/400x600/8B0000/FFFFFF?text=Stranger+Things+Poster",
+    "bannerImage": "https://placehold.co/1920x1080/1a1a1a/FFFFFF?text=Stranger+Things+Banner",
+    "coordinates": [
+      {
+        "lat": 33.7490,
+        "lng": -84.3880,
+        "name": "Atlanta, Georgia"
+      }
+    ],
+    "streamingServices": [
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/title/80057281",
+        "logo": "https://placehold.co/100x50/E50914/FFFFFF?text=Netflix"
+      }
+    ],
+    "bookingOptions": [
+      {
+        "name": "Stranger Things Experience",
+        "type": "tour",
+        "price": "$45",
+        "url": "https://example.com/stranger-things-tour",
+        "isPartner": true
+      },
+      {
+        "name": "Hawkins Hotel",
+        "type": "accommodation",
+        "price": "$120/night",
+        "discount": "$95/night",
+        "url": "https://example.com/hawkins-hotel"
+      }
+    ],
+    "behindTheScenes": {
+      "intro": "The Duffer Brothers wanted to capture the authentic feel of 1980s small-town America, leading them to choose Georgia as their primary filming location.",
+      "facts": [
+        "The show was originally pitched as a limited series",
+        "Many exterior shots were filmed in Jackson, Georgia",
+        "The Upside Down scenes were filmed using practical effects",
+        "Hawkins High School is actually Patrick Henry High School in Stockbridge, Georgia"
+      ]
+    },
+    "trailer": {
+      "title": "Stranger Things - Official Trailer",
+      "description": "Watch the official trailer for Netflix's Stranger Things",
+      "thumbnailUrl": "https://placehold.co/1280x720/8B0000/FFFFFF?text=Stranger+Things+Trailer",
+      "contentUrl": "https://example.com/stranger-things-trailer.mp4",
+      "embedUrl": "https://www.youtube.com/embed/example",
+      "uploadDate": "2016-07-15",
+      "duration": "PT2M30S"
+    }
+  },
+  "seasons": [
+    {
+      "number": 1,
+      "episodeCount": 8,
+      "releaseYear": 2016,
+      "posterImage": "https://placehold.co/400x600/8B0000/FFFFFF?text=Season+1+Poster",
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Chapter One: The Vanishing of Will Byers",
+          "description": "On his way home from a friend's house, young Will sees something terrifying. Nearby, a sinister secret lurks in the depths of a government lab.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E1+Thumbnail",
+          "locations": ["hawkins-lab", "hawkins-high", "mirkwood"]
+        },
+        {
+          "number": 2,
+          "title": "Chapter Two: The Weirdo on Maple Street",
+          "description": "Lucas, Mike and Dustin try to talk to the girl they found in the woods. Hopper questions an anxious Joyce about an unsettling phone call.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E2+Thumbnail",
+          "locations": ["hawkins-middle", "byers-house"]
+        },
+        {
+          "number": 3,
+          "title": "Chapter Three: Holly, Jolly",
+          "description": "An increasingly concerned Nancy looks for Barb and finds out what Jonathan's been up to. Joyce is convinced Will is trying to talk to her.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E3+Thumbnail",
+          "locations": ["hawkins-high", "upside-down-portal"]
+        },
+        {
+          "number": 4,
+          "title": "Chapter Four: The Body",
+          "description": "Refusing to believe Will is dead, Joyce and Hopper team up to investigate what happened. Nancy and Jonathan become unlikely allies.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E4+Thumbnail",
+          "locations": ["hawkins-lab", "quarry"]
+        },
+        {
+          "number": 5,
+          "title": "Chapter Five: Dig Dug",
+          "description": "Hopper discovers the truth about the lab, while Dustin and Lucas recruit Steve to help find Dart. Nancy and Jonathan prepare to fight the monster.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E5+Thumbnail",
+          "locations": ["hawkins-lab", "byers-house"]
+        },
+        {
+          "number": 6,
+          "title": "Chapter Six: The Monster",
+          "description": "Nancy and Jonathan swap conspiracy theories with a reluctant Murray. Eleven reflects on her past while the gang sets their plan into motion.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E6+Thumbnail",
+          "locations": ["hawkins-middle", "upside-down-portal"]
+        },
+        {
+          "number": 7,
+          "title": "Chapter Seven: The Bathtub",
+          "description": "Eleven makes a sacrifice to save her friends. Joyce and Hopper are taken to the lab where they discover the truth about the experiments.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E7+Thumbnail",
+          "locations": ["hawkins-lab", "hawkins-middle"]
+        },
+        {
+          "number": 8,
+          "title": "Chapter Eight: The Upside Down",
+          "description": "Dr. Brenner holds Hopper and Joyce for questioning while the boys wait with Eleven in the gym. Back at the lab, Nancy and Jonathan fight the Demogorgon.",
+          "airDate": "2016-07-15",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S1E8+Thumbnail",
+          "locations": ["hawkins-lab", "hawkins-middle", "upside-down-portal"]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "episodeCount": 9,
+      "releaseYear": 2017,
+      "posterImage": "https://placehold.co/400x600/8B0000/FFFFFF?text=Season+2+Poster",
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Chapter One: MADMAX",
+          "description": "As the town preps for Halloween, a high-scoring rival shakes things up in the arcade, and a skeptical Hopper inspects a field of rotting pumpkins.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E1+Thumbnail",
+          "locations": ["hawkins-high", "arcade", "pumpkin-patch"]
+        },
+        {
+          "number": 2,
+          "title": "Chapter Two: Trick or Treat, Freak",
+          "description": "After Will sees something terrible on trick-or-treat night, Mike wonders whether Eleven's still out there. Nancy wrestles with the truth about Barb.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E2+Thumbnail",
+          "locations": ["hawkins-neighborhoods", "byers-house"]
+        },
+        {
+          "number": 3,
+          "title": "Chapter Three: The Pollywog",
+          "description": "Dustin adopts a strange new pet, and Eleven grows increasingly impatient. A well-meaning Bob urges Will to stand up to his fears.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E3+Thumbnail",
+          "locations": ["dustin-house", "hawkins-lab"]
+        },
+        {
+          "number": 4,
+          "title": "Chapter Four: Will the Wise",
+          "description": "An ailing Will opens up to Joyce. Meanwhile, Bob makes a request, Nancy and Jonathan team up, and Hopper learns the truth.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E4+Thumbnail",
+          "locations": ["hawkins-lab", "byers-house"]
+        },
+        {
+          "number": 5,
+          "title": "Chapter Five: Dig Dug",
+          "description": "Nancy and Jonathan swap conspiracy theories with a reluctant Murray. Eleven reflects on her past while the gang sets their plan into motion.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E5+Thumbnail",
+          "locations": ["murray-warehouse", "hopper-cabin"]
+        },
+        {
+          "number": 6,
+          "title": "Chapter Six: The Spy",
+          "description": "Will's connection to a shadowy evil grows stronger, but no one's quite sure how to stop it. Elsewhere, Dustin and Steve forge an unlikely bond.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E6+Thumbnail",
+          "locations": ["hawkins-lab", "junkyard"]
+        },
+        {
+          "number": 7,
+          "title": "Chapter Seven: The Lost Sister",
+          "description": "Psychic visions draw Eleven to a band of violent outcasts and an angry girl with a shadowy past.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E7+Thumbnail",
+          "locations": ["chicago-warehouse"]
+        },
+        {
+          "number": 8,
+          "title": "Chapter Eight: The Mind Flayer",
+          "description": "An unlikely hero steps forward when a deadly development puts the Hawkins Lab on lockdown, trapping Will and several others inside.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E8+Thumbnail",
+          "locations": ["hawkins-lab", "byers-house"]
+        },
+        {
+          "number": 9,
+          "title": "Chapter Nine: The Gate",
+          "description": "Eleven makes a sacrifice to save her friends. Joyce and Hopper are taken to the lab where they discover the truth about the experiments.",
+          "airDate": "2017-10-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S2E9+Thumbnail",
+          "locations": ["hawkins-lab", "upside-down-portal", "hawkins-middle"]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "episodeCount": 8,
+      "releaseYear": 2019,
+      "posterImage": "https://placehold.co/400x600/8B0000/FFFFFF?text=Season+3+Poster",
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Chapter One: Suzie, Do You Copy?",
+          "description": "Summer brings new jobs and budding romance. But when Dustin's radio picks up a Russian broadcast, he wonders if the evil from last year is back.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E1+Thumbnail",
+          "locations": ["starcourt-mall", "dustin-house"]
+        },
+        {
+          "number": 2,
+          "title": "Chapter Two: The Mall Rats",
+          "description": "Nancy and Jonathan follow a lead, Steve and Robin sign on to a secret mission, and Max and Eleven go shopping. A rattled Billy has troubling visions.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E2+Thumbnail",
+          "locations": ["starcourt-mall", "hawkins-pool"]
+        },
+        {
+          "number": 3,
+          "title": "Chapter Three: The Case of the Missing Lifeguard",
+          "description": "With El and Max looking for Billy, Will declares a day without girls. Steve and Dustin go on a stakeout, and Joyce and Hopper return to Hawkins Lab.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E3+Thumbnail",
+          "locations": ["hawkins-pool", "hawkins-lab", "starcourt-mall"]
+        },
+        {
+          "number": 4,
+          "title": "Chapter Four: The Sauna Test",
+          "description": "A code red brings the gang back together to face a frighteningly familiar evil. Karen urges Nancy to keep digging, and Robin finds a useful map.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E4+Thumbnail",
+          "locations": ["hawkins-high", "starcourt-mall"]
+        },
+        {
+          "number": 5,
+          "title": "Chapter Five: The Flayed",
+          "description": "Strange surprises lurk inside an old farmhouse and deep beneath the Starcourt Mall. Meanwhile, the Mind Flayer is gathering strength.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E5+Thumbnail",
+          "locations": ["starcourt-mall", "brimborn-steelworks"]
+        },
+        {
+          "number": 6,
+          "title": "Chapter Six: E Pluribus Unum",
+          "description": "Dr. Alexei reveals what the Russians have been building, and Eleven sees where Billy has been. Dustin and Erica help save the day.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E6+Thumbnail",
+          "locations": ["starcourt-mall", "brimborn-steelworks"]
+        },
+        {
+          "number": 7,
+          "title": "Chapter Seven: The Bite",
+          "description": "With time running out -- and an assassin close behind -- Hopper's crew races back to Hawkins, where El and the kids are preparing for war.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E7+Thumbnail",
+          "locations": ["starcourt-mall", "murray-warehouse"]
+        },
+        {
+          "number": 8,
+          "title": "Chapter Eight: The Battle of Starcourt",
+          "description": "Terror reigns in the food court when the Mind Flayer comes to collect. But down below, in the dark, the future of the world is at stake.",
+          "airDate": "2019-07-04",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S3E8+Thumbnail",
+          "locations": ["starcourt-mall", "upside-down-portal"]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "episodeCount": 9,
+      "releaseYear": 2022,
+      "posterImage": "https://placehold.co/400x600/8B0000/FFFFFF?text=Season+4+Poster",
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Chapter One: The Hellfire Club",
+          "description": "Amid the horror of a shocking massacre at a Russian prison, Hopper struggles to survive. Back in Hawkins, the gang gathers for spring break.",
+          "airDate": "2022-05-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E1+Thumbnail",
+          "locations": ["hawkins-high", "russia-prison"]
+        },
+        {
+          "number": 2,
+          "title": "Chapter Two: Vecna's Curse",
+          "description": "A plane brings Mike to California -- and a dead body brings Hawkins to a halt. Nancy goes looking for leads. A shaken Eddie tells the gang what he saw.",
+          "airDate": "2022-05-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E2+Thumbnail",
+          "locations": ["california-house", "hawkins-trailer-park"]
+        },
+        {
+          "number": 3,
+          "title": "Chapter Three: The Monster and the Superhero",
+          "description": "Murray and Joyce fly to Alaska, and El faces serious consequences. Robin and Nancy dig up dirt on Hawkins' demons. Dr. Owens delivers sobering news.",
+          "airDate": "2022-05-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E3+Thumbnail",
+          "locations": ["alaska-facility", "hawkins-library"]
+        },
+        {
+          "number": 4,
+          "title": "Chapter Four: Dear Billy",
+          "description": "Max is in grave danger... and running out of time. A patient at Pennhurst asylum has visitors. Elsewhere, in Russia, Hopper is hard at work.",
+          "airDate": "2022-05-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E4+Thumbnail",
+          "locations": ["pennhurst-asylum", "russia-prison"]
+        },
+        {
+          "number": 5,
+          "title": "Chapter Five: The Nina Project",
+          "description": "Owens takes El to Nevada, where she's forced to confront her past, while the Hawkins kids cling to hope. A prison guard makes Hopper a deal.",
+          "airDate": "2022-05-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E5+Thumbnail",
+          "locations": ["nevada-facility", "russia-prison"]
+        },
+        {
+          "number": 6,
+          "title": "Chapter Six: The Dive",
+          "description": "Behind the Iron Curtain, a risky rescue mission gets underway. The California crew seeks help from a hacker. Steve takes one for the team.",
+          "airDate": "2022-05-27",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E6+Thumbnail",
+          "locations": ["russia-prison", "lovers-lake"]
+        },
+        {
+          "number": 7,
+          "title": "Chapter Seven: The Massacre at Hawkins Lab",
+          "description": "As Hopper braces to battle a monster, Dustin dissects Vecna's motives -- and decodes a message from beyond. El finds strength in a distant memory.",
+          "airDate": "2022-07-01",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E7+Thumbnail",
+          "locations": ["russia-prison", "hawkins-lab", "nevada-facility"]
+        },
+        {
+          "number": 8,
+          "title": "Chapter Eight: Papa",
+          "description": "Nancy has sobering visions, and El passes an important test. Back in Hawkins, the gang gathers supplies and prepares for battle.",
+          "airDate": "2022-07-01",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E8+Thumbnail",
+          "locations": ["nevada-facility", "hawkins-war-zone"]
+        },
+        {
+          "number": 9,
+          "title": "Chapter Nine: The Piggyback",
+          "description": "With selfless hearts and a clash of metal, heroes fight from every corner of the battlefield to save Hawkins -- and the world itself.",
+          "airDate": "2022-07-01",
+          "thumbnail": "https://placehold.co/640x360/2C2C2C/FFFFFF?text=S4E9+Thumbnail",
+          "locations": ["upside-down-portal", "hawkins-war-zone", "russia-prison"]
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "hawkins-lab",
+      "name": "Hawkins National Laboratory",
+      "description": "The mysterious government facility where Eleven was held and experiments on the Upside Down took place. In reality, this is the Georgia Mental Health Institute in Decatur, Georgia.",
+      "coordinates": {
+        "lat": 33.7756,
+        "lng": -84.2963
+      },
+      "image": "https://placehold.co/800x600/2C2C2C/FFFFFF?text=Hawkins+Lab",
+      "episodes": [
+        { "season": 1, "episode": 1, "sceneDescription": "Eleven escapes from the lab" },
+        { "season": 1, "episode": 4, "sceneDescription": "Hopper discovers the truth" },
+        { "season": 1, "episode": 7, "sceneDescription": "Joyce and Hopper infiltrate the lab" },
+        { "season": 2, "episode": 8, "sceneDescription": "The lab is overrun by Demodogs" }
+      ]
+    },
+    {
+      "id": "hawkins-high",
+      "name": "Hawkins High School",
+      "description": "The high school attended by Nancy, Jonathan, and Steve. Filmed at Patrick Henry High School in Stockbridge, Georgia.",
+      "coordinates": {
+        "lat": 33.5379,
+        "lng": -84.2324
+      },
+      "image": "https://placehold.co/800x600/8B4513/FFFFFF?text=Hawkins+High+School",
+      "episodes": [
+        { "season": 1, "episode": 1, "sceneDescription": "Nancy and Barb at school" },
+        { "season": 1, "episode": 3, "sceneDescription": "Nancy searches for Barb" },
+        { "season": 3, "episode": 4, "sceneDescription": "The sauna test" }
+      ]
+    },
+    {
+      "id": "hawkins-middle",
+      "name": "Hawkins Middle School",
+      "description": "Where Mike, Dustin, Lucas, and Will attend school. The gym scenes were filmed at Patrick Henry High School.",
+      "coordinates": {
+        "lat": 33.5379,
+        "lng": -84.2324
+      },
+      "image": "https://placehold.co/800x600/228B22/FFFFFF?text=Hawkins+Middle+School",
+      "episodes": [
+        { "season": 1, "episode": 6, "sceneDescription": "The boys hide in the gym" },
+        { "season": 1, "episode": 8, "sceneDescription": "Final confrontation with the Demogorgon" }
+      ]
+    },
+    {
+      "id": "starcourt-mall",
+      "name": "Starcourt Mall",
+      "description": "The central location for Season 3, where the Russian base was hidden. Filmed at Gwinnett Place Mall in Duluth, Georgia.",
+      "coordinates": {
+        "lat": 33.9526,
+        "lng": -84.1557
+      },
+      "image": "https://placehold.co/800x600/FF69B4/FFFFFF?text=Starcourt+Mall",
+      "episodes": [
+        { "season": 3, "episode": 1, "sceneDescription": "Summer jobs at the mall" },
+        { "season": 3, "episode": 2, "sceneDescription": "Nancy and Jonathan investigate" },
+        { "season": 3, "episode": 8, "sceneDescription": "The Battle of Starcourt" }
+      ]
+    },
+    {
+      "id": "byers-house",
+      "name": "Byers House",
+      "description": "The home of Joyce, Will, and Jonathan Byers. A private residence in East Point, Georgia.",
+      "coordinates": {
+        "lat": 33.6751,
+        "lng": -84.4638
+      },
+      "image": "https://placehold.co/800x600/8B4513/FFFFFF?text=Byers+House",
+      "episodes": [
+        { "season": 1, "episode": 2, "sceneDescription": "Joyce sees the lights" },
+        { "season": 1, "episode": 5, "sceneDescription": "Will communicates through the lights" },
+        { "season": 2, "episode": 8, "sceneDescription": "The Mind Flayer attacks" }
+      ]
+    },
+    {
+      "id": "upside-down-portal",
+      "name": "Upside Down Portal",
+      "description": "The gateway between Hawkins and the Upside Down dimension. Various locations were used for portal scenes.",
+      "coordinates": {
+        "lat": 33.7490,
+        "lng": -84.3880
+      },
+      "image": "https://placehold.co/800x600/8B0000/FFFFFF?text=Upside+Down+Portal",
+      "episodes": [
+        { "season": 1, "episode": 3, "sceneDescription": "Nancy enters the Upside Down" },
+        { "season": 1, "episode": 8, "sceneDescription": "Eleven closes the portal" },
+        { "season": 2, "episode": 9, "sceneDescription": "Eleven seals the gate" }
+      ]
+    }
+  ],
+  "content": "# Stranger Things Filming Locations\n\nDiscover the real-world locations where Netflix's supernatural hit series Stranger Things was filmed. From the mysterious Hawkins National Laboratory to the iconic Starcourt Mall, explore the Georgia locations that brought the fictional town of Hawkins, Indiana to life.\n\n## About the Show\n\nStranger Things, created by the Duffer Brothers, premiered on Netflix in 2016 and quickly became a cultural phenomenon. Set in the 1980s in the fictional town of Hawkins, Indiana, the show follows a group of kids as they encounter supernatural forces and government conspiracies.\n\n## Why Georgia?\n\nThe Duffer Brothers chose Georgia as their primary filming location for several reasons:\n\n- **Tax incentives**: Georgia offers attractive film tax credits\n- **Authentic small-town feel**: Many Georgia towns captured the 1980s Midwest atmosphere\n- **Diverse locations**: From urban Atlanta to rural countryside\n- **Production infrastructure**: Established film industry presence\n\n## Visiting the Locations\n\nMany of the Stranger Things filming locations are accessible to fans:\n\n- **Public locations**: Schools, parks, and downtown areas\n- **Private residences**: Viewable from public streets (please respect privacy)\n- **Commercial locations**: Some offer tours or special events\n\n## Behind the Scenes\n\nThe production team worked closely with local communities to transform modern Georgia locations into 1980s Hawkins. This involved:\n\n- Removing modern elements like LED streetlights\n- Adding period-appropriate signage and decorations\n- Using practical effects for supernatural elements\n- Coordinating with local businesses and residents",
+  "html": "<h1>Stranger Things Filming Locations</h1><p>Discover the real-world locations where Netflix's supernatural hit series Stranger Things was filmed. From the mysterious Hawkins National Laboratory to the iconic Starcourt Mall, explore the Georgia locations that brought the fictional town of Hawkins, Indiana to life.</p><h2>About the Show</h2><p>Stranger Things, created by the Duffer Brothers, premiered on Netflix in 2016 and quickly became a cultural phenomenon. Set in the 1980s in the fictional town of Hawkins, Indiana, the show follows a group of kids as they encounter supernatural forces and government conspiracies.</p><h2>Why Georgia?</h2><p>The Duffer Brothers chose Georgia as their primary filming location for several reasons:</p><ul><li><strong>Tax incentives</strong>: Georgia offers attractive film tax credits</li><li><strong>Authentic small-town feel</strong>: Many Georgia towns captured the 1980s Midwest atmosphere</li><li><strong>Diverse locations</strong>: From urban Atlanta to rural countryside</li><li><strong>Production infrastructure</strong>: Established film industry presence</li></ul><h2>Visiting the Locations</h2><p>Many of the Stranger Things filming locations are accessible to fans:</p><ul><li><strong>Public locations</strong>: Schools, parks, and downtown areas</li><li><strong>Private residences</strong>: Viewable from public streets (please respect privacy)</li><li><strong>Commercial locations</strong>: Some offer tours or special events</li></ul><h2>Behind the Scenes</h2><p>The production team worked closely with local communities to transform modern Georgia locations into 1980s Hawkins. This involved:</p><ul><li>Removing modern elements like LED streetlights</li><li>Adding period-appropriate signage and decorations</li><li>Using practical effects for supernatural elements</li><li>Coordinating with local businesses and residents</li></ul>"
+} 

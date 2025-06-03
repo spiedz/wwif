@@ -9,6 +9,7 @@ export interface Episode {
   description?: string;
   airDate?: string;
   locations?: string[]; // References to location IDs
+  thumbnail?: string; // Episode thumbnail image
 }
 
 /**
@@ -19,6 +20,7 @@ export interface Season {
   episodeCount: number;
   releaseYear: number;
   episodes: Episode[];
+  posterImage?: string; // Season poster image
 }
 
 /**
