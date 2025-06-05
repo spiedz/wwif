@@ -1,4 +1,4 @@
-```yaml
+---
 slug: "what-was-filmed-in-larne"
 name: "Larne, United Kingdom"
 metaTitle: "Journey Through Larne's Cinematic Landscapes: Game of Thrones, D&D & The Northman Filming Locations"
