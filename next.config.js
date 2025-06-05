@@ -143,12 +143,7 @@ const nextConfig = {
     return [
       {
         source: '/what-was-filmed-in-:location',
-        destination: '/locations/:location',
-        permanent: true,
-      },
-      {
-        source: '/locations/what-was-filmed-in-:location',
-        destination: '/locations/:location',
+        destination: '/locations/what-was-filmed-in-:location',
         permanent: true,
       }
     ]
