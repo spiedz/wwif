@@ -155,6 +155,12 @@ export default function Home() {
                   Browse {stats.series}+ Series
                 </Link>
                 <Link 
+                  href="/locations" 
+                  className="inline-block border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors"
+                >
+                  Visit Locations
+                </Link>
+                <Link 
                   href="/blog" 
                   className="inline-block border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors"
                 >
@@ -362,6 +368,129 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+        </section>
+        
+        {/* Featured Filming Locations Section */}
+        <section className="mb-16">
+          <div className="flex justify-between items-center mb-8">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800">Featured Filming Locations</h2>
+              <p className="text-gray-600 mt-2">Discover the real places where movie magic happens</p>
+            </div>
+            <Link 
+              href="/locations" 
+              className="text-primary hover:text-red-700 font-medium flex items-center"
+            >
+              View All Locations
+              <svg className="w-5 h-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Larne",
+                description: "Northern Ireland's filming hotspot featuring Game of Thrones locations, harbours, and dramatic coastal routes.",
+                country: "Northern Ireland",
+                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+                slug: "larne",
+                featuredProductions: ["Game of Thrones", "Morgan", "The Foreigner"],
+                stats: { films: 6, series: 1 }
+              },
+              {
+                name: "London",
+                description: "The world's most filmed city with iconic landmarks from Big Ben to Tower Bridge appearing in countless productions.",
+                country: "England",
+                image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+                slug: "london",
+                featuredProductions: ["Harry Potter", "James Bond", "The Crown"],
+                stats: { films: 150, series: 45 }
+              },
+              {
+                name: "New York City",
+                description: "From Manhattan skyscrapers to Brooklyn streets, NYC provides the backdrop for countless Hollywood blockbusters.",
+                country: "United States",
+                image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+                slug: "new-york-city",
+                featuredProductions: ["Spider-Man", "The Avengers", "Friends"],
+                stats: { films: 200, series: 75 }
+              }
+            ].map((location, index) => (
+              <Link key={index} href={`/locations/${location.slug}`} className="block group">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100">
+                  <div className="h-48 overflow-hidden relative">
+                    <img 
+                      src={location.image} 
+                      alt={`${location.name} filming locations`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300";
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <span className="text-sm opacity-80">{location.country}</span>
+                    </div>
+                    <div className="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {location.stats.films}+ Films
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-primary transition-colors">{location.name}</h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">{location.description}</p>
+                    
+                    {/* Featured Productions */}
+                    <div className="mb-4">
+                      <p className="text-xs text-gray-500 mb-2">Featured in:</p>
+                      <div className="flex flex-wrap gap-1">
+                        {location.featuredProductions.slice(0, 3).map((production, prodIndex) => (
+                          <span key={prodIndex} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">
+                            {production}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="flex justify-between items-center">
+                      <div className="text-sm text-gray-500">
+                        {location.stats.films} films • {location.stats.series} series
+                      </div>
+                      <span className="text-primary group-hover:text-red-700 font-medium text-sm flex items-center transition-colors">
+                        Explore
+                        <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          {/* Location Feature Banner */}
+          <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">Plan Your Film Location Tour</h3>
+            <p className="text-lg mb-6 text-white/90">
+              Discover detailed guides, travel tips, and insider information for visiting your favorite filming locations
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/locations" 
+                className="bg-white text-blue-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Browse All Locations
+              </Link>
+              <Link 
+                href="/blog" 
+                className="border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Travel Guides
+              </Link>
+            </div>
           </div>
         </section>
         

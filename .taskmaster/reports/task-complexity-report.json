@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "generatedAt": "2025-06-03T16:13:34.634Z",
+    "tasksAnalyzed": 1,
+    "totalTasks": 24,
+    "analysisCount": 1,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 24,
+      "taskTitle": "Implement Location-Based Content Feature with Interactive Map",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Break down the 'Implement Location-Based Content Feature with Interactive Map' task into 7 distinct subtasks, each focusing on one of the major components: route structure implementation, location data management, interactive map integration, content management system extension, SEO optimization, travel content integration, and mobile responsiveness. For each subtask, provide a clear title, description, acceptance criteria, and estimated complexity (1-5).",
+      "reasoning": "This task has high complexity due to multiple interconnected components requiring both frontend and backend development. It involves route structure implementation, data schema design, third-party API integration (Google Maps), content management extensions, SEO optimization, travel-specific features, and responsive design considerations. The task has 7 major components with multiple sub-requirements in each, dependencies on 6 other tasks, and requires comprehensive testing across functionality, SEO, performance, responsive design, integration, and user acceptance. The high priority and extensive testing strategy further indicate its complexity."
+    }
+  ]
+}

@@ -468,7 +468,7 @@ export async function getAllLocationsData() {
 }
 
 /**
- * Updates a location with media items
+ * SERVER-ONLY: Updates a location with media items
  */
 export async function updateLocationWithMedia(locationSlug: string, mediaType: string, mediaSlug: string, mediaTitle: string) {
   try {
@@ -505,5 +505,96 @@ export async function updateLocationWithMedia(locationSlug: string, mediaType: s
   } catch (error) {
     console.error(`Error updating location with media (${locationSlug}):`, error);
     return false;
+  }
+}
+
+/**
+ * SERVER-ONLY: Gets a location by its slug
+ */
+export async function getLocationBySlug(slug: string) {
+  try {
+    const fullPath = path.join(locationsDirectory, `${slug}.md`);
+    
+    if (!fs.existsSync(fullPath)) {
+      console.error(`Location file not found: ${fullPath}`);
+      return null;
+    }
+    
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data, content } = matter(fileContents);
+
+    const processedContent = await processMarkdownContent(content);
+
+    const locationData = {
+      meta: {
+        slug,
+        name: data.name || '',
+        description: data.description || '',
+        address: data.address || '',
+        city: data.city || '',
+        state: data.state || '',
+        country: data.country || '',
+        coordinates: data.coordinates || { lat: 0, lng: 0 },
+        image: data.image || '',
+        mediaItems: data.mediaItems || [],
+        population: data.population || null,
+        timezone: data.timezone || '',
+        bestTimeToVisit: data.bestTimeToVisit || '',
+        travelTips: data.travelTips || [],
+        nearbyAttractions: data.nearbyAttractions || [],
+        localEvents: data.localEvents || [],
+      },
+      content: content,
+      html: processedContent,
+    };
+
+    return locationData;
+  } catch (error) {
+    console.error(`Error getting location by slug (${slug}):`, error);
+    return null;
+  }
+}
+
+/**
+ * SERVER-ONLY: Gets all locations with summary data for listing pages
+ */
+export async function getAllLocations() {
+  try {
+    const slugs = getLocationSlugs();
+    const locations = [];
+
+    for (const slug of slugs) {
+      const fullPath = path.join(locationsDirectory, `${slug}.md`);
+      
+      if (!fs.existsSync(fullPath)) {
+        continue;
+      }
+      
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const { data } = matter(fileContents);
+
+      // Count films and series for this location
+      const mediaItems = data.mediaItems || [];
+      const filmCount = mediaItems.filter((item: any) => item.type === 'film').length;
+      const seriesCount = mediaItems.filter((item: any) => item.type === 'series').length;
+
+      locations.push({
+        slug,
+        name: data.name || '',
+        description: data.description || '',
+        city: data.city || '',
+        country: data.country || '',
+        coordinates: data.coordinates || { lat: 0, lng: 0 },
+        image: data.image || '',
+        filmCount,
+        seriesCount,
+      });
+    }
+
+    // Sort by name for consistency
+    return locations.sort((a, b) => a.name.localeCompare(b.name));
+  } catch (error) {
+    console.error('Error getting all locations:', error);
+    return [];
   }
 }

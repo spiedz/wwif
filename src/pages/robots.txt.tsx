@@ -75,6 +75,7 @@ Disallow: /
 # Sitemap references
 Sitemap: ${BASE_URL}/sitemap.xml
 Sitemap: ${BASE_URL}/image-sitemap.xml
+Sitemap: ${BASE_URL}/location-images-sitemap.xml
 `;
 }
 

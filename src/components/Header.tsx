@@ -54,6 +54,12 @@ const Header: React.FC = () => {
               Series
             </Link>
             <Link 
+              href="/locations" 
+              className={`nav-link ${isActive('/locations') ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary'}`}
+            >
+              Locations
+            </Link>
+            <Link 
               href="/about" 
               className={`nav-link ${isActive('/about') ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary'}`}
             >
@@ -115,6 +121,13 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Series
+            </Link>
+            <Link 
+              href="/locations" 
+              className={`nav-link py-2 ${isActive('/locations') ? 'text-primary font-medium' : 'text-gray-700'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Locations
             </Link>
             <Link 
               href="/about" 
