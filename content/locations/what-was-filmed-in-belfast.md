@@ -18,8 +18,14 @@ keywords:
   - Belfast travel guide
   - What was filmed in Belfast
 address: "Belfast City Hall, Donegall Square N, Belfast BT1 5GS, United Kingdom"
-coordinates: "54.5964° N, 5.9287° W"
-population: "~345,000 (city proper, 2021 est.)"
+city: "Belfast"
+state: "County Antrim"
+country: "United Kingdom"
+coordinates:
+  lat: 54.5964
+  lng: -5.9287
+image: "https://images.ireland.com/thumbs/Images/Antrim/7f6e35c8d3d048e6adaa9d273c305521/featurecarousel-desktop.jpg"
+population: 345000
 timezone: "GMT (Greenwich Mean Time), BST (British Summer Time during warmer months)"
 bestTimeToVisit: "May to September for best weather; shoulder seasons (April, October) for fewer crowds and pleasant conditions."
 travelTips:
