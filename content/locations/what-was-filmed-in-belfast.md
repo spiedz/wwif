@@ -1,4 +1,4 @@
-```yaml
+---
 slug: "what-was-filmed-in-belfast"
 name: "Belfast, United Kingdom"
 metaTitle: "Belfast Film & TV Locations: Game of Thrones, Belfast (2021) and The Fall | Your Ultimate Guide – what-was-filmed-in-belfast"
