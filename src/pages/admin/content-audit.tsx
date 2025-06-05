@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { Content, FilmMeta, BlogMeta } from '../../types/content';
 import { TVSeries } from '../../types/series';
-import { getAllFilms, getAllSeries, getAllBlogPosts } from '../../lib/server/serverMarkdown';
+import { LocationContent } from '../../types/location';
+import { getAllFilms, getAllSeries, getAllBlogPosts, getLocationBySlug, getLocationSlugs } from '../../lib/server/serverMarkdown';
 
 // Type alias for blog posts
 type BlogPost = Content<BlogMeta>;
@@ -13,7 +14,7 @@ interface ContentItem {
   id: string;
   title: string;
   slug: string;
-  type: 'film' | 'series' | 'blog';
+  type: 'film' | 'series' | 'blog' | 'location';
   description?: string;
   wordCount: number;
   qualityScore: number;
@@ -44,6 +45,7 @@ interface ContentAuditProps {
   films: Content<FilmMeta>[];
   series: TVSeries[];
   blogPosts: BlogPost[];
+  locations: LocationContent[];
 }
 
 // Enhanced content quality scoring algorithm (matches API)
@@ -129,12 +131,17 @@ const calculateQualityScore = (item: any, type: string): number => {
     if (item.meta?.category) score += 3;
     if (item.meta?.author) score += 2;
     if (item.meta?.datePublished) score += 1;
+  } else if (type === 'location') {
+    if (item.meta?.mediaItems && item.meta.mediaItems.length > 0) score += 4;
+    if (item.meta?.city && item.meta?.country) score += 3;
+    if (item.meta?.coordinates) score += 2;
+    if (item.meta?.nearbyAttractions && item.meta.nearbyAttractions.length > 0) score += 1;
   }
   
   return Math.min(100, Math.round(score));
 };
 
-const convertToContentItem = (item: any, type: 'film' | 'series' | 'blog'): ContentItem | null => {
+const convertToContentItem = (item: any, type: 'film' | 'series' | 'blog' | 'location'): ContentItem | null => {
   // Debug: Log the first few items to see the data structure
   if (Math.random() < 0.02) { // Log roughly 2% of items to avoid spam
     console.log(`Sample ${type} item structure:`, {
@@ -245,7 +252,7 @@ const convertToContentItem = (item: any, type: 'film' | 'series' | 'blog'): Cont
     internalLinks: 0, // Could be calculated from content
     externalLinks: 0, // Could be calculated from content
     metaDescription: description,
-    url: `${baseUrl}/${type === 'film' ? 'films' : type === 'series' ? 'series' : 'blog'}/${finalSlug}`,
+    url: `${baseUrl}/${type === 'film' ? 'films' : type === 'series' ? 'series' : type === 'location' ? 'locations' : 'blog'}/${finalSlug}`,
     isIndexed: false, // Will be populated from GSC
     searchImpressions: 0,
     searchClicks: 0,
@@ -384,14 +391,14 @@ const PasswordProtection = ({ onUnlock }: { onUnlock: () => void }) => {
   );
 };
 
-export default function ContentAudit({ films, series, blogPosts }: ContentAuditProps) {
+export default function ContentAudit({ films, series, blogPosts, locations }: ContentAuditProps) {
   // Authentication state
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
   // All other state hooks - moved to top
   const [selectedItems, setSelectedItems] = useState<Set<string>>(new Set());
-  const [filterType, setFilterType] = useState<'all' | 'film' | 'series' | 'blog'>('all');
+  const [filterType, setFilterType] = useState<'all' | 'film' | 'series' | 'blog' | 'location'>('all');
   const [filterQuality, setFilterQuality] = useState<'all' | 'excellent' | 'good' | 'fair' | 'poor'>('all');
   const [filterIndexed, setFilterIndexed] = useState<'all' | 'indexed' | 'not-indexed'>('all');
   const [sortBy, setSortBy] = useState<'quality' | 'title' | 'wordCount' | 'lastModified' | 'impressions' | 'clicks' | 'position'>('quality');
@@ -415,22 +422,25 @@ export default function ContentAudit({ films, series, blogPosts }: ContentAuditP
     console.log('Processing content data:', {
       films: films.length,
       series: series.length, 
-      blogPosts: blogPosts.length
+      blogPosts: blogPosts.length,
+      locations: locations.length
     });
 
     const filmItems = films.map(film => convertToContentItem(film, 'film')).filter(Boolean) as ContentItem[];
     const seriesItems = series.map(s => convertToContentItem(s, 'series')).filter(Boolean) as ContentItem[];
     const blogItems = blogPosts.map(post => convertToContentItem(post, 'blog')).filter(Boolean) as ContentItem[];
+    const locationItems = locations.map(location => convertToContentItem(location, 'location')).filter(Boolean) as ContentItem[];
     
     console.log('Processed content items:', {
       filmItems: filmItems.length,
       seriesItems: seriesItems.length,
       blogItems: blogItems.length,
-      total: filmItems.length + seriesItems.length + blogItems.length
+      locationItems: locationItems.length,
+      total: filmItems.length + seriesItems.length + blogItems.length + locationItems.length
     });
 
-    return [...filmItems, ...seriesItems, ...blogItems];
-  }, [films, series, blogPosts]);
+    return [...filmItems, ...seriesItems, ...blogItems, ...locationItems];
+  }, [films, series, blogPosts, locations]);
 
   // Enhanced content with GSC data - moved to top
   const enhancedContent = useMemo(() => {
@@ -779,7 +789,7 @@ export default function ContentAudit({ films, series, blogPosts }: ContentAuditP
     setIndexingResults(null);
     
     try {
-      let contentItems: Array<{slug: string, type: 'film' | 'series' | 'blog'}> = [];
+      let contentItems: Array<{slug: string, type: 'film' | 'series' | 'blog' | 'location'}> = [];
       
       if (scope === 'selected') {
         contentItems = filteredContent
@@ -1113,13 +1123,14 @@ export default function ContentAudit({ films, series, blogPosts }: ContentAuditP
               <label className="block text-sm font-medium text-gray-700 mb-2">Content Type</label>
               <select
                 value={filterType}
-                onChange={(e) => setFilterType(e.target.value as 'all' | 'film' | 'series' | 'blog')}
+                onChange={(e) => setFilterType(e.target.value as 'all' | 'film' | 'series' | 'blog' | 'location')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
               >
                 <option value="all">All Types</option>
                 <option value="film">Films</option>
                 <option value="series">TV Series</option>
                 <option value="blog">Blog Posts</option>
+                <option value="location">Locations</option>
               </select>
             </div>
 
@@ -1247,6 +1258,7 @@ export default function ContentAudit({ films, series, blogPosts }: ContentAuditP
                           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                             item.type === 'film' ? 'bg-blue-100 text-blue-800' :
                             item.type === 'series' ? 'bg-purple-100 text-purple-800' :
+                            item.type === 'location' ? 'bg-orange-100 text-orange-800' :
                             'bg-green-100 text-green-800'
                           }`}>
                             {item.type}
@@ -1254,7 +1266,7 @@ export default function ContentAudit({ films, series, blogPosts }: ContentAuditP
                         </div>
                         <div className="ml-4">
                           <div className="text-sm font-medium text-gray-900">
-                            <Link href={`/${item.type === 'film' ? 'films' : item.type === 'series' ? 'series' : 'blog'}/${item.slug}`} className="hover:text-primary">
+                            <Link href={`/${item.type === 'film' ? 'films' : item.type === 'series' ? 'series' : item.type === 'location' ? 'locations' : 'blog'}/${item.slug}`} className="hover:text-primary">
                               {item.title}
                             </Link>
                           </div>
@@ -1289,7 +1301,7 @@ export default function ContentAudit({ films, series, blogPosts }: ContentAuditP
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <div className="flex space-x-2">
                         <Link 
-                          href={`/${item.type === 'film' ? 'films' : item.type === 'series' ? 'series' : 'blog'}/${item.slug}`}
+                          href={`/${item.type === 'film' ? 'films' : item.type === 'series' ? 'series' : item.type === 'location' ? 'locations' : 'blog'}/${item.slug}`}
                           className="text-indigo-600 hover:text-indigo-900"
                         >
                           View
@@ -1464,11 +1476,20 @@ export default function ContentAudit({ films, series, blogPosts }: ContentAuditP
 
 export const getStaticProps: GetStaticProps = async () => {
   // Load only essential data to stay under 128KB limit
-  const [films, series, blogPosts] = await Promise.all([
+  const [films, series, blogPosts, locationSlugs] = await Promise.all([
     getAllFilms(),
     getAllSeries(), 
-    getAllBlogPosts()
+    getAllBlogPosts(),
+    Promise.resolve(getLocationSlugs())
   ]);
+
+  // Load locations individually to optimize data
+  const locations = await Promise.all(
+    locationSlugs.map(async (slug) => {
+      const location = await getLocationBySlug(slug);
+      return location;
+    })
+  ).then(results => results.filter(Boolean));
 
   // Reduce data size by removing large content fields and keeping only essential metadata
   const optimizedFilms = films.map(film => ({
@@ -1510,11 +1531,26 @@ export const getStaticProps: GetStaticProps = async () => {
     content: post.content ? post.content.substring(0, 500) + '...' : '',
   }));
 
+  const optimizedLocations = locations.map(location => ({
+    meta: {
+      title: location?.meta.name || '',
+      slug: location?.meta.slug || '',
+      description: location?.meta.description || '',
+      city: location?.meta.city || '',
+      country: location?.meta.country || '',
+      image: location?.meta.image || '',
+      mediaItems: location?.meta.mediaItems || [],
+      coordinates: location?.meta.coordinates || { lat: 0, lng: 0 },
+    },
+    content: location?.content ? location.content.substring(0, 500) + '...' : '',
+  }));
+
   return {
     props: {
       films: optimizedFilms,
       series: optimizedSeries,
       blogPosts: optimizedBlogPosts,
+      locations: optimizedLocations,
     },
     revalidate: 3600, // Regenerate every hour
   };
