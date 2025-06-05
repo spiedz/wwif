@@ -53,7 +53,7 @@ mediaItems:
   - type: "film"
     slug: "the-northman"
     title: "The Northman"
-```
+---
 
 ```html
 <main>
