@@ -179,7 +179,7 @@ const SearchPage: NextPage = () => {
     if (result.item && result.item.meta) {
       return {
         meta: result.item.meta,
-        type: result.item.type || 'film' // Default to film if type is not specified
+        type: result.item.type || 'film' // Use the type from the search item
       };
     } else if (result.meta) {
       return {
@@ -187,9 +187,17 @@ const SearchPage: NextPage = () => {
         type: result.type || 'film'
       };
     } else {
+      // For direct meta objects, try to determine type based on properties
+      let detectedType = 'film';
+      if (result.name && result.city) {
+        detectedType = 'location'; // Locations have name and city
+      } else if (result.creator || result.releaseYearStart) {
+        detectedType = 'series'; // Series have creator or releaseYearStart
+      }
+      
       return {
         meta: result,
-        type: 'film'
+        type: detectedType
       };
     }
   };
@@ -252,7 +260,14 @@ const SearchPage: NextPage = () => {
                         const contentSlug = content.slug || `unknown-${index}`;
                         
                         // Determine the correct URL based on content type
-                        const contentUrl = type === 'series' ? `/series/${contentSlug}` : `/films/${contentSlug}`;
+                        let contentUrl = '';
+                        if (type === 'series') {
+                          contentUrl = `/series/${contentSlug}`;
+                        } else if (type === 'location') {
+                          contentUrl = `/locations/${contentSlug}`;
+                        } else {
+                          contentUrl = `/films/${contentSlug}`;
+                        }
                         
                         return (
                           <Link 
@@ -261,11 +276,11 @@ const SearchPage: NextPage = () => {
                             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
                           >
                             <div className="aspect-video relative bg-gray-200">
-                              {content.posterImage ? (
+                              {content.posterImage || content.image ? (
                                 <div className="relative w-full h-40">
                                   <Image 
-                                    src={content.posterImage} 
-                                    alt={content.title || 'Content poster'}
+                                    src={content.posterImage || content.image} 
+                                    alt={content.title || content.name || 'Content poster'}
                                     fill
                                     className="object-cover" 
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -279,18 +294,38 @@ const SearchPage: NextPage = () => {
                             </div>
                             <div className="p-4">
                               <h3 className="font-bold text-lg mb-1 line-clamp-2">
-                                {content.title || 'Untitled'}
+                                {content.title || content.name || 'Untitled'}
                               </h3>
                               
                               {/* Display badge for content type */}
                               <div className="mb-2">
-                                <span className={`text-xs font-medium px-2 py-1 rounded ${type === 'series' ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'}`}>
-                                  {type === 'series' ? 'TV Series' : 'Film'}
+                                <span className={`text-xs font-medium px-2 py-1 rounded ${
+                                  type === 'series' ? 'bg-blue-100 text-blue-800' : 
+                                  type === 'location' ? 'bg-green-100 text-green-800' : 
+                                  'bg-red-100 text-red-800'
+                                }`}>
+                                  {type === 'series' ? 'TV Series' : type === 'location' ? 'Location' : 'Film'}
                                 </span>
                               </div>
                               
+                              {/* Location-specific information */}
+                              {type === 'location' && (
+                                <>
+                                  {(content.city || content.country) && (
+                                    <p className="text-gray-600 mb-1">
+                                      {[content.city, content.state, content.country].filter(Boolean).join(', ')}
+                                    </p>
+                                  )}
+                                  {(content.filmCount !== undefined || content.seriesCount !== undefined) && (
+                                    <p className="text-sm text-gray-600 mb-2">
+                                      {content.filmCount || 0} films, {content.seriesCount || 0} series
+                                    </p>
+                                  )}
+                                </>
+                              )}
+                              
                               {/* Year display - handle different properties for films vs series */}
-                              {(content.year || content.releaseYearStart) && (
+                              {type !== 'location' && (content.year || content.releaseYearStart) && (
                                 <p className="text-gray-600 mb-1">
                                   {content.year || content.releaseYearStart}
                                   {content.releaseYearEnd && content.releaseYearEnd !== content.releaseYearStart && 
@@ -299,14 +334,14 @@ const SearchPage: NextPage = () => {
                               )}
                               
                               {/* Creator/Director display */}
-                              {(content.director || content.creator) && (
+                              {type !== 'location' && (content.director || content.creator) && (
                                 <p className="text-sm text-gray-600 mb-2">
                                   {content.director ? `Director: ${content.director}` : `Creator: ${content.creator}`}
                                 </p>
                               )}
                               
                               {/* Genre display - handle different properties for films vs series */}
-                              {(content.genre || content.genres) && (
+                              {type !== 'location' && (content.genre || content.genres) && (
                                 <div className="flex flex-wrap gap-1 mt-1 mb-3">
                                   {Array.isArray(content.genre) 
                                     ? content.genre.filter(Boolean).map((genre: string, idx: number) => (

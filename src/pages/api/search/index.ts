@@ -1,14 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getAllFilms, getAllSeries } from '../../../lib/server/serverMarkdown';
+import { getAllFilms, getAllSeries, getAllLocations } from '../../../lib/server/serverMarkdown';
 import searchService, { ContentType, SearchItem } from '../../../utils/searchService';
 import { FilmMeta } from '../../../types/content';
 import { SeriesMeta } from '../../../types/series';
+import { LocationContent } from '../../../types/location';
+import { FuseResult } from 'fuse.js';
 
 // Define a type for search results with matches from Fuse.js
-type SearchResultWithMatches = {
-  item: SearchItem;
-  matches?: Array<{ indices: number[][]; key: string; value: string }>;
-};
+type SearchResultWithMatches = FuseResult<SearchItem>;
 
 export default async function handler(
   req: NextApiRequest,
@@ -34,13 +33,16 @@ export default async function handler(
       selectedContentType = ContentType.FILM;
     } else if (contentType === 'series') {
       selectedContentType = ContentType.SERIES;
+    } else if (contentType === 'locations') {
+      selectedContentType = ContentType.LOCATION;
     }
     
     // Initialize search service if needed
     if (!searchService.isInitialized()) {
       const films = await getAllFilms();
       const series = await getAllSeries();
-      searchService.initialize(films, series);
+      const locations = await getAllLocations();
+      searchService.initialize(films, series, locations);
     }
     
     // Handle different search types

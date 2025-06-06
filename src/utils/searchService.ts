@@ -1,23 +1,25 @@
 import { FilmMeta, SearchResult } from '../types/content';
 import { SeriesMeta, TVSeries } from '../types/series';
-import Fuse from 'fuse.js';
+import { LocationContent } from '../types/location';
+import Fuse, { FuseResult } from 'fuse.js';
 
 // Define content type enum
 export enum ContentType {
   FILM = 'film',
-  SERIES = 'series'
+  SERIES = 'series',
+  LOCATION = 'location'
 }
 
 // Define unified search item type
 export type SearchItem = {
-  meta: FilmMeta | SeriesMeta;
+  meta: FilmMeta | SeriesMeta | LocationContent;
   content?: string;
   html?: string;
   type: ContentType; // Add content type field
 };
 
 /**
- * SearchService class for handling film and TV series search functionality
+ * SearchService class for handling film, TV series, and location search functionality
  */
 class SearchService {
   private searchIndex: SearchItem[] = [];
@@ -25,17 +27,18 @@ class SearchService {
   private initialized: boolean = false;
   
   /**
-   * Initialize the search service with film and series data
+   * Initialize the search service with film, series, and location data
    * @param films An array of film data to be indexed for search
    * @param series An array of TV series data to be indexed for search
+   * @param locations An array of location data to be indexed for search
    */
-  public initialize(films: any[] = [], series: any[] = []): void {
+  public initialize(films: any[] = [], series: any[] = [], locations: any[] = []): void {
     if (typeof Fuse === 'undefined') {
       console.error('Fuse.js not available. Search will not work.');
       return;
     }
     
-    // Convert films and series to SearchItems with type field
+    // Convert films, series, and locations to SearchItems with type field
     const filmItems = films.map(film => ({
       ...film,
       type: ContentType.FILM
@@ -46,20 +49,30 @@ class SearchService {
       type: ContentType.SERIES
     }));
     
-    // Combine both content types
-    this.searchIndex = [...filmItems, ...seriesItems];
+    const locationItems = locations.map(location => ({
+      meta: location,
+      type: ContentType.LOCATION
+    }));
     
-    // Initialize Fuse with settings for both films and series
+    // Combine all content types
+    this.searchIndex = [...filmItems, ...seriesItems, ...locationItems];
+    
+    // Initialize Fuse with settings for films, series, and locations
     this.fuseInstance = new Fuse(this.searchIndex, {
       keys: [
         { name: 'meta.title', weight: 1.0 },
-        { name: 'meta.director', weight: 0.7 }, // For films
-        { name: 'meta.creator', weight: 0.7 },  // For series
+        { name: 'meta.name', weight: 1.0 },           // For locations
+        { name: 'meta.director', weight: 0.7 },       // For films
+        { name: 'meta.creator', weight: 0.7 },        // For series
         { name: 'meta.description', weight: 0.6 },
-        { name: 'meta.year', weight: 0.5 },     // For films
+        { name: 'meta.city', weight: 0.9 },           // For locations
+        { name: 'meta.country', weight: 0.8 },        // For locations
+        { name: 'meta.state', weight: 0.7 },          // For locations
+        { name: 'meta.address', weight: 0.6 },        // For locations
+        { name: 'meta.year', weight: 0.5 },           // For films
         { name: 'meta.releaseYearStart', weight: 0.5 }, // For series
-        { name: 'meta.genre', weight: 0.5 },    // For films
-        { name: 'meta.genres', weight: 0.5 },   // For series
+        { name: 'meta.genre', weight: 0.5 },          // For films
+        { name: 'meta.genres', weight: 0.5 },         // For series
         { name: 'meta.coordinates.name', weight: 0.9 },
         { name: 'meta.coordinates.description', weight: 0.7 },
       ],
@@ -88,10 +101,7 @@ class SearchService {
    * @param contentType Optional filter for specific content type (film or series)
    * @returns Search results with matching content
    */
-  public search(query: string, contentType?: ContentType): Array<{
-    item: SearchItem;
-    matches?: Array<{ indices: number[][]; key: string; value: string }>;
-  }> {
+  public search(query: string, contentType?: ContentType): Array<FuseResult<SearchItem>> {
     if (!this.initialized || !this.fuseInstance) {
       console.warn('Search not initialized yet');
       return [];
@@ -106,7 +116,7 @@ class SearchService {
       
       // Filter by content type if specified
       if (contentType) {
-        results = results.filter(result => result.item.type === contentType);
+        results = results.filter((result: FuseResult<SearchItem>) => result.item.type === contentType);
       }
       
       return results;
@@ -123,10 +133,7 @@ class SearchService {
    * @param limit Maximum number of suggestions to return
    * @returns Matching suggestions
    */
-  public getSuggestions(query: string, contentType?: ContentType, limit: number = 5): Array<{
-    item: SearchItem;
-    matches?: Array<{ indices: number[][]; key: string; value: string }>;
-  }> {
+  public getSuggestions(query: string, contentType?: ContentType, limit: number = 5): Array<FuseResult<SearchItem>> {
     if (!query || !query.trim() || !this.initialized) {
       return [];
     }
@@ -196,7 +203,7 @@ class SearchService {
       
       let results = locationFuse
         .search(normalizedLocation)
-        .map((result: any) => result.item)
+        .map((result: FuseResult<SearchItem>) => result.item)
         .filter(Boolean); // Filter out null/undefined items
       
       // Filter by content type if specified
