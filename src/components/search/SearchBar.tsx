@@ -44,7 +44,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     if (initialValue !== query) {
       setQuery(initialValue);
     }
-  }, [initialValue]);
+  }, [initialValue, query]);
 
   // Create debounced search function only once
   // eslint-disable-next-line react-hooks/exhaustive-deps

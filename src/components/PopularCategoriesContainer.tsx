@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PopularCategories from './PopularCategories';
 import categoryAnalyticsService, { CategoryCount, CategorySortOrder, CategoryFilterOptions } from '../utils/categoryAnalytics';
 
@@ -25,7 +25,7 @@ const PopularCategoriesContainer: React.FC<PopularCategoriesContainerProps> = ({
   const [retryCount, setRetryCount] = useState<number>(0);
 
   // Method to fetch categories that can be called manually or by useEffect
-  const fetchCategories = async (forceRefresh = false) => {
+  const fetchCategories = useCallback(async (forceRefresh = false) => {
     try {
       setLoading(true);
       setError(null);
@@ -48,7 +48,7 @@ const PopularCategoriesContainer: React.FC<PopularCategoriesContainerProps> = ({
     } finally {
       setLoading(false);
     }
-  };
+  }, [maxCategories, sortOrder, filterOptions]);
 
   // Fetch categories on component mount and when props change
   useEffect(() => {
@@ -68,7 +68,7 @@ const PopularCategoriesContainer: React.FC<PopularCategoriesContainerProps> = ({
       // Clean up interval on unmount
       return () => clearInterval(intervalId);
     }
-  }, [maxCategories, sortOrder, filterOptions, refreshInterval]);
+  }, [fetchCategories, refreshInterval]);
 
   // Retry logic with exponential backoff
   useEffect(() => {
@@ -83,7 +83,7 @@ const PopularCategoriesContainer: React.FC<PopularCategoriesContainerProps> = ({
       
       return () => clearTimeout(retryTimer);
     }
-  }, [error, retryCount]);
+  }, [error, retryCount, fetchCategories]);
 
   // Manual refresh handler - useful for adding to a refresh button
   const handleRefresh = () => {

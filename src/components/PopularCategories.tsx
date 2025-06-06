@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 interface CategoryItem {
   name: string;
@@ -22,8 +21,6 @@ const PopularCategories: React.FC<PopularCategoriesProps> = ({
   maxCategories = 6,
   loading = false,
 }) => {
-  const router = useRouter();
-  
   // Take only the number of categories specified
   const displayCategories = categories.slice(0, maxCategories);
   
@@ -90,7 +87,7 @@ const PopularCategories: React.FC<PopularCategoriesProps> = ({
           </svg>
           <p className="text-gray-600 text-lg mb-2">No categories found</p>
           <p className="text-gray-500 text-sm mb-6 max-w-md mx-auto">
-            We couldn't find any film categories. Try refreshing or check back later when more content is available.
+            We couldn&apos;t find any film categories. Try refreshing or check back later when more content is available.
           </p>
           <Link 
             href="/films" 

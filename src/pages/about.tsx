@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
 import SEO from '../components/SEO';
 import { getWebPageSchema, getOrganizationSchema } from '../utils/schema';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import FAQSection, { FAQItem } from '../components/FAQSection';
 
-export default function AboutPage() {
+export default function About() {
   const router = useRouter();
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
   const currentUrl = `${BASE_URL}${router.asPath}`;
@@ -118,7 +120,7 @@ export default function AboutPage() {
                 
                 <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl border-l-4 border-primary shadow-md">
                   <p className="text-xl text-gray-800 italic">
-                    "We believe that every filming location has a story to tell beyond what we see on screen."
+                    &quot;We believe that every filming location has a story to tell beyond what we see on screen.&quot;
                   </p>
                 </div>
                 

@@ -90,7 +90,6 @@ const SearchSuggestions: React.FC<SearchSuggestionProps> = ({
                 
                 // Find the match for the title if it exists
                 const titleMatch = result.matches?.find(match => match.key === 'meta.title');
-                const locationMatch = result.matches?.find(match => match.key.includes('location') || match.key.includes('coordinates'));
                 const directorMatch = result.matches?.find(match => match.key === 'meta.director');
                 
                 return (
@@ -140,8 +139,8 @@ const SearchSuggestions: React.FC<SearchSuggestionProps> = ({
                               }}
                             />
                           )}
-                          {film.genre && Array.isArray(film.genre) && film.genre.length > 0 && (
-                            <span className="truncate">{film.genre.slice(0, 2).join(', ')}</span>
+                          {film.genre && (
+                            <span className="truncate">{film.genre}</span>
                           )}
                         </div>
                       </div>

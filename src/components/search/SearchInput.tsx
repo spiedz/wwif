@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 interface SearchInputProps {
   placeholder?: string;
@@ -24,7 +23,6 @@ const SearchInput: React.FC<SearchInputProps> = ({
 }) => {
   const [query, setQuery] = useState(initialValue);
   const inputRef = useRef<HTMLInputElement>(null);
-  const router = useRouter();
 
   useEffect(() => {
     if (autoFocus && inputRef.current) {
@@ -37,7 +35,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
     if (initialValue !== query) {
       setQuery(initialValue);
     }
-  }, [initialValue]);
+  }, [initialValue, query]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

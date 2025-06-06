@@ -9,25 +9,13 @@ import BannerAd from '../components/ads/BannerAd';
 import { AD_SLOTS } from '../utils/adManager';
 import SearchBar from '../components/search/SearchBar';
 
-// Dynamic content interface
-interface FeaturedContent {
-  title: string;
-  description: string;
-  image: string;
-  slug: string;
-  type: 'film' | 'series';
-  year?: number;
-  isNew?: boolean;
-}
-
 export default function Home() {
   const router = useRouter();
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
   const currentUrl = `${BASE_URL}${router.asPath}`;
   
-  // State for dynamic content
-  const [featuredContent, setFeaturedContent] = useState<FeaturedContent[]>([]);
-  const [stats, setStats] = useState({
+  // State for stats
+  const [stats] = useState({
     films: 227,
     series: 101,
     locations: 500,
@@ -88,7 +76,7 @@ export default function Home() {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [heroSlides.length]);
 
   return (
     <>
