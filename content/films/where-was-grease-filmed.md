@@ -61,7 +61,7 @@ behindTheScenes:
     - "The stage musical was originally set in Chicago, but the film adaptation moved the setting to Los Angeles."
     - "The song 'Hopelessly Devoted to You' was not in the original stage musical and was written specifically for the film, earning an Oscar nomination."
     - "The carnival sequence at the end of the film featured real carnival rides brought to the location for filming."
-    - "The "Summer Nights" sequence features multiple locations stitched together, including a school field and a beach."
+    - "The 'Summer Nights' sequence features multiple locations stitched together, including a school field and a beach."
     - "The iconic final scene’s transformational car was achieved using special effects, including a ramp and wires."
     - "Jeff Conaway (Kenickie) and John Travolta (Danny) had both appeared in the Broadway version of Grease."
 ---

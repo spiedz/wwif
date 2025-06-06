@@ -63,7 +63,7 @@ behindTheScenes:
     - "The film utilized cutting-edge rendering technology to bring unprecedented detail to fur and fabrics."
     - "Voice actors participated in immersive workshops on Chinese culture to deepen their understanding of their roles."
     - "One pivotal scene was inspired by the annual Pingshan Canyon boat festival, bringing vibrant cultural detail."
-    - "The scale of the "new villains' lair" was a direct homage to the colossal scale of the Longmen Grottoes."
+    - "The scale of the 'new villains' lair' was a direct homage to the colossal scale of the Longmen Grottoes."
 ---
 🎬 Where Was Kung Fu Panda 5 Filmed? Complete Ancient China Location Guide
 

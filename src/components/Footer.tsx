@@ -93,18 +93,18 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Popular Content</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/films/where-was-joker-filmed" className="text-gray-300 hover:text-white transition-colors">
-                  Joker Filming Locations
+                <Link href="/films/where-was-titanic-filmed" className="text-gray-300 hover:text-white transition-colors">
+                  Titanic Filming Locations
                 </Link>
               </li>
               <li>
-                <Link href="/films/where-was-dark-filmed" className="text-gray-300 hover:text-white transition-colors">
-                  Dark Filming Locations
+                <Link href="/films/where-was-inception-filmed" className="text-gray-300 hover:text-white transition-colors">
+                  Inception Filming Locations
                 </Link>
               </li>
               <li>
-                <Link href="/blog/best-filming-locations-in-paris" className="text-gray-300 hover:text-white transition-colors">
-                  Best Filming Locations in Paris
+                <Link href="/blog/most-iconic-movie-locations-you-can-visit" className="text-gray-300 hover:text-white transition-colors">
+                  Most Iconic Movie Locations You Can Visit
                 </Link>
               </li>
             </ul>

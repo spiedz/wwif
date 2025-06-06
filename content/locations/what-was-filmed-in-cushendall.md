@@ -38,7 +38,7 @@ nearbyAttractions:
 localEvents:
   - "Heart of the Glens Festival (August)"
   - "Cushendall Halloween Celebrations (October)"
-mediaItems:[]
+mediaItems: []
 ---
 
 # 🎬 Explore the Cinematic Beauty of Cushendall | Your Film Tourism Guide

@@ -11,7 +11,7 @@ coordinates:
   - lat: 49.2553
     lng: -122.9904
     name: Bridge Studios
-    description: Production hub for Tron: Ares.
+    description: "Production hub for Tron: Ares."
     image: https://www.vmcdn.ca/f/files/burnabynow/images/buildings/larco-marine-way-film-studio-2.png;w=1200;h=800;mode=crop
   - lat: 49.2842
     lng: -123.1190

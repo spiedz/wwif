@@ -47,7 +47,7 @@ behindTheScenes:
   facts:
     - "Cameron's team developed new software and hardware specifically for the Avatar franchise."
     - "Production utilized an enormous custom-built water tank for intricate underwater scenes."
-    - "Actors performed "in-volume" with virtual sets rendered in real-time."
+    - "Actors performed 'in-volume' with virtual sets rendered in real-time."
     - "The films rely on highly advanced facial performance capture to bring Na'vi characters to life."
     - "Thousands of visual effects artists from Weta FX (formerly Weta Digital) are involved."
     - "The movies were shot at an incredibly high frame rate to enhance visual clarity."

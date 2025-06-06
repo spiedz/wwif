@@ -47,7 +47,7 @@ bookingOptions:
     type: "hotel"
     description: "Centrally located with easy access to public transport."
 behindTheScenes:
-  intro: "Mark Waters, the director, skillfully brought Tina Fey's razor-sharp script to life, transforming Toronto's urban landscape into the suburban jungles of Illinois. The production team masterfully selected locations that captured the quintessential American high school feel, creating a world both familiar and distinctly "Mean Girls." This careful choice of backdrops was crucial in grounding the film's satirical humor in a believable reality, making North Shore High feel like a place we all *almost* went to."
+  intro: "Mark Waters, the director, skillfully brought Tina Fey's razor-sharp script to life, transforming Toronto's urban landscape into the suburban jungles of Illinois. The production team masterfully selected locations that captured the quintessential American high school feel, creating a world both familiar and distinctly 'Mean Girls.' This careful choice of backdrops was crucial in grounding the film's satirical humor in a believable reality, making North Shore High feel like a place we all *almost* went to."
   facts:
     - "Tina Fey, the screenwriter, drew inspiration from Rosalind Wiseman's non-fiction self-help book 'Queen Bees and Wannabes'."
     - "Lindsay Lohan originally auditioned for the role of Regina George, but director Mark Waters convinced her Cady was a better fit."

@@ -431,39 +431,108 @@ export async function getAllSeries(): Promise<TVSeries[]> {
 /**
  * SERVER-ONLY: Pre-processes all location data for client-side use
  * This function can be used in getStaticProps to fetch all location data
+ * This function is robust and will skip problematic files instead of failing entirely
  */
 export async function getAllLocationsData() {
+  const locationsData = [];
+  let processedCount = 0;
+  let skippedCount = 0;
+  
   try {
     const slugs = getLocationSlugs();
-    const locationsData = [];
+    console.log(`Processing ${slugs.length} location files for data export...`);
 
     for (const slug of slugs) {
-      const fullPath = path.join(locationsDirectory, `${slug}.md`);
-      
-      if (!fs.existsSync(fullPath)) {
+      try {
+        const fullPath = path.join(locationsDirectory, `${slug}.md`);
+        
+        if (!fs.existsSync(fullPath)) {
+          console.warn(`Location file not found: ${fullPath}`);
+          skippedCount++;
+          continue;
+        }
+        
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        
+        // Parse frontmatter with individual error handling
+        let data;
+        try {
+          const parsed = matter(fileContents);
+          data = parsed.data;
+        } catch (yamlError) {
+          console.error(`YAML parsing error in ${slug}:`, yamlError);
+          skippedCount++;
+          continue;
+        }
+
+        // Validate required fields
+        if (!data.name) {
+          console.warn(`Location ${slug} is missing required 'name' field. Skipping...`);
+          skippedCount++;
+          continue;
+        }
+
+        // Handle coordinate formats - normalize to {lat, lng}
+        let coordinates = { lat: 0, lng: 0 };
+        if (data.coordinates) {
+          try {
+            if (data.coordinates.lat !== undefined && data.coordinates.lng !== undefined) {
+              coordinates = {
+                lat: Number(data.coordinates.lat) || 0,
+                lng: Number(data.coordinates.lng) || 0
+              };
+            } else if (data.coordinates.latitude !== undefined && data.coordinates.longitude !== undefined) {
+              coordinates = {
+                lat: Number(data.coordinates.latitude) || 0,
+                lng: Number(data.coordinates.longitude) || 0
+              };
+            }
+            
+            // Validate coordinates are reasonable
+            if (Math.abs(coordinates.lat) > 90 || Math.abs(coordinates.lng) > 180) {
+              console.warn(`Invalid coordinates for ${slug}: lat=${coordinates.lat}, lng=${coordinates.lng}. Using defaults.`);
+              coordinates = { lat: 0, lng: 0 };
+            }
+          } catch (coordError) {
+            console.warn(`Error parsing coordinates for ${slug}, using defaults:`, coordError);
+            coordinates = { lat: 0, lng: 0 };
+          }
+        }
+
+        // Parse arrays safely
+        const safeArray = (field: any): any[] => {
+          if (Array.isArray(field)) return field;
+          if (field) return [field]; // Convert single value to array
+          return [];
+        };
+
+        locationsData.push({
+          slug,
+          name: String(data.name || '').trim(),
+          description: String(data.description || '').trim(),
+          address: String(data.address || '').trim(),
+          city: String(data.city || '').trim(),
+          country: String(data.country || '').trim(),
+          coordinates: coordinates,
+          image: String(data.image || '').trim(),
+          mediaItems: safeArray(data.mediaItems),
+        });
+
+        processedCount++;
+      } catch (fileError) {
+        console.error(`Error processing location file ${slug}:`, fileError);
+        skippedCount++;
         continue;
       }
-      
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data } = matter(fileContents);
-
-      locationsData.push({
-        slug,
-        name: data.name || '',
-        description: data.description || '',
-        address: data.address || '',
-        city: data.city || '',
-        country: data.country || '',
-        coordinates: data.coordinates || { lat: 0, lng: 0 },
-        image: data.image || '',
-        mediaItems: data.mediaItems || [],
-      });
     }
 
+    console.log(`Location data processing complete: ${processedCount} processed, ${skippedCount} skipped`);
     return locationsData;
   } catch (error) {
-    console.error('Error getting all location data:', error);
-    return [];
+    console.error('Critical error in getAllLocationsData:', error);
+    // Return whatever we managed to process instead of empty array
+    console.log(`Returning ${locationsData.length} location data items despite error`);
+    return locationsData;
   }
 }
 
@@ -510,6 +579,7 @@ export async function updateLocationWithMedia(locationSlug: string, mediaType: s
 
 /**
  * SERVER-ONLY: Gets a location by its slug
+ * This function is robust and will handle parsing errors gracefully
  */
 export async function getLocationBySlug(slug: string) {
   try {
@@ -521,80 +591,198 @@ export async function getLocationBySlug(slug: string) {
     }
     
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
+    
+    // Parse frontmatter with error handling
+    let data, content;
+    try {
+      const parsed = matter(fileContents);
+      data = parsed.data;
+      content = parsed.content;
+    } catch (yamlError) {
+      console.error(`YAML parsing error in location ${slug}:`, yamlError);
+      return null;
+    }
 
-    const processedContent = await processMarkdownContent(content);
+    // Validate required fields
+    if (!data.name) {
+      console.error(`Location ${slug} is missing required 'name' field`);
+      return null;
+    }
+
+    let processedContent;
+    try {
+      processedContent = await processMarkdownContent(content);
+    } catch (contentError) {
+      console.warn(`Error processing markdown content for ${slug}, using raw content:`, contentError);
+      processedContent = content; // Fallback to raw content
+    }
+
+    // Handle coordinate formats - normalize to {lat, lng}
+    let coordinates = { lat: 0, lng: 0 };
+    if (data.coordinates) {
+      try {
+        if (data.coordinates.lat !== undefined && data.coordinates.lng !== undefined) {
+          coordinates = {
+            lat: Number(data.coordinates.lat) || 0,
+            lng: Number(data.coordinates.lng) || 0
+          };
+        } else if (data.coordinates.latitude !== undefined && data.coordinates.longitude !== undefined) {
+          coordinates = {
+            lat: Number(data.coordinates.latitude) || 0,
+            lng: Number(data.coordinates.longitude) || 0
+          };
+        }
+        
+        // Validate coordinates are reasonable
+        if (Math.abs(coordinates.lat) > 90 || Math.abs(coordinates.lng) > 180) {
+          console.warn(`Invalid coordinates for ${slug}: lat=${coordinates.lat}, lng=${coordinates.lng}. Using defaults.`);
+          coordinates = { lat: 0, lng: 0 };
+        }
+      } catch (coordError) {
+        console.warn(`Error parsing coordinates for ${slug}, using defaults:`, coordError);
+        coordinates = { lat: 0, lng: 0 };
+      }
+    }
+
+    // Parse arrays safely
+    const safeArray = (field: any): any[] => {
+      if (Array.isArray(field)) return field;
+      if (field) return [field]; // Convert single value to array
+      return [];
+    };
 
     const locationData = {
       meta: {
         slug,
-        name: data.name || '',
-        description: data.description || '',
-        address: data.address || '',
-        city: data.city || '',
-        state: data.state || '',
-        country: data.country || '',
-        coordinates: data.coordinates || { lat: 0, lng: 0 },
-        image: data.image || '',
-        mediaItems: data.mediaItems || [],
-        population: data.population || null,
-        timezone: data.timezone || '',
-        bestTimeToVisit: data.bestTimeToVisit || '',
-        travelTips: data.travelTips || [],
-        nearbyAttractions: data.nearbyAttractions || [],
-        localEvents: data.localEvents || [],
+        name: String(data.name || '').trim(),
+        description: String(data.description || '').trim(),
+        address: String(data.address || '').trim(),
+        city: String(data.city || '').trim(),
+        state: String(data.state || '').trim(),
+        country: String(data.country || '').trim(),
+        coordinates: coordinates,
+        image: String(data.image || '').trim(),
+        mediaItems: safeArray(data.mediaItems),
+        population: data.population ? Number(data.population) || null : null,
+        timezone: String(data.timezone || '').trim(),
+        bestTimeToVisit: String(data.bestTimeToVisit || '').trim(),
+        travelTips: safeArray(data.travelTips),
+        nearbyAttractions: safeArray(data.nearbyAttractions),
+        localEvents: safeArray(data.localEvents),
       },
-      content: content,
-      html: processedContent,
+      content: content || '',
+      html: processedContent || '',
     };
 
     return locationData;
   } catch (error) {
-    console.error(`Error getting location by slug (${slug}):`, error);
+    console.error(`Critical error getting location by slug (${slug}):`, error);
     return null;
   }
 }
 
 /**
  * SERVER-ONLY: Gets all locations with summary data for listing pages
+ * This function is robust and will skip problematic files instead of failing entirely
  */
 export async function getAllLocations() {
+  const locations = [];
+  let processedCount = 0;
+  let skippedCount = 0;
+  
   try {
     const slugs = getLocationSlugs();
-    const locations = [];
+    console.log(`Processing ${slugs.length} location files...`);
 
     for (const slug of slugs) {
-      const fullPath = path.join(locationsDirectory, `${slug}.md`);
-      
-      if (!fs.existsSync(fullPath)) {
+      try {
+        const fullPath = path.join(locationsDirectory, `${slug}.md`);
+        
+        if (!fs.existsSync(fullPath)) {
+          console.warn(`Location file not found: ${fullPath}`);
+          skippedCount++;
+          continue;
+        }
+        
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        
+        // Parse frontmatter with individual error handling
+        let data;
+        try {
+          const parsed = matter(fileContents);
+          data = parsed.data;
+        } catch (yamlError) {
+          console.error(`YAML parsing error in ${slug}:`, yamlError);
+          skippedCount++;
+          continue;
+        }
+
+        // Validate required fields
+        if (!data.name || !data.city || !data.country) {
+          console.warn(`Location ${slug} is missing required fields (name, city, or country). Skipping...`);
+          skippedCount++;
+          continue;
+        }
+
+        // Count films and series for this location
+        const mediaItems = data.mediaItems || [];
+        const filmCount = mediaItems.filter((item: any) => item.type === 'film').length;
+        const seriesCount = mediaItems.filter((item: any) => item.type === 'series' || item.type === 'tv').length;
+
+        // Handle coordinate formats - normalize to {lat, lng}
+        let coordinates = { lat: 0, lng: 0 };
+        if (data.coordinates) {
+          try {
+            if (data.coordinates.lat !== undefined && data.coordinates.lng !== undefined) {
+              coordinates = {
+                lat: Number(data.coordinates.lat) || 0,
+                lng: Number(data.coordinates.lng) || 0
+              };
+            } else if (data.coordinates.latitude !== undefined && data.coordinates.longitude !== undefined) {
+              coordinates = {
+                lat: Number(data.coordinates.latitude) || 0,
+                lng: Number(data.coordinates.longitude) || 0
+              };
+            }
+          } catch (coordError) {
+            console.warn(`Invalid coordinates for ${slug}, using defaults:`, coordError);
+          }
+        }
+
+        // Validate coordinates are reasonable (basic sanity check)
+        if (Math.abs(coordinates.lat) > 90 || Math.abs(coordinates.lng) > 180) {
+          console.warn(`Suspicious coordinates for ${slug}: lat=${coordinates.lat}, lng=${coordinates.lng}. Using defaults.`);
+          coordinates = { lat: 0, lng: 0 };
+        }
+
+        locations.push({
+          slug,
+          name: String(data.name || '').trim(),
+          description: String(data.description || '').trim(),
+          city: String(data.city || '').trim(),
+          country: String(data.country || '').trim(),
+          coordinates: coordinates,
+          image: String(data.image || '').trim(),
+          filmCount,
+          seriesCount,
+        });
+
+        processedCount++;
+      } catch (fileError) {
+        console.error(`Error processing location file ${slug}:`, fileError);
+        skippedCount++;
         continue;
       }
-      
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data } = matter(fileContents);
-
-      // Count films and series for this location
-      const mediaItems = data.mediaItems || [];
-      const filmCount = mediaItems.filter((item: any) => item.type === 'film').length;
-      const seriesCount = mediaItems.filter((item: any) => item.type === 'series').length;
-
-      locations.push({
-        slug,
-        name: data.name || '',
-        description: data.description || '',
-        city: data.city || '',
-        country: data.country || '',
-        coordinates: data.coordinates || { lat: 0, lng: 0 },
-        image: data.image || '',
-        filmCount,
-        seriesCount,
-      });
     }
+
+    console.log(`Location processing complete: ${processedCount} processed, ${skippedCount} skipped`);
 
     // Sort by name for consistency
     return locations.sort((a, b) => a.name.localeCompare(b.name));
   } catch (error) {
-    console.error('Error getting all locations:', error);
-    return [];
+    console.error('Critical error in getAllLocations:', error);
+    // Return whatever we managed to process instead of empty array
+    console.log(`Returning ${locations.length} locations despite error`);
+    return locations.sort((a, b) => a.name.localeCompare(b.name));
   }
 }

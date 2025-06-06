@@ -63,7 +63,7 @@ behindTheScenes:
     - "CGI was extensively used, but much of the practical effects, like the tilting sets, were real mechanical wonders."
     - "The ship's bow was placed on hydraulic jacks to simulate its plunge into the ocean."
     - "The infamous 'heart of the ocean' necklace was a fictional creation, though inspired by real jewels."
-    - "The crew had a strict "no bathroom breaks" policy during long shoots due to the distance to facilities from the set."
+    - "The crew had a strict 'no bathroom breaks' policy during long shoots due to the distance to facilities from the set."
 ---
 
 # 🎬 Where Was Titanic Filmed? Complete Baja California Location Guide

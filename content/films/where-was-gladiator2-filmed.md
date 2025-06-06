@@ -52,7 +52,7 @@ behindTheScenes:
   facts:
     - "Filming faced significant delays due to the 2023 SAG-AFTRA strike, impacting production timelines in Malta."
     - "Massive sets were constructed at Fort Ricasoli, transforming the historic fort into a sprawling Roman city."
-    - "Composer Harry Gregson-Williams, famed for his work on "Kingdom of Heaven," took over scoring duties from Hans Zimmer."
+    - "Composer Harry Gregson-Williams, famed for his work on 'Kingdom of Heaven,' took over scoring duties from Hans Zimmer."
     - "Reports indicated the construction of an elaborate arena in Morocco, promising new gladiatorial spectacles."
     - "The production made extensive use of practical effects and colossal set pieces to achieve a grand scale without over-relying on CGI."
     - "Lead actor Paul Mescal underwent intense physical training to prepare for the physically demanding role."
