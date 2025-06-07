@@ -117,12 +117,26 @@ export const getBreadcrumbSchema = (items: Array<{ name: string; url: string }>)
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url
-    }))
+    itemListElement: items.map((item: { name: string; url: string }, index: number) => {
+      // Convert relative URLs to absolute URLs for schema.org compliance
+      let absoluteUrl = item.url;
+      if (item.url.startsWith('/')) {
+        absoluteUrl = `${BASE_URL}${item.url}`;
+      } else if (!item.url.startsWith('http')) {
+        // Handle other relative URLs (but not already absolute URLs)
+        absoluteUrl = `${BASE_URL}/${item.url}`;
+      }
+      
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'WebPage',
+          '@id': absoluteUrl,
+          name: item.name
+        }
+      };
+    })
   };
 };
 

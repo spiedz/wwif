@@ -143,7 +143,7 @@ export default function LocationPage({ location }: LocationPageProps) {
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4 py-6 max-w-7xl">
           {/* Breadcrumb navigation */}
-          <Breadcrumbs items={breadcrumbUIItems} />
+          <Breadcrumbs items={breadcrumbUIItems} currentUrl={currentUrl} />
 
           {/* Hero Section */}
           <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 mb-8">

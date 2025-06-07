@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { getBreadcrumbSchema } from '../utils/schema';
 
 interface BreadcrumbItem {
@@ -9,13 +10,20 @@ interface BreadcrumbItem {
 interface BreadcrumbsProps {
   items: BreadcrumbItem[];
   includeSchemaMarkup?: boolean;
+  currentUrl?: string;
 }
 
-export default function Breadcrumbs({ items, includeSchemaMarkup = true }: BreadcrumbsProps) {
+export default function Breadcrumbs({ items, includeSchemaMarkup = true, currentUrl }: BreadcrumbsProps) {
+  const router = useRouter();
+  
+  // Generate the current page URL if not provided
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://wherewasitfilmed.co';
+  const fullCurrentUrl = currentUrl || `${baseUrl}${router.asPath}`;
+  
   // Generate schema data for breadcrumbs
   const schemaItems = items.map(item => ({
     name: item.label,
-    url: item.url || '#'
+    url: item.url || fullCurrentUrl
   }));
   
   const breadcrumbSchema = getBreadcrumbSchema(schemaItems);
