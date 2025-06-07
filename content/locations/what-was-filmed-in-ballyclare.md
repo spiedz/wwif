@@ -18,7 +18,7 @@ country: "United Kingdom"
 coordinates:
   lat: 54.7700
   lng: -6.0000
-image: ""
+image: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/530000/530184-carrickfergus.jpg?impolicy=fcrop&w=512&h=288&q=medium"
 population: 9335
 timezone: "Europe/London"
 bestTimeToVisit: "Late Spring to Early Autumn (May-September) for pleasant weather and vibrant landscapes."

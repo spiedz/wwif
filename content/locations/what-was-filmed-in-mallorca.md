@@ -24,7 +24,7 @@ country: "Spain"
 coordinates:
   lat: 39.5696
   lng: 2.6496
-image: ""
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHwukbNTsnHaJ3FsJFiGRc4sM7k89_4448tA&s"
 population: 923608
 timezone: "Europe/Madrid"
 bestTimeToVisit: "Spring (April-May) and Autumn (September-October) for pleasant weather, fewer crowds, and stunning light."

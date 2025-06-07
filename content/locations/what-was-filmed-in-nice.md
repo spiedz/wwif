@@ -21,7 +21,7 @@ country: "France"
 coordinates:
   lat: 43.6960
   lng: 7.2607
-image: ""
+image: "https://ik.imgkit.net/3vlqs5axxjf/external/ik-seo/http://images.ntmllc.com/v4/destination/France/Nice/220608_SCN_Nice_iStock486761941_Z98854/Nice-Scenery.jpg?tr=w-780%2Ch-437%2Cfo-auto"
 population: 343477
 timezone: "Europe/Paris"
 bestTimeToVisit: "May to June or September to October (shoulder seasons for pleasant weather and fewer crowds)"

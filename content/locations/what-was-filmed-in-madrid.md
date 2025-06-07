@@ -23,7 +23,7 @@ country: "Spain"
 coordinates:
   lat: 40.416775
   lng: -3.703790
-image: ""
+image: "https://media.betterroaming.com/f/252707/2048x1152/230afd2c7c/blog_image_madrid_vacation.webp"
 population: 3305408
 timezone: "Europe/Madrid"
 bestTimeToVisit: "Spring (April-May) or Autumn (September-October) for pleasant weather and fewer crowds."

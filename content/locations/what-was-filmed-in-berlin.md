@@ -26,7 +26,7 @@ country: "Germany"
 coordinates:
   lat: 52.516272
   lng: 13.377761
-image: ""
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg/960px-Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg"
 population: 3760000
 timezone: "Europe/Berlin"
 bestTimeToVisit: "May to September offers pleasant weather, longer daylight, and various outdoor festivals."

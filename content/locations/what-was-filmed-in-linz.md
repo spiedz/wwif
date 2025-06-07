@@ -21,7 +21,7 @@ country: "Austria"
 coordinates:
   lat: 48.3069
   lng: 14.2858
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Linz_P%C3%B6stlingbergbahn_Bergstrecke.jpg/1280px-Linz_P%C3%B6stlingbergbahn_Bergstrecke.jpg"
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1L1R83V-abXZrR26az_g4--LVt26sg1WcRw&s"
 population: 209951
 timezone: "Europe/Vienna"
 bestTimeToVisit: "May - September (pleasant weather, vibrant cultural scene)"

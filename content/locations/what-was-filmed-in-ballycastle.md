@@ -21,7 +21,7 @@ country: "United Kingdom"
 coordinates:
   lat: 55.2003
   lng: -6.2500
-image: ""
+image: https://upload.wikimedia.org/wikipedia/commons/9/93/Ballycastle_Harbour_-_geograph.org.uk_-_468327.jpg"
 population: 5689
 timezone: "Europe/London"
 bestTimeToVisit: "May – September (mild weather, long daylight hours, and vibrant local events)"

@@ -21,7 +21,7 @@ country: "Italy"
 coordinates:
   lat: 40.6358
   lng: 14.6023
-image: ""
+image: "https://www.burgessyachts.com/media-library/media/burgess/zz-ml1/editorial/stories/amalfi%20unesco%20jul%2021/amalfi-coast-istock-1486379706.jpg?format=webp&quality=60&v=202503261544"
 population: 4945
 timezone: "Europe/Rome"
 bestTimeToVisit: "May to early June or September to early October"

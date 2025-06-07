@@ -21,7 +21,7 @@ country: "Italy"
 coordinates:
   lat: 45.4642
   lng: 9.1900
-image: "https://www.yesmilano.it/sites/default/files/styles/testata_full/public/articolo/copertina/2632/6687/MilanoDuomoByPaolo_1280x560.jpg"
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGpn_iPpVgiQAhGdAqUaJIMufs1wcnwT_KlQ&s"
 population: 1390000
 timezone: "Europe/Rome"
 bestTimeToVisit: "Spring (April-May) and Autumn (September-October) for pleasant weather and fewer crowds."

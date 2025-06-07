@@ -21,7 +21,7 @@ country: "Spain"
 coordinates:
   lat: 41.3851
   lng: 2.1734
-image: "https://cms.througheternity.com/upload/CONF83/20231114/barcelona_spain_sagrada_familia_hero_image_for_this_article.jpeg"
+image: "https://media.timeout.com/images/106185654/750/562/image.jpg"
 population: 1600000
 timezone: "Europe/Madrid"
 bestTimeToVisit: "Spring (April-May) and Autumn (September-October) for pleasant weather and fewer crowds."

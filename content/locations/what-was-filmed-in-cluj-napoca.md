@@ -19,7 +19,7 @@ country: "Romania"
 coordinates:
   lat: 46.7712
   lng: 23.6236
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cluj-Napoca_-_panoramio_%281%29.jpg/1200px-Cluj-Napoca_-_panoramio_%281%29.jpg"
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Romania-2382_-_View_from_Hotel_%287794313314%29.jpg/1200px-Romania-2382_-_View_from_Hotel_%287794313314%29.jpg"
 population: 324576
 timezone: "Europe/Bucharest"
 bestTimeToVisit: "May – September (pleasant weather for exploring)"

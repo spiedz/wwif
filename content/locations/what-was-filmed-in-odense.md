@@ -21,7 +21,7 @@ country: "Denmark"
 coordinates:
   lat: 55.4027
   lng: 10.3846
-image: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Odense_skyline.jpg"
+image: "https://api.www.visitodense.com/sites/visitodense.com/files/2024-06/odense-aa-bybillede-drone%40Benjamin-Dalby.jpg"
 population: 180760
 timezone: "Europe/Copenhagen"
 bestTimeToVisit: "May to September for mild weather and long daylight hours, or December for festive charm."

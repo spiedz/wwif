@@ -21,7 +21,7 @@ country: "Poland"
 coordinates:
   lat: 54.372158
   lng: 18.646638
-image: "https://worldcitytrail.com/wp-content/uploads/2024/12/Long-Market.jpg"
+image: "https://upload.wikimedia.org/wikipedia/commons/8/81/Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg"
 population: 470907
 timezone: "Europe/Warsaw"
 bestTimeToVisit: "May to September (warm weather, vibrant atmosphere)"
@@ -47,7 +47,7 @@ mediaItems:
 
 # 🎬 Explore Gdansk: Where History Meets Hollywood on the Baltic Coast!
 
-Welcome to Gdansk, a city steeped in rich history, stunning architecture, and increasingly, cinematic allure! This Polish gem, with its meticulously reconstructed Old Town and vibrant waterside, has recently served as a captivating backdrop for notable productions. Among them, the intriguing documentaries [*The Art of Charlie Chan*](/films/where-was-the-art-of-charlie-chan-filmed) and its sequel, [*The Art of Charlie Chan: A Missing Episode*](/films/where-was-the-art-of-charlie-chan-a-missing-episode-filmed), have beautifully showcased Gdansk's unique charm to a global audience.
+Welcome to Gdansk, a city steeped in rich history, stunning architecture, and increasingly, cinematic allure! This Polish gem, with its meticulously reconstructed Old Town and vibrant waterside, has recently served as a captivating backdrop for notable productions. Among them, the intriguing documentaries https[*The Art of Charlie Chan*](/films/where-was-the-art-of-charlie-chan-filmed) and its sequel, [*The Art of Charlie Chan: A Missing Episode*](/films/where-was-the-art-of-charlie-chan-a-missing-episode-filmed), have beautifully showcased Gdansk's unique charm to a global audience.
 
 <img src="https://worldcitytrail.com/wp-content/uploads/2024/12/Long-Market.jpg" alt="Gdansk Long Market at night with illuminated architectural facades and Neptune's Fountain foreground." style="width: 100%; height: auto; border-radius: 8px; margin: 15px 0;" />
 

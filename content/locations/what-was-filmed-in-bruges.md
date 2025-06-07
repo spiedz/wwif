@@ -21,7 +21,7 @@ country: "Belgium"
 coordinates:
   lat: 51.2096
   lng: 3.2247
-image: "https://www.museabrugge.be/objects/production/_1200x630_crop_center-center_82_none/Belfort-met-panorama22_Musea_Brugge.f1664971276.jpg?v=1749113514%2C0.5883%2C0.2145"
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStmB4opEYGfdBjvYYplrJ4R8lwf3BoWE6L7g&s"
 population: 118000
 timezone: "Europe/Brussels"
 bestTimeToVisit: "Spring (April-May) or Autumn (September-October) for pleasant weather and fewer crowds."

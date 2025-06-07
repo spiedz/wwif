@@ -23,7 +23,7 @@ country: "Italy"
 coordinates:
   lat: 43.7731
   lng: 11.2558
-image: ""
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmHU7TmTX51Dxc3-6ibf-sYV7zIaJNZlZHMA&s"
 population: 382000
 timezone: "Europe/Rome"
 bestTimeToVisit: "Spring (April-May) and Autumn (September-October) for pleasant weather and fewer crowds."

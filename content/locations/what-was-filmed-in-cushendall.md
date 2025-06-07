@@ -21,7 +21,7 @@ country: "United Kingdom"
 coordinates:
   lat: 55.0560
   lng: -6.0590
-image: ""
+image: "https://upload.wikimedia.org/wikipedia/commons/d/de/Cushendall2.jpg"
 population: 1369
 timezone: "Europe/London"
 bestTimeToVisit: "May – September for mild weather and long daylight hours, ideal for outdoor exploration."

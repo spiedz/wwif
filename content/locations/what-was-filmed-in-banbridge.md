@@ -21,7 +21,7 @@ country: "United Kingdom"
 coordinates:
   lat: 54.3477
   lng: -6.2737
-image: ""
+image: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Banbridge.jpg"
 population: 17200
 timezone: "Europe/London"
 bestTimeToVisit: "Spring (April-May) and Autumn (September-October) for mild weather and fewer crowds."
